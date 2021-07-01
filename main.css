@@ -39,7 +39,7 @@ body {
 .content-main {
   padding: 2rem;
   height: 100rem;
-  top: 5rem;
+  margin-top: 0.5rem;
 }
 
 .content-sidebar {
