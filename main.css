@@ -60,3 +60,8 @@ body {
 .accordion-collapse {
   word-break: break-all;
 }
+
+.grade-input {
+
+  margin-top: 0.5rem;
+}
