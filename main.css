@@ -36,7 +36,11 @@ body {
   outline: 0;
 }
 
-.main-content {
+.content-main {
 
   padding: 2rem;
+}
+
+.content-sidebar {
+  position: sticky;
 }
