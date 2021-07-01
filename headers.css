@@ -31,6 +31,11 @@
   outline: 0;
 }
 
+.main-content {
+
+  padding: 2rem;
+}
+
 .grades-label {
   text-align: right;
 }
