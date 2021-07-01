@@ -37,11 +37,13 @@ body {
 }
 
 .content-main {
-
   padding: 2rem;
+  height: 100rem;
+  top: 5rem;
 }
 
 .content-sidebar {
   position: sticky;
   height: calc(100vh - 7rem);
+  top: 5rem;
 }
