@@ -30,3 +30,7 @@
 .dropdown-toggle {
   outline: 0;
 }
+
+.grades-label {
+  text-align: right;
+}
