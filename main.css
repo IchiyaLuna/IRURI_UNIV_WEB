@@ -43,4 +43,5 @@ body {
 
 .content-sidebar {
   position: sticky;
+  height: calc(100vh - 7rem);
 }
