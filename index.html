@@ -108,13 +108,28 @@
         <div class="container-fluid gy-5">
             <div class='row gx-5 gy-5'>
                 <div class='col-md-8'>
-                    <div class="p-3 border bg-light">여기엔 주요 내용</div>
-                </div>
-                <div class='col-md-4'>
-                    <div class="p-3 border bg-light">여기엔 사이드바</div>
+                    <div class="accordion" id="PrivacyInfo">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="FirstHeader">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#FirstContent" aria-expanded="true" aria-controls="FirstContent">
+                                    개인정보 활용동의
+                                </button>
+                            </h2>
+                            <div id="FirstContent" class="accordion-collapse collapse show"
+                                aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
+                                <div class="accordion-body">
+                                    <strong>꼭 읽어보세요</strong>이것은 개인정보 동의서...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border bg-light">여기엔 주요 내용</div>
+                    </div>
+                    <div class='col-md-4'>
+                        <div class="p-3 border bg-light">여기엔 사이드바</div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
