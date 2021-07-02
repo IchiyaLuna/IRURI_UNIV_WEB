@@ -608,11 +608,40 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script launguage='javascript'>
+    <script launguage='text/javascript'>
         var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
+        var resultpage = document.input - form
 
         function test_input() {
-            noinput_modal.show()
+
+            var fk = document.getElementById("first-korean")
+            var fm = document.getElementById("first-math")
+            var fe = document.getElementById("first-english")
+            var fh = document.getElementById("first-history")
+            var fso = document.getElementById("first-social")
+            var fsc = document.getElementById("first-science")
+
+            var sk = document.getElementById("second-korean")
+            var sm = document.getElementById("second-math")
+            var se = document.getElementById("second-english")
+            var sh = document.getElementById("second-history")
+            var sso = document.getElementById("second-social")
+            var ssc = document.getElementById("second-science")
+
+            var tk = document.getElementById("third-korean")
+            var tm = document.getElementById("third-math")
+            var te = document.getElementById("third-english")
+            var th = document.getElementById("third-history")
+            var tso = document.getElementById("third-social")
+            var tsc = document.getElementById("third-science")
+
+            var sum = fk + fm + fe + fh + fso + fsc + sk + sm + se + sh + sso + ssc + tk + tm + te + th + tso + tsc
+
+            if (sum == 0) {
+                noinput_modal.show()
+            } else {
+                resultpage.submit();
+            }
         }
 
         function close_modal() {
