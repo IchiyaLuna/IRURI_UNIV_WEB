@@ -1,6 +1,81 @@
 <!doctype html>
 <html lang="ko" class="h-100">
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $gender = $_POST["gender-radio"];
+    $type = $_POST["type-radio"];
+
+    $first_korean = $_POST["first-korean"];
+    $first_math =  $_POST["first-math"];
+    $first_english =  $_POST["first-english"];
+    $first_history =  $_POST["first-history"];
+    $first_social =  $_POST["first-social"];
+    $first_science =  $_POST["first-science"];
+
+    $first = array($first_korean, $first_math, $first_english, $first_history, $first_social, $first_science);
+
+    $second_korean = $_POST["second-korean"];
+    $second_math =  $_POST["second-math"];
+    $second_english =  $_POST["second-english"];
+    $second_history =  $_POST["second-history"];
+    $second_social =  $_POST["second-social"];
+    $second_science =  $_POST["second-science"];
+
+    $second = array($second_korean, $second_math, $second_english, $second_history, $second_social, $second_science);
+
+    $third_korean = $_POST["third-korean"];
+    $third_math = $_POST["third-math"];
+    $third_english = $_POST["third-english"];
+    $third_history = $_POST["third-history"];
+    $third_social = $_POST["third-social"];
+    $third_science = $_POST["third-science"];
+
+    $third = array($third_korean, $third_math, $third_english, $third_history, $third_social, $third_science);
+}
+
+if ($gender == 1) {
+    $gender = "남";
+} elseif ($gender == 2) {
+    $gender = "여";
+}
+if ($type == 1) {
+    $type = "인문";
+} elseif ($type == 2) {
+    $type = "자연";
+}
+
+$simple_avg = 0;
+$count = 0;
+
+foreach ($first as $value) {
+    if ($value == 0) {
+        continue;
+    }
+    $simple_avg += $value;
+    $count++;
+}
+
+foreach ($second as $value) {
+    if ($value == 0) {
+        continue;
+    }
+    $simple_avg += $value;
+    $count++;
+}
+
+foreach ($third as $value) {
+    if ($value == 0) {
+        continue;
+    }
+    $simple_avg += $value;
+    $count++;
+}
+
+$simple_avg /= $count;
+
+?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,75 +161,59 @@
                     <p class="lead">학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.</p>
 
                     <div class="card card-body">
-                        <br>
-                        <?php
 
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $gender = $_POST["gender-radio"] . "<br>";
-                            $type = $_POST["type-radio"] . "<br>";
+                        <table class="table table-bordered">
 
-                            $first_korean = $_POST["first-korean"] . "<br>";
-                            $first_math =  $_POST["first-math"] . "<br>";
-                            $first_english =  $_POST["first-english"] . "<br>";
-                            $first_history =  $_POST["first-history"] . "<br>";
-                            $first_social =  $_POST["first-social"] . "<br>";
-                            $first_science =  $_POST["first-science"] . "<br>";
+                            <thead>
+                                <tr>
+                                    <th scope="col">성별</th>
+                                    <th scope="col">계열</th>
+                                    <th scope="col">단순 평균</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><?php echo $gender; ?></th>
+                                    <td><?php echo $type; ?></td>
+                                    <td><?php echo $simple_avg; ?></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table class="table mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">합격예측</th>
+                                                    <th scope="col">대학</th>
+                                                    <th scope="col">내 환산등급</th>
+                                                    <th scope="col">상세 정보</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">위험</th>
+                                                    <td>서울대</td>
+                                                    <td>1.3</td>
+                                                    <td>상세</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">가능</th>
+                                                    <td>연세대(서울)</td>
+                                                    <td>1.2</td>
+                                                    <td>상세</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">안정</th>
+                                                    <td>서강대</td>
+                                                    <td>1.2</td>
+                                                    <td>상세</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                            $second_korean = $_POST["second-korean"] . "<br>";
-                            $second_math =  $_POST["second-math"] . "<br>";
-                            $second_english =  $_POST["second-english"] . "<br>";
-                            $second_history =  $_POST["second-history"] . "<br>";
-                            $second_social =  $_POST["second-social"] . "<br>";
-                            $second_science =  $_POST["second-science"] . "<br>";
-
-                            $third_korean = $_POST["third-korean"] . "<br>";
-                            $third_math = $_POST["third-math"] . "<br>";
-                            $third_english = $_POST["third-english"] . "<br>";
-                            $third_history = $_POST["third-history"] . "<br>";
-                            $third_social = $_POST["third-social"] . "<br>";
-                            $third_science = $_POST["third-science"] . "<br>";
-                        }
-                        echo "성별 = ";
-
-                        if ($gender == 1) {
-                            echo "남자" . "<br>";
-                        }
-                        if ($gender == 2) {
-                            echo "여자" . "<br>";
-                        }
-
-                        echo "계열 = ";
-                        if ($type == 1) {
-                            echo "인문" . "<br>";
-                        }
-                        if ($type == 2) {
-                            echo "자연" . "<br>";
-                        }
-
-                        echo "1학년 성적 = ";
-                        echo $first_korean . " ";
-                        echo $first_math . " ";
-                        echo $first_english . " ";
-                        echo $first_history . " ";
-                        echo $first_social . " ";
-                        echo $first_science . "<br>";
-
-                        echo "2학년 성적 = ";
-                        echo $second_korean . " ";
-                        echo $second_math . " ";
-                        echo $second_english . " ";
-                        echo $second_history . " ";
-                        echo $second_social . " ";
-                        echo $second_science . "<br>";
-
-                        echo "3학년 성적 = ";
-                        echo $third_korean . " ";
-                        echo $third_math . " ";
-                        echo $third_english . " ";
-                        echo $third_history . " ";
-                        echo $third_social . " ";
-                        echo $third_science . "<br>";
-                        ?>
                     </div>
                 </div>
 
