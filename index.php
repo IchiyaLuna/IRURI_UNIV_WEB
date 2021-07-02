@@ -478,24 +478,24 @@
                         <table class="table table-hover">
                             <tbody>
                                 <tr class="table-primary">
-                                    <th scope="col">안정</th>
-                                    <th scope="col">최초 합격 가능성</th>
-                                    <th scope="col">평균과 0~n등급 차이</th>
+                                    <td>안정</td>
+                                    <td>최초 합격 가능성</td>
+                                    <td>평균과 0~n등급 차이</td>
                                 </tr>
                                 <tr class="table-success">
-                                    <th scope="col">가능</th>
-                                    <th scope="col">합격 가능성</th>
-                                    <th scope="col">평균과 0~n등급 차이</th>
+                                    <td>가능</td>
+                                    <td>합격 가능성</td>
+                                    <td>평균과 0~n등급 차이</td>
                                 </tr>
                                 <tr class="table-warning">
-                                    <th scope="col">불안</th>
-                                    <th scope="col">추가 합격 가능성</th>
-                                    <th scope="col">평균과 0~n등급 차이</th>
+                                    <td>불안</td>
+                                    <td>추가 합격 가능성</td>
+                                    <td>평균과 0~n등급 차이</td>
                                 </tr>
                                 <tr class="table-danger">
-                                    <th scope="col">위험</th>
-                                    <th scope="col">합격 어려움</th>
-                                    <th scope="col">평균과 0~n등급 차이</th>
+                                    <td>위험</td>
+                                    <td>합격 어려움</td>
+                                    <td>평균과 0~n등급 차이</td>
                                 </tr>
                             </tbody>
                         </table>
