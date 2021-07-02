@@ -32,15 +32,6 @@
     <link href="main.css" rel="stylesheet">
 </head>
 
-<script launguage='javascript'>
-    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), options)
-
-    function test_input() {
-        noinput_modal.show()
-    }
-</script>
-
-
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <!-- Begin page content -->
@@ -616,6 +607,14 @@
     </footer>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script launguage='javascript'>
+        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), options)
+
+        function test_input() {
+            noinput_modal.show()
+        }
+    </script>
 
 </body>
 
