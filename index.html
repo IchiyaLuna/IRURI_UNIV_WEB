@@ -130,355 +130,360 @@
 
                         <div class="card card-body">
                             <br>
-                            <div class="gender-type container">
+                            <form name="gender-form" method="POST" action="./result.php">
+                                <div class="gender-type container">
 
-                                <div class="row">
+                                    <div class="row">
 
-                                    <div class="col-md">
-                                        <h5>성별</h5>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender-radio"
-                                                id="radio-male" value="1" checked>
-                                            <label class="form-check-label" for="radio-male">남자</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender-radio"
-                                                id="radio-female" value="2">
-                                            <label class="form-check-label" for="radio-female">여자</label>
-                                        </div>
-                                    </div>
+                                        <div class="col-md">
+                                            <h5>성별</h5>
 
-                                    <div class="col-md">
-                                        <h5>계열</h5>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="type-radio"
-                                                id="radio-natural" value="1" checked>
-                                            <label class="form-check-label" for="radio-male">인문</label>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender-radio"
+                                                    id="radio-male" value="1" checked>
+                                                <label class="form-check-label" for="radio-male">남자</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender-radio"
+                                                    id="radio-female" value="2">
+                                                <label class="form-check-label" for="radio-female">여자</label>
+                                            </div>
+
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="type-radio"
-                                                id="radio-literature" value="2">
-                                            <label class="form-check-label" for="radio-female">자연</label>
+
+                                        <div class="col-md">
+                                            <h5>계열</h5>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="type-radio"
+                                                    id="radio-natural" value="1" checked>
+                                                <label class="form-check-label" for="radio-male">인문</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="type-radio"
+                                                    id="radio-literature" value="2">
+                                                <label class="form-check-label" for="radio-female">자연</label>
+                                            </div>
                                         </div>
+
                                     </div>
 
                                 </div>
+                                <br>
+                                <div class="first-grade container">
+                                    <h5>1학년</h5>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="first-korean" class="form-label">국어</label>
+                                            <select class="form-select" id="first-korean" name="first-korean">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                            </div>
-                            <br>
-                            <div class="first-grade container">
-                                <h5>1학년</h5>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="first-korean" class="form-label">국어</label>
-                                        <select class="form-select" id="first-korean">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
+                                        <div class="col-lg">
+                                            <label for="first-math" class="form-label">수학</label>
+                                            <select class="form-select" id="first-math" name="first-math">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg">
+                                            <label for="first-english" class="form-label">영어</label>
+                                            <select class="form-select" id="first-english" name="first-english">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
                                     </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="first-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="first-history" name="first-history">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="first-math" class="form-label">수학</label>
-                                        <select class="form-select" id="first-math">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                        <div class="col-lg">
+                                            <label for="first-social" class="form-label">사회탐구</label>
+                                            <select class="form-select" id="first-social" name="first-social">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="first-english" class="form-label">영어</label>
-                                        <select class="form-select" id="first-english">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
+                                        <div class="col-lg">
+                                            <label for="first-science" class="form-label">과학탐구</label>
+                                            <select class="form-select" id="first-science" name="first-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="first-history" class="form-label">한국사</label>
-                                        <select class="form-select" id="first-history">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                <div class="second-grade container">
+                                    <h5>2학년</h5>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="second-korean" class="form-label">국어</label>
+                                            <select class="form-select" id="second-korean" name="second-korean">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="first-social" class="form-label">사회탐구</label>
-                                        <select class="form-select" id="first-social">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                        <div class="col-lg">
+                                            <label for="second-math" class="form-label">수학</label>
+                                            <select class="form-select" id="second-math" name="second-math">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="first-science" class="form-label">과학탐구</label>
-                                        <select class="form-select" id="first-science">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
+                                        <div class="col-lg">
+                                            <label for="second-english" class="form-label">영어</label>
+                                            <select class="form-select" id="second-english" name="second-english">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="second-grade container">
-                                <h5>2학년</h5>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="second-korean" class="form-label">국어</label>
-                                        <select class="form-select" id="second-korean">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="second-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="second-history" name="second-history">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="second-math" class="form-label">수학</label>
-                                        <select class="form-select" id="second-math">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                        <div class="col-lg">
+                                            <label for="second-social" class="form-label">사회탐구</label>
+                                            <select class="form-select" id="second-social" name="second-social">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="second-english" class="form-label">영어</label>
-                                        <select class="form-select" id="second-english">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="second-history" class="form-label">한국사</label>
-                                        <select class="form-select" id="second-history">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-lg">
-                                        <label for="second-social" class="form-label">사회탐구</label>
-                                        <select class="form-select" id="second-social">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-lg">
-                                        <label for="second-science" class="form-label">과학탐구</label>
-                                        <select class="form-select" id="second-science">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="third-grade container">
-                                <h5>3학년</h5>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="third-korean" class="form-label">국어</label>
-                                        <select class="form-select" id="third-korean">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-lg">
-                                        <label for="third-math" class="form-label">수학</label>
-                                        <select class="form-select" id="third-math">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-lg">
-                                        <label for="third-english" class="form-label">영어</label>
-                                        <select class="form-select" id="third-english">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
+                                        <div class="col-lg">
+                                            <label for="second-science" class="form-label">과학탐구</label>
+                                            <select class="form-select" id="second-science" name="second-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-lg">
-                                        <label for="third-history" class="form-label">한국사</label>
-                                        <select class="form-select" id="third-history">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                <div class="third-grade container">
+                                    <h5>3학년</h5>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="third-korean" class="form-label">국어</label>
+                                            <select class="form-select" id="third-korean" name="third-korean">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="third-social" class="form-label">사회탐구</label>
-                                        <select class="form-select" id="third-social">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
-                                    </div>
+                                        <div class="col-lg">
+                                            <label for="third-math" class="form-label">수학</label>
+                                            <select class="form-select" id="third-math" name="third-math">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
 
-                                    <div class="col-lg">
-                                        <label for="third-science" class="form-label">과학탐구</label>
-                                        <select class="form-select" id="third-science">
-                                            <option selected>미응시</option>
-                                            <option value="1">1등급</option>
-                                            <option value="2">2등급</option>
-                                            <option value="3">3등급</option>
-                                            <option value="4">4등급</option>
-                                            <option value="5">5등급</option>
-                                            <option value="6">6등급</option>
-                                            <option value="7">7등급</option>
-                                            <option value="8">8등급</option>
-                                            <option value="9">9등급</option>
-                                        </select>
+                                        <div class="col-lg">
+                                            <label for="third-english" class="form-label">영어</label>
+                                            <select class="form-select" id="third-english" name="third-english">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg">
+                                            <label for="third-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="third-history" name="third-history">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg">
+                                            <label for="third-social" class="form-label">사회탐구</label>
+                                            <select class="form-select" id="third-social" name="third-social">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg">
+                                            <label for="third-science" class="form-label">과학탐구</label>
+                                            <select class="form-select" id="third-science" name="third-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="d-grid">
-                                <button type="button" class="btn btn-outline-primary">완료</button>
-                            </div>
+                                <br>
+                                <br>
+                                <div class="d-grid">
+                                    <input class="btn btn-outline-primary" type="submit"
+                                        value="complete-btn">완료</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <br>
