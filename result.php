@@ -86,7 +86,7 @@
                     <p class="lead">학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.</p>
 
                     <div class="card card-body">
-                        아 응애애요<br>
+                        <br>
                         <?php
                         $gender = $_POST['gender-radio'] . "<br>";
                         $type = $_POST['type-radio'] . "<br>";
@@ -154,8 +154,6 @@
                         echo $third_science . "<br>";
                         ?>
                     </div>
-
-
                 </div>
 
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
