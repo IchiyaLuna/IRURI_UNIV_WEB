@@ -609,6 +609,7 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script launguage='text/javascript'>
+    
         var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
         var resultpage = document.getElementById('input-form')
 
