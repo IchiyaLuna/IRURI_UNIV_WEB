@@ -164,7 +164,6 @@ $simple_avg /= $count;
                     <div class="card card-body">
                         <div class="result-table table-responsive">
                             <table class="table table-bordered">
-
                                 <thead>
                                     <tr>
                                         <th scope="col">성별</th>
@@ -226,79 +225,53 @@ $simple_avg /= $count;
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
-
-                    <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>등급 안내</h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">내신 등급 비율 안내</h5>
-                                <p class="card-text">비율을 참고하여 등급을 입력해주세요.</p>
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">등급</th>
-                                            <th scope="col">누적비율</th>
-                                            <th scope="col">등급비율</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th class="grades-label" scope="row">1</th>
-                                            <td>~ 4%</td>
-                                            <td>4%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">2</th>
-                                            <td>~ 11%</td>
-                                            <td>7%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">3</th>
-                                            <td>~ 23%</td>
-                                            <td>12%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">4</th>
-                                            <td>~ 40%</td>
-                                            <td>17%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">5</th>
-                                            <td>~ 60%</td>
-                                            <td>20%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">6</th>
-                                            <td>~ 77%</td>
-                                            <td>17%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">7</th>
-                                            <td>~ 89%</td>
-                                            <td>12%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">8</th>
-                                            <td>~ 96%</td>
-                                            <td>7%</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="grades-label" scope="row">9</th>
-                                            <td>~ 100%</td>
-                                            <td>4%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                </div>
+                <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>결과 안내</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">예측 단계 안내</h5>
+                            <p class="card-text">합격 예측은 아래 설명을 참고해주세요.</p>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">예측</th>
+                                        <th scope="col">해석</th>
+                                        <th scope="col">기준</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-primary">
+                                        <td>안정</td>
+                                        <td>최초 합격 가능성</td>
+                                        <td>평균과 0~n등급 차이</td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td>가능</td>
+                                        <td>합격 가능성</td>
+                                        <td>평균과 0~n등급 차이</td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td>불안</td>
+                                        <td>추가 합격 가능성</td>
+                                        <td>평균과 0~n등급 차이</td>
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td>위험</td>
+                                        <td>합격 어려움</td>
+                                        <td>평균과 0~n등급 차이</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 
