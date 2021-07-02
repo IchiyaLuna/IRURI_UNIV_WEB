@@ -470,7 +470,6 @@
                                 <br>
                                 <br>
                                 <div class="d-grid">
-                                    <input class="btn btn-outline-primary" type="submit" value="완료">
                                     <button type="button" class="btn btn-outline-primary" onclick="test_input()">
                                         완료
                                     </button>
