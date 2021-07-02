@@ -124,7 +124,7 @@
 
                         <div class="card card-body">
                             <br>
-                            <form name="input-form" method="POST" action="./result.php">
+                            <form name="input-form" id="input-form" method="POST" action="./result.php">
                                 <div class="gender-type container">
 
                                     <div class="row">
@@ -610,7 +610,7 @@
 
     <script launguage='text/javascript'>
         var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
-        var resultpage = document.input - form
+        var resultpage = document.getElementById('input-form')
 
         function test_input() {
 
