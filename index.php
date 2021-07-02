@@ -609,10 +609,14 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script launguage='javascript'>
-        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), options)
+        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), backdrop)
 
         function test_input() {
             noinput_modal.show()
+        }
+
+        function close_modal() {
+            noinput_modal.hide()
         }
     </script>
 
