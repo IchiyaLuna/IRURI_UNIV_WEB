@@ -173,7 +173,7 @@ $simple_avg /= $count;
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><?php echo $gender; ?></th>
+                                    <td><?php echo $gender; ?></td>
                                     <td><?php echo $type; ?></td>
                                     <td><?php echo round($simple_avg, 2); ?></td>
                                 </tr>
@@ -189,21 +189,33 @@ $simple_avg /= $count;
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+                                                <tr class="table-danger">
                                                     <td>위험</td>
                                                     <td>서울대</td>
                                                     <td>1.3</td>
                                                     <td>상세</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>가능</td>
+                                                <tr class="table-warning">
+                                                    <td>불안</td>
                                                     <td>연세대(서울)</td>
                                                     <td>1.2</td>
                                                     <td>상세</td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="table-success">
+                                                    <td>가능</td>
+                                                    <td>고려대(서울)</td>
+                                                    <td>1.2</td>
+                                                    <td>상세</td>
+                                                </tr>
+                                                <tr class="table-primary">
                                                     <td>안정</td>
-                                                    <td>서강대</td>
+                                                    <td>한양대</td>
+                                                    <td>1.2</td>
+                                                    <td>상세</td>
+                                                </tr>
+                                                <tr class="table-primary">
+                                                    <td>안정</td>
+                                                    <td>성균관대</td>
                                                     <td>1.2</td>
                                                     <td>상세</td>
                                                 </tr>
