@@ -615,45 +615,45 @@
         function test_input() {
 
             var fk = document.getElementById("first-korean").options
-            var fkIndex = fk.options.selectedIndex
+            var fkIndex = fk.selectedIndex
             var fm = document.getElementById("first-math").options
-            var fmIndex = fm.options.selectedIndex
+            var fmIndex = fm.selectedIndex
             var fe = document.getElementById("first-english").options
-            var feIndex = fe.options.selectedIndex
+            var feIndex = fe.selectedIndex
             var fh = document.getElementById("first-history").options
-            var fhIndex = fh.options.selectedIndex
+            var fhIndex = fh.selectedIndex
             var fso = document.getElementById("first-social").options
-            var fsoIndex = fso.options.selectedIndex
+            var fsoIndex = fso.selectedIndex
             var fsc = document.getElementById("first-science").options
-            var fscIndex = fsc.options.selectedIndex
+            var fscIndex = fsc.selectedIndex
 
             var sk = document.getElementById("second-korean").options
-            var skIndex = sk.options.selectedIndex
+            var skIndex = sk.selectedIndex
             var sm = document.getElementById("second-math").options
-            var smIndex = sm.options.selectedIndex
+            var smIndex = sm.selectedIndex
             var se = document.getElementById("second-english").options
-            var seIndex = se.options.selectedIndex
+            var seIndex = se.selectedIndex
             var sh = document.getElementById("second-history").options
-            var shIndex = sh.options.selectedIndex
+            var shIndex = sh.selectedIndex
             var sso = document.getElementById("second-social").options
-            var ssoIndex = sso.options.selectedIndex
+            var ssoIndex = sso.selectedIndex
             var ssc = document.getElementById("second-science").options
-            var sscIndex = ssc.options.selectedIndex
+            var sscIndex = ssc.selectedIndex
 
             var tk = document.getElementById("third-korean").options
-            var tkIndex = tk.options.selectedIndex
+            var tkIndex = tk.selectedIndex
             var tm = document.getElementById("third-math").options
-            var tmIndex = tm.options.selectedIndex
+            var tmIndex = tm.selectedIndex
             var te = document.getElementById("third-english").options
-            var teIndex = te.options.selectedIndex
+            var teIndex = te.selectedIndex
             var th = document.getElementById("third-history").options
-            var thIndex = th.options.selectedIndex
+            var thIndex = th.selectedIndex
             var tso = document.getElementById("third-social").options
-            var tsoIndex = tso.options.selectedIndex
+            var tsoIndex = tso.selectedIndex
             var tsc = document.getElementById("third-science").options
-            var tscIndex = tsc.options.selectedIndex
+            var tscIndex = tsc.selectedIndex
 
-            var sum = fk[fkIndex].value + fm[fmIndex].value + fe[feIndex].value + fh[fhIndex].value + fso[fsoIndex].value + fsc[fscIndex].value + sk[skIndex].value + sm[smIndex].value + se[seIndex].value + sh[shIndex].value + sso[ssoIndex].value + ssc[sscIndex].value + tk[tkIndex].value + tm[tmIndex].value + te[teIndex].value + th[thIndex].value + tso[tsoIndex].value + tsc[tscIndex].value
+            var sum = fk.options[fkIndex].value + fm.options[fmIndex].value + fe.options[feIndex].value + fh.options[fhIndex].value + fso.options[fsoIndex].value + fsc.options[fscIndex].value + sk.options[skIndex].value + sm.options[smIndex].value + se.options[seIndex].value + sh.options[shIndex].value + sso.options[ssoIndex].value + ssc.options[sscIndex].value + tk.options[tkIndex].value + tm.options[tmIndex].value + te.options[teIndex].value + th.options[thIndex].value + tso.options[tsoIndex].value + tsc.options[tscIndex].value
 
             if (sum == 0) {
                 noinput_modal.show()
