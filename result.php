@@ -175,7 +175,7 @@ $simple_avg /= $count;
                                 <tr>
                                     <th scope="row"><?php echo $gender; ?></th>
                                     <td><?php echo $type; ?></td>
-                                    <td><?php echo $simple_avg; ?></td>
+                                    <td><?php echo round($simple_avg, 2); ?></td>
                                 </tr>
                                 <tr>
                                     <td colspan="3">
@@ -190,7 +190,7 @@ $simple_avg /= $count;
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">위험</th>
+                                                    <td>위험</th>
                                                     <td>서울대</td>
                                                     <td>1.3</td>
                                                     <td>상세</td>
