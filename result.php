@@ -179,7 +179,7 @@ $simple_avg /= $count;
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <table class="table mb-0">
+                                        <table class="table mb-0 table-hover">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">합격예측</th>
