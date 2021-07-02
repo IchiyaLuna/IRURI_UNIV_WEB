@@ -476,6 +476,13 @@
                         <h3>예측 결과에 대한 안내입니다.</h3>
                         <h5 class="pb-3 mb-3 border-bottom">단계 안내</h5>
                         <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">예측</th>
+                                    <th scope="col">해석</th>
+                                    <th scope="col">기준</th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 <tr class="table-primary">
                                     <td>안정</td>
