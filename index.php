@@ -502,10 +502,7 @@
                         야옹<br>
                         야옹<br>
                     </div>
-
-
                 </div>
-
 
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
                     <div class="card">
