@@ -473,28 +473,32 @@
                     </div>
                     <br>
                     <div class="card card-body">
-                        아 응애애요<br>
-                        두번째 내용??<br>
-                        응애<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
-                        야옹<br>
+                        <h3>예측 결과에 대한 안내입니다.</h3>
+                        <h5 class="pb-3 mb-3 border-bottom">단계 안내</h5>
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr class="table-primary">
+                                    <th scope="col">안정</th>
+                                    <th scope="col">최초 합격 가능성</th>
+                                    <th scope="col">평균과 0~n등급 차이</th>
+                                </tr>
+                                <tr class="table-success">
+                                    <th scope="col">가능</th>
+                                    <th scope="col">합격 가능성</th>
+                                    <th scope="col">평균과 0~n등급 차이</th>
+                                </tr>
+                                <tr class="table-warning">
+                                    <th scope="col">불안</th>
+                                    <th scope="col">추가 합격 가능성</th>
+                                    <th scope="col">평균과 0~n등급 차이</th>
+                                </tr>
+                                <tr class="table-danger">
+                                    <th scope="col">위험</th>
+                                    <th scope="col">합격 어려움</th>
+                                    <th scope="col">평균과 0~n등급 차이</th>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
