@@ -160,7 +160,7 @@
                                 </div>
                                 <br>
                                 <div class="first-grade container">
-                                    <h5 class="mb-3 border-bottom">1학년</h5>
+                                    <h5 class="pb-3 mb-3 border-bottom">1학년</h5>
                                     <div class="row gy-3">
                                         <div class="col-lg-4">
                                             <label for="first-korean" class="form-label">국어</label>
@@ -261,7 +261,7 @@
                                 </div>
                                 <br>
                                 <div class="second-grade container">
-                                    <h5 class="mb-3 border-bottom">2학년</h5>
+                                    <h5 class="pb-3 mb-3 border-bottom">2학년</h5>
                                     <div class="row gy-3">
                                         <div class="col-lg-4">
                                             <label for="second-korean" class="form-label">국어</label>
@@ -362,7 +362,7 @@
                                 </div>
                                 <br>
                                 <div class="third-grade container">
-                                    <h5 class="mb-3 border-bottom">3학년</h5>
+                                    <h5 class="pb-3 mb-3 border-bottom">3학년</h5>
                                     <div class="row gy-3">
                                         <div class="col-lg-4">
                                             <label for="third-korean" class="form-label">국어</label>
