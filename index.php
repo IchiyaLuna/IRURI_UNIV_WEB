@@ -591,7 +591,7 @@
                         최소 하나 이상의 등급을 입력해주세요.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                        <button type="button" class="btn btn-primary" onclick="close_modal()">확인</button>
                     </div>
                 </div>
             </div>
@@ -609,7 +609,7 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     <script launguage='javascript'>
-        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), backdrop)
+        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
 
         function test_input() {
             noinput_modal.show()
