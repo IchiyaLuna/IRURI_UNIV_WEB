@@ -190,19 +190,19 @@ $simple_avg /= $count;
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>위험</th>
+                                                    <td>위험</td>
                                                     <td>서울대</td>
                                                     <td>1.3</td>
                                                     <td>상세</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">가능</th>
+                                                    <td>가능</td>
                                                     <td>연세대(서울)</td>
                                                     <td>1.2</td>
                                                     <td>상세</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">안정</th>
+                                                    <td>안정</td>
                                                     <td>서강대</td>
                                                     <td>1.2</td>
                                                     <td>상세</td>
