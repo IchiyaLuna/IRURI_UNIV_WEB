@@ -32,6 +32,15 @@
     <link href="main.css" rel="stylesheet">
 </head>
 
+<script launguage='javascript'>
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'), options)
+
+    function test_input() {
+        noinput_modal.show()
+    }
+</script>
+
+
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <!-- Begin page content -->
@@ -471,7 +480,7 @@
                                 <br>
                                 <div class="d-grid">
                                     <input class="btn btn-outline-primary" type="submit" value="완료">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#no-input">
+                                    <button type="button" class="btn btn-primary" onclick="test_input()">
                                         Launch demo modal
                                     </button>
                                 </div>
@@ -591,7 +600,7 @@
                         최소 하나 이상의 등급을 입력해주세요.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
