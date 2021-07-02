@@ -105,6 +105,7 @@ $simple_avg /= $count;
     <!-- Custom styles for this template -->
 
     <link href="main.css" rel="stylesheet">
+    <link href="result.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -161,7 +162,7 @@ $simple_avg /= $count;
                     <p class="lead">학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.</p>
 
                     <div class="card card-body">
-                        <div class="table-responsive">
+                        <div class="result-table table-responsive">
                             <table class="table table-bordered">
 
                                 <thead>
