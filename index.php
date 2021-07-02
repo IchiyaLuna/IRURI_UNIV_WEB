@@ -473,8 +473,7 @@
                     </div>
                     <br>
                     <div class="card card-body">
-                        <h3>예측 결과에 대한 안내입니다.</h3>
-                        <h5 class="pb-3 mb-3 border-bottom">단계 안내</h5>
+                        <h5 class="pb-3 mb-3 border-bottom">예측 단계 안내</h5>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -506,6 +505,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <p>2022 수시 전형 모의 예측이므로 예측 결과는 실제 결과와 다를 수 있으나 최선의 예측을 제공해드리려 노력하겠습니다.</p>
                     </div>
                 </div>
 
