@@ -161,8 +161,8 @@
                                 <br>
                                 <div class="first-grade container">
                                     <h5>1학년</h5>
-                                    <div class="row">
-                                        <div class="col-lg">
+                                    <div class="row gy-3">
+                                        <div class="col-lg-4">
                                             <label for="first-korean" class="form-label">국어</label>
                                             <select class="form-select" id="first-korean" name="first-korean">
                                                 <option selected value="0">미응시</option>
@@ -178,7 +178,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="first-math" class="form-label">수학</label>
                                             <select class="form-select" id="first-math" name="first-math">
                                                 <option selected value="0">미응시</option>
@@ -194,7 +194,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="first-english" class="form-label">영어</label>
                                             <select class="form-select" id="first-english" name="first-english">
                                                 <option selected value="0">미응시</option>
@@ -209,10 +209,8 @@
                                                 <option value="9">9등급</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg">
+
+                                        <div class="col-lg-4">
                                             <label for="first-history" class="form-label">한국사</label>
                                             <select class="form-select" id="first-history" name="first-history">
                                                 <option selected value="0">미응시</option>
@@ -228,7 +226,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="first-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="first-social" name="first-social">
                                                 <option selected value="0">미응시</option>
@@ -244,7 +242,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="first-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="first-science" name="first-science">
                                                 <option selected value="0">미응시</option>
@@ -264,8 +262,8 @@
                                 <br>
                                 <div class="second-grade container">
                                     <h5>2학년</h5>
-                                    <div class="row">
-                                        <div class="col-lg">
+                                    <div class="row gy-3">
+                                        <div class="col-lg-4">
                                             <label for="second-korean" class="form-label">국어</label>
                                             <select class="form-select" id="second-korean" name="second-korean">
                                                 <option selected value="0">미응시</option>
@@ -281,7 +279,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="second-math" class="form-label">수학</label>
                                             <select class="form-select" id="second-math" name="second-math">
                                                 <option selected value="0">미응시</option>
@@ -297,7 +295,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="second-english" class="form-label">영어</label>
                                             <select class="form-select" id="second-english" name="second-english">
                                                 <option selected value="0">미응시</option>
@@ -312,10 +310,8 @@
                                                 <option value="9">9등급</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg">
+
+                                        <div class="col-lg-4">
                                             <label for="second-history" class="form-label">한국사</label>
                                             <select class="form-select" id="second-history" name="second-history">
                                                 <option selected value="0">미응시</option>
@@ -331,7 +327,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="second-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="second-social" name="second-social">
                                                 <option selected value="0">미응시</option>
@@ -347,7 +343,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="second-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="second-science" name="second-science">
                                                 <option selected value="0">미응시</option>
@@ -367,8 +363,8 @@
                                 <br>
                                 <div class="third-grade container">
                                     <h5>3학년</h5>
-                                    <div class="row">
-                                        <div class="col-lg">
+                                    <div class="row gy-3">
+                                        <div class="col-lg-4">
                                             <label for="third-korean" class="form-label">국어</label>
                                             <select class="form-select" id="third-korean" name="third-korean">
                                                 <option selected value="0">미응시</option>
@@ -384,7 +380,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="third-math" class="form-label">수학</label>
                                             <select class="form-select" id="third-math" name="third-math">
                                                 <option selected value="0">미응시</option>
@@ -400,7 +396,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="third-english" class="form-label">영어</label>
                                             <select class="form-select" id="third-english" name="third-english">
                                                 <option selected value="0">미응시</option>
@@ -415,10 +411,8 @@
                                                 <option value="9">9등급</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-lg">
+
+                                        <div class="col-lg-4">
                                             <label for="third-history" class="form-label">한국사</label>
                                             <select class="form-select" id="third-history" name="third-history">
                                                 <option selected value="0">미응시</option>
@@ -434,7 +428,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="third-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="third-social" name="third-social">
                                                 <option selected value="0">미응시</option>
@@ -450,7 +444,7 @@
                                             </select>
                                         </div>
 
-                                        <div class="col-lg">
+                                        <div class="col-lg-4">
                                             <label for="third-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="third-science" name="third-science">
                                                 <option selected value="0">미응시</option>
