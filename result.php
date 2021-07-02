@@ -77,7 +77,7 @@
 
         <div class="container-fluid px-4">
 
-            <div class='row'>
+            <div class="row">
 
                 <div class="content-main col-md-8 bg-light border rounded-3">
 
@@ -88,30 +88,32 @@
                     <div class="card card-body">
                         <br>
                         <?php
-                        $gender = $_POST['gender-radio'] . "<br>";
-                        $type = $_POST['type-radio'] . "<br>";
 
-                        $first_korean = $_POST['first-korean'] . "<br>";
-                        $first_math =  $_POST['first-math'] . "<br>";
-                        $first_english =  $_POST['first-english'] . "<br>";
-                        $first_history =  $_POST['first-history'] . "<br>";
-                        $first_social =  $_POST['first-social'] . "<br>";
-                        $first_science =  $_POST['first-science'] . "<br>";
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $gender = $_POST["gender-radio"] . "<br>";
+                            $type = $_POST["type-radio"] . "<br>";
 
-                        $second_korean = $_POST['second-korean'] . "<br>";
-                        $second_math =  $_POST['second-math'] . "<br>";
-                        $second_english =  $_POST['second-english'] . "<br>";
-                        $second_history =  $_POST['second-history'] . "<br>";
-                        $second_social =  $_POST['second-social'] . "<br>";
-                        $second_science =  $_POST['second-science'] . "<br>";
+                            $first_korean = $_POST["first-korean"] . "<br>";
+                            $first_math =  $_POST["first-math"] . "<br>";
+                            $first_english =  $_POST["first-english"] . "<br>";
+                            $first_history =  $_POST["first-history"] . "<br>";
+                            $first_social =  $_POST["first-social"] . "<br>";
+                            $first_science =  $_POST["first-science"] . "<br>";
 
-                        $third_korean = $_POST['third-korean'] . "<br>";
-                        $third_math = $_POST['third-math'] . "<br>";
-                        $third_english = $_POST['third-english'] . "<br>";
-                        $third_history = $_POST['third-history'] . "<br>";
-                        $third_social = $_POST['third-social'] . "<br>";
-                        $third_science = $_POST['third-science'] . "<br>";
+                            $second_korean = $_POST["second-korean"] . "<br>";
+                            $second_math =  $_POST["second-math"] . "<br>";
+                            $second_english =  $_POST["second-english"] . "<br>";
+                            $second_history =  $_POST["second-history"] . "<br>";
+                            $second_social =  $_POST["second-social"] . "<br>";
+                            $second_science =  $_POST["second-science"] . "<br>";
 
+                            $third_korean = $_POST["third-korean"] . "<br>";
+                            $third_math = $_POST["third-math"] . "<br>";
+                            $third_english = $_POST["third-english"] . "<br>";
+                            $third_history = $_POST["third-history"] . "<br>";
+                            $third_social = $_POST["third-social"] . "<br>";
+                            $third_science = $_POST["third-science"] . "<br>";
+                        }
                         echo "성별 = ";
 
                         if ($gender == 1) {
@@ -156,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
+                <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
                     <div class="card">
                         <div class="card-header">
                             <h5>등급 안내</h5>
