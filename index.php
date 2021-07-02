@@ -611,45 +611,51 @@
         function test_input() {
 
             var fk = document.getElementById("first-korean")
-            var fkIndex = fk.selectedIndex
+            fk = fk.options[fk.selectedIndex].value
             var fm = document.getElementById("first-math")
-            var fmIndex = fm.selectedIndex
+            fm = fm.options[fm.selectedIndex].value
             var fe = document.getElementById("first-english")
-            var feIndex = fe.selectedIndex
+            fe = fe.options[fe.selectedIndex].value
             var fh = document.getElementById("first-history")
-            var fhIndex = fh.selectedIndex
+            fh = fh.options[fh.selectedIndex].value
             var fso = document.getElementById("first-social")
-            var fsoIndex = fso.selectedIndex
+            fso = fso.options[fso.selectedIndex].value
             var fsc = document.getElementById("first-science")
-            var fscIndex = fsc.selectedIndex
+            fsc = fsc.options[fsc.selectedIndex].value
+
+            var fsum = fk + fm + fe + fh + fso + fsc
 
             var sk = document.getElementById("second-korean")
-            var skIndex = sk.selectedIndex
+            sk = sk.options[sk.selectedIndex].value
             var sm = document.getElementById("second-math")
-            var smIndex = sm.selectedIndex
+            sm = sm.options[sm.selectedIndex].value
             var se = document.getElementById("second-english")
-            var seIndex = se.selectedIndex
+            se = se.options[se.selectedIndex].value
             var sh = document.getElementById("second-history")
-            var shIndex = sh.selectedIndex
+            sh = sh.options[sh.selectedIndex].value
             var sso = document.getElementById("second-social")
-            var ssoIndex = sso.selectedIndex
+            sso = sso.options[sso.selectedIndex].value
             var ssc = document.getElementById("second-science")
-            var sscIndex = ssc.selectedIndex
+            ssc = ssc.options[ssc.selectedIndex].value
+
+            var ssum = sk + sm + se + sh + sso + ssc
 
             var tk = document.getElementById("third-korean")
-            var tkIndex = tk.selectedIndex
+            tk = tk.options[tk.selectedIndex].value
             var tm = document.getElementById("third-math")
-            var tmIndex = tm.selectedIndex
+            tm = tm.options[tm.selectedIndex].value
             var te = document.getElementById("third-english")
-            var teIndex = te.selectedIndex
+            te = te.options[te.selectedIndex].value
             var th = document.getElementById("third-history")
-            var thIndex = th.selectedIndex
+            th = th.options[th.selectedIndex].value
             var tso = document.getElementById("third-social")
-            var tsoIndex = tso.selectedIndex
+            tso = tso.options[tso.selectedIndex].value
             var tsc = document.getElementById("third-science")
-            var tscIndex = tsc.selectedIndex
+            tsc = tsc.options[tsc.selectedIndex].value
 
-            var sum = fk.options[fkIndex].value + fm.options[fmIndex].value + fe.options[feIndex].value + fh.options[fhIndex].value + fso.options[fsoIndex].value + fsc.options[fscIndex].value + sk.options[skIndex].value + sm.options[smIndex].value + se.options[seIndex].value + sh.options[shIndex].value + sso.options[ssoIndex].value + ssc.options[sscIndex].value + tk.options[tkIndex].value + tm.options[tmIndex].value + te.options[teIndex].value + th.options[thIndex].value + tso.options[tsoIndex].value + tsc.options[tscIndex].value
+            var tsum = tk + tm + te + th + tso + tsc
+
+            var sum = fsum + ssum + tsum
 
             if (sum == 0) {
                 noinput_modal.show()
