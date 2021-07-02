@@ -32,8 +32,7 @@
     <link href="main.css" rel="stylesheet">
 </head>
 
-<body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false"
-    onselectstart="return false">
+<body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <!-- Begin page content -->
 
@@ -43,8 +42,7 @@
 
             <a class="navbar-brand" href="https://workruri.akkyu.net/">이루리 테스트</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
-                aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -61,8 +59,7 @@
 
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">기타</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">기타</a>
 
                         <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
                             <li><a class="dropdown-item" href="#">안내</a></li>
@@ -92,14 +89,12 @@
                         <div class="accordion-item">
 
                             <h2 class="accordion-header" id="FirstHeader">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#FirstContent" aria-expanded="false" aria-controls="FirstContent">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FirstContent" aria-expanded="false" aria-controls="FirstContent">
                                     개인정보 제공 및 활용 동의
                                 </button>
                             </h2>
 
-                            <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader"
-                                data-bs-parent="#PrivacyInfo">
+                            <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
                                 <div class="accordion-body">
                                     본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
                                     이외 민감한 개인정보는 수집 대상이 아니며 사용한 모든 정보는 오직 성적 분석 및 합격 예측에만 사용됩니다.
@@ -113,8 +108,7 @@
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input"
-                            value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             개인정보 제공 및 활용에 동의합니다
                         </label>
@@ -130,7 +124,7 @@
 
                         <div class="card card-body">
                             <br>
-                            <form name="gender-form" method="POST" action="./result.php">
+                            <form name="input-form" method="POST" action="./result.php">
                                 <div class="gender-type container">
 
                                     <div class="row">
@@ -139,13 +133,11 @@
                                             <h5>성별</h5>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender-radio"
-                                                    id="radio-male" value="1" checked>
+                                                <input class="form-check-input" type="radio" name="gender-radio" id="radio-male" value="1" checked>
                                                 <label class="form-check-label" for="radio-male">남자</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender-radio"
-                                                    id="radio-female" value="2">
+                                                <input class="form-check-input" type="radio" name="gender-radio" id="radio-female" value="2">
                                                 <label class="form-check-label" for="radio-female">여자</label>
                                             </div>
 
@@ -154,13 +146,11 @@
                                         <div class="col-md">
                                             <h5>계열</h5>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type-radio"
-                                                    id="radio-natural" value="1" checked>
+                                                <input class="form-check-input" type="radio" name="type-radio" id="radio-natural" value="1" checked>
                                                 <label class="form-check-label" for="radio-male">인문</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type-radio"
-                                                    id="radio-literature" value="2">
+                                                <input class="form-check-input" type="radio" name="type-radio" id="radio-literature" value="2">
                                                 <label class="form-check-label" for="radio-female">자연</label>
                                             </div>
                                         </div>
@@ -481,6 +471,9 @@
                                 <br>
                                 <div class="d-grid">
                                     <input class="btn btn-outline-primary" type="submit" value="완료">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#no-input">
+                                        Launch demo modal
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -584,6 +577,26 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Alert Modal -->
+        <div class="modal fade" id="no-input" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="no-input-label">오류</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        최소 하나 이상의 등급을 입력해주세요.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 
