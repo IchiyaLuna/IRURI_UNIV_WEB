@@ -54,7 +54,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">성적 계산기</a>
+                        <a class="nav-link" href="./calc">성적 계산기</a>
                     </li>
 
                     <li class="nav-item dropdown">
