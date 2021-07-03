@@ -226,6 +226,8 @@ $simple_avg /= $count;
                                 </tbody>
                             </table>
                         </div>
+
+                        <?php include "./sqload.php"; ?>
                     </div>
                 </div>
                 <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
