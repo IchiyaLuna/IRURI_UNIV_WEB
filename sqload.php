@@ -27,13 +27,13 @@ $fetch_all = mysqli_query($database, $sql);
     echo "<tbody>";
     while ($row = mysqli_fetch_array($fetch_all)) {
         echo "<tr>";
-        echo "<td>" . $row['code']."<td>";
-        echo "<td>" . $row['location'] . "<td>";
-        echo "<td>" . $row['name'] . "<td>";
-        echo "<td>" . $row['type'] . "<td>";
-        echo "<td>" . $row['low'] . "<td>";
-        echo "<td>" . $row['high'] . "<td>";
-        echo "<td>" . $row['avg'] . "<td>";
+        echo "<td>" . $row['code'] . "</td>";
+        echo "<td>" . $row['location'] . "</td>";
+        echo "<td>" . $row['name'] . "</td>";
+        echo "<td>" . $row['type'] . "</td>";
+        echo "<td>" . $row['low'] . "</td>";
+        echo "<td>" . $row['high'] . "</td>";
+        echo "<td>" . $row['avg'] . "</td>";
         echo "</tr>";
     }
 echo "</tbody>";
