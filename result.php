@@ -4,7 +4,6 @@
 <?php
 function white($arr_1, $arr_2, $arr_3)
 {
-
     if (sizeof($arr_1) == 0)
         $average_1 = 0;
     else
@@ -31,9 +30,9 @@ function white($arr_1, $arr_2, $arr_3)
 
 function gray($arr_1, $arr_2, $arr_3)
 {
-    global $type;
+    global $Line;
 
-    if ($type == "인문") {
+    if ($Line == "문과") {
         unset($arr_1[3]);
         unset($arr_1[5]);
         unset($arr_2[3]);
@@ -64,7 +63,7 @@ function gray($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($type == "자연") {
+    if ($Line == "이과") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
@@ -99,9 +98,9 @@ function gray($arr_1, $arr_2, $arr_3)
 
 function yellow($arr_1, $arr_2, $arr_3)
 {
-    global $type;
+    global $Line;
 
-    if ($type == "인문") {
+    if ($Line == "문과") {
         unset($arr_1[3]);
         unset($arr_2[3]);
         unset($arr_3[3]);
@@ -129,7 +128,7 @@ function yellow($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($type == "자연") {
+    if ($Line == "이과") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
@@ -164,9 +163,9 @@ function yellow($arr_1, $arr_2, $arr_3)
 
 function light_yellow($arr_1, $arr_2, $arr_3)
 {
-    global $type;
+    global $Line;
 
-    if ($type == "인문") {
+    if ($Line == "문과") {
         unset($arr_1[3]);
         unset($arr_2[3]);
         unset($arr_3[3]);
@@ -194,7 +193,7 @@ function light_yellow($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($type == "자연") {
+    if ($Line == "이과") {
         unset($arr_1[4]);
         unset($arr_2[4]);
         unset($arr_3[4]);
@@ -226,7 +225,6 @@ function light_yellow($arr_1, $arr_2, $arr_3)
 
 function green($arr_1, $arr_2, $arr_3)
 {
-
     unset($arr_1[5]);
     unset($arr_2[5]);
     unset($arr_3[5]);
@@ -257,9 +255,9 @@ function green($arr_1, $arr_2, $arr_3)
 
 function beige($arr_1, $arr_2, $arr_3)
 {
-    global $type;
+    global $Line;
 
-    if ($type == "인문") {
+    if ($Line == "문과") {
         unset($arr_1[5]);
         unset($arr_2[5]);
         unset($arr_3[5]);
@@ -287,7 +285,7 @@ function beige($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($type == "자연") {
+    if ($Line == "이과") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
@@ -328,29 +326,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_korean = $_POST["first-korean"];
     $first_math =  $_POST["first-math"];
     $first_english =  $_POST["first-english"];
-    $first_history =  $_POST["first-history"];
     $first_social =  $_POST["first-social"];
     $first_science =  $_POST["first-science"];
+    $first_history =  $_POST["first-history"];
 
-    $first = array($first_korean, $first_math, $first_english, $first_history, $first_social, $first_science);
+    $first = array($first_korean, $first_math, $first_english, $first_social, $first_science, $first_history);
 
     $second_korean = $_POST["second-korean"];
     $second_math =  $_POST["second-math"];
     $second_english =  $_POST["second-english"];
-    $second_history =  $_POST["second-history"];
     $second_social =  $_POST["second-social"];
     $second_science =  $_POST["second-science"];
+    $second_history =  $_POST["second-history"];
 
-    $second = array($second_korean, $second_math, $second_english, $second_history, $second_social, $second_science);
+    $second = array($second_korean, $second_math, $second_english, $second_social, $second_science, $second_history);
 
     $third_korean = $_POST["third-korean"];
     $third_math = $_POST["third-math"];
     $third_english = $_POST["third-english"];
-    $third_history = $_POST["third-history"];
     $third_social = $_POST["third-social"];
     $third_science = $_POST["third-science"];
+    $third_history = $_POST["third-history"];
 
-    $third = array($third_korean, $third_math, $third_english, $third_history, $third_social, $third_science);
+    $third = array($third_korean, $third_math, $third_english, $third_social, $third_science, $third_history);
 }
 
 for ($i = 0; $i < 6; $i++) {
@@ -407,8 +405,6 @@ foreach ($third as $value) {
 }
 
 $simple_avg /= $count;
-
-
 
 $white = white($first, $second, $third);
 $gray = gray($first, $second, $third);

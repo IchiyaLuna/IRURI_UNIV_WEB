@@ -211,22 +211,6 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <label for="first-history" class="form-label">한국사</label>
-                                            <select class="form-select" id="first-history" name="first-history">
-                                                <option selected value="0">미응시</option>
-                                                <option value="1">1등급</option>
-                                                <option value="2">2등급</option>
-                                                <option value="3">3등급</option>
-                                                <option value="4">4등급</option>
-                                                <option value="5">5등급</option>
-                                                <option value="6">6등급</option>
-                                                <option value="7">7등급</option>
-                                                <option value="8">8등급</option>
-                                                <option value="9">9등급</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-lg-4">
                                             <label for="first-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="first-social" name="first-social">
                                                 <option selected value="0">미응시</option>
@@ -245,6 +229,22 @@
                                         <div class="col-lg-4">
                                             <label for="first-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="first-science" name="first-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label for="first-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="first-history" name="first-history">
                                                 <option selected value="0">미응시</option>
                                                 <option value="1">1등급</option>
                                                 <option value="2">2등급</option>
@@ -312,22 +312,6 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <label for="second-history" class="form-label">한국사</label>
-                                            <select class="form-select" id="second-history" name="second-history">
-                                                <option selected value="0">미응시</option>
-                                                <option value="1">1등급</option>
-                                                <option value="2">2등급</option>
-                                                <option value="3">3등급</option>
-                                                <option value="4">4등급</option>
-                                                <option value="5">5등급</option>
-                                                <option value="6">6등급</option>
-                                                <option value="7">7등급</option>
-                                                <option value="8">8등급</option>
-                                                <option value="9">9등급</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-lg-4">
                                             <label for="second-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="second-social" name="second-social">
                                                 <option selected value="0">미응시</option>
@@ -346,6 +330,22 @@
                                         <div class="col-lg-4">
                                             <label for="second-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="second-science" name="second-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label for="second-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="second-history" name="second-history">
                                                 <option selected value="0">미응시</option>
                                                 <option value="1">1등급</option>
                                                 <option value="2">2등급</option>
@@ -413,22 +413,6 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <label for="third-history" class="form-label">한국사</label>
-                                            <select class="form-select" id="third-history" name="third-history">
-                                                <option selected value="0">미응시</option>
-                                                <option value="1">1등급</option>
-                                                <option value="2">2등급</option>
-                                                <option value="3">3등급</option>
-                                                <option value="4">4등급</option>
-                                                <option value="5">5등급</option>
-                                                <option value="6">6등급</option>
-                                                <option value="7">7등급</option>
-                                                <option value="8">8등급</option>
-                                                <option value="9">9등급</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-lg-4">
                                             <label for="third-social" class="form-label">사회탐구</label>
                                             <select class="form-select" id="third-social" name="third-social">
                                                 <option selected value="0">미응시</option>
@@ -447,6 +431,22 @@
                                         <div class="col-lg-4">
                                             <label for="third-science" class="form-label">과학탐구</label>
                                             <select class="form-select" id="third-science" name="third-science">
+                                                <option selected value="0">미응시</option>
+                                                <option value="1">1등급</option>
+                                                <option value="2">2등급</option>
+                                                <option value="3">3등급</option>
+                                                <option value="4">4등급</option>
+                                                <option value="5">5등급</option>
+                                                <option value="6">6등급</option>
+                                                <option value="7">7등급</option>
+                                                <option value="8">8등급</option>
+                                                <option value="9">9등급</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                            <label for="third-history" class="form-label">한국사</label>
+                                            <select class="form-select" id="third-history" name="third-history">
                                                 <option selected value="0">미응시</option>
                                                 <option value="1">1등급</option>
                                                 <option value="2">2등급</option>
@@ -621,14 +621,14 @@
             fm = fm.options[fm.selectedIndex].value
             var fe = document.getElementById("first-english")
             fe = fe.options[fe.selectedIndex].value
-            var fh = document.getElementById("first-history")
-            fh = fh.options[fh.selectedIndex].value
             var fso = document.getElementById("first-social")
             fso = fso.options[fso.selectedIndex].value
             var fsc = document.getElementById("first-science")
             fsc = fsc.options[fsc.selectedIndex].value
+            var fh = document.getElementById("first-history")
+            fh = fh.options[fh.selectedIndex].value
 
-            var fsum = fk + fm + fe + fh + fso + fsc
+            var fsum = fk + fm + fe + fso + fsc + fh
 
             var sk = document.getElementById("second-korean")
             sk = sk.options[sk.selectedIndex].value
@@ -636,14 +636,14 @@
             sm = sm.options[sm.selectedIndex].value
             var se = document.getElementById("second-english")
             se = se.options[se.selectedIndex].value
-            var sh = document.getElementById("second-history")
-            sh = sh.options[sh.selectedIndex].value
             var sso = document.getElementById("second-social")
             sso = sso.options[sso.selectedIndex].value
             var ssc = document.getElementById("second-science")
             ssc = ssc.options[ssc.selectedIndex].value
+            var sh = document.getElementById("second-history")
+            sh = sh.options[sh.selectedIndex].value
 
-            var ssum = sk + sm + se + sh + sso + ssc
+            var ssum = sk + sm + se + sso + ssc + sh
 
             var tk = document.getElementById("third-korean")
             tk = tk.options[tk.selectedIndex].value
@@ -651,14 +651,14 @@
             tm = tm.options[tm.selectedIndex].value
             var te = document.getElementById("third-english")
             te = te.options[te.selectedIndex].value
-            var th = document.getElementById("third-history")
-            th = th.options[th.selectedIndex].value
             var tso = document.getElementById("third-social")
             tso = tso.options[tso.selectedIndex].value
             var tsc = document.getElementById("third-science")
             tsc = tsc.options[tsc.selectedIndex].value
+            var th = document.getElementById("third-history")
+            th = th.options[th.selectedIndex].value
 
-            var tsum = tk + tm + te + th + tso + tsc
+            var tsum = tk + tm + te + tso + tsc + th
 
             var sum = fsum + ssum + tsum
 

@@ -51,34 +51,7 @@
        unset($grade_3[$i]);
    }
 
- function white($arr_1,$arr_2,$arr_3)
-  { 
-   
-  
-   if(sizeof($arr_1)==0)
-    $average_1 = 0;
-   else
-    $average_1 = array_sum($arr_1)/sizeof($arr_1);
-
-   if(sizeof($arr_2)==0)
-    $average_2 = 0;
-   else
-    $average_2 = array_sum($arr_2)/sizeof($arr_2);
-
-   if(sizeof($arr_3)==0)
-    $average_3 = 0;
-   else
-    $average_3 = array_sum($arr_3)/sizeof($arr_3);
-   
-
-   $average = array($average_1, $average_2, $average_3);
-   for($j=0; $j<3; $j++) {
-     if ($average[$j]==0)
-       unset($average[$j]);
-   }
-   return array_sum($average)/sizeof($average);
-
-  }
+ 
 
  function gray($arr_1,$arr_2,$arr_3)
   {
@@ -216,9 +189,6 @@
        }
      return array_sum($average)/sizeof($average);    
     }
-
-
-
   }  
 
  function light_yellow($arr_1,$arr_2,$arr_3)
