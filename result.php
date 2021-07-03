@@ -30,9 +30,9 @@ function white($arr_1, $arr_2, $arr_3)
 
 function gray($arr_1, $arr_2, $arr_3)
 {
-    global $Line;
+    global $type;
 
-    if ($Line == "인문") {
+    if ($type == "인문") {
         unset($arr_1[3]);
         unset($arr_1[5]);
         unset($arr_2[3]);
@@ -63,7 +63,7 @@ function gray($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($Line == "자연") {
+    if ($type == "자연") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
@@ -98,9 +98,9 @@ function gray($arr_1, $arr_2, $arr_3)
 
 function yellow($arr_1, $arr_2, $arr_3)
 {
-    global $Line;
+    global $type;
 
-    if ($Line == "인문") {
+    if ($type == "인문") {
         unset($arr_1[3]);
         unset($arr_2[3]);
         unset($arr_3[3]);
@@ -128,7 +128,7 @@ function yellow($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($Line == "자연") {
+    if ($type == "자연") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
@@ -163,9 +163,9 @@ function yellow($arr_1, $arr_2, $arr_3)
 
 function light_yellow($arr_1, $arr_2, $arr_3)
 {
-    global $Line;
+    global $type;
 
-    if ($Line == "인문") {
+    if ($type == "인문") {
         unset($arr_1[3]);
         unset($arr_2[3]);
         unset($arr_3[3]);
@@ -193,7 +193,7 @@ function light_yellow($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($Line == "자연") {
+    if ($type == "자연") {
         unset($arr_1[4]);
         unset($arr_2[4]);
         unset($arr_3[4]);
@@ -255,9 +255,9 @@ function green($arr_1, $arr_2, $arr_3)
 
 function beige($arr_1, $arr_2, $arr_3)
 {
-    global $Line;
+    global $type;
 
-    if ($Line == "인문") {
+    if ($type == "인문") {
         unset($arr_1[5]);
         unset($arr_2[5]);
         unset($arr_3[5]);
@@ -285,7 +285,7 @@ function beige($arr_1, $arr_2, $arr_3)
         }
         return array_sum($average) / sizeof($average);
     }
-    if ($Line == "자연") {
+    if ($type == "자연") {
         unset($arr_1[4]);
         unset($arr_1[5]);
         unset($arr_2[4]);
