@@ -410,12 +410,12 @@ $simple_avg /= $count;
 
 
 
-$white = white($grade_1, $grade_2, $grade_3);
-$gray = gray($grade_1, $grade_2, $grade_3);
-$yellow = yellow($grade_1, $grade_2, $grade_3);
-$light_yellow = light_yellow($grade_1, $grade_2, $grade_3);
-$green = green($grade_1, $grade_2, $grade_3);
-$beige = beige($grade_1, $grade_2, $grade_3);
+$white = white($first, $second, $third);
+$gray = gray($first, $second, $third);
+$yellow = yellow($first, $second, $third);
+$light_yellow = light_yellow($first, $second, $third);
+$green = green($first, $second, $third);
+$beige = beige($first, $second, $third);
 
 ?>
 
