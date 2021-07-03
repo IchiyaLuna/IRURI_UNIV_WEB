@@ -33,11 +33,11 @@ function gray($arr_1, $arr_2, $arr_3)
     global $type;
 
     if ($type == "인문") {
-        unset($arr_1[3]);
+        unset($arr_1[4]);
         unset($arr_1[5]);
-        unset($arr_2[3]);
+        unset($arr_2[4]);
         unset($arr_2[5]);
-        unset($arr_3[3]);
+        unset($arr_3[4]);
         unset($arr_3[5]);
 
         if (sizeof($arr_1) == 0)
@@ -64,11 +64,11 @@ function gray($arr_1, $arr_2, $arr_3)
         return array_sum($average) / sizeof($average);
     }
     if ($type == "자연") {
-        unset($arr_1[4]);
+        unset($arr_1[3]);
         unset($arr_1[5]);
-        unset($arr_2[4]);
+        unset($arr_2[3]);
         unset($arr_2[5]);
-        unset($arr_3[4]);
+        unset($arr_3[3]);
         unset($arr_3[5]);
 
         if (sizeof($arr_1) == 0)
@@ -101,9 +101,9 @@ function yellow($arr_1, $arr_2, $arr_3)
     global $type;
 
     if ($type == "인문") {
-        unset($arr_1[3]);
-        unset($arr_2[3]);
-        unset($arr_3[3]);
+        unset($arr_1[4]);
+        unset($arr_2[4]);
+        unset($arr_3[4]);
 
         if (sizeof($arr_1) == 0)
             $average_1 = 0;
@@ -129,11 +129,11 @@ function yellow($arr_1, $arr_2, $arr_3)
         return array_sum($average) / sizeof($average);
     }
     if ($type == "자연") {
-        unset($arr_1[4]);
+        unset($arr_1[3]);
         unset($arr_1[5]);
-        unset($arr_2[4]);
+        unset($arr_2[3]);
         unset($arr_2[5]);
-        unset($arr_3[4]);
+        unset($arr_3[3]);
         unset($arr_3[5]);
 
         if (sizeof($arr_1) == 0)
@@ -166,9 +166,9 @@ function light_yellow($arr_1, $arr_2, $arr_3)
     global $type;
 
     if ($type == "인문") {
-        unset($arr_1[3]);
-        unset($arr_2[3]);
-        unset($arr_3[3]);
+        unset($arr_1[4]);
+        unset($arr_2[4]);
+        unset($arr_3[4]);
 
         if (sizeof($arr_1) == 0)
             $average_1 = 0;
@@ -194,9 +194,9 @@ function light_yellow($arr_1, $arr_2, $arr_3)
         return array_sum($average) / sizeof($average);
     }
     if ($type == "자연") {
-        unset($arr_1[4]);
-        unset($arr_2[4]);
-        unset($arr_3[4]);
+        unset($arr_1[3]);
+        unset($arr_2[3]);
+        unset($arr_3[3]);
 
         if (sizeof($arr_1) == 0)
             $average_1 = 0;
@@ -286,11 +286,11 @@ function beige($arr_1, $arr_2, $arr_3)
         return array_sum($average) / sizeof($average);
     }
     if ($type == "자연") {
-        unset($arr_1[4]);
+        unset($arr_1[3]);
         unset($arr_1[5]);
-        unset($arr_2[4]);
+        unset($arr_2[3]);
         unset($arr_2[5]);
-        unset($arr_3[4]);
+        unset($arr_3[3]);
         unset($arr_3[5]);
 
         if (sizeof($arr_1) == 0)
