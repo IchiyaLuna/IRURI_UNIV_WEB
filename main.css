@@ -47,7 +47,7 @@ body {
 
 .content-main {
   padding: 2rem;
-  height: auto;
+  height: min-content;
   margin-top: 0.5rem;
 
   font-family: 'Noto Sans KR',
