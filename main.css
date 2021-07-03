@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-body {
-  /*min-height: 75rem;*/
-  padding-top: 4.5rem
-}
-
-@media (max-width: 768px) {
-  body {
-    min-height: 175rem;
-  }
-}
-
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
@@ -48,7 +37,7 @@ body {
 .content-main {
   padding: 2rem;
   height: min-content;
-  margin-top: 0.5rem;
+  margin-top: 5rem;
 
   font-family: 'Noto Sans KR',
     sans-serif;
@@ -57,9 +46,9 @@ body {
 
 .content-sidebar {
   position: sticky;
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 10rem);
   top: 5rem;
-
+  margin-top: 5rem;
   font-family: 'Noto Sans KR',
     sans-serif;
 }
