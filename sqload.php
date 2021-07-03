@@ -11,7 +11,7 @@ if (!$database) {
 
 $sql = "SELECT * FROM sushi_2022";
 $fetch_all = mysqli_query($database, $sql);
-
+    echo "<div class='result-table table-responsive'>";
     echo "<table class='table'>";
     echo "<thead>";
     echo "<tr>";
@@ -38,6 +38,6 @@ $fetch_all = mysqli_query($database, $sql);
     }
 echo "</tbody>";
 echo "</table>";
-
+echo "</div>";
 
 mysqli_close($database);
