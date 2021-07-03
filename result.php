@@ -2,6 +2,325 @@
 <html lang="ko" class="h-100">
 
 <?php
+function white($arr_1, $arr_2, $arr_3)
+{
+
+    if (sizeof($arr_1) == 0)
+        $average_1 = 0;
+    else
+        $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+    if (sizeof($arr_2) == 0)
+        $average_2 = 0;
+    else
+        $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+    if (sizeof($arr_3) == 0)
+        $average_3 = 0;
+    else
+        $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+
+    $average = array($average_1, $average_2, $average_3);
+    for ($j = 0; $j < 3; $j++) {
+        if ($average[$j] == 0)
+            unset($average[$j]);
+    }
+    return array_sum($average) / sizeof($average);
+}
+
+function gray($arr_1, $arr_2, $arr_3)
+{
+    global $type;
+
+    if ($type == "인문") {
+        unset($arr_1[3]);
+        unset($arr_1[5]);
+        unset($arr_2[3]);
+        unset($arr_2[5]);
+        unset($arr_3[3]);
+        unset($arr_3[5]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+    if ($type == "자연") {
+        unset($arr_1[4]);
+        unset($arr_1[5]);
+        unset($arr_2[4]);
+        unset($arr_2[5]);
+        unset($arr_3[4]);
+        unset($arr_3[5]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+}
+
+function yellow($arr_1, $arr_2, $arr_3)
+{
+    global $type;
+
+    if ($type == "인문") {
+        unset($arr_1[3]);
+        unset($arr_2[3]);
+        unset($arr_3[3]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+    if ($type == "자연") {
+        unset($arr_1[4]);
+        unset($arr_1[5]);
+        unset($arr_2[4]);
+        unset($arr_2[5]);
+        unset($arr_3[4]);
+        unset($arr_3[5]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+}
+
+function light_yellow($arr_1, $arr_2, $arr_3)
+{
+    global $type;
+
+    if ($type == "인문") {
+        unset($arr_1[3]);
+        unset($arr_2[3]);
+        unset($arr_3[3]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+    if ($type == "자연") {
+        unset($arr_1[4]);
+        unset($arr_2[4]);
+        unset($arr_3[4]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+}
+
+function green($arr_1, $arr_2, $arr_3)
+{
+
+    unset($arr_1[5]);
+    unset($arr_2[5]);
+    unset($arr_3[5]);
+
+    if (sizeof($arr_1) == 0)
+        $average_1 = 0;
+    else
+        $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+    if (sizeof($arr_2) == 0)
+        $average_2 = 0;
+    else
+        $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+    if (sizeof($arr_3) == 0)
+        $average_3 = 0;
+    else
+        $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+    $average = array($average_1, $average_2, $average_3);
+
+    for ($j = 0; $j < 3; $j++) {
+        if ($average[$j] == 0)
+            unset($average[$j]);
+    }
+    return array_sum($average) / sizeof($average);
+}
+
+function beige($arr_1, $arr_2, $arr_3)
+{
+    global $type;
+
+    if ($type == "인문") {
+        unset($arr_1[5]);
+        unset($arr_2[5]);
+        unset($arr_3[5]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+    if ($type == "자연") {
+        unset($arr_1[4]);
+        unset($arr_1[5]);
+        unset($arr_2[4]);
+        unset($arr_2[5]);
+        unset($arr_3[4]);
+        unset($arr_3[5]);
+
+        if (sizeof($arr_1) == 0)
+            $average_1 = 0;
+        else
+            $average_1 = array_sum($arr_1) / sizeof($arr_1);
+
+        if (sizeof($arr_2) == 0)
+            $average_2 = 0;
+        else
+            $average_2 = array_sum($arr_2) / sizeof($arr_2);
+
+        if (sizeof($arr_3) == 0)
+            $average_3 = 0;
+        else
+            $average_3 = array_sum($arr_3) / sizeof($arr_3);
+
+        $average = array($average_1, $average_2, $average_3);
+
+        for ($j = 0; $j < 3; $j++) {
+            if ($average[$j] == 0)
+                unset($average[$j]);
+        }
+        return array_sum($average) / sizeof($average);
+    }
+}
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender-radio"];
     $type = $_POST["type-radio"];
@@ -32,6 +351,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $third_science = $_POST["third-science"];
 
     $third = array($third_korean, $third_math, $third_english, $third_history, $third_social, $third_science);
+}
+
+for ($i = 0; $i < 6; $i++) {
+    if ($first[$i] == 0)
+        unset($first[$i]);
+}
+
+for ($i = 0; $i < 6; $i++) {
+    if ($second[$i] == 0)
+        unset($second[$i]);
+}
+
+for ($i = 0; $i < 6; $i++) {
+    if ($third[$i] == 0)
+        unset($third[$i]);
 }
 
 if ($gender == 1) {
@@ -73,6 +407,15 @@ foreach ($third as $value) {
 }
 
 $simple_avg /= $count;
+
+
+
+$white = white($grade_1, $grade_2, $grade_3);
+$gray = gray($grade_1, $grade_2, $grade_3);
+$yellow = yellow($grade_1, $grade_2, $grade_3);
+$light_yellow = light_yellow($grade_1, $grade_2, $grade_3);
+$green = green($grade_1, $grade_2, $grade_3);
+$beige = beige($grade_1, $grade_2, $grade_3);
 
 ?>
 
@@ -225,6 +568,12 @@ $simple_avg /= $count;
                                     </tr>
                                 </tbody>
                             </table>
+                            <?php echo $white . "<br>"; ?>
+                            <?php echo $gray . "<br>"; ?>
+                            <?php echo $yellow . "<br>"; ?>
+                            <?php echo $light_yellow . "<br>"; ?>
+                            <?php echo $green . "<br>"; ?>
+                            <?php echo $beige . "<br>"; ?>
                         </div>
 
                         <?php include "./sqload.php"; ?>
