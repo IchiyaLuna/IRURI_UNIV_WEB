@@ -24,7 +24,7 @@ $fetch_all = mysqli_query($database, $sql);
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
-    while ($row = mysqli_fetch_assoc($fetch_all)) {
+    while ($row = mysqli_fetch_array($fetch_all)) {
         echo "<tr>";
         echo "<td>" . $row['code']."<td>";
         echo "<td>" . $row['location'] . "<td>";
