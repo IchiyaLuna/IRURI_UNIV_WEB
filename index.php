@@ -30,6 +30,12 @@
     <!-- Custom styles for this template -->
 
     <link href="main.css" rel="stylesheet">
+    <script>
+        //페이지 로드될때 새로고침
+        $(document).on("pageload", function() {
+            window.location.reload(true);
+        });
+    </script>
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
