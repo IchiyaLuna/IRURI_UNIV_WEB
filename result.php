@@ -144,6 +144,33 @@ foreach ((array) $result_list as $key => $value) {
 }
 
 array_multisort($sort, SORT_ASC, $result_list);
+
+$index = 0;
+
+foreach ($result_list as $vaule) {
+    
+    if ($vaule[5] < 0) {
+        continue;
+    }
+    if ($value[5] >= 0) {
+        break;
+    }
+
+    $index++;
+}
+
+$final_result = array();
+
+if ($index == 0) {
+    for ($i = 0; $i < 5; $i++) {
+        array_push($final_result, $result_list[$i]);
+    }
+} else {
+    for ($i = $index - 1; $i < $index + 4; $i++) {
+        array_push($final_result, $result_list[$i]);
+    }
+}
+
 ?>
 
 <head>
@@ -306,6 +333,7 @@ array_multisort($sort, SORT_ASC, $result_list);
                         <?php echo $beige . "<br>"; ?>
 
                         <?php
+                        
                         echo "<table class='table table-bordered'>";
                         echo "<thead>";
                         echo "<tr>";
@@ -319,7 +347,7 @@ array_multisort($sort, SORT_ASC, $result_list);
                         echo "</thead>";
                         echo "<tbody>";
 
-                        foreach ($result_list as $result) {
+                        foreach ($final_result as $result) {
                             echo "<tr>";
                             echo "<td>" . $result[0] . "</td>";
                             echo "<td>" . $result[1] . "</td>";
