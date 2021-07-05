@@ -2,10 +2,6 @@
 <html lang="ko" class="h-100">
 
 <head>
-    <?php
-    header("Progma:no-cache");
-    header("Cache-Control:no-cache,must-revalidate");
-    ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
@@ -34,12 +30,6 @@
     <!-- Custom styles for this template -->
 
     <link href="main.css" rel="stylesheet">
-    <script>
-        //페이지 로드될때 새로고침
-        $(document).on("pageload", function() {
-            window.location.reload(true);
-        });
-    </script>
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -121,7 +111,7 @@
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
                         <label class="form-check-label" for="flexCheckDefault">
                             개인정보 제공 및 활용에 동의합니다
                         </label>
@@ -137,7 +127,7 @@
 
                         <div class="card card-body">
                             <br>
-                            <form name="input-form" id="input-form" method="POST" action="./result.php">
+                            <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
                                 <div class="gender-type container">
 
                                     <div class="row">
