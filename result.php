@@ -6,6 +6,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $gender = $_POST["gender-radio"];
     $type = $_POST["type-radio"];
 
@@ -89,6 +90,59 @@ $light_yellow = light_yellow($first, $second, $third);
 $green = green($first, $second, $third);
 $beige = beige($first, $second, $third);
 
+include "./univ_load.php";
+
+$result_list = array();
+
+foreach ($univ_list as $univ) {
+
+    $gap = 0;
+
+    if ($gender == "남") {
+        if (strpos($univ['name'], "여대") !== false) {
+            continue;
+        }
+    }
+
+    switch ($univ['method']) {
+        case 0:
+            $gap = $univ['avg'] - $white;
+            $this_time_myavg = $white;
+            break;
+        case 1:
+            $gap = $univ['avg'] - $gray;
+            $this_time_myavg = $gray;
+            break;
+        case 2:
+            $gap = $univ['avg'] - $yellow;
+            $this_time_myavg = $yellow;
+            break;
+        case 3:
+            $gap = $univ['avg'] - $light_yellow;
+            $this_time_myavg = $light_yellow;
+            break;
+        case 4:
+            $gap = $univ['avg'] - $green;
+            $this_time_myavg = $green;
+            break;
+        case 5:
+            $gap = $univ['avg'] - $beige;
+            $this_time_myavg = $beige;
+            break;
+        default:
+            $gap = -1;
+            break;
+    }
+
+    $this_time_result = array($univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
+}
+
+foreach ((array) $result_list as $key => $value) {
+
+    $sort[$key] = $value[5];
+}
+
+array_multisort($sort, SORT_ASC, $result_list);
 ?>
 
 <head>
@@ -240,15 +294,42 @@ $beige = beige($first, $second, $third);
                                     </tr>
                                 </tbody>
                             </table>
-                            <?php echo $white . "<br>"; ?>
-                            <?php echo $gray . "<br>"; ?>
-                            <?php echo $yellow . "<br>"; ?>
-                            <?php echo $light_yellow . "<br>"; ?>
-                            <?php echo $green . "<br>"; ?>
-                            <?php echo $beige . "<br>"; ?>
+
                         </div>
 
-                        <?php include "./sqload.php"; ?>
+                        <?php echo $white . "<br>"; ?>
+                        <?php echo $gray . "<br>"; ?>
+                        <?php echo $yellow . "<br>"; ?>
+                        <?php echo $light_yellow . "<br>"; ?>
+                        <?php echo $green . "<br>"; ?>
+                        <?php echo $beige . "<br>"; ?>
+
+                        <?php
+                        echo "<table class='table table-bordered'>";
+                        echo "<thead>";
+                        echo "<tr>";
+                        echo "<th scope='col'>name</th>";
+                        echo "<th scope='col'>low</th>";
+                        echo "<th scope='col'>high</th>";
+                        echo "<th scope='col'>avg</th>";
+                        echo "<th scope='col'>myavg</th>";
+                        echo "<th scope='col'>gap</th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        foreach ($result_list as $result) {
+                            echo "<tr>";
+                            echo "<td>" . $result[0] . "</td>";
+                            echo "<td>" . $result[1] . "</td>";
+                            echo "<td>" . $result[2] . "</td>";
+                            echo "<td>" . $result[3] . "</td>";
+                            echo "<td>" . $result[4] . "</td>";
+                            echo "<td>" . $result[5] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</table>";       
+                        ?>
                     </div>
                 </div>
                 <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
