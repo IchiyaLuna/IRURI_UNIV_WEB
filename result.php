@@ -150,12 +150,11 @@ $index = 0;
 foreach ($result_list as $vaule) {
     
     if ($vaule[5] < 0.0) {
+        $index++;
         continue;
     } elseif ($value[5] >= 0.0) {
         break;
     }
-
-    $index++;
 }
 
 $final_result = array();
