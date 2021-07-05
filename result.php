@@ -165,7 +165,7 @@ if ($index == 0) {
     for ($i = 0; $i < 5; $i++) {
         if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
         elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][2]) $posi = 3;
+        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
         else $posi = 2;
         $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
@@ -174,7 +174,7 @@ if ($index == 0) {
     for ($i = $index - 1; $i < $index + 4; $i++) {
         if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
         elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][2]) $posi = 3;
+        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
         else $posi = 2;
         $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
