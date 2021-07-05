@@ -163,12 +163,12 @@ $final_result = array();
 
 if ($index == 0) {
     for ($i = 0; $i < 5; $i++) {
-        $arr_to_push = array($result_list[0], $result_list[1], $result_list[2], $result_list[3], $result_list[4], round($result_list[5], 2));
+        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 2));
         array_push($final_result, $arr_to_push);
     }
 } else {
     for ($i = $index - 1; $i < $index + 4; $i++) {
-        $arr_to_push = array($result_list[0], $result_list[1], $result_list[2], $result_list[3], $result_list[4], round($result_list[5], 2));
+        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 2));
         array_push($final_result, $arr_to_push);
     }
 }
