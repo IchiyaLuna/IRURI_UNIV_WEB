@@ -261,8 +261,8 @@ if ($index == 0) {
                                                             <th scope="col">합격예측</th>
                                                             <th scope="col">대학</th>
                                                             <th scope="col">등급 간 차이</th>
-                                                            <th scope="col">대학 합격 평균 등급</th>
-                                                            <th scope="col">내 환산등급</th>
+                                                            <th scope="col">합격 평균 등급</th>
+                                                            <th scope="col">내 환산 등급</th>
                                                             <th scope="col">상세 정보</th>
                                                         </tr>
                                                     </thead>
