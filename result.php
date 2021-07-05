@@ -291,41 +291,42 @@ if ($index == 0) {
                                                     <tr>
                                                         <th scope="col">합격예측</th>
                                                         <th scope="col">대학</th>
+                                                        <th scope="col">등급 편차</th>
+                                                        <th scope="col">대학 합격 평균 등급</th>
                                                         <th scope="col">내 환산등급</th>
                                                         <th scope="col">상세 정보</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="table-danger">
-                                                        <td>위험</td>
-                                                        <td>서울대</td>
-                                                        <td>1.3</td>
-                                                        <td>상세</td>
-                                                    </tr>
-                                                    <tr class="table-warning">
-                                                        <td>불안</td>
-                                                        <td>연세대(서울)</td>
-                                                        <td>1.2</td>
-                                                        <td>상세</td>
-                                                    </tr>
-                                                    <tr class="table-success">
-                                                        <td>가능</td>
-                                                        <td>고려대(서울)</td>
-                                                        <td>1.2</td>
-                                                        <td>상세</td>
-                                                    </tr>
-                                                    <tr class="table-primary">
-                                                        <td>안정</td>
-                                                        <td>한양대</td>
-                                                        <td>1.2</td>
-                                                        <td>상세</td>
-                                                    </tr>
-                                                    <tr class="table-primary">
-                                                        <td>안정</td>
-                                                        <td>성균관대</td>
-                                                        <td>1.2</td>
-                                                        <td>상세</td>
-                                                    </tr>
+                                                    <?php
+                                                    foreach ($final_result as $result) {
+
+                                                        switch ($result[0]) {
+                                                            case 0:
+                                                                echo "<tr class='table-primary'>";
+                                                                echo "<td>" . "안정" . "</td>";
+                                                                break;
+                                                            case 1:
+                                                                echo "<tr class='table-success'>";
+                                                                echo "<td>" . "가능" . "</td>";
+                                                                break;
+                                                            case 2:
+                                                                echo "<tr class='table-warning'>";
+                                                                echo "<td>" . "불안" . "</td>";
+                                                                break;
+                                                            case 3:
+                                                                echo "<tr class='table-danger'>";
+                                                                echo "<td>" . "위험" . "</td>";
+                                                                break;
+                                                        }
+                                                        echo "<td>" . $result[1] . "</td>";
+                                                        echo "<td>" . $result[6] . "</td>";
+                                                        echo "<td>" . $result[4] . "</td>";
+                                                        echo "<td>" . $result[5] . "</td>";
+                                                        echo "<td>" . "상세" . "</td>";
+                                                        echo "</tr>";
+                                                    }
+                                                    ?>
                                                 </tbody>
                                             </table>
                                         </td>
