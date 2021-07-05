@@ -3,7 +3,7 @@
 
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . "./avg_functions.php";
+include "./avg_functions.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender-radio"];
