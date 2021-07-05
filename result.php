@@ -149,9 +149,9 @@ $index = 0;
 
 foreach ($result_list as $vaule) {
     
-    if ($vaule[5] < 0) {
+    if ($vaule[5] < 0.0) {
         continue;
-    } elseif ($value[5] >= 0) {
+    } elseif ($value[5] >= 0.0) {
         break;
     }
 
