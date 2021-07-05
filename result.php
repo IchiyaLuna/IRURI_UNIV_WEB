@@ -151,8 +151,7 @@ foreach ($result_list as $vaule) {
     
     if ($vaule[5] < 0) {
         continue;
-    }
-    if ($value[5] >= 0) {
+    } elseif ($value[5] >= 0) {
         break;
     }
 
@@ -333,7 +332,7 @@ if ($index == 0) {
                         <?php echo $beige . "<br>"; ?>
 
                         <?php
-                        
+
                         echo "<table class='table table-bordered'>";
                         echo "<thead>";
                         echo "<tr>";
