@@ -116,7 +116,7 @@
                             개인정보 제공 및 활용에 동의합니다
                         </label>
                     </div>
-                    <br>
+                    
                     <div class="grade-input collapse show" id="grade-input">
                         <div class="card card-body">
                             동의를 선택해야 성적을 입력하실 수 있습니다.
