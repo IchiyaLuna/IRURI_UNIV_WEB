@@ -48,7 +48,7 @@
 
             <a class="navbar-brand" href="https://workruri.akkyu.net/">
                 <img src="./assets/svg/logo_green.webp" width="30" height="30" class="d-inline-block align-top" alt="">
-                이루리 테스트
+                 이루리 테스트
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
