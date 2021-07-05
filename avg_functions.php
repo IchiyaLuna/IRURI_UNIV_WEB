@@ -16,7 +16,7 @@ function count_arr($arr)
 
 function getarravg($arr_1, $arr_2, $arr_3)
 {
-    $arr_all = $arr_1 + $arr_2 + $arr_3;
+    $arr_all = array_merge($arr_1, $arr_2, $arr_3);
 
     return array_sum($arr_all) / count_arr($arr_all);
 }
