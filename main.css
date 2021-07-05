@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+body {
+  font-family: 'Noto Sans KR',
+  sans-serif;
+}
+
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
