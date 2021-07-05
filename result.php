@@ -359,8 +359,25 @@ if ($index == 0) {
                         echo "<tbody>";
 
                         foreach ($final_result as $result) {
-                            echo "<tr>";
-                            echo "<td>" . $result[0] . "</td>";
+
+                            switch ($result[0]) {
+                                case 0:
+                                    echo "<tr class='table-primary'>";
+                                    echo "<td>" . "안정" . "</td>";
+                                    break;
+                                case 1:
+                                    echo "<tr class='table-primary'>";
+                                    echo "<td>" . "가능" . "</td>";
+                                    break;
+                                case 2:
+                                    echo "<tr class='table-primary'>";
+                                    echo "<td>" . "불안" . "</td>";
+                                    break;
+                                case 3:
+                                    echo "<tr class='table-primary'>";
+                                    echo "<td>" . "위험" . "</td>";
+                                    break;
+                            }
                             echo "<td>" . $result[1] . "</td>";
                             echo "<td>" . $result[2] . "</td>";
                             echo "<td>" . $result[3] . "</td>";
