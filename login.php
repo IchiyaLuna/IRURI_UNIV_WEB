@@ -20,7 +20,7 @@
 
   <main class="form-signin">
     <form>
-      <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <img class="mb-4" src="../assets/webp/logo_green.webp" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">로그인</h1>
 
       <div class="form-floating">
@@ -43,5 +43,4 @@
   </main>
 
 </body>
-
 </html>
