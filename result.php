@@ -152,7 +152,7 @@ foreach ($result_list as $vaule) {
 
     if ($vaule[5] < 0.0) {
 
-        if ($index == $univ_count - 4) break;
+        if ($index == $univ_count - 6) break;
 
         $index++;
         continue;
@@ -161,8 +161,8 @@ foreach ($result_list as $vaule) {
 
 $final_result = array();
 
-if ($index == 0) {
-    for ($i = 0; $i < 5; $i++) {
+if ($index < 3) {
+    for ($i = 0; $i < 10; $i++) {
         if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
         elseif ($result_list[$i][5] > 0) $posi = 1;
         elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
@@ -171,7 +171,7 @@ if ($index == 0) {
         array_push($final_result, $arr_to_push);
     }
 } else {
-    for ($i = $index - 1; $i < $index + 4; $i++) {
+    for ($i = $index - 3; $i < $index + 7; $i++) {
         if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
         elseif ($result_list[$i][5] > 0) $posi = 1;
         elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
