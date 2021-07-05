@@ -286,7 +286,7 @@ if ($index == 0) {
                                     </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <table class="table mb-0 table-hover">
+                                            <table class="table mb-0 table-hover table-responsive">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">합격예측</th>
