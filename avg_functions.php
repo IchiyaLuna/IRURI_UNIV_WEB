@@ -18,7 +18,7 @@ function getarravg($arr_1, $arr_2, $arr_3)
 {
     $arr_all = $arr_1 + $arr_2 + $arr_3;
 
-    return $arr_all / count_arr($arr_all);
+    return array_sum($arr_all) / count_arr($arr_all);
 }
 
 function white($arr_1, $arr_2, $arr_3)

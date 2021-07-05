@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="ko" class="h-100">
 
+<?php include "./avg_functions.php"; ?>
+
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
