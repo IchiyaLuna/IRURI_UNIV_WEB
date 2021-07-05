@@ -3,8 +3,6 @@
 
 <?php
 
-include "./avg_functions.php";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender-radio"];
     $type = $_POST["type-radio"];
