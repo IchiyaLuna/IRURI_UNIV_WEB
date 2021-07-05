@@ -20,8 +20,8 @@
 
   <main class="form-signin">
     <form>
-      <img class="mb-4" src="../assets/webp/logo_green.webp" alt="" width="72" height="57">
-      <h1 class="h3 mb-3 fw-normal">로그인</h1>
+      <img class="mb-4" src="../assets/webp/logo_green.webp" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 fw-normal">관리자 로그인</h1>
 
       <div class="form-floating">
         <input type="text" class="form-control" id="floatingInput" placeholder="ID">
