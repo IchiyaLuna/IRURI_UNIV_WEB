@@ -46,7 +46,11 @@
 
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="https://workruri.akkyu.net/">이루리 테스트</a>
+            <a class="navbar-brand" href="https://workruri.akkyu.net/">
+                <img src="./assets/svg/logo_green.svg" width="30" height="30" alt="">
+                <img src="./assets/svg/logo_white.svg" width="30" height="30" alt="">
+                이루리 테스트
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
