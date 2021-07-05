@@ -107,27 +107,27 @@ foreach ($univ_list as $univ) {
     switch ($univ['method']) {
         case 0:
             $gap = $univ['avg'] - $white;
-            $this_time_myavg = $white;
+            $this_time_myavg = round($white, 2);
             break;
         case 1:
             $gap = $univ['avg'] - $gray;
-            $this_time_myavg = $gray;
+            $this_time_myavg = round($gray, 2);
             break;
         case 2:
             $gap = $univ['avg'] - $yellow;
-            $this_time_myavg = $yellow;
+            $this_time_myavg = round($yellow, 2);
             break;
         case 3:
             $gap = $univ['avg'] - $light_yellow;
-            $this_time_myavg = $light_yellow;
+            $this_time_myavg = round($light_yellow, 2);
             break;
         case 4:
             $gap = $univ['avg'] - $green;
-            $this_time_myavg = $green;
+            $this_time_myavg = round($green, 2);
             break;
         case 5:
             $gap = $univ['avg'] - $beige;
-            $this_time_myavg = $beige;
+            $this_time_myavg = round($beige, 2);
             break;
         default:
             $gap = -1;
