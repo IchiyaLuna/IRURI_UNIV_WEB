@@ -107,27 +107,27 @@ foreach ($univ_list as $univ) {
     switch ($univ['method']) {
         case 0:
             $gap = $univ['avg'] - $white;
-            $this_time_myavg = round($white, 2);
+            $this_time_myavg = round($white, 3);
             break;
         case 1:
             $gap = $univ['avg'] - $gray;
-            $this_time_myavg = round($gray, 2);
+            $this_time_myavg = round($gray, 3);
             break;
         case 2:
             $gap = $univ['avg'] - $yellow;
-            $this_time_myavg = round($yellow, 2);
+            $this_time_myavg = round($yellow, 3);
             break;
         case 3:
             $gap = $univ['avg'] - $light_yellow;
-            $this_time_myavg = round($light_yellow, 2);
+            $this_time_myavg = round($light_yellow, 3);
             break;
         case 4:
             $gap = $univ['avg'] - $green;
-            $this_time_myavg = round($green, 2);
+            $this_time_myavg = round($green, 3);
             break;
         case 5:
             $gap = $univ['avg'] - $beige;
-            $this_time_myavg = round($beige, 2);
+            $this_time_myavg = round($beige, 3);
             break;
         default:
             $gap = -1;
@@ -163,12 +163,12 @@ $final_result = array();
 
 if ($index == 0) {
     for ($i = 0; $i < 5; $i++) {
-        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 2));
+        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
     }
 } else {
     for ($i = $index - 1; $i < $index + 4; $i++) {
-        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 2));
+        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
     }
 }
