@@ -152,7 +152,7 @@ foreach ($result_list as $vaule) {
 
     if ($vaule[5] < 0.0) {
 
-        if ($index == $univ_count - 6) break;
+        if ($index == $univ_count - 7) break;
 
         $index++;
         continue;
