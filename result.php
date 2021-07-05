@@ -149,10 +149,10 @@ $index = 0;
 $univ_count = sizeof($result_list);
 
 foreach ($result_list as $vaule) {
-    
+
     if ($vaule[5] < 0.0) {
 
-        if($index == $univ_count - 4) break;
+        if ($index == $univ_count - 4) break;
 
         $index++;
         continue;
@@ -163,12 +163,20 @@ $final_result = array();
 
 if ($index == 0) {
     for ($i = 0; $i < 5; $i++) {
-        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
+        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
+        elseif ($result_list[$i][5] > 0) $posi = 1;
+        elseif ($result_list[$i][4] > $result_list[$i][2]) $posi = 3;
+        else $posi = 2;
+        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
     }
 } else {
     for ($i = $index - 1; $i < $index + 4; $i++) {
-        $arr_to_push = array($result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
+        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
+        elseif ($result_list[$i][5] > 0) $posi = 1;
+        elseif ($result_list[$i][4] > $result_list[$i][2]) $posi = 3;
+        else $posi = 2;
+        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
         array_push($final_result, $arr_to_push);
     }
 }
@@ -339,6 +347,7 @@ if ($index == 0) {
                         echo "<table class='table table-bordered'>";
                         echo "<thead>";
                         echo "<tr>";
+                        echo "<th scope='col'>posi</th>";
                         echo "<th scope='col'>name</th>";
                         echo "<th scope='col'>low</th>";
                         echo "<th scope='col'>high</th>";
@@ -357,11 +366,12 @@ if ($index == 0) {
                             echo "<td>" . $result[3] . "</td>";
                             echo "<td>" . $result[4] . "</td>";
                             echo "<td>" . $result[5] . "</td>";
+                            echo "<td>" . $result[6] . "</td>";
                             echo "</tr>";
                         }
 
                         echo "</tbody>";
-                        echo "</table>";       
+                        echo "</table>";
                         ?>
                     </div>
                 </div>
