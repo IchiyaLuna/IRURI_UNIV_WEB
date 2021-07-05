@@ -12,9 +12,9 @@ if (!$database) {
 }
 
 if ($type == "인문") {
-    $sql = "SELECT * FROM sushi_2022 WHERE type = '인문'";
+    $sql = "SELECT * FROM sushi_2022_n WHERE type = '인문'";
 } elseif ($type == "자연") {
-    $sql = "SELECT * FROM sushi_2022 WHERE type = '자연'";
+    $sql = "SELECT * FROM sushi_2022_n WHERE type = '자연'";
 }
 
 $fetch_all = mysqli_query($database, $sql);
