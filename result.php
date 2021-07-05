@@ -291,7 +291,7 @@ if ($index == 0) {
                                                     <tr>
                                                         <th scope="col">합격예측</th>
                                                         <th scope="col">대학</th>
-                                                        <th scope="col">등급 편차</th>
+                                                        <th scope="col">등급 간 차이</th>
                                                         <th scope="col">대학 합격 평균 등급</th>
                                                         <th scope="col">내 환산등급</th>
                                                         <th scope="col">상세 정보</th>
@@ -362,12 +362,12 @@ if ($index == 0) {
                                     <tr class="table-success">
                                         <td>가능</td>
                                         <td>합격 가능성</td>
-                                        <td>합격자 평균과의 편차가 양수</td>
+                                        <td>합격자 평균과의 차이가 양수</td>
                                     </tr>
                                     <tr class="table-warning">
                                         <td>불안</td>
                                         <td>추가 합격 가능성</td>
-                                        <td>합격자 평균과의 편차가 음수</td>
+                                        <td>합격자 평균과의 차이가 음수</td>
                                     </tr>
                                     <tr class="table-danger">
                                         <td>위험</td>
