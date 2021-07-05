@@ -14,11 +14,22 @@ function count_arr($arr)
     return $count;
 }
 
-function getarravg($arr_1, $arr_2, $arr_3)
-{
-    $arr_all = array_merge($arr_1, $arr_2, $arr_3);
+function getarravg($arr) {
 
-    return array_sum($arr_all) / count_arr($arr_all);
+    $count = count_arr($arr);
+
+    if ($count == 0) {
+        return 0;
+    } else {
+    return array_sum($arr) / $count;
+    }
+}
+
+function gettotalavg($arr_1, $arr_2, $arr_3)
+{
+    $avg_arr = array(getarravg($arr_1), getarravg($arr_2), getarravg($arr_3));
+
+    return getarravg($avg_arr);
 }
 
 function white($arr_1, $arr_2, $arr_3)
