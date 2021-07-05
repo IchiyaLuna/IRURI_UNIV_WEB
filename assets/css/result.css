@@ -1,4 +1,4 @@
 .result-table {
     word-break: keep-all;
-    white-space: pre;
+    white-space: nowrap;
 }
