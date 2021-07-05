@@ -35,7 +35,7 @@ function gettotalavg($arr_1, $arr_2, $arr_3)
 function white($arr_1, $arr_2, $arr_3)
 {
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
 
 function gray($arr_1, $arr_2, $arr_3)
@@ -59,7 +59,7 @@ function gray($arr_1, $arr_2, $arr_3)
         }
     }
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
 
 function yellow($arr_1, $arr_2, $arr_3)
@@ -83,7 +83,7 @@ function yellow($arr_1, $arr_2, $arr_3)
         }
     }
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
 
 function light_yellow($arr_1, $arr_2, $arr_3)
@@ -107,7 +107,7 @@ function light_yellow($arr_1, $arr_2, $arr_3)
         }
     }
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
 
 function green($arr_1, $arr_2, $arr_3)
@@ -116,7 +116,7 @@ function green($arr_1, $arr_2, $arr_3)
     $arr_2[5] = 0;
     $arr_3[5] = 0;
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
 
 function beige($arr_1, $arr_2, $arr_3)
@@ -140,5 +140,5 @@ function beige($arr_1, $arr_2, $arr_3)
         }
     }
 
-    return getarravg($arr_1, $arr_2, $arr_3);
+    return gettotalavg($arr_1, $arr_2, $arr_3);
 }
