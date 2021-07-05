@@ -492,22 +492,22 @@
                                 <tr class="table-primary">
                                     <td>안정</td>
                                     <td>최초 합격 가능성</td>
-                                    <td>평균과 0~n등급 차이</td>
+                                    <td>합격자 최고 성적 평균보다 위</td>
                                 </tr>
                                 <tr class="table-success">
                                     <td>가능</td>
                                     <td>합격 가능성</td>
-                                    <td>평균과 0~n등급 차이</td>
+                                    <td>합격자 평균과의 편차가 양수</td>
                                 </tr>
                                 <tr class="table-warning">
                                     <td>불안</td>
                                     <td>추가 합격 가능성</td>
-                                    <td>평균과 0~n등급 차이</td>
+                                    <td>합격자 평균과의 편차가 음수</td>
                                 </tr>
                                 <tr class="table-danger">
                                     <td>위험</td>
                                     <td>합격 어려움</td>
-                                    <td>평균과 0~n등급 차이</td>
+                                    <td>합격자 최저 성적 평균보다 아래</td>
                                 </tr>
                             </tbody>
                         </table>

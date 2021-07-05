@@ -335,62 +335,6 @@ if ($index == 0) {
                             </table>
 
                         </div>
-
-                        <?php echo $white . "<br>"; ?>
-                        <?php echo $gray . "<br>"; ?>
-                        <?php echo $yellow . "<br>"; ?>
-                        <?php echo $light_yellow . "<br>"; ?>
-                        <?php echo $green . "<br>"; ?>
-                        <?php echo $beige . "<br>"; ?>
-
-                        <?php
-
-                        echo "<table class='table table-bordered'>";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th scope='col'>posi</th>";
-                        echo "<th scope='col'>name</th>";
-                        echo "<th scope='col'>low</th>";
-                        echo "<th scope='col'>high</th>";
-                        echo "<th scope='col'>avg</th>";
-                        echo "<th scope='col'>myavg</th>";
-                        echo "<th scope='col'>gap</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        echo "<tbody>";
-
-                        foreach ($final_result as $result) {
-
-                            switch ($result[0]) {
-                                case 0:
-                                    echo "<tr class='table-primary'>";
-                                    echo "<td>" . "안정" . "</td>";
-                                    break;
-                                case 1:
-                                    echo "<tr class='table-success'>";
-                                    echo "<td>" . "가능" . "</td>";
-                                    break;
-                                case 2:
-                                    echo "<tr class='table-warning'>";
-                                    echo "<td>" . "불안" . "</td>";
-                                    break;
-                                case 3:
-                                    echo "<tr class='table-danger'>";
-                                    echo "<td>" . "위험" . "</td>";
-                                    break;
-                            }
-                            echo "<td>" . $result[1] . "</td>";
-                            echo "<td>" . $result[2] . "</td>";
-                            echo "<td>" . $result[3] . "</td>";
-                            echo "<td>" . $result[4] . "</td>";
-                            echo "<td>" . $result[5] . "</td>";
-                            echo "<td>" . $result[6] . "</td>";
-                            echo "</tr>";
-                        }
-
-                        echo "</tbody>";
-                        echo "</table>";
-                        ?>
                     </div>
                 </div>
                 <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
@@ -413,22 +357,22 @@ if ($index == 0) {
                                     <tr class="table-primary">
                                         <td>안정</td>
                                         <td>최초 합격 가능성</td>
-                                        <td>평균과 0~n등급 차이</td>
+                                        <td>합격자 최고 성적 평균보다 위</td>
                                     </tr>
                                     <tr class="table-success">
                                         <td>가능</td>
                                         <td>합격 가능성</td>
-                                        <td>평균과 0~n등급 차이</td>
+                                        <td>합격자 평균과의 편차가 양수</td>
                                     </tr>
                                     <tr class="table-warning">
                                         <td>불안</td>
                                         <td>추가 합격 가능성</td>
-                                        <td>평균과 0~n등급 차이</td>
+                                        <td>합격자 평균과의 편차가 음수</td>
                                     </tr>
                                     <tr class="table-danger">
                                         <td>위험</td>
                                         <td>합격 어려움</td>
-                                        <td>평균과 0~n등급 차이</td>
+                                        <td>합격자 최저 성적 평균보다 아래</td>
                                     </tr>
                                 </tbody>
                             </table>
