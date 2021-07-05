@@ -84,7 +84,7 @@
                     <h1>내신 등급 계산기</h1>
 
                     <p class="lead">학생의 내신 성적을 입력하시면 내신 등급을 계산합니다.</p>
-                
+
                     <div class="card card-body">
                         <h5 class="pb-3 mb-3 border-bottom">응애 나 아기계산기</h5>
                         <p>성적줘 응애.</p>
