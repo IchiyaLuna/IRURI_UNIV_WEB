@@ -135,6 +135,7 @@ foreach ($univ_list as $univ) {
     }
 
     $this_time_result = array($univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
+    array_push($result_list, $this_time_result);
 }
 
 foreach ((array) $result_list as $key => $value) {
@@ -317,6 +318,7 @@ array_multisort($sort, SORT_ASC, $result_list);
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tbody>";
+
                         foreach ($result_list as $result) {
                             echo "<tr>";
                             echo "<td>" . $result[0] . "</td>";
@@ -327,6 +329,7 @@ array_multisort($sort, SORT_ASC, $result_list);
                             echo "<td>" . $result[5] . "</td>";
                             echo "</tr>";
                         }
+
                         echo "</tbody>";
                         echo "</table>";       
                         ?>
