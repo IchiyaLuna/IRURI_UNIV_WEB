@@ -47,8 +47,8 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="https://workruri.akkyu.net/">
-                <img src="./assets/svg/logo_green.webp" width="30" height="30" alt="">
-                <img src="./assets/svg/logo_white.webp" width="30" height="30" alt="">
+                <img src="./assets/svg/logo_green.webp" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img src="./assets/svg/logo_white.webp" width="30" height="30" class="d-inline-block align-top" alt="">
                 이루리 테스트
             </a>
 
