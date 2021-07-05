@@ -366,15 +366,15 @@ if ($index == 0) {
                                     echo "<td>" . "안정" . "</td>";
                                     break;
                                 case 1:
-                                    echo "<tr class='table-primary'>";
+                                    echo "<tr class='table-success'>";
                                     echo "<td>" . "가능" . "</td>";
                                     break;
                                 case 2:
-                                    echo "<tr class='table-primary'>";
+                                    echo "<tr class='table-warning'>";
                                     echo "<td>" . "불안" . "</td>";
                                     break;
                                 case 3:
-                                    echo "<tr class='table-primary'>";
+                                    echo "<tr class='table-danger'>";
                                     echo "<td>" . "위험" . "</td>";
                                     break;
                             }
