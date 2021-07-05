@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko" class="h-100">
 
-<?php include "./avg_functions.php"; ?>
+<?php include "./module/avg_functions.php"; ?>
 
 <?php
 
@@ -90,7 +90,7 @@ $light_yellow = light_yellow($first, $second, $third);
 $green = green($first, $second, $third);
 $beige = beige($first, $second, $third);
 
-include "./univ_load.php";
+include "./module/univ_load.php";
 
 $result_list = array();
 
@@ -211,50 +211,18 @@ if ($index == 0) {
 
     <!-- Custom styles for this template -->
 
-    <link href="main.css" rel="stylesheet">
-    <link href="result.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/result.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <!-- Begin page content -->
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" aria-label="navbar-main">
-
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="https://workruri.akkyu.net/">이루리 테스트</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index">합격 예측기</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">성적 계산기</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">기타</a>
-
-                        <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
-                            <li><a class="dropdown-item" href="#">안내</a></li>
-                            <li><a class="dropdown-item" href="./login">관리자</a></li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <?php
+    $cur_page = "index";
+    require "./module/navbar.php";
+    ?>
 
     <main class="flex-shrink-0">
 
@@ -394,7 +362,6 @@ if ($index == 0) {
     </footer>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>
