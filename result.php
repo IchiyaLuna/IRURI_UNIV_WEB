@@ -146,15 +146,17 @@ foreach ((array) $result_list as $key => $value) {
 array_multisort($sort, SORT_ASC, $result_list);
 
 $index = 0;
+$univ_count = sizeof($result_list);
 
 foreach ($result_list as $vaule) {
     
     if ($vaule[5] < 0.0) {
+
+        if($index == $univ_count - 4) break;
+
         $index++;
         continue;
-    } elseif ($value[5] >= 0.0) {
-        break;
-    }
+    } elseif ($value[5] >= 0.0) break;
 }
 
 $final_result = array();
