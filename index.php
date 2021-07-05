@@ -11,70 +11,19 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
     <!-- Custom styles for this template -->
 
-    <link href="main.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <!-- Begin page content -->
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" aria-label="navbar-main">
-
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="https://workruri.akkyu.net/">
-                <img src="./assets/webp/logo_green.webp" width="30" height="30" class="d-inline-block align-top" alt="">
-                &nbsp;이루리 테스트
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index">합격 예측기</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./calc">성적 계산기</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">기타</a>
-
-                        <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
-                            <li><a class="dropdown-item" href="#">안내</a></li>
-                            <li><a class="dropdown-item" href="./login">관리자</a></li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <?php
+    $cur_page = "index";
+    require "./module/navbar.php";
+    ?>
 
     <main class="flex-shrink-0">
 
@@ -116,7 +65,7 @@
                             개인정보 제공 및 활용에 동의합니다
                         </label>
                     </div>
-                    
+
                     <div class="grade-input collapse show" id="grade-input">
                         <div class="card card-body">
                             동의를 선택해야 성적을 입력하실 수 있습니다.
@@ -612,72 +561,7 @@
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script launguage='text/javascript'>
-        var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
-        var resultpage = document.getElementById('input-form')
-
-        function test_input() {
-
-            var fk = document.getElementById("first-korean")
-            fk = fk.options[fk.selectedIndex].value
-            var fm = document.getElementById("first-math")
-            fm = fm.options[fm.selectedIndex].value
-            var fe = document.getElementById("first-english")
-            fe = fe.options[fe.selectedIndex].value
-            var fso = document.getElementById("first-social")
-            fso = fso.options[fso.selectedIndex].value
-            var fsc = document.getElementById("first-science")
-            fsc = fsc.options[fsc.selectedIndex].value
-            var fh = document.getElementById("first-history")
-            fh = fh.options[fh.selectedIndex].value
-
-            var fsum = fk + fm + fe + fso + fsc + fh
-
-            var sk = document.getElementById("second-korean")
-            sk = sk.options[sk.selectedIndex].value
-            var sm = document.getElementById("second-math")
-            sm = sm.options[sm.selectedIndex].value
-            var se = document.getElementById("second-english")
-            se = se.options[se.selectedIndex].value
-            var sso = document.getElementById("second-social")
-            sso = sso.options[sso.selectedIndex].value
-            var ssc = document.getElementById("second-science")
-            ssc = ssc.options[ssc.selectedIndex].value
-            var sh = document.getElementById("second-history")
-            sh = sh.options[sh.selectedIndex].value
-
-            var ssum = sk + sm + se + sso + ssc + sh
-
-            var tk = document.getElementById("third-korean")
-            tk = tk.options[tk.selectedIndex].value
-            var tm = document.getElementById("third-math")
-            tm = tm.options[tm.selectedIndex].value
-            var te = document.getElementById("third-english")
-            te = te.options[te.selectedIndex].value
-            var tso = document.getElementById("third-social")
-            tso = tso.options[tso.selectedIndex].value
-            var tsc = document.getElementById("third-science")
-            tsc = tsc.options[tsc.selectedIndex].value
-            var th = document.getElementById("third-history")
-            th = th.options[th.selectedIndex].value
-
-            var tsum = tk + tm + te + tso + tsc + th
-
-            var sum = fsum + ssum + tsum
-
-            if (sum == 0) {
-                noinput_modal.show()
-            } else {
-                resultpage.submit()
-            }
-            return false
-        }
-
-        function close_modal() {
-            noinput_modal.hide()
-            return false
-        }
-    </script>
+    <script src="../assets/js/valid.js"></script>
 
 </body>
 
