@@ -35,7 +35,10 @@
 
                     <h1>대학 합격 예측기</h1>
 
-                    <p class="lead">학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.</p>
+                    <p class="lead">
+                        학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.<br>
+                        (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
+                    </p>
 
                     <div class="accordion" id="PrivacyInfo">
                         <div class="accordion-item">
@@ -553,11 +556,7 @@
     </main>
 
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">&copy 2021. Ichiya Luna DEV VERSION</span>
-        </div>
-    </footer>
+    <?php require "./module/footer.php" ?>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 

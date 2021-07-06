@@ -14,14 +14,15 @@ function count_arr($arr)
     return $count;
 }
 
-function getarravg($arr) {
+function getarravg($arr)
+{
 
     $count = count_arr($arr);
 
     if ($count == 0) {
         return 0;
     } else {
-    return array_sum($arr) / $count;
+        return array_sum($arr) / $count;
     }
 }
 
