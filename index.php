@@ -270,7 +270,6 @@
                                 </form>
                             </div>
                         </div>
-                        <br>
                     </div>
 
                     <div class="collapse multi-collapse-b" id="department-input">
@@ -484,9 +483,9 @@
                                 </form>
                             </div>
                         </div>
-                        <br>
-                    </div>
 
+                    </div>
+                    <br>
                     <div class="card card-body">
                         <h5 class="pb-3 mb-3 border-bottom">예측 단계 안내</h5>
                         <table class="table table-hover">
