@@ -41,7 +41,7 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
                     <div class="dynamic-input">
                         <form>
-                            <div class="container-floating d-grid gap-1">
+                            <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
                                         과목명
@@ -87,6 +87,10 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-warining">초기화</button>
+                                <button type="button" class="btn btn-outline-primary">등급 계산 하기</button>
                             </div>
                         </form>
                     </div>
