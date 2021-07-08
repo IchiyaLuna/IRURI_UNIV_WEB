@@ -40,24 +40,27 @@
                         (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
                     </p>
 
-                    <div class="card card-body">
-                        <div class="row align-items-md-stretch">
-                            <div class="col-md-6">
-                                <div class="h-100 p-5 text-white bg-dark rounded-3">
-                                    <h2>Change the background</h2>
-                                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-                                    <button class="btn btn-outline-light" type="button">Example button</button>
+
+                    <div class="row align-items-md-stretch">
+                        <div class="col-md-6">
+                            <a href="#">
+                                <div class="h-100 p-5 text-white bg-dark border rounded-3">
+                                    <h2>대학교 기준</h2>
+                                    <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
+
                                 </div>
-                            </div>
-                            <div class="col-md-6">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#">
                                 <div class="h-100 p-5 bg-light border rounded-3">
-                                    <h2>Add borders</h2>
-                                    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-                                    <button class="btn btn-outline-secondary" type="button">Example button</button>
+                                    <h2>학과 기준</h2>
+                                    <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
+
 
                     <div class="accordion" id="PrivacyInfo">
                         <div class="accordion-item">
