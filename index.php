@@ -417,6 +417,43 @@
                                     </div>
                                 </div>
                                 <br>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="korean-type">
+                                        <option value="0" selected>화법과작문</option>
+                                        <option value="1">언어와매체</option>
+                                    </select>
+                                    <select class="form-select" id="korean-grade" name="korean-grade">
+                                        <option selected value="0">미응시</option>
+                                        <option value="1">1등급</option>
+                                        <option value="2">2등급</option>
+                                        <option value="3">3등급</option>
+                                        <option value="4">4등급</option>
+                                        <option value="5">5등급</option>
+                                        <option value="6">6등급</option>
+                                        <option value="7">7등급</option>
+                                        <option value="8">8등급</option>
+                                        <option value="9">9등급</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="math-type">
+                                        <option value="0" selected>확률과통계</option>
+                                        <option value="1">미적분</option>
+                                        <option value="2">기하</option>
+                                    </select>
+                                    <select class="form-select" id="korean-grade" name="korean-grade">
+                                        <option selected value="0">미응시</option>
+                                        <option value="1">1등급</option>
+                                        <option value="2">2등급</option>
+                                        <option value="3">3등급</option>
+                                        <option value="4">4등급</option>
+                                        <option value="5">5등급</option>
+                                        <option value="6">6등급</option>
+                                        <option value="7">7등급</option>
+                                        <option value="8">8등급</option>
+                                        <option value="9">9등급</option>
+                                    </select>
+                                </div>
                                 <br>
                                 <div class="d-grid">
                                     <button type="button" class="btn btn-outline-primary" onclick="test_input()">

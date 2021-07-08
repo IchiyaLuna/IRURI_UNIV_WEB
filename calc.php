@@ -40,7 +40,7 @@
 
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
                     <div class="dynamic-input">
-                        <form id="subject-form">
+                        <form id="subject-form" class="needs-validation" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
@@ -65,19 +65,19 @@
 
                                 <div class="subject-input row g-1 py-1 align-items-center">
                                     <div class="col-3">
-                                        <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명">
+                                        <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="0" name="rank[]" placeholder="0">
+                                        <input type="number" class="form-control form-control-sm text-center" min="0" name="rank[]" placeholder="0" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="0">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="0" required>
                                     </div>
                                     <div class="col-1 text-center">
                                         <div class="d-grid">
