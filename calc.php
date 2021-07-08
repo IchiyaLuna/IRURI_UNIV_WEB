@@ -78,7 +78,7 @@
                                     <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
+                                    <button type="button" class="btn-close" aria-label="Close"></button>
                                 </div>
                             </div>
                         </div>
