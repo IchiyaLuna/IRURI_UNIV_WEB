@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-outline-warining">초기화</button>
+                                <button type="button" class="btn btn-outline-warning">초기화</button>
                                 <button type="button" class="btn btn-outline-primary">등급 계산 하기</button>
                             </div>
                         </form>
