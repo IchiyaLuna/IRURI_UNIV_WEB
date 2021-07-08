@@ -114,6 +114,30 @@
 
                                 </div>
                                 <br>
+                                <div class="row gy-3">
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="ig-first-label">1학년 평균</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="ig-second-label">2학년 평균</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="ig-third-label">3학년 평균</span>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
                                 <div class="first-grade container">
                                     <h5 class="pb-3 mb-3 border-bottom">1학년</h5>
                                     <div class="row gy-3">
