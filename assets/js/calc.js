@@ -8,6 +8,7 @@ $(function () {
 
         NewEntry.find('input').val('');
         DynamicForm.find('.subject-input:not(:last) .btn-add').removeClass('btn-add').addClass('btn-remove');
+<<<<<<< HEAD
         DynamicForm.find('.subject-input:not(:last) .btn-remove').removeClass('btn-outline-success').addClass('btn-outline-danger');
         DynamicForm.find('.subject-input:not(:last) .btn-remove').html('<i class="fas fa-minus"></i>');
     }).on('click', '.btn-add', function (e) {
@@ -19,3 +20,10 @@ $(function () {
     });
 
 });
+=======
+        DynamicForm.find('.subject-input:not(:last) .btn-remove').removeClass('btn-success').addClass('btn-danger');
+        DynamicForm.find('.subject-input:not(:last) .btn-remove').html('<i class="fas fa-minus"></i>');
+    })
+
+})
+>>>>>>> parent of 42a2822 (Update calc.js)
