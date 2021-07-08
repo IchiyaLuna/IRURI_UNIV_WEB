@@ -136,7 +136,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-3 d-grid gap-2 d-lg-flex justify-content-lg-end">
                                         <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
                                     </div>
                                 </div>
