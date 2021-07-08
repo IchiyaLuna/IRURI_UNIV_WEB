@@ -63,7 +63,7 @@ body {
   word-break: keep-all;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .content-main {
     padding: 1rem;
   }
