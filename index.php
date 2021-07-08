@@ -90,13 +90,13 @@
                             </label>
                         </div>
 
-                        <div class="grade-input-u collapse show" id="grade-input">
+                        <div class="grade-input-u collapse show" id="grade-input-u">
                             <div class="card card-body">
                                 동의를 선택해야 성적을 입력하실 수 있습니다.
                             </div>
                         </div>
 
-                        <div class="grade-input-u collapse" id="grade-input">
+                        <div class="grade-input-u collapse" id="grade-input-u">
 
                             <div class="card card-body">
                                 <br>
@@ -363,13 +363,13 @@
                             </label>
                         </div>
 
-                        <div class="grade-input-d collapse show" id="grade-input">
+                        <div class="grade-input-d collapse show" id="grade-input-d">
                             <div class="card card-body">
                                 동의를 선택해야 성적을 입력하실 수 있습니다.
                             </div>
                         </div>
 
-                        <div class="grade-input-d collapse" id="grade-input">
+                        <div class="grade-input-d collapse" id="grade-input-d">
 
                             <div class="card card-body">
                                 <br>
