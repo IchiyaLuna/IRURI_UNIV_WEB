@@ -13,7 +13,7 @@ $(function () {
         $(this).parents('.subject-input:first').remove();
 
         e.preventDefault();
-        return false
+        return false;
     });
 
 });
