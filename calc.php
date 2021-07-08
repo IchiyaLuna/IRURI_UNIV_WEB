@@ -54,19 +54,19 @@
                                     <tbody id="score-input-body">
                                         <tr>
                                             <td>
-                                                <input type="text" name="subject[]" placeholder="과목명">
+                                                <input type="text" class="form-control" name="subject[]" placeholder="과목명">
                                             </td>
                                             <td>
-                                                <input type="number" min="0" name="rank[]" placeholder="석차">
+                                                <input type="number" class="form-control" min="0" name="rank[]" placeholder="석차">
                                             </td>
                                             <td>
-                                                <input type="number" min="1" name="samerank[]" placeholder="동석차" value="1">
+                                                <input type="number" class="form-control" min="1" name="samerank[]" placeholder="동석차" value="1">
                                             </td>
                                             <td>
-                                                <input type="number" min="1" name="students[]" placeholder="이수자">
+                                                <input type="number" class="form-control" min="1" name="students[]" placeholder="이수자">
                                             </td>
                                             <td>
-                                                <input type="number" min="1" name="time[]" placeholder="단위">
+                                                <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
