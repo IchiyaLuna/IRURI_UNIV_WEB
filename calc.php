@@ -41,7 +41,7 @@
                     <form>
                         <div class="container-floating">
                             <div class="row g-1">
-                                <div class="col-3 text-center">
+                                <div class="col-4 text-center">
                                     과목명
                                 </div>
                                 <div class="col text-center">
@@ -62,20 +62,20 @@
                             </div>
 
                             <div class="row g-1 align-items-center">
-                                <div class="col-3">
-                                    <input type="text" class="form-control" name="subject[]" placeholder="과목명">
+                                <div class="col-4">
+                                    <input type="text" class="form-control text-center" name="subject[]" placeholder="과목명">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="0" name="rank[]" placeholder="0">
+                                    <input type="number" class="form-control text-center" min="0" name="rank[]" placeholder="0">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="samerank[]" placeholder="1" value="1">
+                                    <input type="number" class="form-control text-center" min="1" name="samerank[]" placeholder="1" value="1">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="students[]" placeholder="0">
+                                    <input type="number" class="form-control text-center" min="1" name="students[]" placeholder="0">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="time[]" placeholder="0">
+                                    <input type="number" class="form-control text-center" min="1" name="time[]" placeholder="0">
                                 </div>
                                 <div class="col-1 text-center">
                                     <button type="button" class="btn btn-outline-success btn-sm">
