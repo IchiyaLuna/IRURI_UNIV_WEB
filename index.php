@@ -46,14 +46,14 @@
                                 <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
                                     <h2>대학교 기준</h2>
                                     <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
-                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#university-input" role="button">학교 보러가기</a>
+                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#multi-collapse-a" role="button">학교 보러가기</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="h-100 p-5 bg-light border rounded-3 position-relative">
                                     <h2>학과 기준</h2>
                                     <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
-                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#department-input" role="button">학과 보러가기</a>
+                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#multi-collapse-b" role="button">학과 보러가기</a>
                                 </div>
                             </div>
                         </div>
