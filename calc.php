@@ -41,43 +41,43 @@
                     <form>
                         <div class="container">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     과목명
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     석차
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     동석차
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     이수자
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     단위
                                 </div>
-                                <div class="col-1">
+                                <div class="col">
 
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <input type="text" class="form-control" name="subject[]" placeholder="과목명">
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     <input type="number" class="form-control" min="0" name="rank[]" placeholder="석차">
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     <input type="number" class="form-control" min="1" name="samerank[]" placeholder="동석차" value="1">
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     <input type="number" class="form-control" min="1" name="students[]" placeholder="이수자">
                                 </div>
-                                <div class="col-2">
+                                <div class="col">
                                     <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
                                 </div>
-                                <div class="col-1">
+                                <div class="col">
                                     <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
                                 </div>
                             </div>
