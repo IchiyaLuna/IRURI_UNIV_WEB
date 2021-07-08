@@ -41,8 +41,8 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
                     <div class="dynamic-input">
                         <form>
-                            <div class="container-floating">
-                                <div class="row g-1">
+                            <div class="container-floating d-grid gap-1">
+                                <div class="row gy-2 g-1">
                                     <div class="col-3 text-center">
                                         과목명
                                     </div>
