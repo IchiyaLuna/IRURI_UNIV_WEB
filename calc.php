@@ -42,7 +42,7 @@
                     <div class="dynamic-input">
                         <form>
                             <div class="container-floating d-grid gap-1">
-                                <div class="row gx-1 py-1">
+                                <div class="row gx-1">
                                     <div class="col-3 text-center">
                                         과목명
                                     </div>
