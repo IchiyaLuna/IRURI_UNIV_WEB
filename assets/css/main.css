@@ -63,6 +63,12 @@ body {
   word-break: keep-all;
 }
 
+@media (min-width: 768px) {
+  .content-main {
+    padding: 1rem;
+  }
+}
+
 .content-sidebar {
   position: sticky;
   height: calc(100vh - 10rem);
