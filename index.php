@@ -161,8 +161,67 @@
                                         <option value="9">9등급</option>
                                     </select>
                                 </div>
+
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="math-label">수학</span>
+                                    <select class="form-select" id="math-type">
+                                        <option value="0" selected>확률과통계</option>
+                                        <option value="1">미적분</option>
+                                        <option value="2">기하</option>
+                                    </select>
+                                    <select class="form-select" id="korean-grade" name="korean-grade">
+                                        <option selected value="0">미응시</option>
+                                        <option value="1">1등급</option>
+                                        <option value="2">2등급</option>
+                                        <option value="3">3등급</option>
+                                        <option value="4">4등급</option>
+                                        <option value="5">5등급</option>
+                                        <option value="6">6등급</option>
+                                        <option value="7">7등급</option>
+                                        <option value="8">8등급</option>
+                                        <option value="9">9등급</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="math-label">영어</span>
+                                    <select class="form-select" id="korean-grade" name="korean-grade">
+                                        <option selected value="0">미응시</option>
+                                        <option value="1">1등급</option>
+                                        <option value="2">2등급</option>
+                                        <option value="3">3등급</option>
+                                        <option value="4">4등급</option>
+                                        <option value="5">5등급</option>
+                                        <option value="6">6등급</option>
+                                        <option value="7">7등급</option>
+                                        <option value="8">8등급</option>
+                                        <option value="9">9등급</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="math-label">탐구 1</span>
+                                    <select class="form-select" id="math-type">
+                                        <option value="0" selected>확률과통계</option>
+                                        <option value="1">미적분</option>
+                                        <option value="2">기하</option>
+                                    </select>
+                                    <select class="form-select" id="korean-grade" name="korean-grade">
+                                        <option selected value="0">미응시</option>
+                                        <option value="1">1등급</option>
+                                        <option value="2">2등급</option>
+                                        <option value="3">3등급</option>
+                                        <option value="4">4등급</option>
+                                        <option value="5">5등급</option>
+                                        <option value="6">6등급</option>
+                                        <option value="7">7등급</option>
+                                        <option value="8">8등급</option>
+                                        <option value="9">9등급</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="math-label">탐구 2</span>
                                     <select class="form-select" id="math-type">
                                         <option value="0" selected>확률과통계</option>
                                         <option value="1">미적분</option>
