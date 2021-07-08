@@ -9,7 +9,7 @@ $(function () {
         NewEntry.find('input').val('');
         DynamicForm.find('.subject-input:not(:last) .btn-add').removeClass('btn-add').addClass('btn-remove');
         DynamicForm.find('.subject-input:not(:last) .btn-remove').removeClass('btn-outline-success').addClass('btn-outline-danger');
-        DynamicForm.find('.subject-input:not(:last) .btn-remove').html('<span class="glyphicon glyphicon-minus"></span>');
+        DynamicForm.find('.subject-input:not(:last) .btn-remove').html('<i class="fas fa-minus"></i>');
     }).on('click', '.btn-remove', function (e) {
         $(this).parents('.subject-input:first').remove();
 
