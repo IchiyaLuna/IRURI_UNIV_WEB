@@ -143,6 +143,7 @@
 
                                 <br>
                                 <div class="input-group mb-3">
+                                    <span class="input-group-text" id="korean-label">국어</span>
                                     <select class="form-select" id="korean-type">
                                         <option value="0" selected>화법과작문</option>
                                         <option value="1">언어와매체</option>
@@ -161,6 +162,7 @@
                                     </select>
                                 </div>
                                 <div class="input-group mb-3">
+                                    <span class="input-group-text" id="math-label">수학</span>
                                     <select class="form-select" id="math-type">
                                         <option value="0" selected>확률과통계</option>
                                         <option value="1">미적분</option>
