@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="col-1 text-center">
                                         <div class="d-grid">
-                                            <button type="button" class="btn btn-outline-success btn-sm btn-add">
+                                            <button type="button" class="btn btn-success btn-sm btn-add">
                                                 <i class="fas fa-plus"></i>
                                             </button>
                                         </div>
