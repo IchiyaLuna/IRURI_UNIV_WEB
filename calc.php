@@ -40,7 +40,7 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
                     <form>
                         <div class="container-floating">
-                            <div class="row">
+                            <div class="row g-1">
                                 <div class="col-3 text-center">
                                     과목명
                                 </div>
@@ -61,21 +61,21 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row g-1">
                                 <div class="col-3">
                                     <input type="text" class="form-control" name="subject[]" placeholder="과목명">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="0" name="rank[]" placeholder="석차">
+                                    <input type="number" class="form-control" min="0" name="rank[]" placeholder="0">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="samerank[]" placeholder="동석차" value="1">
+                                    <input type="number" class="form-control" min="1" name="samerank[]" placeholder="1" value="1">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="students[]" placeholder="이수자">
+                                    <input type="number" class="form-control" min="1" name="students[]" placeholder="0">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
+                                    <input type="number" class="form-control" min="1" name="time[]" placeholder="0">
                                 </div>
                                 <div class="col-1">
                                     <button type="button" class="btn btn-outline-success">
