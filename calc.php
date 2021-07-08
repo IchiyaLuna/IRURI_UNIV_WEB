@@ -41,7 +41,7 @@
                     <form>
                         <div class="container-floating">
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-2 text-center">
                                     과목명
                                 </div>
                                 <div class="col text-center">
