@@ -56,7 +56,7 @@
                                 <div class="col-2">
                                     단위
                                 </div>
-                                <div class="col">
+                                <div class="col-1">
 
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                 <div class="col-2">
                                     <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
                                 </div>
-                                <div class="col">
+                                <div class="col-1">
                                     <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
                                 </div>
                             </div>
