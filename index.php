@@ -40,25 +40,27 @@
                         (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
                     </p>
 
-
-                    <div class="row align-items-md-stretch">
-                        <div class="col-md-6">
-                            <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
-                                <h2>대학교 기준</h2>
-                                <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
-                                <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#university-input" role="button">학교 보러가기</a>
+                    <div class="collapse multi-collapse-a multi-collapse-b">
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
+                                    <h2>대학교 기준</h2>
+                                    <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
+                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#university-input" role="button">학교 보러가기</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="h-100 p-5 bg-light border rounded-3 position-relative">
-                                <h2>학과 기준</h2>
-                                <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
-                                <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#department-input" role="button">학과 보러가기</a>
+                            <div class="col-md-6">
+                                <div class="h-100 p-5 bg-light border rounded-3 position-relative">
+                                    <h2>학과 기준</h2>
+                                    <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
+                                    <a class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#department-input" role="button">학과 보러가기</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="collapse" id="university-input">
+                    <div class="collapse multi-collapse-a" id="university-input">
+                        <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-a"></button>
                         <div class="accordion" id="PrivacyInfo">
                             <div class="accordion-item">
 
@@ -271,7 +273,8 @@
                         <br>
                     </div>
 
-                    <div class="collapse" id="department-input">
+                    <div class="collapse multi-collapse-b" id="department-input">
+                        <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-b"></button>
                         <div class="accordion" id="PrivacyInfo">
                             <div class="accordion-item">
 
