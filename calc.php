@@ -44,19 +44,19 @@
                                 <div class="col-2">
                                     과목명
                                 </div>
-                                <div class="col">
+                                <div class="col text-center">
                                     석차
                                 </div>
-                                <div class="col">
+                                <div class="col text-center">
                                     동석차
                                 </div>
-                                <div class="col">
+                                <div class="col text-center">
                                     이수자
                                 </div>
-                                <div class="col">
+                                <div class="col text-center">
                                     단위
                                 </div>
-                                <div class="col">
+                                <div class="col text-center">
 
                                 </div>
                             </div>
