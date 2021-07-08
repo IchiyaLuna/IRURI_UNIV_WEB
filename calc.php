@@ -41,7 +41,7 @@
                     <form>
                         <div class="container-floating">
                             <div class="row">
-                                <div class="col-2 text-center">
+                                <div class="col-3 text-center">
                                     과목명
                                 </div>
                                 <div class="col text-center">
@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col-3">
                                     <input type="text" class="form-control" name="subject[]" placeholder="과목명">
                                 </div>
                                 <div class="col">
