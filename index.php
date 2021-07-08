@@ -166,7 +166,7 @@
 
                                     <div class="row">
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="korean-label">국어&nbsp;&nbsp;</span>
                                                 <select class="form-select" id="korean-type">
@@ -188,7 +188,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">수학&nbsp;&nbsp;</span>
                                                 <select class="form-select" id="math-type">
@@ -211,7 +211,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">영어&nbsp;&nbsp;</span>
                                                 <select class="form-select" id="korean-grade" name="korean-grade">
@@ -229,7 +229,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">한국사</span>
                                                 <select class="form-select" id="math-type">
@@ -252,7 +252,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">탐구 1</span>
                                                 <select class="form-select" id="math-type">
@@ -275,7 +275,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-xl-6">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">탐구 2</span>
                                                 <select class="form-select" id="math-type">
@@ -298,7 +298,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
+                                        <div class="col-xl-12">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="math-label">제2외국어</span>
                                                 <select class="form-select" id="math-type">
