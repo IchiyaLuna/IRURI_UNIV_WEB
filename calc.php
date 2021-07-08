@@ -38,58 +38,60 @@
                     <p class="lead">학생의 내신 성적을 입력하시면 내신 등급을 계산합니다.</p>
 
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
-                    <form>
-                        <div class="container-floating">
-                            <div class="row g-1">
-                                <div class="col-3 text-center">
-                                    과목명
-                                </div>
-                                <div class="col text-center">
-                                    석차
-                                </div>
-                                <div class="col text-center">
-                                    동석차
-                                </div>
-                                <div class="col text-center">
-                                    이수자
-                                </div>
-                                <div class="col text-center">
-                                    단위
-                                </div>
-                                <div class="col-1 text-center">
+                    <div class="dynamic-input">
+                        <form>
+                            <div class="container-floating">
+                                <div class="row g-1">
+                                    <div class="col-3 text-center">
+                                        과목명
+                                    </div>
+                                    <div class="col text-center">
+                                        석차
+                                    </div>
+                                    <div class="col text-center">
+                                        동석차
+                                    </div>
+                                    <div class="col text-center">
+                                        이수자
+                                    </div>
+                                    <div class="col text-center">
+                                        단위
+                                    </div>
+                                    <div class="col-1 text-center">
 
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row g-1 align-items-center">
-                                <div class="col-3">
-                                    <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명">
-                                </div>
-                                <div class="col">
-                                    <input type="number" class="form-control form-control-sm text-center" min="0" name="rank[]" placeholder="0">
-                                </div>
-                                <div class="col">
-                                    <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1" value="1">
-                                </div>
-                                <div class="col">
-                                    <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0">
-                                </div>
-                                <div class="col">
-                                    <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="0">
-                                </div>
-                                <div class="col-1 text-center">
-                                    <div class="d-grid">
-                                        <button type="button" class="btn btn-outline-success btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
-                                            </svg>
-                                            <span class="visually-hidden">Button</span>
-                                        </button>
+                                <div class="subject-input row g-1 align-items-center">
+                                    <div class="col-3">
+                                        <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm text-center" min="0" name="rank[]" placeholder="0">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0">
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="0">
+                                    </div>
+                                    <div class="col-1 text-center">
+                                        <div class="d-grid">
+                                            <button type="button" class="btn btn-outline-success btn-sm" onclick="test_input()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                                </svg>
+                                                <span class="visually-hidden">Button</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
                     <div class="card">
@@ -186,6 +188,7 @@
     <?php require "./module/footer.php" ?>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/calc.js"></script>
 </body>
 
 </html>
