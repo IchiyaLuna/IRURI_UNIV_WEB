@@ -40,7 +40,7 @@
                         (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
                     </p>
 
-                    <div class="collapse multi-collapse-a multi-collapse-b">
+                    <div class="collapse multi-collapse-a multi-collapse-b show">
                         <div class="row align-items-md-stretch">
                             <div class="col-md-6">
                                 <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
