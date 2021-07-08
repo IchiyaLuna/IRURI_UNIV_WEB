@@ -42,7 +42,7 @@
                     <div class="dynamic-input">
                         <form>
                             <div class="container-floating d-grid gap-1">
-                                <div class="row gy-2 g-1">
+                                <div class="row gx-1 py-1">
                                     <div class="col-3 text-center">
                                         과목명
                                     </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
 
-                                <div class="subject-input row g-1 align-items-center">
+                                <div class="subject-input row g-1 py-1 align-items-center">
                                     <div class="col-3">
                                         <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명">
                                     </div>
