@@ -61,7 +61,7 @@
                                 </div>
                             </div>
 
-                            <div class="input-group input-group-sm row g-1">
+                            <div class="row g-1">
                                 <div class="col-3">
                                     <input type="text" class="form-control" name="subject[]" placeholder="과목명">
                                 </div>
