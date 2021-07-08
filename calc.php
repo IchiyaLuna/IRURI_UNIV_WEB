@@ -37,46 +37,46 @@
 
                     <p class="lead">학생의 내신 성적을 입력하시면 내신 등급을 계산합니다.</p>
 
-                    <div class="card card-body">
-                        <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
-                        <div>
-                            <form>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">과목명</th>
-                                            <th scope="col">석차</th>
-                                            <th scope="col">동석차</th>
-                                            <th scope="col">이수자</th>
-                                            <th scope="col">단위</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="score-input-body">
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="form-control" name="subject[]" placeholder="과목명">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" min="0" name="rank[]" placeholder="석차">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" min="1" name="samerank[]" placeholder="동석차" value="1">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" min="1" name="students[]" placeholder="이수자">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form>
-                        </div>
+
+                    <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
+                    <div>
+                        <form>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">과목명</th>
+                                        <th scope="col">석차</th>
+                                        <th scope="col">동석차</th>
+                                        <th scope="col">이수자</th>
+                                        <th scope="col">단위</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="score-input-body">
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" name="subject[]" placeholder="과목명">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" min="0" name="rank[]" placeholder="석차">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" min="1" name="samerank[]" placeholder="동석차" value="1">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" min="1" name="students[]" placeholder="이수자">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" min="1" name="time[]" placeholder="단위">
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-succenss" type="text">추가</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
                     </div>
+
 
                 </div>
 
