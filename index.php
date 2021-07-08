@@ -84,19 +84,19 @@
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-u" value="" id="flexCheckDefault" autocomplete="off">
                             <label class="form-check-label" for="flexCheckDefault">
                                 개인정보 제공 및 활용에 동의합니다
                             </label>
                         </div>
 
-                        <div class="grade-input collapse show" id="grade-input">
+                        <div class="grade-input-u collapse show" id="grade-input">
                             <div class="card card-body">
                                 동의를 선택해야 성적을 입력하실 수 있습니다.
                             </div>
                         </div>
 
-                        <div class="grade-input collapse" id="grade-input">
+                        <div class="grade-input-u collapse" id="grade-input">
 
                             <div class="card card-body">
                                 <br>
@@ -357,19 +357,19 @@
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-d" value="" id="flexCheckDefault" autocomplete="off">
                             <label class="form-check-label" for="flexCheckDefault">
                                 개인정보 제공 및 활용에 동의합니다
                             </label>
                         </div>
 
-                        <div class="grade-input collapse show" id="grade-input">
+                        <div class="grade-input-d collapse show" id="grade-input">
                             <div class="card card-body">
                                 동의를 선택해야 성적을 입력하실 수 있습니다.
                             </div>
                         </div>
 
-                        <div class="grade-input collapse" id="grade-input">
+                        <div class="grade-input-d collapse" id="grade-input">
 
                             <div class="card card-body">
                                 <br>
