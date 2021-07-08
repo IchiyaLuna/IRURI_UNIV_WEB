@@ -137,7 +137,7 @@
                                     </div>
 
                                     <div class="col-lg-3">
-                                        <a class="btn btn-primary" href="./calc" role="button">등급 계산기 바로가기</a>
+                                        <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
                                     </div>
                                 </div>
 
