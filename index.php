@@ -43,232 +43,447 @@
 
                     <div class="row align-items-md-stretch">
                         <div class="col-md-6">
-                            <div class="h-100 p-5 text-white bg-dark border rounded-3">
+                            <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
                                 <h2>대학교 기준</h2>
                                 <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
-                                <a href="#" class="btn btn-primary stretched-link">학교 보러가기</a>
+                                <a href="#" class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#university-input">학교 보러가기</a>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="h-100 p-5 bg-light border rounded-3">
+                            <div class="h-100 p-5 bg-light border rounded-3 position-relative">
                                 <h2>학과 기준</h2>
                                 <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
-                                <a href="#" class="btn btn-primary stretched-link">학과 보러가기</a>
+                                <a href="#" class="btn btn-primary stretched-link" data-bs-toggle="collapse" href="#department-input">학과 보러가기</a>
                             </div>
                         </div>
                     </div>
 
+                    <div class="collapse" id="university-input">
+                        <div class="accordion" id="PrivacyInfo">
+                            <div class="accordion-item">
 
-                    <div class="accordion" id="PrivacyInfo">
-                        <div class="accordion-item">
-
-                            <h2 class="accordion-header" id="FirstHeader">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FirstContent" aria-expanded="false" aria-controls="FirstContent">
-                                    개인정보 제공 및 활용 동의
-                                </button>
-                            </h2>
-
-                            <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
-                                <div class="accordion-body">
-                                    본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
-                                    이외 민감한 개인정보는 수집 대상이 아니며 사용한 모든 정보는 오직 성적 분석 및 합격 예측에만 사용됩니다.
-                                    이용자는 합격 예측기를 사용하기 전, 언제나 동의하지 않을 권리가 있으며 이 경우 합격 예측이 불가능합니다.
-                                    수집한 정보 중 일부는 더 정확한 정보를 이용자에게 제공하기 위한 분석 자료로 보관되며 외부인이 볼 수 없도록 안전하게 저장됩니다.
-                                    아래 동의 버튼을 누르고 성적 등 정보를 입력하면, 이용자가 본 개인 정보 제공 및 활용에 동의하였다고 간주합니다.
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            개인정보 제공 및 활용에 동의합니다
-                        </label>
-                    </div>
-
-                    <div class="grade-input collapse show" id="grade-input">
-                        <div class="card card-body">
-                            동의를 선택해야 성적을 입력하실 수 있습니다.
-                        </div>
-                    </div>
-
-                    <div class="grade-input collapse" id="grade-input">
-
-                        <div class="card card-body">
-                            <br>
-                            <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
-                                <div class="gender-type container">
-
-                                    <div class="row">
-
-                                        <div class="col-md">
-                                            <h5>성별</h5>
-
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender-radio" id="radio-male" value="1" checked>
-                                                <label class="form-check-label" for="radio-male">남자</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gender-radio" id="radio-female" value="2">
-                                                <label class="form-check-label" for="radio-female">여자</label>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md">
-                                            <h5>계열</h5>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type-radio" id="radio-natural" value="1" checked>
-                                                <label class="form-check-label" for="radio-male">인문</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type-radio" id="radio-literature" value="2">
-                                                <label class="form-check-label" for="radio-female">자연</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <br>
-                                <div class="row gy-3">
-                                    <div class="col-xl-3">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="ig-first-label">1학년 평균</span>
-                                            <input type="text" class="form-control form-control-sm text-center" name="first" placeholder="1.0">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-3">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="ig-second-label">2학년 평균</span>
-                                            <input type="text" class="form-control form-control-sm text-center" name="second" placeholder="1.0">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-3">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="ig-third-label">3학년 평균</span>
-                                            <input type="text" class="form-control form-control-sm text-center" name="third" placeholder="1.0">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xl-3 d-grid gap-2">
-                                        <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
-                                    </div>
-                                </div>
-
-                                <br>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="korean-label">국어</span>
-                                    <select class="form-select" id="korean-type">
-                                        <option value="0" selected>화법과작문</option>
-                                        <option value="1">언어와매체</option>
-                                    </select>
-                                    <select class="form-select" id="korean-grade" name="korean-grade">
-                                        <option selected value="0">미응시</option>
-                                        <option value="1">1등급</option>
-                                        <option value="2">2등급</option>
-                                        <option value="3">3등급</option>
-                                        <option value="4">4등급</option>
-                                        <option value="5">5등급</option>
-                                        <option value="6">6등급</option>
-                                        <option value="7">7등급</option>
-                                        <option value="8">8등급</option>
-                                        <option value="9">9등급</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="math-label">수학</span>
-                                    <select class="form-select" id="math-type">
-                                        <option value="0" selected>확률과통계</option>
-                                        <option value="1">미적분</option>
-                                        <option value="2">기하</option>
-                                    </select>
-                                    <select class="form-select" id="korean-grade" name="korean-grade">
-                                        <option selected value="0">미응시</option>
-                                        <option value="1">1등급</option>
-                                        <option value="2">2등급</option>
-                                        <option value="3">3등급</option>
-                                        <option value="4">4등급</option>
-                                        <option value="5">5등급</option>
-                                        <option value="6">6등급</option>
-                                        <option value="7">7등급</option>
-                                        <option value="8">8등급</option>
-                                        <option value="9">9등급</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="math-label">영어</span>
-                                    <select class="form-select" id="korean-grade" name="korean-grade">
-                                        <option selected value="0">미응시</option>
-                                        <option value="1">1등급</option>
-                                        <option value="2">2등급</option>
-                                        <option value="3">3등급</option>
-                                        <option value="4">4등급</option>
-                                        <option value="5">5등급</option>
-                                        <option value="6">6등급</option>
-                                        <option value="7">7등급</option>
-                                        <option value="8">8등급</option>
-                                        <option value="9">9등급</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="math-label">탐구 1</span>
-                                    <select class="form-select" id="math-type">
-                                        <option value="0" selected>확률과통계</option>
-                                        <option value="1">미적분</option>
-                                        <option value="2">기하</option>
-                                    </select>
-                                    <select class="form-select" id="korean-grade" name="korean-grade">
-                                        <option selected value="0">미응시</option>
-                                        <option value="1">1등급</option>
-                                        <option value="2">2등급</option>
-                                        <option value="3">3등급</option>
-                                        <option value="4">4등급</option>
-                                        <option value="5">5등급</option>
-                                        <option value="6">6등급</option>
-                                        <option value="7">7등급</option>
-                                        <option value="8">8등급</option>
-                                        <option value="9">9등급</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="math-label">탐구 2</span>
-                                    <select class="form-select" id="math-type">
-                                        <option value="0" selected>확률과통계</option>
-                                        <option value="1">미적분</option>
-                                        <option value="2">기하</option>
-                                    </select>
-                                    <select class="form-select" id="korean-grade" name="korean-grade">
-                                        <option selected value="0">미응시</option>
-                                        <option value="1">1등급</option>
-                                        <option value="2">2등급</option>
-                                        <option value="3">3등급</option>
-                                        <option value="4">4등급</option>
-                                        <option value="5">5등급</option>
-                                        <option value="6">6등급</option>
-                                        <option value="7">7등급</option>
-                                        <option value="8">8등급</option>
-                                        <option value="9">9등급</option>
-                                    </select>
-                                </div>
-                                <br>
-                                <div class="d-grid">
-                                    <button type="button" class="btn btn-outline-primary" onclick="test_input()">
-                                        완료
+                                <h2 class="accordion-header" id="FirstHeader">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FirstContent" aria-expanded="false" aria-controls="FirstContent">
+                                        개인정보 제공 및 활용 동의
                                     </button>
+                                </h2>
+
+                                <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
+                                    <div class="accordion-body">
+                                        본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
+                                        이외 민감한 개인정보는 수집 대상이 아니며 사용한 모든 정보는 오직 성적 분석 및 합격 예측에만 사용됩니다.
+                                        이용자는 합격 예측기를 사용하기 전, 언제나 동의하지 않을 권리가 있으며 이 경우 합격 예측이 불가능합니다.
+                                        수집한 정보 중 일부는 더 정확한 정보를 이용자에게 제공하기 위한 분석 자료로 보관되며 외부인이 볼 수 없도록 안전하게 저장됩니다.
+                                        아래 동의 버튼을 누르고 성적 등 정보를 입력하면, 이용자가 본 개인 정보 제공 및 활용에 동의하였다고 간주합니다.
+                                    </div>
                                 </div>
-                            </form>
+
+                            </div>
                         </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                개인정보 제공 및 활용에 동의합니다
+                            </label>
+                        </div>
+
+                        <div class="grade-input collapse show" id="grade-input">
+                            <div class="card card-body">
+                                동의를 선택해야 성적을 입력하실 수 있습니다.
+                            </div>
+                        </div>
+
+                        <div class="grade-input collapse" id="grade-input">
+
+                            <div class="card card-body">
+                                <br>
+                                <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
+                                    <div class="gender-type container">
+
+                                        <div class="row">
+
+                                            <div class="col-md">
+                                                <h5>성별</h5>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender-radio" id="radio-male" value="1" checked>
+                                                    <label class="form-check-label" for="radio-male">남자</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender-radio" id="radio-female" value="2">
+                                                    <label class="form-check-label" for="radio-female">여자</label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md">
+                                                <h5>계열</h5>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="type-radio" id="radio-natural" value="1" checked>
+                                                    <label class="form-check-label" for="radio-male">인문</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="type-radio" id="radio-literature" value="2">
+                                                    <label class="form-check-label" for="radio-female">자연</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div class="row gy-3">
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-first-label">1학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="first" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-second-label">2학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="second" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-third-label">3학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="third" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 d-grid gap-2">
+                                            <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="korean-label">국어</span>
+                                        <select class="form-select" id="korean-type">
+                                            <option value="0" selected>화법과작문</option>
+                                            <option value="1">언어와매체</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">수학</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">영어</span>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">탐구 1</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">탐구 2</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-outline-primary" onclick="test_input()">
+                                            완료
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
                     </div>
-                    <br>
+
+                    <div class="collapse" id="department-input">
+                        <div class="accordion" id="PrivacyInfo">
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="FirstHeader">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FirstContent" aria-expanded="false" aria-controls="FirstContent">
+                                        개인정보 제공 및 활용 동의
+                                    </button>
+                                </h2>
+
+                                <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
+                                    <div class="accordion-body">
+                                        본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
+                                        이외 민감한 개인정보는 수집 대상이 아니며 사용한 모든 정보는 오직 성적 분석 및 합격 예측에만 사용됩니다.
+                                        이용자는 합격 예측기를 사용하기 전, 언제나 동의하지 않을 권리가 있으며 이 경우 합격 예측이 불가능합니다.
+                                        수집한 정보 중 일부는 더 정확한 정보를 이용자에게 제공하기 위한 분석 자료로 보관되며 외부인이 볼 수 없도록 안전하게 저장됩니다.
+                                        아래 동의 버튼을 누르고 성적 등 정보를 입력하면, 이용자가 본 개인 정보 제공 및 활용에 동의하였다고 간주합니다.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input" value="" id="flexCheckDefault" autocomplete="off">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                개인정보 제공 및 활용에 동의합니다
+                            </label>
+                        </div>
+
+                        <div class="grade-input collapse show" id="grade-input">
+                            <div class="card card-body">
+                                동의를 선택해야 성적을 입력하실 수 있습니다.
+                            </div>
+                        </div>
+
+                        <div class="grade-input collapse" id="grade-input">
+
+                            <div class="card card-body">
+                                <br>
+                                <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
+                                    <div class="gender-type container">
+
+                                        <div class="row">
+
+                                            <div class="col-md">
+                                                <h5>성별</h5>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender-radio" id="radio-male" value="1" checked>
+                                                    <label class="form-check-label" for="radio-male">남자</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender-radio" id="radio-female" value="2">
+                                                    <label class="form-check-label" for="radio-female">여자</label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md">
+                                                <h5>계열</h5>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="type-radio" id="radio-natural" value="1" checked>
+                                                    <label class="form-check-label" for="radio-male">인문</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="type-radio" id="radio-literature" value="2">
+                                                    <label class="form-check-label" for="radio-female">자연</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div class="row gy-3">
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-first-label">1학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="first" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-second-label">2학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="second" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="ig-third-label">3학년 평균</span>
+                                                <input type="text" class="form-control form-control-sm text-center" name="third" placeholder="1.0">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 d-grid gap-2">
+                                            <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="korean-label">국어</span>
+                                        <select class="form-select" id="korean-type">
+                                            <option value="0" selected>화법과작문</option>
+                                            <option value="1">언어와매체</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">수학</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">영어</span>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">탐구 1</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="math-label">탐구 2</span>
+                                        <select class="form-select" id="math-type">
+                                            <option value="0" selected>확률과통계</option>
+                                            <option value="1">미적분</option>
+                                            <option value="2">기하</option>
+                                        </select>
+                                        <select class="form-select" id="korean-grade" name="korean-grade">
+                                            <option selected value="0">미응시</option>
+                                            <option value="1">1등급</option>
+                                            <option value="2">2등급</option>
+                                            <option value="3">3등급</option>
+                                            <option value="4">4등급</option>
+                                            <option value="5">5등급</option>
+                                            <option value="6">6등급</option>
+                                            <option value="7">7등급</option>
+                                            <option value="8">8등급</option>
+                                            <option value="9">9등급</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="d-grid">
+                                        <button type="button" class="btn btn-outline-primary" onclick="test_input()">
+                                            완료
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
                     <div class="card card-body">
                         <h5 class="pb-3 mb-3 border-bottom">예측 단계 안내</h5>
                         <table class="table table-hover">
