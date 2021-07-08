@@ -186,6 +186,7 @@
     <?php require "./module/footer.php" ?>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../assets/js/calc.js"></script>
 </body>
 
