@@ -41,7 +41,7 @@
                         <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
                         <div>
                             <form>
-                                <table>
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">과목명</th>
