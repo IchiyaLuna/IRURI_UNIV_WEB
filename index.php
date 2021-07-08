@@ -84,7 +84,7 @@
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-u" value="" id="flexCheckDefault" autocomplete="off">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-u" value="" id="check-univ" autocomplete="off">
                             <label class="form-check-label" for="flexCheckDefault">
                                 개인정보 제공 및 활용에 동의합니다
                             </label>
@@ -357,7 +357,7 @@
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-d" value="" id="flexCheckDefault" autocomplete="off">
+                            <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-d" value="" id="check-dept" autocomplete="off">
                             <label class="form-check-label" for="flexCheckDefault">
                                 개인정보 제공 및 활용에 동의합니다
                             </label>
