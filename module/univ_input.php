@@ -1,4 +1,4 @@
-<div class="collapse multi-collapse-univ" id="university-input">
+<div class="collapse multi-collapse-univ" id="univ-input">
     <div class="container-fluid close-button">
         <div class="row justify-content-end mb-3">
             <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-univ"></button>
@@ -125,56 +125,44 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-korean-label">국어</span>
+                                <span class="input-group-text" id="univ-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-korean-type">
                                     <option value="0" selected>화법과작문</option>
                                     <option value="1">언어와매체</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-korean-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-korean-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-korean-score" id="univ-korean-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-math-label">수학</span>
+                                <span class="input-group-text" id="univ-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-math-type">
                                     <option value="0" selected>확률과통계</option>
                                     <option value="1">미적분</option>
                                     <option value="2">기하</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-math-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-math-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-math-score" id="univ-math-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-english-label">영어</span>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-english-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-english-score">원점수</label>
-                                </div>
+                                <span class="input-group-text" id="univ-english-label">영어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-english-score" id="univ-english-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-history-label">한국사</span>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-history-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-history-score">원점수</label>
-                                </div>
+                                <span class="input-group-text" id="univ-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-selectA-label">탐구 1</span>
+                                <span class="input-group-text" id="univ-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-selectA">
                                     <option value="p1" selected>물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -194,16 +182,13 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-selectA-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-selectA-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-selectA-score" id="univ-selectA-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-selectB-label">탐구 2</span>
+                                <span class="input-group-text" id="univ-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-selectB">
                                     <option value="p1">물리학 I</option>
                                     <option value="c1" selected>화학 I</option>
@@ -223,14 +208,11 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-selectB-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-selectB-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-selectB-score" id="univ-selectB-score" placeholder="원점수">
                             </div>
                         </div>
 
-                        <div class="col-xl-12">
+                        <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-foreignlang-label">제2외국어</span>
                                 <select class="form-select" id="univ-foreignlang-type">
@@ -245,11 +227,12 @@
                                     <option value="be">베트남어 I</option>
                                     <option value="cc">한문 I</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="univ-foreignlang-score" min="0" max="100" placeholder="원점수">
-                                    <label for="univ-foreignlang-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="univ-foreignlang-score" id="univ-foreignlang-score" placeholder="원점수">
                             </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                            &nbsp;
                         </div>
                     </div>
                 </div>
