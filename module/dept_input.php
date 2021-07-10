@@ -26,18 +26,18 @@
 
     <div class="form-check py-3">
         <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" href="#grade-input-dept" value="" id="check-dept" autocomplete="off">
-        <label class="form-check-label" for="flexCheckDefault">
+        <label class="form-check-label" for="check-dept">
             개인정보 제공 및 활용에 동의합니다
         </label>
     </div>
 
-    <div class="grade-input-dept collapse show" id="grade-input-u">
+    <div class="grade-input-dept collapse show" id="grade-input-dept">
         <div class="card card-body">
             동의를 선택해야 성적을 입력하실 수 있습니다.
         </div>
     </div>
 
-    <div class="grade-input-dept collapse" id="grade-input-u">
+    <div class="grade-input-dept collapse" id="grade-input-dept">
         <div class="card card-body">
             <form name="dept-input-form" id="dept-input-form" method="POST" action="./result_dept.php" autocomplete="off">
                 <h3 class="border-bottom">인적사항</h3>
@@ -204,7 +204,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-selectB-label">탐구 2</span>
-                                <select class="form-select" id="dept-selectA">
+                                <select class="form-select" id="dept-selectB">
                                     <option value="p1">물리학 I</option>
                                     <option value="c1" selected>화학 I</option>
                                     <option value="b1">생명과학 I</option>
