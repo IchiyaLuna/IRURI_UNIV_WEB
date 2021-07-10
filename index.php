@@ -60,8 +60,10 @@
                     </div>
 
                     <div class="collapse multi-collapse-a" id="university-input">
-                        <div class="row justify-content-end">
-                            <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-a"></button>
+                        <div class="container-fluid">
+                            <div class="row justify-content-end">
+                                <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-a"></button>
+                            </div>
                         </div>
                         <div class="accordion" id="PrivacyInfo">
                             <div class="accordion-item">
