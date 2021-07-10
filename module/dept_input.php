@@ -125,7 +125,7 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-korean-label">국어&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="dept-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="dept-korean-type">
                                     <option value="0" selected>화법과작문</option>
                                     <option value="1">언어와매체</option>
@@ -136,7 +136,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-math-label">수학&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="dept-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="dept-math-type">
                                     <option value="0" selected>확률과통계</option>
                                     <option value="1">미적분</option>
@@ -148,21 +148,21 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-english-label">영어&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="dept-english-label">영어&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <input type="text" class="form-control form-control-sm text-center" name="dept-english-score" id="dept-english-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-history-label">한국사</span>
+                                <span class="input-group-text" id="dept-history-label">한국사&nbsp;&nbsp;</span>
                                 <input type="text" class="form-control form-control-sm text-center" name="dept-history-score" id="dept-history-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-selectA-label">탐구 1</span>
+                                <span class="input-group-text" id="dept-selectA-label">탐구 1&nbsp;&nbsp;</span>
                                 <select class="form-select" id="dept-selectA">
                                     <option value="p1" selected>물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -188,7 +188,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-selectB-label">탐구 2</span>
+                                <span class="input-group-text" id="dept-selectB-label">탐구 2&nbsp;&nbsp;</span>
                                 <select class="form-select" id="dept-selectB">
                                     <option value="p1">물리학 I</option>
                                     <option value="c1" selected>화학 I</option>
