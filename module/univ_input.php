@@ -40,7 +40,7 @@
     <div class="grade-input-univ collapse mb-3" id="grade-input-univ">
         <div class="card card-body">
             <form name="univ-input-form" id="univ-input-form" method="POST" action="./result_univ.php" autocomplete="off">
-                <h3 class="border-bottom">인적사항</h3>
+                <h3 class="pb-3 border-bottom">인적사항</h3>
                 <div class="personal-info py-3">
                     <div class="row">
                         <div class="col-md mb-3 gender-group">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="border-bottom">내신</h3>
+                <h3 class="pb-3 border-bottom">내신</h3>
                 <div class="sushi py-3">
                     <div class="row gy-3">
                         <div class="col-xl-3 first-group">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="border-bottom">수능(모의고사)</h3>
+                <h3 class="pb-3 border-bottom">수능(모의고사)</h3>
                 <div class="jungshi py-3">
                     <div class="row">
                         <div class="col-xl-6">
