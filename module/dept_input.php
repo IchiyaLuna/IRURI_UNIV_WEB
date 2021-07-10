@@ -230,6 +230,9 @@
                                 <input type="text" class="form-control form-control-sm text-center" name="dept-foreignlang-score" id="dept-foreignlang-score" placeholder="원점수">
                             </div>
                         </div>
+
+                        <div class="col-xl-12">
+                        </div>
                     </div>
                 </div>
                 <br>
