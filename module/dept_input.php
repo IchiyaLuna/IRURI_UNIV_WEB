@@ -232,6 +232,7 @@
                         </div>
 
                         <div class="col-xl-12">
+                            &nbsp;
                         </div>
                     </div>
                 </div>
