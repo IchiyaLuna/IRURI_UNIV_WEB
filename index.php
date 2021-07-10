@@ -97,15 +97,14 @@
                         </div>
 
                         <div class="grade-input-u collapse" id="grade-input-u">
-
                             <div class="card card-body">
                                 <br>
                                 <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
-                                    <div class="personal-info container">
+                                    <div class="personal-info">
 
                                         <div class="row">
 
-                                            <div class="col-md">
+                                            <div class="col-md mb-3">
                                                 <h5>성별</h5>
 
                                                 <div class="form-check form-check-inline">
@@ -116,10 +115,9 @@
                                                     <input class="form-check-input" type="radio" name="gender-radio" id="radio-female" value="2">
                                                     <label class="form-check-label" for="radio-female">여자</label>
                                                 </div>
-
                                             </div>
 
-                                            <div class="col-md">
+                                            <div class="col-md mb-3">
                                                 <h5>계열</h5>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="type-radio" id="radio-natural" value="1" checked>
@@ -131,7 +129,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md">
+                                            <div class="col-md mb-3">
                                                 <h5>지역</h5>
                                                 <select class="form-select" id="location-select" name="location-select">
                                                     <option value="서울" selected>서울</option>
@@ -154,7 +152,6 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                     </div>
                                     <br>
                                     <div class="row gy-3">
@@ -180,7 +177,7 @@
                                         </div>
 
                                         <div class="col-xl-3 d-grid gap-2">
-                                            <a class="btn btn-primary justify-content-md-end" href="./calc" role="button">등급 계산기 바로가기</a>
+                                            <a class="btn btn-primary justify-content-md-end" href="./calc" target="_blank" role="button">등급 계산기 바로가기</a>
                                         </div>
                                     </div>
 
