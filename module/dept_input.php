@@ -130,10 +130,7 @@
                                     <option value="0" selected>화법과작문</option>
                                     <option value="1">언어와매체</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-korean-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-korean-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-korean-score" id="dept-korean-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -145,30 +142,21 @@
                                     <option value="1">미적분</option>
                                     <option value="2">기하</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-math-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-math-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-math-score" id="dept-math-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-english-label">영어</span>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-english-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-english-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-english-score" id="dept-english-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-history-label">한국사</span>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-history-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-history-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-history-score" id="dept-history-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -194,10 +182,7 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-selectA-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-selectA-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-selectA-score" id="dept-selectA-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -223,10 +208,7 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-selectB-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-selectB-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-selectB-score" id="dept-selectB-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -245,10 +227,7 @@
                                     <option value="be">베트남어 I</option>
                                     <option value="cc">한문 I</option>
                                 </select>
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="dept-foreignlang-score" min="0" max="100" placeholder="원점수">
-                                    <label for="dept-foreignlang-score">원점수</label>
-                                </div>
+                                <input type="text" class="form-control form-control-sm text-center" name="dept-foreignlang-score" id="dept-foreignlang-score" placeholder="원점수">
                             </div>
                         </div>
                     </div>
