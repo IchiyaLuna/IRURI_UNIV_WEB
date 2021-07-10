@@ -125,7 +125,7 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-korean-label">국어</span>
+                                <span class="input-group-text" id="dept-korean-label">국어&nbsp;</span>
                                 <select class="form-select" id="dept-korean-type">
                                     <option value="0" selected>화법과작문</option>
                                     <option value="1">언어와매체</option>
@@ -136,7 +136,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-math-label">수학</span>
+                                <span class="input-group-text" id="dept-math-label">수학&nbsp;</span>
                                 <select class="form-select" id="dept-math-type">
                                     <option value="0" selected>확률과통계</option>
                                     <option value="1">미적분</option>
@@ -148,7 +148,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-english-label">영어</span>
+                                <span class="input-group-text" id="dept-english-label">영어&nbsp;</span>
                                 <input type="text" class="form-control form-control-sm text-center" name="dept-english-score" id="dept-english-score" placeholder="원점수">
                             </div>
                         </div>
