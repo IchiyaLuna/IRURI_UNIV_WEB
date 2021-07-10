@@ -43,6 +43,29 @@
                 <h3 class="pb-3 border-bottom">인적사항</h3>
                 <div class="personal-info py-3">
                     <div class="row">
+                        <div class="col-md mb-3 location-group">
+                            <h5>지역</h5>
+                            <select class="form-select" id="univ-location-select" name="univ-location-select">
+                                <option value="서울" selected>서울</option>
+                                <option value="경기">경기도</option>
+                                <option value="인천">인천</option>
+                                <option value="강원">강원도</option>
+                                <option value="충북">충청북도</option>
+                                <option value="충남">충청남도</option>
+                                <option value="세종">세종시</option>
+                                <option value="대전">대전</option>
+                                <option value="전북">전라북도</option>
+                                <option value="전남">전라남도</option>
+                                <option value="광주">광주광역시</option>
+                                <option value="경북">경상북도</option>
+                                <option value="경남">경상남도</option>
+                                <option value="대구">대구</option>
+                                <option value="부산">부산</option>
+                                <option value="울산">울산</option>
+                                <option value="제주">제주도</option>
+                            </select>
+                        </div>
+
                         <div class="col-md mb-3 gender-group">
                             <h5>성별</h5>
                             <div class="form-check form-check-inline">
@@ -66,32 +89,10 @@
                                 <label class="form-check-label" for="univ-radio-literature">자연</label>
                             </div>
                         </div>
-
-                        <div class="col-md mb-3 location-group">
-                            <h5>지역</h5>
-                            <select class="form-select" id="univ-location-select" name="univ-location-select">
-                                <option value="서울" selected>서울</option>
-                                <option value="경기">경기도</option>
-                                <option value="인천">인천</option>
-                                <option value="강원">강원도</option>
-                                <option value="충북">충청북도</option>
-                                <option value="충남">충청남도</option>
-                                <option value="세종">세종시</option>
-                                <option value="대전">대전</option>
-                                <option value="전북">전라북도</option>
-                                <option value="전남">전라남도</option>
-                                <option value="광주">광주광역시</option>
-                                <option value="경북">경상북도</option>
-                                <option value="경남">경상남도</option>
-                                <option value="대구">대구</option>
-                                <option value="부산">부산</option>
-                                <option value="울산">울산</option>
-                                <option value="제주">제주도</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
-                <h3 class="pb-3 border-bottom">내신</h3>
+                <h3>내신</h3>
+                <h5 class="pb-3 border-bottom">아직 성적이 없는 경우 0을 입력해주세요.</h5>
                 <div class="sushi py-3">
                     <div class="row gy-3">
                         <div class="col-xl-3 first-group">
@@ -127,8 +128,9 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-korean-type">
-                                    <option value="0" selected>화법과작문</option>
-                                    <option value="1">언어와매체</option>
+                                    <option value="na" selected>미응시</option>
+                                    <option value="tw">화법과작문</option>
+                                    <option value="lm">언어와매체</option>
                                 </select>
                                 <input type="text" class="form-control form-control-sm text-center" name="univ-korean-score" id="univ-korean-score" placeholder="원점수">
                             </div>
@@ -138,9 +140,10 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-math-type">
-                                    <option value="0" selected>확률과통계</option>
-                                    <option value="1">미적분</option>
-                                    <option value="2">기하</option>
+                                    <option value="na" selected>미응시</option>
+                                    <option value="ps">확률과통계</option>
+                                    <option value="cl">미적분</option>
+                                    <option value="ge">기하</option>
                                 </select>
                                 <input type="text" class="form-control form-control-sm text-center" name="univ-math-score" id="univ-math-score" placeholder="원점수">
                             </div>
@@ -149,6 +152,10 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-english-label">영어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <select class="form-select" id="univ-english-type">
+                                    <option value="na" selected>미응시</option>
+                                    <option value="at">응시</option>
+                                </select>
                                 <input type="text" class="form-control form-control-sm text-center" name="univ-english-score" id="univ-english-score" placeholder="원점수">
                             </div>
                         </div>
@@ -156,6 +163,9 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <select class="form-select" id="univ-history-type" disabled>
+                                    <option value="na" selected>필수</option>
+                                </select>
                                 <input type="text" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
                             </div>
                         </div>
@@ -164,7 +174,8 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-selectA">
-                                    <option value="p1" selected>물리학 I</option>
+                                    <option value="na" selected>미응시</option>
+                                    <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
                                     <option value="b1">생명과학 I</option>
                                     <option value="e1">지구과학 I</option>
@@ -190,8 +201,9 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-selectB">
+                                    <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
-                                    <option value="c1" selected>화학 I</option>
+                                    <option value="c1">화학 I</option>
                                     <option value="b1">생명과학 I</option>
                                     <option value="e1">지구과학 I</option>
                                     <option value="p2">물리학 II</option>
@@ -216,7 +228,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-foreignlang-label">제2외국어</span>
                                 <select class="form-select" id="univ-foreignlang-type">
-                                    <option value="0" selected>미응시</option>
+                                    <option value="na" selected>미응시</option>
                                     <option value="du">독일어 I</option>
                                     <option value="fr">프랑스어 I</option>
                                     <option value="sp">스페인어 I</option>
