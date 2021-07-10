@@ -1,7 +1,7 @@
-<div class="collapse multi-collapse-a" id="dept-input">
+<div class="collapse multi-collapse-dept" id="dept-input">
     <div class="container-fluid close-button">
         <div class="row justify-content-end mb-3">
-            <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-a"></button>
+            <button class="btn-close" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-dept"></button>
         </div>
     </div>
     <div class="accordion" id="dept-privacyinfo">
