@@ -212,7 +212,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-12">
+                        <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-foreignlang-label">제2외국어</span>
                                 <select class="form-select" id="dept-foreignlang-type">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xl-12">
+                        <div class="col-xl-6">
                             &nbsp;
                         </div>
                     </div>
