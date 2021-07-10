@@ -31,13 +31,13 @@
         </label>
     </div>
 
-    <div class="grade-input-univ collapse show" id="grade-input-univ">
+    <div class="grade-input-univ collapse mb-3 show" id="grade-input-univ">
         <div class="card card-body">
             동의를 선택해야 성적을 입력하실 수 있습니다.
         </div>
     </div>
 
-    <div class="grade-input-univ collapse" id="grade-input-univ">
+    <div class="grade-input-univ collapse mb-3" id="grade-input-univ">
         <div class="card card-body">
             <form name="univ-input-form" id="univ-input-form" method="POST" action="./result_univ.php" autocomplete="off">
                 <h3 class="border-bottom">인적사항</h3>
