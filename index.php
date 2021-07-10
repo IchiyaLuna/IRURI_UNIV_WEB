@@ -36,7 +36,7 @@
                     <h1>대학 합격 예측기</h1>
 
                     <p class="lead">
-                        학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.<br>
+                        학생의 기본 정보와 내신, 수능(모의고사) 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시, 정시 전형 추천 대학 혹은 학과를 보여드립니다.<br>
                         (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
                     </p>
 
@@ -45,14 +45,14 @@
                             <div class="col-md-6">
                                 <div class="h-100 p-5 text-white bg-dark border rounded-3 position-relative">
                                     <h2>대학교 기준</h2>
-                                    <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에서 합격 가능성을 표시합니다.</p>
+                                    <p>입력한 내신과 정시 등급을 기준으로 전체 대학교 목록에 합격 가능성과 학생의 각 대학별 환산 점수를 표시하고, 추가적인 정보도 제공합니다.</p>
                                     <button class="btn btn-primary stretched-link" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-a">학교 보러가기</button>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="h-100 p-5 bg-light border rounded-3 position-relative">
                                     <h2>학과 기준</h2>
-                                    <p>원하는 1지망 2지망 학과를 선택하여 해당 학과를 기준으로 출력합니다.</p>
+                                    <p>원하는 학과의 분야를 선택하면 해당 분야를 기준으로 현재 가능성 있는 학교의 학과들과 세부 정보를 출력합니다.</p>
                                     <button class="btn btn-primary stretched-link" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-b">학과 보러가기</button>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
 
                                 <div id="FirstContent" class="accordion-collapse collapse" aria-labelledby="FirstHeader" data-bs-parent="#PrivacyInfo">
                                     <div class="accordion-body">
-                                        본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
+                                        본 합격 예측기가 수집하는 개인정보는 학생의 성별, 학년, 지역, 성적 등의 정보이며 추가로 사이트의 원활한 동작을 위해 접속 정보 등을 수집합니다.
                                         이외 민감한 개인정보는 수집 대상이 아니며 사용한 모든 정보는 오직 성적 분석 및 합격 예측에만 사용됩니다.
                                         이용자는 합격 예측기를 사용하기 전, 언제나 동의하지 않을 권리가 있으며 이 경우 합격 예측이 불가능합니다.
                                         수집한 정보 중 일부는 더 정확한 정보를 이용자에게 제공하기 위한 분석 자료로 보관되며 외부인이 볼 수 없도록 안전하게 저장됩니다.
@@ -101,7 +101,7 @@
                             <div class="card card-body">
                                 <br>
                                 <form name="input-form" id="input-form" method="POST" action="./result.php" autocomplete="off">
-                                    <div class="gender-type container">
+                                    <div class="personal-info container">
 
                                         <div class="row">
 
@@ -131,6 +131,28 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md">
+                                                <h5>지역</h5>
+                                                <select class="form-select" id="location-select" name="location-select">
+                                                    <option value="서울" selected>서울</option>
+                                                    <option value="경기">경기도</option>
+                                                    <option value="인천">인천</option>
+                                                    <option value="강원">강원도</option>
+                                                    <option value="충북">충청북도</option>
+                                                    <option value="충남">충청남도</option>
+                                                    <option value="세종">세종시</option>
+                                                    <option value="대전">대전</option>
+                                                    <option value="전북">전라북도</option>
+                                                    <option value="전남">전라남도</option>
+                                                    <option value="광주">광주광역시</option>
+                                                    <option value="경북">경상북도</option>
+                                                    <option value="경남">경상남도</option>
+                                                    <option value="대구">대구</option>
+                                                    <option value="부산">부산</option>
+                                                    <option value="울산">울산</option>
+                                                    <option value="제주">제주도</option>
+                                                </select>
+                                            </div>
                                         </div>
 
                                     </div>
