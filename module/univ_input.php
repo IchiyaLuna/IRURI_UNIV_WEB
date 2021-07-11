@@ -98,21 +98,21 @@
                         <div class="col-xl-3 first-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-first-label">1학년 평균</span>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-first" id="univ-first" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-first" id="univ-first" placeholder="1.0">
                             </div>
                         </div>
 
                         <div class="col-xl-3 second-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-second-label">2학년 평균</span>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-second" id="univ-second" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-second" id="univ-second" placeholder="1.0">
                             </div>
                         </div>
 
                         <div class="col-xl-3 third-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-third-label">3학년 평균</span>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-third" id="univ-third" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-third" id="univ-third" placeholder="1.0">
                             </div>
                         </div>
 
@@ -132,7 +132,7 @@
                                     <option value="tw">화법과작문</option>
                                     <option value="lm">언어와매체</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-korean-score" id="univ-korean-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-korean-score" id="univ-korean-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -145,7 +145,7 @@
                                     <option value="cl">미적분</option>
                                     <option value="ge">기하</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-math-score" id="univ-math-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-math-score" id="univ-math-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -156,7 +156,7 @@
                                     <option value="na" selected>미응시</option>
                                     <option value="at">응시</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-english-score" id="univ-english-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-english-score" id="univ-english-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -166,7 +166,7 @@
                                 <select class="form-select" id="univ-history-type" disabled>
                                     <option value="na" selected>필수</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -193,7 +193,7 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-selectA-score" id="univ-selectA-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-selectA-score" id="univ-selectA-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -220,7 +220,7 @@
                                     <option value="le">생활과윤리</option>
                                     <option value="et">윤리와사상</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-selectB-score" id="univ-selectB-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-selectB-score" id="univ-selectB-score" placeholder="원점수">
                             </div>
                         </div>
 
@@ -239,12 +239,11 @@
                                     <option value="be">베트남어 I</option>
                                     <option value="cc">한문 I</option>
                                 </select>
-                                <input type="text" class="form-control form-control-sm text-center" name="univ-foreignlang-score" id="univ-foreignlang-score" placeholder="원점수">
+                                <input type="number" class="form-control form-control-sm text-center" name="univ-foreignlang-score" id="univ-foreignlang-score" placeholder="원점수">
                             </div>
                         </div>
 
                         <div class="col-xl-6">
-                            &nbsp;
                         </div>
                     </div>
                 </div>
