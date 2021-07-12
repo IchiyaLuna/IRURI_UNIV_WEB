@@ -2,8 +2,9 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $gender = $_POST["gender-radio"];
-    $type = $_POST["type-radio"];
+    $location = $_POST["univ-location-select"];
+    $gender = $_POST["univ-gender-radio"];
+    $type = $_POST["univ-type-radio"];
 
     $first_korean = $_POST["first-korean"];
     $first_math =  $_POST["first-math"];
