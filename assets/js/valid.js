@@ -1,5 +1,26 @@
-var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'))
-var resultpage = document.getElementById('input-form')
+var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+var resultpage = document.getElementById('input-form');
+
+function test_calc_input() {
+
+    const names = document.getElementsByName("subject[]");
+    const ranks = document.getElementsByName("rank[]");
+    const sameranks = document.getElementsByName("samerank[]");
+    const studentss = document.getElementsByName("students[]");
+    const times = document.getElementsByName("time[]");
+
+    for (var key in names) {
+
+        if (names[key] === "") {
+
+        }
+    }
+}
+
+function test_univ_input() {
+
+
+}
 
 function test_input() {
 

@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_korean = $_POST["first-korean"];
     $first_math =  $_POST["first-math"];
     $first_english =  $_POST["first-english"];
-    $first_social =  $_POST["first-social"];
+    $first_social =  $_POST["first-social "];
     $first_science =  $_POST["first-science"];
     $first_history =  $_POST["first-history"];
 
