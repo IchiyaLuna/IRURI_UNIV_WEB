@@ -43,7 +43,7 @@
                     <?php require "./module/get_post_grade.php" ?>
 
                     <div class="table-resposive">
-                        <table class="table mb-0 table-hover">
+                        <table class="table mb-0 bg-white table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">과목명</th>
