@@ -82,10 +82,7 @@
                         </table>
                     </div>
 
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-warning">초기화</button>
-                        <button type="submit" class="btn btn-outline-primary" onclick="test_calc_input();">등급 계산 하기</button>
-                    </div>
+                    <button type="button" class="btn btn-outline-warning" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>초기화</button>
                 </div>
 
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
