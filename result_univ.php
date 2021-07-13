@@ -2,7 +2,7 @@
 <html lang="ko" class="h-100">
 
 <?php require "./module/avg_functions.php"; ?>
-<?php require "./module/get_post.php"; ?>
+<?php require "./module/get_post_univ.php"; ?>
 
 <head>
     <meta charset="utf-8">

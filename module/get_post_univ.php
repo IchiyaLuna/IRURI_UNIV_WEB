@@ -6,37 +6,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["univ-gender-radio"];
     $type = $_POST["univ-type-radio"];
 
-    $first_korean = $_POST["first-korean"];
-    $first_math =  $_POST["first-math"];
-    $first_english =  $_POST["first-english"];
-    $first_social =  $_POST["first-social "];
-    $first_science =  $_POST["first-science"];
-    $first_history =  $_POST["first-history"];
+    $first = $_POST["univ-first"];
+    $second = $_POST["univ-first"];
+    $third = $_POST["univ-first"];
 
-    $first = array($first_korean, $first_math, $first_english, $first_social, $first_science, $first_history);
+    $sushi = array($first, $second, $third);
 
-    $second_korean = $_POST["second-korean"];
-    $second_math =  $_POST["second-math"];
-    $second_english =  $_POST["second-english"];
-    $second_social =  $_POST["second-social"];
-    $second_science =  $_POST["second-science"];
-    $second_history =  $_POST["second-history"];
+    $korean_type = $_POST["univ-korean-type"];
+    $math_type = $_POST["univ-math-type"];
+    $english_type = $_POST["univ-english-type"];
+    $history_type = $_POST["univ-history-type"];
+    $selectA_type = $_POST["univ-selectA-type"];
+    $selectB_type = $_POST["univ-selectB-type"];
+    $foreign_type = $_POST["univ-foreignlang-type"];
 
-    $second = array($second_korean, $second_math, $second_english, $second_social, $second_science, $second_history);
-
-    $third_korean = $_POST["third-korean"];
-    $third_math = $_POST["third-math"];
-    $third_english = $_POST["third-english"];
-    $third_social = $_POST["third-social"];
-    $third_science = $_POST["third-science"];
-    $third_history = $_POST["third-history"];
-
-    $third = array($third_korean, $third_math, $third_english, $third_social, $third_science, $third_history);
+    $korean_score = $_POST["univ-korean-score"];
+    $math_score = $_POST["univ-math-score"];
+    $english_score = $_POST["univ-english-score"];
+    $history_score = $_POST["univ-history-score"];
+    $selectA_score = $_POST["univ-selectA-score"];
+    $selectB_score = $_POST["univ-selectB-score"];
+    $foreign_score = $_POST["univ-foreignlang-score"];
 } else {
 
-    $first = array(0, 0, 0, 0, 0, 0);
-    $second = array(0, 0, 0, 0, 0, 0);
-    $third = array(0, 0, 0, 0, 0, 0);
+    exit;
 }
 
 if ($gender == 1) {
@@ -53,39 +46,21 @@ if ($type == 1) {
 $simple_avg = 0;
 $count = 0;
 
-foreach ($first as $value) {
-    if ($value == 0) {
-        continue;
-    }
-    $simple_avg += $value;
-    $count++;
-}
+foreach ($sushi as $grade) {
 
-foreach ($second as $value) {
-    if ($value == 0) {
-        continue;
-    }
-    $simple_avg += $value;
-    $count++;
-}
-
-foreach ($third as $value) {
-    if ($value == 0) {
-        continue;
-    }
-    $simple_avg += $value;
-    $count++;
+    if ($grade !== 0) $count++;
+    $simple_avg += $grade;
 }
 
 $simple_avg /= $count;
-
+/*
 $white = white($first, $second, $third);
 $gray = gray($first, $second, $third);
 $yellow = yellow($first, $second, $third);
 $light_yellow = light_yellow($first, $second, $third);
 $green = green($first, $second, $third);
 $beige = beige($first, $second, $third);
-
+*/
 include "./module/univ_load.php";
 
 $result_list = array();
@@ -100,6 +75,9 @@ foreach ($univ_list as $univ) {
         }
     }
 
+    $this_time_myavg = round($simple_avg, 3);
+    $gap = round($univ['avg'] - $this_time_myavg, 3);
+    /*
     switch ($univ['method']) {
         case 0:
             $gap = $univ['avg'] - $white;
@@ -129,7 +107,7 @@ foreach ($univ_list as $univ) {
             $gap = -1;
             break;
     }
-
+    */
     $this_time_result = array($univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
     array_push($result_list, $this_time_result);
 }
@@ -140,7 +118,7 @@ foreach ((array) $result_list as $key => $value) {
 }
 
 array_multisort($sort, SORT_ASC, $result_list);
-
+/*
 $index = 0;
 $univ_count = sizeof($result_list);
 
@@ -154,9 +132,20 @@ foreach ($result_list as $vaule) {
         continue;
     } elseif ($value[5] >= 0.0) break;
 }
-
+*/
 $final_result = array();
 
+foreach ($result_list as $data) {
+    if ($data[4] < $data[2]) $posi = 0;
+    elseif ($data[5] > 0) $posi = 1;
+    elseif ($data[4] > $data[1]) $posi = 3;
+    else $posi = 2;
+
+    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+    array_push($final_result, $arr_to_push);
+}
+
+/*
 if ($index < 3) {
     for ($i = 0; $i < 10; $i++) {
         if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
@@ -176,3 +165,4 @@ if ($index < 3) {
         array_push($final_result, $arr_to_push);
     }
 }
+*/
