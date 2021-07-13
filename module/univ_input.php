@@ -173,7 +173,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="univ-selectA">
+                                <select class="form-select" id="univ-selectA-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -200,7 +200,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="univ-selectB">
+                                <select class="form-select" id="univ-selectB-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
