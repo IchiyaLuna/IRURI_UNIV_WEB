@@ -34,4 +34,4 @@ for ($i = 0; $i < sizeof($subject); $i++) {
     $total_time += $time[$i];
 }
 
-$final_grade = $modified_grade / $total_time;
+$final_grade = round($modified_grade / $total_time, 1);
