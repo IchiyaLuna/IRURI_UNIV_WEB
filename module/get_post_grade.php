@@ -31,7 +31,7 @@ for ($i = 0; $i < sizeof($subject); $i++) {
     array_push($subjects, $arrtopush);
 
     $modified_grade += $thistimerank;
-    $total_time++;
+    $total_time += $time[$i];
 }
 
 $final_grade = $modified_grade / $total_time;
