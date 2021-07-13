@@ -178,7 +178,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        입력칸은 비워둘 수 없습니다.
+                        입력 칸은 비워둘 수 없습니다.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
@@ -195,7 +195,24 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        석차, 동석차, 이수자, 단위수는 0보다 커야합니다.
+                        석차, 동석차, 이수자, 단위수는 0보다 커야 합니다.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-modal modal fade" id="big-input" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="big-input-label">오류</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        석차는 학생 수보다 클 수 없습니다.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>

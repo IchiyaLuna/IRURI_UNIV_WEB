@@ -1,5 +1,6 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
 var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
 
 var resultpage = document.getElementById('input-form');
 var calcresult = document.getElementById('subject-form');
@@ -48,6 +49,11 @@ function test_calc_input() {
         }
         if (times[key].value <= 0) {
             zeroinput_modal.show();
+            return false;
+        }
+
+        if (ranks[key].value > studentss[key].value) {
+            biginput_modal.show();
             return false;
         }
     }
@@ -120,5 +126,7 @@ function test_input() {
 
 function close_modal() {
     noinput_modal.hide();
+    zeroinput_modal.hide();
+    biginput_modal.hide();
     return false;
 }
