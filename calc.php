@@ -194,6 +194,7 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/calc.js"></script>
+    <script src="../assets/js/valid.js"></script>
 </body>
 
 </html>
