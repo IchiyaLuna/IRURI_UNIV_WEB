@@ -66,7 +66,7 @@
                                     echo "<td>" . $data[2] . "명" . "</td>";
                                     echo "<td>" . $data[3] . "명" . "</td>";
                                     echo "<td>" . $data[4] . "단위" . "</td>";
-                                    echo "<td>" . "<p class='text-danger'>" . $data[5] . "등급" . "</p>" . "</td>";
+                                    echo "<td>" . "<div class='text-danger'>" . $data[5] . "등급" . "</div>" . "</td>";
 
                                     echo "</tr>";
                                 }
