@@ -115,7 +115,7 @@ function test_univ_input() {
         return false;
     }
 
-    if (math_score != "na" && math_score === "") {
+    if (math_type != "na" && math_score === "") {
         zeroinput_modal.show();
         return false;
     }
@@ -137,7 +137,7 @@ function test_univ_input() {
         zeroinput_modal.show();
         return false;
     }
-    if (parseInt(history_score) < 0 || parseInt(history_score) > 100) {
+    if (parseInt(history_score) < 0 || parseInt(history_score) > 50) {
         biginput_modal.show();
         return false;
     }
@@ -146,7 +146,7 @@ function test_univ_input() {
         zeroinput_modal.show();
         return false;
     }
-    if (parseInt(selectA_score) < 0 || parseInt(selectA_score) > 100) {
+    if (parseInt(selectA_score) < 0 || parseInt(selectA_score) > 50) {
         biginput_modal.show();
         return false;
     }
@@ -155,7 +155,7 @@ function test_univ_input() {
         zeroinput_modal.show();
         return false;
     }
-    if (parseInt(selectB_score) < 0 || parseInt(selectB_score) > 100) {
+    if (parseInt(selectB_score) < 0 || parseInt(selectB_score) > 50) {
         biginput_modal.show();
         return false;
     }
@@ -164,7 +164,7 @@ function test_univ_input() {
         zeroinput_modal.show();
         return false;
     }
-    if (parseInt(foreign_score) < 0 || parseInt(foreign_score) > 100) {
+    if (parseInt(foreign_score) < 0 || parseInt(foreign_score) > 50) {
         biginput_modal.show();
         return false;
     }
