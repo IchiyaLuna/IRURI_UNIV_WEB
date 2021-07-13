@@ -38,7 +38,7 @@
 
                     <p class="lead">학생의 내신 성적을 입력하시면 내신 등급을 계산합니다.</p>
 
-                    <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
+                    <h5 class="pb-3 mb-3 border-bottom">계산 방법 혹은 조건에 따라 다를 수 있으나 표준적인 방법을 활용하여 학년 평균 등급을 계산합니다.</h5>
 
                     <div class="dynamic-input">
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
