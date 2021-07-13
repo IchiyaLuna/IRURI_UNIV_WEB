@@ -164,7 +164,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="univ-history-type" disabled>
-                                    <option value="na" selected>필수</option>
+                                    <option value="at" selected>필수</option>
                                 </select>
                                 <input type="number" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
                             </div>
