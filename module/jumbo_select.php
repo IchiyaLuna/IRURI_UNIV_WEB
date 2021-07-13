@@ -11,7 +11,7 @@
             <div class="h-100 p-5 bg-white border rounded-3 position-relative">
                 <h2>학과 기준</h2>
                 <p>원하는 학과의 분야를 선택하면 해당 분야를 기준으로 현재 가능성 있는 학교의 학과들과 세부 정보를 출력합니다.</p>
-                <button class="btn btn-outline-light stretched-link" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-dept">학과 보러가기</button>
+                <button class="btn btn-outline-dark stretched-link" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-dept">학과 보러가기</button>
             </div>
         </div>
     </div>
