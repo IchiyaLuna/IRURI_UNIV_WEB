@@ -1,4 +1,6 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+
 var resultpage = document.getElementById('input-form');
 var calcresult = document.getElementById('subject-form');
 

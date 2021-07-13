@@ -41,7 +41,7 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
 
                     <div class="dynamic-input">
-                        <form id="subject-form" class="needs-validation" action="./module/get_post_grade.php">
+                        <form id="subject-form" class="needs-validation" action="./module/get_post_grade.php" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
@@ -69,16 +69,16 @@
                                         <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="rank[]" placeholder="1" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="rank[]" placeholder="1" pattern="[0-9]+" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1" pattern="[0-9]+" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="1" pattern="[0-9]+" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="1" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="1" pattern="[0-9]+" required>
                                     </div>
                                     <div class="col-1 text-center">
                                         <div class="d-grid">
@@ -179,6 +179,23 @@
                     </div>
                     <div class="modal-body">
                         입력칸은 비워둘 수 없습니다.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-modal modal fade" id="zero-input" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="zero-input-label">오류</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        석차, 동석차, 이수자, 단위수는 0보다 커야합니다.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
