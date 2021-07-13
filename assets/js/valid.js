@@ -67,9 +67,9 @@ function test_calc_input() {
 }
 
 function test_univ_input() {
-    const first = document.getElementById("univ-first");
-    const second = document.getElementById("univ-second");
-    const third = document.getElementById("univ-third");
+    const first = document.getElementById("univ-first").value;
+    const second = document.getElementById("univ-second").value;
+    const third = document.getElementById("univ-third").value;
 
     if (first === "" || second === "" || third === "") {
         noinput_modal.show();
@@ -98,13 +98,13 @@ function test_univ_input() {
     var foreign_type = document.getElementById("univ-foreignlang-type");
     foreign_type = foreign_type.options[foreign_type.selectedIndex].value;
 
-    const korean_score = document.getElementById("univ-korean-type");
-    const math_score = document.getElementById("univ-math-type");
-    const english_score = document.getElementById("univ-english-type");
-    const history_score = document.getElementById("univ-history-type");
-    const selectA_score = document.getElementById("univ-selectA-type");
-    const selectB_score = document.getElementById("univ-selectB-type");
-    const foreign_score = document.getElementById("univ-foreignlang-type");
+    const korean_score = document.getElementById("univ-korean-type").value;
+    const math_score = document.getElementById("univ-math-type").value;
+    const english_score = document.getElementById("univ-english-type").value;
+    const history_score = document.getElementById("univ-history-type").value;
+    const selectA_score = document.getElementById("univ-selectA-type").value;
+    const selectB_score = document.getElementById("univ-selectB-type").value;
+    const foreign_score = document.getElementById("univ-foreignlang-type").value;
 
     if (korean_type != "na" && korean_score === "") {
         zeroinput_modal.show();
