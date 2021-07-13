@@ -73,7 +73,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="6" class="text-center">
+                                    <td colspan="6" class="text-center fw-bold text-danger">
                                         <?php echo "평균 등급 : " . $final_grade; ?>
                                     </td>
                                 </tr>
