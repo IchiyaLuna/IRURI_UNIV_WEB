@@ -129,7 +129,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        최소 하나 이상의 내신 등급을 입력해 주세요.
+                        최소 하나 이상의 내신 등급을 입력해 주세요. (성적이 아직 없거나 생략하고 싶은 경우 0을 입력합니다.)
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal()">확인</button>
