@@ -22,16 +22,32 @@ function test_calc_input() {
             noinput_modal.show();
             return false;
         }
+        if (ranks[key].value <= 0) {
+            zeroinput_modal.show();
+            return false;
+        }
         if (sameranks[key].value === "") {
             noinput_modal.show();
+            return false;
+        }
+        if (sameranks[key].value <= 0) {
+            zeroinput_modal.show();
             return false;
         }
         if (studentss[key].value === "") {
             noinput_modal.show();
             return false;
         }
+        if (studentss[key].value <= 0) {
+            zeroinput_modal.show();
+            return false;
+        }
         if (times[key].value === "") {
             noinput_modal.show();
+            return false;
+        }
+        if (times[key].value <= 0) {
+            zeroinput_modal.show();
             return false;
         }
     }
