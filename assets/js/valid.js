@@ -53,6 +53,8 @@ function test_calc_input() {
         }
 
         if (ranks[key].value > studentss[key].value) {
+            alert(ranks[key].value);
+            alert(studentss[key].value);
             biginput_modal.show();
             return false;
         }
