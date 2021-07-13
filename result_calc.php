@@ -14,6 +14,7 @@
     <!-- Custom styles for this template -->
 
     <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/result.css" rel="stylesheet">
     <link href="../assets/fa-assets/css/all.css" rel="stylesheet">
 </head>
 
@@ -42,8 +43,8 @@
 
                     <?php require "./module/get_post_grade.php" ?>
 
-                    <div class="table-resposive">
-                        <table class="table mb-0 bg-white table-hover">
+                    <div class="result-table table-resposive">
+                        <table class="table mb-0 table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col">과목명</th>
