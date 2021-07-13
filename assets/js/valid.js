@@ -98,13 +98,13 @@ function test_univ_input() {
     var foreign_type = document.getElementById("univ-foreignlang-type");
     foreign_type = foreign_type.options[foreign_type.selectedIndex].value;
 
-    const korean_score = document.getElementById("univ-korean-type").value;
-    const math_score = document.getElementById("univ-math-type").value;
-    const english_score = document.getElementById("univ-english-type").value;
-    const history_score = document.getElementById("univ-history-type").value;
-    const selectA_score = document.getElementById("univ-selectA-type").value;
-    const selectB_score = document.getElementById("univ-selectB-type").value;
-    const foreign_score = document.getElementById("univ-foreignlang-type").value;
+    const korean_score = document.getElementById("univ-korean-score").value;
+    const math_score = document.getElementById("univ-math-score").value;
+    const english_score = document.getElementById("univ-english-score").value;
+    const history_score = document.getElementById("univ-history-score").value;
+    const selectA_score = document.getElementById("univ-selectA-score").value;
+    const selectB_score = document.getElementById("univ-selectB-score").value;
+    const foreign_score = document.getElementById("univ-foreignlang-score").value;
 
     if (korean_type != "na" && korean_score === "") {
         zeroinput_modal.show();
