@@ -40,7 +40,7 @@
 
                     <h5 class="pb-3 mb-3 border-bottom">계산 방법 혹은 조건에 따라 다를 수 있으나 표준적인 방법을 활용하여 학년 평균 등급을 계산합니다.</h5>
 
-                    <div class="dynamic-input">
+                    <div class="dynamic-input mb-3">
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
@@ -92,7 +92,7 @@
                         </form>
                     </div>
 
-                    <div class="btn-group" role="group">
+                    <div class="btn-group float-right" role="group">
                         <button type="button" class="btn btn-warning" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>초기화</button>
                         <button type="submit" class="btn btn-primary" onclick="test_calc_input();"><i class="fas fa-calculator"></i>등급 계산 하기</button>
                     </div>
