@@ -82,7 +82,7 @@
                         </table>
                     </div>
 
-                    <button type="button" class="btn btn-warning float-end" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>다시 계산하기</button>
+                    <button type="button" class="btn btn-warning float-end" onclick="window.history.back();"><i class="fas fa-redo-alt"></i>다시 계산하기</button>
                 </div>
 
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
