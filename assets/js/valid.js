@@ -12,23 +12,23 @@ function test_calc_input() {
 
     for (var key in names) {
 
-        if (names[key] === "") {
+        if (names[key].value === "") {
             noinput_modal.show();
             return false;
         }
-        if (ranks[key] === "") {
+        if (ranks[key].value === "") {
             noinput_modal.show();
             return false;
         }
-        if (sameranks[key] === "") {
+        if (sameranks[key].value === "") {
             noinput_modal.show();
             return false;
         }
-        if (studentss[key] === "") {
+        if (studentss[key].value === "") {
             noinput_modal.show();
             return false;
         }
-        if (times[key] === "") {
+        if (times[key].value === "") {
             noinput_modal.show();
             return false;
         }
