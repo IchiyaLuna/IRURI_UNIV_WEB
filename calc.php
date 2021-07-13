@@ -41,7 +41,7 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
 
                     <div class="dynamic-input">
-                        <form id="subject-form" class="needs-validation" action="./module/get_post_grade.php" novalidate>
+                        <form id="subject-form" class="needs-validation" action="./result_calc.php" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
