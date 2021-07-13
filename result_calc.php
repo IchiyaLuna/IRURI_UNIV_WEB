@@ -43,7 +43,7 @@
 
                     <?php require "./module/get_post_grade.php" ?>
 
-                    <div class="result-table table-resposive">
+                    <div class="result-table table-resposive mb-3">
                         <table class="table mb-0 table-hover">
                             <thead>
                                 <tr>
@@ -82,7 +82,7 @@
                         </table>
                     </div>
 
-                    <button type="button" class="btn btn-warning float-right" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>다시 계산하기</button>
+                    <button type="button" class="btn btn-warning float-end" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>다시 계산하기</button>
                 </div>
 
                 <div class='content-sidebar col-md-4 d-none d-md-block sticky-md-top'>
