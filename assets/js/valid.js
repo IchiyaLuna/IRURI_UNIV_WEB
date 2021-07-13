@@ -23,7 +23,7 @@ function test_calc_input() {
             noinput_modal.show();
             return false;
         }
-        if (ranks[key].value <= 0) {
+        if (parseInt(ranks[key].value) <= 0) {
             zeroinput_modal.show();
             return false;
         }
@@ -31,7 +31,7 @@ function test_calc_input() {
             noinput_modal.show();
             return false;
         }
-        if (sameranks[key].value <= 0) {
+        if (parseInt(sameranks[key].value) <= 0) {
             zeroinput_modal.show();
             return false;
         }
@@ -39,7 +39,7 @@ function test_calc_input() {
             noinput_modal.show();
             return false;
         }
-        if (studentss[key].value <= 0) {
+        if (parseInt(studentss[key].value) <= 0) {
             zeroinput_modal.show();
             return false;
         }
@@ -47,12 +47,12 @@ function test_calc_input() {
             noinput_modal.show();
             return false;
         }
-        if (times[key].value <= 0) {
+        if (parseInt(times[key].value) <= 0) {
             zeroinput_modal.show();
             return false;
         }
 
-        if (ranks[key].value > studentss[key].value) {
+        if (parseInt(ranks[key].value) > parseInt(studentss[key].value)) {
             alert(ranks[key].value);
             alert(typeof ranks[key].value);
             alert(studentss[key].value);
