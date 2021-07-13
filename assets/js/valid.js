@@ -1,5 +1,6 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
 var resultpage = document.getElementById('input-form');
+var calcresult = document.getElementById('subject-form');
 
 function test_calc_input() {
 
@@ -12,9 +13,29 @@ function test_calc_input() {
     for (var key in names) {
 
         if (names[key] === "") {
-
+            noinput_modal.show();
+            return false;
+        }
+        if (ranks[key] === "") {
+            noinput_modal.show();
+            return false;
+        }
+        if (sameranks[key] === "") {
+            noinput_modal.show();
+            return false;
+        }
+        if (studentss[key] === "") {
+            noinput_modal.show();
+            return false;
+        }
+        if (times[key] === "") {
+            noinput_modal.show();
+            return false;
         }
     }
+
+    calcresult.submit();
+    return false;
 }
 
 function test_univ_input() {
@@ -80,6 +101,6 @@ function test_input() {
 }
 
 function close_modal() {
-    noinput_modal.hide()
-    return false
+    noinput_modal.hide();
+    return false;
 }

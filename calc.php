@@ -41,7 +41,7 @@
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
 
                     <div class="dynamic-input">
-                        <form id="subject-form" class="needs-validation" novalidate>
+                        <form id="subject-form" class="needs-validation" action="./module/get_post_grade.php" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
@@ -94,7 +94,7 @@
 
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-outline-warning">초기화</button>
-                        <button type="submit" class="btn btn-outline-primary" form="subject-form">등급 계산 하기</button>
+                        <button type="submit" class="btn btn-outline-primary" onclick="test_calc_input();">등급 계산 하기</button>
                     </div>
                 </div>
 
@@ -167,41 +167,25 @@
                 </div>
             </div>
 
+        </div>
 
-            <!-- Alert Modal -->
-            <div class="alert-modal modal fade" id="no-input" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="no-input-label">오류</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            최소 하나 이상의 등급을 입력해주세요.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onclick="close_modal()">확인</button>
-                        </div>
+        <!-- Alert Modal -->
+        <div class="alert-modal modal fade" id="no-input" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="no-input-label">오류</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        입력칸은 비워둘 수 없습니다.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
                     </div>
                 </div>
             </div>
-
-            <div class="alert-modal modal fade" id="no-name" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="no-name-label">오류</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            과목 이름을 입력해주세요.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" onclick="close_modal()">확인</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
     </main>
 
 
