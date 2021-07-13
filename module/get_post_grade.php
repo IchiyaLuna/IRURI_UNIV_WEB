@@ -30,7 +30,7 @@ for ($i = 0; $i < sizeof($subject); $i++) {
     $arrtopush = array($subject[$i], $rank[$i], $samerank[$i], $students[$i], $time[$i], $thistimerank);
     array_push($subjects, $arrtopush);
 
-    $modified_grade += $thistimerank;
+    $modified_grade += $thistimerank * $time[$i];
     $total_time += $time[$i];
 }
 
