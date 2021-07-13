@@ -67,9 +67,9 @@ function test_calc_input() {
 }
 
 function test_univ_input() {
-    const first = document.getElementByID("univ-first");
-    const second = document.getElementByID("univ-second");
-    const third = document.getElementByID("univ-third");
+    const first = document.getElementById("univ-first");
+    const second = document.getElementById("univ-second");
+    const third = document.getElementById("univ-third");
 
     const sushi_sum = first + second + third;
 
