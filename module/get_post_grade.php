@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST['time'];
 }
 
+$subjects = array();
 $modified_grade = 0;
 $total_time = 0;
 
@@ -25,6 +26,9 @@ for ($i = 0; $i < sizeof($subject); $i++) {
     elseif ($percent <= 96.0) $thistimerank = 8;
     elseif ($percent <= 100.0) $thistimerank = 9;
     else $thistimerank = 10;
+
+    $arrtopush = array($subject[$i], $rank[$i], $samerank[$i], $students[$i], $time[$i], $thistimerank);
+    array_push($subjects, $arrtopush);
 
     $modified_grade += $thistimerank;
     $total_time++;

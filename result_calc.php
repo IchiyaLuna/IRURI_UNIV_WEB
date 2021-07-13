@@ -40,56 +40,45 @@
 
                     <h5 class="pb-3 mb-3 border-bottom">저런 그러나 아직 준비되지 않았습니다.</h5>
 
-                    <div class="dynamic-input">
-                        <form id="subject-form" class="needs-validation" action="./module/get_post_grade.php" novalidate>
-                            <div class="container-floating">
-                                <div class="row gx-1">
-                                    <div class="col-3 text-center">
-                                        과목명
-                                    </div>
-                                    <div class="col text-center">
-                                        석차
-                                    </div>
-                                    <div class="col text-center">
-                                        동석차
-                                    </div>
-                                    <div class="col text-center">
-                                        이수자
-                                    </div>
-                                    <div class="col text-center">
-                                        단위
-                                    </div>
-                                    <div class="col-1 text-center">
+                    <?php require "./module/get_post_grade.php" ?>
 
-                                    </div>
-                                </div>
+                    <div class="table-resposive">
+                        <table class="table mb-0 table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">과목명</th>
+                                    <th scope="col">석차</th>
+                                    <th scope="col">동석차</th>
+                                    <th scope="col">이수자</th>
+                                    <th scope="col">단위</th>
+                                    <th scope="col">등급</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($subjects as $data) {
 
-                                <div class="subject-input row g-1 py-1 align-items-center">
-                                    <div class="col-3">
-                                        <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col-1 text-center">
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-success btn-sm btn-add">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                                    echo "<tr>";
+
+                                    echo "<td>" . $result[0] . "</td>";
+                                    echo "<td>" . $result[1] . "</td>";
+                                    echo "<td>" . $result[2] . "</td>";
+                                    echo "<td>" . $result[3] . "</td>";
+                                    echo "<td>" . $result[4] . "</td>";
+                                    echo "<td>" . $result[5] . "</td>";
+
+                                    echo "</tr>";
+                                }
+                                ?>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6" class="text-center">
+                                        <?php echo "평균 등급 : " . $final_grade; ?>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
 
                     <div class="btn-group" role="group">
