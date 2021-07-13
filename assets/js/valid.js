@@ -71,6 +71,11 @@ function test_univ_input() {
     const second = document.getElementById("univ-second");
     const third = document.getElementById("univ-third");
 
+    if (first === "" || second === "" || third === "") {
+        noinput_modal.show();
+        return false;
+    }
+
     const sushi_sum = first + second + third;
 
     if (sushi_sum == 0) {
