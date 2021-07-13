@@ -60,8 +60,8 @@
 
                                     echo "<tr>";
 
-                                    echo "<td>" . $data[0] . "등" . "</td>";
-                                    echo "<td>" . $data[1] . "명" . "</td>";
+                                    echo "<td>" . $data[0] . "</td>";
+                                    echo "<td>" . $data[1] . "등" . "</td>";
                                     echo "<td>" . $data[2] . "명" . "</td>";
                                     echo "<td>" . $data[3] . "명" . "</td>";
                                     echo "<td>" . $data[4] . "단위" . "</td>";
