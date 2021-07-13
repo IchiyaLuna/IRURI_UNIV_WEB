@@ -69,7 +69,7 @@
                                         <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="0" name="rank[]" placeholder="0" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="rank[]" placeholder="1" required>
                                     </div>
                                     <div class="col">
                                         <input type="number" class="form-control form-control-sm text-center" min="1" name="samerank[]" placeholder="1" required>
@@ -78,7 +78,7 @@
                                         <input type="number" class="form-control form-control-sm text-center" min="1" name="students[]" placeholder="0" required>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="0" required>
+                                        <input type="number" class="form-control form-control-sm text-center" min="1" name="time[]" placeholder="1" required>
                                     </div>
                                     <div class="col-1 text-center">
                                         <div class="d-grid">
