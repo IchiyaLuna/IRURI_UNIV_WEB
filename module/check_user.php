@@ -27,7 +27,8 @@ if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
     echo "<script>window.location.replace('../admin.php');</script>";
 } else {
 
-    echo ("<script>show_modal('noaccount');</script>");
+    header("Content-Type: text/html; charset=UTF-8");
+    echo "<script>alert('잘못된 계정입니다.')</script>";
     echo "<script>window.location.replace('../login.php');</script>";
     exit;
 }
