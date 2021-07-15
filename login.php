@@ -54,7 +54,7 @@
                         아이디와 비밀번호를 입력해 주세요.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" onclick="hide_modal('noinput');">확인</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         존재하지 않는 계정입니다.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" onclick="hide_modal('noaccount');">확인</button>
                     </div>
                 </div>
             </div>
