@@ -29,6 +29,6 @@ if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
 } else {
 
     echo ("<script>show_modal('noaccount');</script>");
-    echo "<script>window.location.replace('../login.php');</script>";
+    echo "<script>window.location.replace('../logina.php');</script>";
     exit;
 }
