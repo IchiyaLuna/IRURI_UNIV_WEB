@@ -14,6 +14,13 @@ function login_test() {
     }
 
     logintestpage.submit();
+    return false;
+}
+
+function enterkey() {
+    if (window.event.keyCode == 13) {
+        login_test();
+    }
 }
 
 function show_modal(type) {

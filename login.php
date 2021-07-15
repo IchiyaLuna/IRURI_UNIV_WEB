@@ -35,7 +35,7 @@
                 <label for="floatingInput">아이디</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="user-pw" name="user-pw" placeholder="Password">
+                <input type="password" class="form-control" id="user-pw" name="user-pw" onkeyup="enterkey();" placeholder="Password">
                 <label for="floatingPassword">패스워드</label>
             </div>
 
