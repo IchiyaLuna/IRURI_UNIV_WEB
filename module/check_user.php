@@ -19,7 +19,9 @@ if (!$database) {
     die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM admin WHERE id='$user_id' && pwdhash='$user_pw'";
+$hash = password_hash($user_pw, PASSWORD_DEFAULT);
+
+$sql = "SELECT * FROM admin WHERE id='$user_id' && pwdhash='$hash'";
 
 if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
 
