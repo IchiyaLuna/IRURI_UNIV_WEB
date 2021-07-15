@@ -77,6 +77,8 @@
             </div>
         </div>
     </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/account.js"></script>
 </body>
 
