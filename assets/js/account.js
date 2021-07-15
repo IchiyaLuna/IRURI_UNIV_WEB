@@ -1,5 +1,6 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
 var noaccount_modal = new bootstrap.Modal(document.getElementById('no-account'));
+var logintestpage = document.getElementById('signin-form');
 
 function login_test() {
 
@@ -11,6 +12,8 @@ function login_test() {
         noinput_modal.show();
         return false;
     }
+
+    logintestpage.submit();
 }
 
 function show_modal(type) {
