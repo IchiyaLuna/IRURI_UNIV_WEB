@@ -138,7 +138,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <h5>세부 분류</h5>
-                            <select class="form-select" id="detail" size="5">
+                            <select class="form-select" id="detail" name="deptsel" size="5">
                                 <option value="-1" selected>세부 분류를 선택해주세요</option>
 
                                 <option class="be" value="3">E-비즈니스</option>
