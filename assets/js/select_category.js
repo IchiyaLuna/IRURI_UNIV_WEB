@@ -8,6 +8,9 @@ function update_selected() {
 }
 
 $(function () {
+    dept = $("#detail").find("option[value!=-1]");
+    dept.detach();
+
     $("#category").change(update_selected);
     $("#category").trigger("change");
 });
