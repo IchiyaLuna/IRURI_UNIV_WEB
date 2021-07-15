@@ -1,7 +1,7 @@
 <!doctype html>
 <?php session_start(); ?>
 
-<?php if (isset($_SESSION['user_id'])) {
+<?php if (isset($_SESSION['user-id'])) {
     echo "<script>location.replace('./admin.php')</script>";
 }
 ?>

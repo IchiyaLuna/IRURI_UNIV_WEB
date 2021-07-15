@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
 
-<?php if (!isset($_SESSION['user_id'])) {
+<?php if (!isset($_SESSION['user-id'])) {
     header("Content-Type: text/html; charset=UTF-8");
     echo "<script>alert('잘못된 접근입니다.')</script>";
     echo "<script>location.replace('./login.php')</script>";

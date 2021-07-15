@@ -20,12 +20,21 @@ if (!$database) {
     die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
 }
 
-$hash = password_hash($user_pw, PASSWORD_DEFAULT);
+$sql = "SELECT * FROM admin WHERE id = '{$user_id}';";
 
-$sql = "SELECT * FROM admin WHERE id = '$user_id' and pwdhash = '$hash';";
+$result = mysqli_query($database, $sql);
+$data = mysqli_fetch_array($result);
 
-if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
+$hash = $data['pwdhash'];
+$myhash = password_hash($user_pw, PASSWORD_DEFAULT);
+$result = password_verify($user_pw, $hash);
 
+echo $myhash . "<br>";
+echo $hash . "<br>";
+
+if ($result === true) {
+    session_start();
+    $_SESSION['user-id'] = $user_id;
     echo "<script>window.location.replace('../admin.php');</script>";
 } else {
 
