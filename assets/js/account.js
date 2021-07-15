@@ -1,6 +1,18 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
 var noaccount_modal = new bootstrap.Modal(document.getElementById('no-account'));
 
+function login_test() {
+
+    const userid = document.getElementById("user-id").value;
+    const userpw = document.getElementById("user-pw").value;
+
+    if (userid === "" || userpw === "") {
+
+        noinput_modal.show();
+        return false;
+    }
+}
+
 function show_modal(type) {
 
     switch (type) {
@@ -11,6 +23,7 @@ function show_modal(type) {
             noaccount_modal.show();
             break;
     }
+    return false;
 }
 
 function hide_modal(type) {
@@ -23,4 +36,5 @@ function hide_modal(type) {
             noaccount_modal.hide();
             break;
     }
+    return false;
 }

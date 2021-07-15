@@ -39,7 +39,7 @@
                 <label for="floatingPassword">패스워드</label>
             </div>
 
-            <button class="w-100 btn btn-lg btn-primary" type="submit">로그인</button>
+            <button class="w-100 btn btn-lg btn-primary" type="button" onclick="login_test();">로그인</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
         </form>
 

@@ -1,7 +1,6 @@
 <?php
 if (!isset($_POST['user_id']) || !isset($_POST['user_pw'])) {
-    echo ("<script>show_modal('noinput');</script>");
-    echo "<script>window.location.replace('./login.php');</script>";
+    echo "<script>window.location.replace('../login.php');</script>";
     exit;
 }
 
@@ -29,6 +28,6 @@ if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
 } else {
 
     echo ("<script>show_modal('noaccount');</script>");
-    echo "<script>window.location.replace('../logina.php');</script>";
+    echo "<script>window.location.replace('../login.php');</script>";
     exit;
 }
