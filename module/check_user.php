@@ -26,11 +26,9 @@ $result = mysqli_query($database, $sql);
 $data = mysqli_fetch_array($result);
 
 $hash = $data['pwdhash'];
-$myhash = password_hash($user_pw, PASSWORD_DEFAULT);
+
 $result = password_verify($user_pw, $hash);
 
-echo $myhash . "<br>";
-echo $hash . "<br>";
 
 if ($result === true) {
     session_start();
