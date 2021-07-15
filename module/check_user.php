@@ -25,10 +25,10 @@ $sql = "SELECT * FROM admin WHERE id='$user_id' && pwdhash='$hash'";
 
 if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
 
-    echo "<script>window.location.replace('./admin.php');</script>";
+    echo "<script>window.location.replace('../admin.php');</script>";
 } else {
 
     echo ("<script>show_modal('noaccount');</script>");
-    echo "<script>window.location.replace('./login.php');</script>";
+    echo "<script>window.location.replace('../login.php');</script>";
     exit;
 }
