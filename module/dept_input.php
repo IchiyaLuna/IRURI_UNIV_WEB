@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <h5>분류</h5>
+                        <h5>세부 분류</h5>
                         <select class="form-select" size="5">
                             <option value="be">분류를 선택해주세요</option>
                         </select>
