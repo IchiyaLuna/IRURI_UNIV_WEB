@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <h5>분류</h5>
-                        <select class="form-select" size="5">
+                        <select class="form-select" id="category" size="5">
                             <option value="be">경영 경제</option>
                             <option value="ad">행정</option>
                             <option value="pr">언론</option>
@@ -139,8 +139,26 @@
 
                     <div class="col-md-6 mb-3">
                         <h5>세부 분류</h5>
-                        <select class="form-select" size="5">
-                            <option value="be">분류를 선택해주세요</option>
+                        <select class="form-select" id="detail" size="5">
+                            <option value="0">세부 분류를 선택해주세요</option>
+
+                            <option class="be" value="3">E-비즈니스</option>
+                            <option class="be" value="4">글로벌 비즈니스</option>
+                            <option class="be" value="5">경영</option>
+                            <option class="be" value="16">금융 경제</option>
+                            <option class="be" value="37">스포츠 산업</option>
+                            <option class="be" value="39">글로벌리더</option>
+                            <option class="be" value="57">외식경영</option>
+                            <option class="be" value="63">무역</option>
+                            <option class="be" value="92">소비자</option>
+
+                            <option class="ad" value="17">경찰행정</option>
+                            <option class="ad" value="22">행정</option>
+                            <option class="ad" value="23">법</option>
+                            <option class="ad" value="31">교통</option>
+                            <option class="ad" value="54">소방행정</option>
+                            <option class="ad" value="113">정치외교정책</option>
+
                         </select>
                     </div>
                 </div>
