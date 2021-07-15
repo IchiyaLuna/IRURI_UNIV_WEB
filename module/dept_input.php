@@ -91,6 +91,59 @@
                         </div>
                     </div>
                 </div>
+                <h3 class="pb-3 border-bottom">학과 선택</h3>
+                <div class="row">
+                    <div class="col-6-md mb-3">
+                        <h5>분류</h5>
+                        <select class="form-select" size="5">
+                            <option value="be">경영 경제</option>
+                            <option value="ad">행정</option>
+                            <option value="pr">언론</option>
+
+                            <option value="cu">문화</option>
+                            <option value="la">언어</option>
+                            <option value="en">영어</option>
+                            <option value="fo">외국어</option>
+
+                            <option value="we">복지</option>
+                            <option value="me">의료</option>
+
+                            <option value="ed">교육</option>
+
+                            <option value="ma">수학</option>
+                            <option value="st">통계</option>
+
+                            <option value="sc">과학</option>
+                            <option value="co">컴퓨터</option>
+                            <option value="mc">기계</option>
+                            <option value="el">전기</option>
+                            <option value="as">항공우주</option>
+                            <option value="nm">신소재</option>
+                            <option value="ca">자동차</option>
+                            <option value="ar">건축</option>
+
+                            <option value="hi">역사</option>
+                            <option value="ph">철학</option>
+                            <option value="re">종교</option>
+                            <option value="at">예술</option>
+
+                            <option value="ng">국방</option>
+                            <option value="nw">국제</option>
+                            <option value="so">사회</option>
+                            <option value="ec">환경</option>
+                            <option value="ga">원예</option>
+                            <option value="fu">융합</option>
+                            <option value="fr">자율</option>
+                        </select>
+                    </div>
+
+                    <div class="col-6-md mb-3">
+                        <h5>분류</h5>
+                        <select class="form-select" size="5">
+                            <option value="be">분류를 선택해주세요</option>
+                        </select>
+                    </div>
+                </div>
                 <h3>내신</h3>
                 <h5 class="pb-3 border-bottom">아직 성적이 없는 경우 0을 입력해주세요.</h5>
                 <div class="sushi py-3">
@@ -164,7 +217,7 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 <select class="form-select" id="dept-history-type" disabled>
-                                    <option value="na" selected>필수</option>
+                                    <option value="at" selected>필수</option>
                                 </select>
                                 <input type="number" class="form-control form-control-sm text-center" name="dept-history-score" id="dept-history-score" placeholder="원점수">
                             </div>
@@ -173,7 +226,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-selectA">
+                                <select class="form-select" id="dept-selectA-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -200,7 +253,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-selectB">
+                                <select class="form-select" id="dept-selectB-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
