@@ -17,3 +17,5 @@ if (!$database) {
 $hash = password_hash($user_pw, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO admin VALUES('{$user_id}', '{$hash}')";
+
+mysqli_query($database, $sql);
