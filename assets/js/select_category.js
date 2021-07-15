@@ -2,13 +2,13 @@ var dept = false;
 
 function update_selected() {
     $("#detail").val(0);
-    $("#detail").find("option[value!=0]").detach();
+    $("#detail").find("option[value!=-1]").detach();
 
     $("#detail").append(dept.filter("." + $(this).val()));
 }
 
 $(function () {
-    dept = $("#detail").find("option[value!=0]");
+    dept = $("#detail").find("option[value!=-1]");
     dept.detach();
 
     $("#category").change(update_selected);
