@@ -2,7 +2,7 @@ var dept = false;
 
 function update_selected() {
     $("#detail").val(0);
-    $("#detail").find("option[value!=-2]").detach();
+    $("#detail").find("option[value!=-1]").detach();
 
     $("#detail").append(dept.filter("." + $(this).val()));
 }
