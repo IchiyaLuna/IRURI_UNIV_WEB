@@ -93,7 +93,7 @@
                 </div>
                 <h3 class="pb-3 border-bottom">학과 선택</h3>
                 <div class="row">
-                    <div class="col-6-md mb-3">
+                    <div class="col-md-6 mb-3">
                         <h5>분류</h5>
                         <select class="form-select" size="5">
                             <option value="be">경영 경제</option>
@@ -137,7 +137,7 @@
                         </select>
                     </div>
 
-                    <div class="col-6-md mb-3">
+                    <div class="col-md-6 mb-3">
                         <h5>분류</h5>
                         <select class="form-select" size="5">
                             <option value="be">분류를 선택해주세요</option>
