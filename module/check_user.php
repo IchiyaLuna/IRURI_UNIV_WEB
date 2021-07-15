@@ -20,7 +20,7 @@ if (!$database) {
 
 $hash = password_hash($user_pw, PASSWORD_DEFAULT);
 
-$sql = "SELECT * FROM admin WHERE id='$user_id' && pwdhash='$hash'";
+$sql = "SELECT * FROM admin WHERE id='$user_id' and pwdhash='$hash'";
 
 if ($result = mysqli_fetch_array(mysqli_query($database, $sql))) {
 
