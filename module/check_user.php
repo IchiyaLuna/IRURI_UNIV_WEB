@@ -1,5 +1,7 @@
 <?php
 if (!isset($_POST['user_id']) || !isset($_POST['user_pw'])) {
+    header("Content-Type: text/html; charset=UTF-8");
+    echo "<script>alert('입력 오류.')</script>";
     echo "<script>window.location.replace('../login.php');</script>";
     exit;
 }
