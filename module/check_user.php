@@ -24,6 +24,7 @@ $sql = "SELECT * FROM admin WHERE id = '{$user_id}';";
 
 $result = mysqli_query($database, $sql);
 $data = mysqli_fetch_array($result);
+mysqli_close($database);
 
 $hash = $data['pwdhash'];
 
@@ -35,7 +36,6 @@ if ($result === true) {
     $_SESSION['user-id'] = $user_id;
     echo "<script>window.location.replace('../admin.php');</script>";
 } else {
-
     header("Content-Type: text/html; charset=UTF-8");
     echo "<script>alert('잘못된 계정입니다.')</script>";
     echo "<script>window.location.replace('../login.php');</script>";

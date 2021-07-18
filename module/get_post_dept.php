@@ -73,13 +73,13 @@ foreach ($dept_list as $dept) {
     $this_time_myavg = round($simple_avg, 3);
     $gap = round($dept['avg'] - $this_time_myavg, 3);
 
-    $this_time_result = array($dept['name'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
+    $this_time_result = array($dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
     array_push($result_list, $this_time_result);
 }
 
 foreach ((array) $result_list as $key => $value) {
 
-    $sort[$key] = $value[5];
+    $sort[$key] = $value[7];
 }
 
 array_multisort($sort, SORT_ASC, $result_list);
@@ -87,33 +87,11 @@ array_multisort($sort, SORT_ASC, $result_list);
 $final_result = array();
 
 foreach ($result_list as $data) {
-    if ($data[4] < $data[2]) $posi = 0;
-    elseif ($data[5] > 0) $posi = 1;
-    elseif ($data[4] > $data[1]) $posi = 3;
+    if ($data[6] < $data[4]) $posi = 0;
+    elseif ($data[7] > 0) $posi = 1;
+    elseif ($data[6] > $data[3]) $posi = 3;
     else $posi = 2;
 
-    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[6]);
     array_push($final_result, $arr_to_push);
 }
-
-/*
-if ($index < 3) {
-    for ($i = 0; $i < 10; $i++) {
-        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
-        elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
-        else $posi = 2;
-        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
-        array_push($final_result, $arr_to_push);
-    }
-} else {
-    for ($i = $index - 3; $i < $index + 7; $i++) {
-        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
-        elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
-        else $posi = 2;
-        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
-        array_push($final_result, $arr_to_push);
-    }
-}
-*/
