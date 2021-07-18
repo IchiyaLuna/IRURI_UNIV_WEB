@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 
 <?php if (isset($_SESSION['user-id'])) {
-    if ($_SESSON['user-id'] === 'admin') {
+    if ($_SESSION['user-id'] === 'admin') {
         echo "<script>location.replace('./admin.php')</script>";
     }
 }
