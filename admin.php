@@ -6,7 +6,6 @@
     echo "<script>alert('잘못된 접근입니다.')</script>";
     echo "<script>location.replace('./login.php')</script>";
 } elseif (isset($_SESSION['user-id'])) {
-    echo "<script>alert('" . $_SESSION['user-id'] . "')</script>";
     if ($_SESSION['user-id'] !== "admin") {
         header("Content-Type: text/html; charset=UTF-8");
         echo "<script>alert('잘못된 접근입니다.')</script>";
@@ -68,7 +67,7 @@
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fas fas-fw fa-clipboard-list"></i>
+                        <i class="fas fa-fw fa-clipboard-list"></i>
                         <span>성적 기록</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
