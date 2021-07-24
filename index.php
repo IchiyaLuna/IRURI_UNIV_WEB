@@ -182,6 +182,8 @@
 
     <script src="../assets/js/valid.js"></script>
 
+    <script src="../assets/js/jungshi_time.js"></script>
+
     <script src="./assets/js/select_category.js"></script>
 </body>
 

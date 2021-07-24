@@ -1,145 +1,73 @@
 <?php
 
-function count_arr($arr)
+function white($arr)
 {
-    $count = 0;
 
-    foreach ($arr as $value) {
-        if ($value == 0) {
-            continue;
+    $valid = 0;
+    $index = 0;
+    $offsets = array(1, 1, 1);
+
+    foreach ($offsets as $offset) {
+        if ($arr[$index] != 0) {
+            $arr[$index] *= $offset;
+            $valid += $offset;
         }
-        $count++;
+        $index++;
     }
 
-    return $count;
+    return array_sum($arr) / $valid;
 }
 
-function getarravg($arr)
+function yellow($arr)
 {
 
-    $count = count_arr($arr);
+    $valid = 0;
+    $index = 0;
+    $offsets = array(30, 35, 35);
 
-    if ($count == 0) {
-        return 0;
-    } else {
-        return array_sum($arr) / $count;
-    }
-}
-
-function gettotalavg($arr_1, $arr_2, $arr_3)
-{
-    $avg_arr = array(getarravg($arr_1), getarravg($arr_2), getarravg($arr_3));
-
-    return getarravg($avg_arr);
-}
-
-function white($arr_1, $arr_2, $arr_3)
-{
-
-    return gettotalavg($arr_1, $arr_2, $arr_3);
-}
-
-function gray($arr_1, $arr_2, $arr_3)
-{
-    global $type;
-
-    $lit_arr = array(4, 5);
-    $sci_arr = array(3, 5);
-
-    if ($type == "인문") {
-        foreach ($lit_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
+    foreach ($offsets as $offset) {
+        if ($arr[$index] != 0) {
+            $arr[$index] *= $offset;
+            $valid += $offset;
         }
-    } else if ($type == "자연") {
-        foreach ($sci_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
-        }
+        $index++;
     }
 
-    return gettotalavg($arr_1, $arr_2, $arr_3);
+    return array_sum($arr) / $valid;
 }
 
-function yellow($arr_1, $arr_2, $arr_3)
+function blue($arr)
 {
-    global $type;
 
-    $lit_arr = array(4);
-    $sci_arr = array(3, 5);
+    $valid = 0;
+    $index = 0;
+    $offsets = array(3, 4, 3);
 
-    if ($type == "인문") {
-        foreach ($lit_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
+    foreach ($offsets as $offset) {
+        if ($arr[$index] != 0) {
+            $arr[$index] *= $offset;
+            $valid += $offset;
         }
-    } else if ($type == "자연") {
-        foreach ($sci_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
-        }
+        $index++;
     }
 
-    return gettotalavg($arr_1, $arr_2, $arr_3);
+    return array_sum($arr) / $valid;
 }
 
-function light_yellow($arr_1, $arr_2, $arr_3)
+function purple($arr)
 {
-    global $type;
 
-    $lit_arr = array(4);
-    $sci_arr = array(3);
+    $valid = 0;
+    $index = 0;
+    $offsets = array(2, 4, 4);
 
-    if ($type == "인문") {
-        foreach ($lit_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
+    foreach ($offsets as $offset) {
+        if ($arr[$index] != 0) {
+            $arr[$index] *= $offset;
+            $valid += $offset;
         }
-    } else if ($type == "자연") {
-        foreach ($sci_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
-        }
+        $index++;
     }
 
-    return gettotalavg($arr_1, $arr_2, $arr_3);
-}
-
-function green($arr_1, $arr_2, $arr_3)
-{
-    $arr_1[5] = 0;
-    $arr_2[5] = 0;
-    $arr_3[5] = 0;
-
-    return gettotalavg($arr_1, $arr_2, $arr_3);
-}
-
-function beige($arr_1, $arr_2, $arr_3)
-{
-    global $type;
-
-    $lit_arr = array(5);
-    $sci_arr = array(3, 5);
-
-    if ($type == "인문") {
-        foreach ($lit_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
-        }
-    } else if ($type == "자연") {
-        foreach ($sci_arr as $index) {
-            $arr_1[$index] = 0;
-            $arr_2[$index] = 0;
-            $arr_3[$index] = 0;
-        }
-    }
-
-    return gettotalavg($arr_1, $arr_2, $arr_3);
+    return array_sum($arr) / $valid;
 }

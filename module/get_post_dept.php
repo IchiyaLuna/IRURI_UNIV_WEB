@@ -56,7 +56,14 @@ foreach ($sushi as $grade) {
 
 $simple_avg /= $count;
 
-include "./module/dept_load.php";
+require "./module/predict.php";
+
+$white = white($sushi);
+$yellow = yellow($sushi);
+$blue = blue($sushi);
+$purple = purple($sushi);
+
+require "./module/dept_load.php";
 
 $result_list = array();
 
@@ -70,8 +77,27 @@ foreach ($dept_list as $dept) {
         }
     }
 
-    $this_time_myavg = round($simple_avg, 3);
-    $gap = round($dept['avg'] - $this_time_myavg, 3);
+    switch ($dept['method']) {
+        case 0:
+            $gap = round($dept['avg'] - $white, 3);
+            $this_time_myavg = round($white, 3);
+            break;
+        case 1:
+            $gap = round($dept['avg'] - $yellow, 3);
+            $this_time_myavg = round($gray, 3);
+            break;
+        case 2:
+            $gap = round($dept['avg'] - $blue, 3);
+            $this_time_myavg = round($yellow, 3);
+            break;
+        case 3:
+            $gap = round($dept['avg'] - $purple, 3);
+            $this_time_myavg = round($light_yellow, 3);
+            break;
+        default:
+            $gap = -1;
+            break;
+    }
 
     $this_time_result = array($dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
     array_push($result_list, $this_time_result);

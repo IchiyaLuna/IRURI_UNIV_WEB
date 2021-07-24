@@ -12,6 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sushi = array($first, $second, $third);
 
+    $year = $_POST["univ-yearsel"];
+    $month = $_POST["univ-monthsel"];
+
     $korean_type = $_POST["univ-korean-type"];
     $math_type = $_POST["univ-math-type"];
     $english_type = $_POST["univ-english-type"];
@@ -53,17 +56,17 @@ foreach ($sushi as $grade) {
 }
 
 $simple_avg /= $count;
-/*
-$white = white($first, $second, $third);
-$gray = gray($first, $second, $third);
-$yellow = yellow($first, $second, $third);
-$light_yellow = light_yellow($first, $second, $third);
-$green = green($first, $second, $third);
-$beige = beige($first, $second, $third);
-*/
-include "./module/univ_load.php";
 
-$result_list = array();
+require "./module/avg_functions.php";
+
+$white = white($sushi);
+$yellow = yellow($sushi);
+$blue = blue($sushi);
+$purple = purple($sushi);
+
+require "./module/univ_load.php";
+
+$sushi_result_list = array();
 
 foreach ($univ_list as $univ) {
 
@@ -75,94 +78,79 @@ foreach ($univ_list as $univ) {
         }
     }
 
-    $this_time_myavg = round($simple_avg, 3);
-    $gap = round($univ['avg'] - $this_time_myavg, 3);
-    /*
     switch ($univ['method']) {
         case 0:
-            $gap = $univ['avg'] - $white;
+            $gap = round($univ['avg'] - $white, 3);
             $this_time_myavg = round($white, 3);
             break;
         case 1:
-            $gap = $univ['avg'] - $gray;
+            $gap = round($univ['avg'] - $yellow, 3);
             $this_time_myavg = round($gray, 3);
             break;
         case 2:
-            $gap = $univ['avg'] - $yellow;
+            $gap = round($univ['avg'] - $blue, 3);
             $this_time_myavg = round($yellow, 3);
             break;
         case 3:
-            $gap = $univ['avg'] - $light_yellow;
+            $gap = round($univ['avg'] - $purple, 3);
             $this_time_myavg = round($light_yellow, 3);
-            break;
-        case 4:
-            $gap = $univ['avg'] - $green;
-            $this_time_myavg = round($green, 3);
-            break;
-        case 5:
-            $gap = $univ['avg'] - $beige;
-            $this_time_myavg = round($beige, 3);
             break;
         default:
             $gap = -1;
+            $this_time_myavg = -1;
             break;
     }
-    */
+
     $this_time_result = array($univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
-    array_push($result_list, $this_time_result);
+    array_push($sushi_result_list, $this_time_result);
 }
 
-foreach ((array) $result_list as $key => $value) {
+foreach ((array) $sushi_result_list as $key => $value) {
 
     $sort[$key] = $value[5];
 }
 
-array_multisort($sort, SORT_ASC, $result_list);
-/*
-$index = 0;
-$univ_count = sizeof($result_list);
+array_multisort($sort, SORT_ASC, $sushi_result_list);
 
-foreach ($result_list as $vaule) {
+$sushi_final_result = array();
 
-    if ($vaule[5] < 0.0) {
-
-        if ($index == $univ_count - 7) break;
-
-        $index++;
-        continue;
-    } elseif ($value[5] >= 0.0) break;
-}
-*/
-$final_result = array();
-
-foreach ($result_list as $data) {
+foreach ($sushi_result_list as $data) {
     if ($data[4] < $data[2]) $posi = 0;
     elseif ($data[5] > 0) $posi = 1;
     elseif ($data[4] > $data[1]) $posi = 3;
     else $posi = 2;
 
     $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
-    array_push($final_result, $arr_to_push);
+    array_push($sushi_final_result, $arr_to_push);
 }
 
-/*
-if ($index < 3) {
-    for ($i = 0; $i < 10; $i++) {
-        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
-        elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
-        else $posi = 2;
-        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
-        array_push($final_result, $arr_to_push);
+if ($year != -1) {
+    require "./module/jungshi_load.php";
+    require "./module/jungshi_functions.php";
+
+    $jungshi_result_list = array();
+
+    foreach ($univ_list as $univ) {
+
+        $gap = 0;
+
+        if ($gender == "남") {
+            if (strpos($univ['name'], "여대") !== false) {
+                continue;
+            }
+        }
+
+        $gap = $percentile - $univ['percentile'];
+        $this_time_result = array($univ['name'], $univ['percentile'], $percentile, $gap);
+        array_push($jungshi_result_list, $this_time_result);
     }
-} else {
-    for ($i = $index - 3; $i < $index + 7; $i++) {
-        if ($result_list[$i][4] < $result_list[$i][2]) $posi = 0;
-        elseif ($result_list[$i][5] > 0) $posi = 1;
-        elseif ($result_list[$i][4] > $result_list[$i][1]) $posi = 3;
-        else $posi = 2;
-        $arr_to_push = array($posi, $result_list[$i][0], $result_list[$i][1], $result_list[$i][2], $result_list[$i][3], $result_list[$i][4], round($result_list[$i][5], 3));
-        array_push($final_result, $arr_to_push);
+
+    foreach ((array) $jungshi_result_list as $key => $value) {
+
+        $sort[$key] = $value[3];
     }
+
+    array_multisort($sort, SORT_ASC, $jungshi_result_list);
+
+    $jungshi_final_result = array();
 }
-*/
