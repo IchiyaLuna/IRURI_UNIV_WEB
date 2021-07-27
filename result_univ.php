@@ -104,6 +104,7 @@
                                                                     echo "<td>" . "위험" . "</td>";
                                                                     break;
                                                             }
+                                                            echo "<td>" . $result[1] . "</td>";
                                                             echo "<td>" . $result[5] . "</td>";
                                                             echo "<td>" . "<button type='button' class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#" . $modal_count . "modal'>" . "상세" . "</button>" . "</td>";
                                                             echo "</tr>";
