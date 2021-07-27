@@ -53,6 +53,10 @@ body {
   outline: 0;
 }
 
+.input-group-text {
+    width: 6rem;
+}
+
 .content-main {
   padding: 2rem;
   height: min-content;
