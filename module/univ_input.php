@@ -153,7 +153,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-korean-label">국어</span>
-                                <select class="form-select" id="univ-korean-type">
+                                <select class="form-select" id="univ-korean-type" name="univ-korean-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="tw">화법과작문</option>
                                     <option value="lm">언어와매체</option>
@@ -168,7 +168,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-math-label">수학</span>
-                                <select class="form-select" id="univ-math-type">
+                                <select class="form-select" id="univ-math-type" name="univ-math-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="ps">확률과통계</option>
                                     <option value="cl">미적분</option>
@@ -181,7 +181,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-english-label">영어</span>
-                                <select class="form-select" id="univ-english-type">
+                                <select class="form-select" id="univ-english-type" name="univ-english-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="at">응시</option>
                                 </select>
@@ -192,7 +192,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-history-label">한국사</span>
-                                <select class="form-select" id="univ-history-type" disabled>
+                                <select class="form-select" id="univ-history-type" name="univ-history-type" disabled>
                                     <option value="at" selected>필수</option>
                                 </select>
                                 <input type="number" class="form-control form-control-sm text-center" name="univ-history-score" id="univ-history-score" placeholder="원점수">
@@ -202,7 +202,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectA-label">탐구 1</span>
-                                <select class="form-select" id="univ-selectA-type">
+                                <select class="form-select" id="univ-selectA-type" name="univ-selectA-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -229,7 +229,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-selectB-label">탐구 2</span>
-                                <select class="form-select" id="univ-selectB-type">
+                                <select class="form-select" id="univ-selectB-type" name="univ-selectB-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -256,7 +256,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-foreignlang-label">제2외국어</span>
-                                <select class="form-select" id="univ-foreignlang-type">
+                                <select class="form-select" id="univ-foreignlang-type" name="univ-foreignlang-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="du">독일어 I</option>
                                     <option value="fr">프랑스어 I</option>
