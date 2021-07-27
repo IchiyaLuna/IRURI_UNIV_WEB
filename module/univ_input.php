@@ -125,26 +125,28 @@
                 <div class="jungshi py-3">
                     <div class="row">
                         <div class="col-xl-6">
-                            <div class="col-md-6">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="year-label">응시 년도&nbsp;&nbsp;&nbsp;</span>
-                                    <select class="form-select" id="year" name="univ-yearsel">
-                                        <option value="-1" selected>응시하지 않음</option>
-                                        <option value="21">21년</option>
-                                    </select>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="year-label">응시 년도&nbsp;&nbsp;&nbsp;</span>
+                                        <select class="form-select" id="year" name="univ-yearsel">
+                                            <option value="-1" selected>응시하지 않음</option>
+                                            <option value="21">21년</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-6">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="month-label">응시 월&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                    <select class="form-select" id="month" name="univ-monthsel">
-                                        <option value="-1" selected>응시하지 않음</option>
+                                <div class="col-md-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="month-label">응시 월&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <select class="form-select" id="month" name="univ-monthsel">
+                                            <option value="-1" selected>응시하지 않음</option>
 
-                                        <option class="21" value="03">3월 학력평가</option>
-                                        <option class="21" value="04">4월 학력평가</option>
-                                        <option class="21" value="07">7월 학력평가</option>
-                                    </select>
+                                            <option class="21" value="03">3월 학력평가</option>
+                                            <option class="21" value="04">4월 학력평가</option>
+                                            <option class="21" value="07">7월 학력평가</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
