@@ -128,7 +128,7 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text" id="year-label">응시 년도&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="input-group-text" id="year-label">응시 년도</span>
                                         <select class="form-select" id="year" name="univ-yearsel">
                                             <option value="-1" selected>응시하지 않음</option>
                                             <option value="21">21년</option>
@@ -138,7 +138,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text" id="month-label">응시 월&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="input-group-text" id="month-label">응시 월</span>
                                         <select class="form-select" id="month" name="univ-monthsel">
                                             <option value="-1" selected>응시하지 않음</option>
 
@@ -152,7 +152,7 @@
                         </div>
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-korean-label">국어</span>
                                 <select class="form-select" id="univ-korean-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="tw">화법과작문</option>
@@ -167,7 +167,7 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-math-label">수학</span>
                                 <select class="form-select" id="univ-math-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="ps">확률과통계</option>
@@ -180,7 +180,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-english-label">영어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-english-label">영어</span>
                                 <select class="form-select" id="univ-english-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="at">응시</option>
@@ -191,7 +191,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-history-label">한국사</span>
                                 <select class="form-select" id="univ-history-type" disabled>
                                     <option value="at" selected>필수</option>
                                 </select>
@@ -201,7 +201,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-selectA-label">탐구 1</span>
                                 <select class="form-select" id="univ-selectA-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
@@ -228,7 +228,7 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="univ-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <span class="input-group-text" id="univ-selectB-label">탐구 2</span>
                                 <select class="form-select" id="univ-selectB-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
