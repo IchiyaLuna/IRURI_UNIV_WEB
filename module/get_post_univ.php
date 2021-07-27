@@ -85,15 +85,15 @@ foreach ($univ_list as $univ) {
             break;
         case 1:
             $gap = round($univ['avg'] - $yellow, 3);
-            $this_time_myavg = round($gray, 3);
+            $this_time_myavg = round($yellow, 3);
             break;
         case 2:
             $gap = round($univ['avg'] - $blue, 3);
-            $this_time_myavg = round($yellow, 3);
+            $this_time_myavg = round($blue, 3);
             break;
         case 3:
             $gap = round($univ['avg'] - $purple, 3);
-            $this_time_myavg = round($light_yellow, 3);
+            $this_time_myavg = round($purple, 3);
             break;
         default:
             $gap = -1;
