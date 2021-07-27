@@ -83,6 +83,11 @@ function test_univ_input() {
         return false;
     }
 
+    var year = document.getElementById("year");
+    year = year.options[year.selectedIndex].value;
+    var month = document.getElementById("month");
+    month = month.options[month.selectedIndex].value;
+
     var korean_type = document.getElementById("univ-korean-type");
     korean_type = korean_type.options[korean_type.selectedIndex].value;
     var math_type = document.getElementById("univ-math-type");
@@ -106,69 +111,70 @@ function test_univ_input() {
     const selectB_score = document.getElementById("univ-selectB-score").value;
     const foreign_score = document.getElementById("univ-foreignlang-score").value;
 
-    if (korean_type != "na" && korean_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(korean_score) < 0 || parseInt(korean_score) > 100) {
-        biginput_modal.show();
-        return false;
-    }
+    if (year != "-1" && month != "-1") {
+        if (korean_type != "na" && korean_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(korean_score) < 0 || parseInt(korean_score) > 100) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (math_type != "na" && math_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(math_score) < 0 || parseInt(math_score) > 100) {
-        biginput_modal.show();
-        return false;
-    }
+        if (math_type != "na" && math_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(math_score) < 0 || parseInt(math_score) > 100) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (english_type != "na" && english_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(english_score) < 0 || parseInt(english_score) > 100) {
-        biginput_modal.show();
-        return false;
-    }
+        if (english_type != "na" && english_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(english_score) < 0 || parseInt(english_score) > 100) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (history_type != "na" && history_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(history_score) < 0 || parseInt(history_score) > 50) {
-        biginput_modal.show();
-        return false;
-    }
+        if (history_type != "na" && history_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(history_score) < 0 || parseInt(history_score) > 50) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (selectA_type != "na" && selectA_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(selectA_score) < 0 || parseInt(selectA_score) > 50) {
-        biginput_modal.show();
-        return false;
-    }
+        if (selectA_type != "na" && selectA_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(selectA_score) < 0 || parseInt(selectA_score) > 50) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (selectB_type != "na" && selectB_score === "") {
-        zeroinput_modal.show();
-        return false;
-    }
-    if (parseInt(selectB_score) < 0 || parseInt(selectB_score) > 50) {
-        biginput_modal.show();
-        return false;
-    }
+        if (selectB_type != "na" && selectB_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(selectB_score) < 0 || parseInt(selectB_score) > 50) {
+            biginput_modal.show();
+            return false;
+        }
 
-    if (foreign_type != "na" && foreign_score === "") {
-        zeroinput_modal.show();
-        return false;
+        if (foreign_type != "na" && foreign_score === "") {
+            zeroinput_modal.show();
+            return false;
+        }
+        if (parseInt(foreign_score) < 0 || parseInt(foreign_score) > 50) {
+            biginput_modal.show();
+            return false;
+        }
     }
-    if (parseInt(foreign_score) < 0 || parseInt(foreign_score) > 50) {
-        biginput_modal.show();
-        return false;
-    }
-
     univresultpage.submit();
 }
 
