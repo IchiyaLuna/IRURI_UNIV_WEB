@@ -126,7 +126,7 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="year-label">응시 년도&nbsp;&nbsp;&nbsp;</span>
                                         <select class="form-select" id="year" name="univ-yearsel">
@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="month-label">응시 월&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                         <select class="form-select" id="month" name="univ-monthsel">
