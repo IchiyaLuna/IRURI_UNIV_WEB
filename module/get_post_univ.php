@@ -153,4 +153,7 @@ if ($year != -1) {
     array_multisort($sort, SORT_ASC, $jungshi_result_list);
 
     $jungshi_final_result = array();
+} else {
+
+    $percentile = -1;
 }

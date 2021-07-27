@@ -126,7 +126,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <h5>분류</h5>
-                            <select class="form-select" id="year" name="univ-yearsel">
+                            <select class="form-select mb-3" id="year" name="univ-yearsel">
                                 <option value="-1" selected>응시하지 않음</option>
                                 <option value="21">21년</option>
                             </select>
@@ -134,7 +134,7 @@
 
                         <div class="col-md-3">
                             <h5>세부 분류</h5>
-                            <select class="form-select" id="month" name="univ-monthsel">
+                            <select class="form-select mb-3" id="month" name="univ-monthsel">
                                 <option value="-1" selected>세부 분류를 선택해주세요</option>
 
                                 <option class="21" value="03">3월 학력평가</option>
@@ -142,10 +142,7 @@
                                 <option class="21" value="07">7월 학력평가</option>
                             </select>
                         </div>
-                    </div>
 
-
-                    <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -157,7 +154,10 @@
                                 <input type="number" class="form-control form-control-sm text-center" name="univ-korean-score" id="univ-korean-score" placeholder="원점수">
                             </div>
                         </div>
+                    </div>
 
+
+                    <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="univ-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>

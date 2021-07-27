@@ -176,13 +176,13 @@
 
     <?php require "./module/footer.php" ?>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
-    <script src="../assets/js/valid.js"></script>
+    <script src="./assets/js/valid.js"></script>
 
-    <script src="../assets/js/jungshi_time.js"></script>
+    <script src="./assets/js/jungshi_time.js"></script>
 
     <script src="./assets/js/select_category.js"></script>
 </body>

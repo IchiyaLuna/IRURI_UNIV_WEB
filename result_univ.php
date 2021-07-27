@@ -48,6 +48,7 @@
                                         <th scope="col">성별</th>
                                         <th scope="col">계열</th>
                                         <th scope="col">단순 평균</th>
+                                        <th scope="col">예상 정시 백분위</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -55,23 +56,34 @@
                                         <td><?php echo $gender; ?></td>
                                         <td><?php echo $type; ?></td>
                                         <td><?php echo round($simple_avg, 2); ?></td>
+                                        <td>
+                                            <?php
+                                            if ($percentile === -1) {
+                                                echo "미응시";
+                                            } else {
+
+                                                echo round($percentile, 2) . "%";
+                                            }
+                                            ?>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3">
+                                        <td colspan="4">
                                             <div class="table-resposive">
+                                                <h5>수시 예측</h5>
                                                 <table class="table mb-0 table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">합격예측</th>
                                                             <th scope="col">대학</th>
-                                                            <th scope="col">등급 간 차이</th>
-                                                            <th scope="col">합격 평균 등급</th>
                                                             <th scope="col">내 환산 등급</th>
                                                             <th scope="col">상세 정보</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <?php
+                                                        $modal_count = 0;
+
                                                         foreach ($sushi_final_result as $result) {
 
                                                             switch ($result[0]) {
@@ -92,13 +104,40 @@
                                                                     echo "<td>" . "위험" . "</td>";
                                                                     break;
                                                             }
-                                                            echo "<td>" . $result[1] . "</td>";
-                                                            echo "<td>" . $result[6] . "</td>";
-                                                            echo "<td>" . $result[4] . "</td>";
                                                             echo "<td>" . $result[5] . "</td>";
-                                                            echo "<td>" . "상세" . "</td>";
+                                                            echo "<td>" . "<button type='button' class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#" . $modal_count . "modal'>" . "상세" . "</button>" . "</td>";
                                                             echo "</tr>";
+                                                        ?>
+                                                            <div class="modal fade" id="<?php echo $modal_count; ?>modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="<?php echo $modal_count; ?>Label">상세보기</h5>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <form method="POST">
+                                                                                <div class="form-floating mb-3">
+                                                                                    <input type="number" class="form-control" id="<?php echo $modal_count; ?>Input">
+                                                                                    <label for="<?php echo $modal_count; ?>Input">코드를 입력해주세요</label>
+                                                                                </div>
+                                                                                <input class="btn btn-primary" type="submit" name="<?php echo $modal_count; ?>Btn" id="<?php echo $modal_count; ?>Btn" value="확인">
+                                                                            </form>
+
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <?php
                                                         }
+
+                                                        function testcode($code)
+                                                        {
+                                                        }
+
                                                         ?>
                                                     </tbody>
                                                 </table>
@@ -106,7 +145,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="3">
+                                        <td colspan="4">
                                             <div class="table-resposive">
                                                 <table class="table mb-0 table-hover">
                                                     <thead>
