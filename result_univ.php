@@ -133,6 +133,7 @@
                                                                 </div>
                                                             </div>
                                                         <?php
+                                                            $modal_count++;
                                                         }
 
                                                         function testcode($code)
