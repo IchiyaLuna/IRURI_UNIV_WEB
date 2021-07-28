@@ -10,7 +10,7 @@ function white($arr)
 
     foreach ($offsets as $offset) {
         if ($arr[$index] != 0) {
-            $sum = $arr[$index] * $offset;
+            $sum += $arr[$index] * $offset;
             $valid += $offset;
         }
         $index++;
@@ -29,7 +29,7 @@ function yellow($arr)
 
     foreach ($offsets as $offset) {
         if ($arr[$index] != 0) {
-            $sum = $arr[$index] * $offset;
+            $sum += $arr[$index] * $offset;
             $valid += $offset;
         }
         $index++;
@@ -48,7 +48,7 @@ function blue($arr)
 
     foreach ($offsets as $offset) {
         if ($arr[$index] != 0) {
-            $sum = $arr[$index] * $offset;
+            $sum += $arr[$index] * $offset;
             $valid += $offset;
         }
         $index++;
@@ -67,7 +67,7 @@ function purple($arr)
 
     foreach ($offsets as $offset) {
         if ($arr[$index] != 0) {
-            $sum = $arr[$index] * $offset;
+            $sum += $arr[$index] * $offset;
             $valid += $offset;
         }
         $index++;
