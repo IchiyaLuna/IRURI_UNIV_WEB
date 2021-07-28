@@ -7,8 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type = $_POST["univ-type-radio"];
 
     $first = $_POST["univ-first"];
-    $second = $_POST["univ-first"];
-    $third = $_POST["univ-first"];
+    $second = $_POST["univ-second"];
+    $third = $_POST["univ-third"];
 
     $sushi = array($first, $second, $third);
 
