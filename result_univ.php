@@ -106,23 +106,23 @@
                                                             }
                                                             echo "<td>" . $result[1] . "</td>";
                                                             echo "<td>" . $result[5] . "</td>";
-                                                            echo "<td>" . "<button type='button' class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#" . $modal_count . "modal'>" . "상세" . "</button>" . "</td>";
+                                                            echo "<td>" . "<button type='button' class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#modal" . $modal_count . "'>" . "상세" . "</button>" . "</td>";
                                                             echo "</tr>";
                                                         ?>
-                                                            <div class="modal fade" id="<?php echo $modal_count; ?>modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                                                            <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="<?php echo $modal_count; ?>Label">상세보기</h5>
+                                                                            <h5 class="modal-title" id="Label<?php echo $modal_count; ?>">상세보기</h5>
                                                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <form method="POST">
                                                                                 <div class="form-floating mb-3">
-                                                                                    <input type="number" class="form-control" id="<?php echo $modal_count; ?>Input">
-                                                                                    <label for="<?php echo $modal_count; ?>Input">코드를 입력해주세요</label>
+                                                                                    <input type="number" class="form-control" id="Input<?php echo $modal_count; ?>">
+                                                                                    <label for="Input<?php echo $modal_count; ?>">코드를 입력해주세요</label>
                                                                                 </div>
-                                                                                <input class="btn btn-primary" type="submit" name="<?php echo $modal_count; ?>Btn" id="<?php echo $modal_count; ?>Btn" value="확인">
+                                                                                <input class="btn btn-primary" type="submit" name="Btn<?php echo $modal_count; ?>" id="Btn<?php echo $modal_count; ?>" value="확인">
                                                                             </form>
 
                                                                         </div>
