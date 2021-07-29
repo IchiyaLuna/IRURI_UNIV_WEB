@@ -165,8 +165,8 @@
                                                             $iscorrect = false;
 
                                                             foreach ($code_list as $codedata) {
-                                                                echo $codedata;
-                                                                if ($codedata == $code) {
+                                                                echo $codedata['code'];
+                                                                if ($codedata['code'] === $code) {
                                                                     $iscorrect = true;
                                                                     break;
                                                                 }
