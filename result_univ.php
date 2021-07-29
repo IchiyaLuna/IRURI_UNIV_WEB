@@ -117,7 +117,7 @@
                                                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form method="GET">
+                                                                            <form method="POST">
                                                                                 <div class="form-floating mb-3">
                                                                                     <textarea class="form-control" placeholder="코드를 입력해주세요" id="code-input" name="code-input"></textarea>
                                                                                     <label for="code-input">승인 코드</label>
@@ -178,8 +178,8 @@
                                                             }
                                                         }
 
-                                                        if (array_key_exists('btn-ok', $_GET)) {
-                                                            testcode($_GET['code-input']);
+                                                        if (array_key_exists('btn-ok', $_POST)) {
+                                                            testcode($_POST['code-input']);
                                                         }
                                                         ?>
                                                     </tbody>
