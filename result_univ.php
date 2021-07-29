@@ -175,6 +175,7 @@
                                                                 echo "맞다";
                                                             } else {
                                                                 echo "<script>alert(\"코드가 일치하지 않습니다.\");</script>";
+                                                                echo "<script>history.back();</script>";
                                                             }
                                                         }
 
