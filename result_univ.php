@@ -119,7 +119,7 @@
                                                                         <div class="modal-body">
                                                                             <form method="POST">
                                                                                 <div class="form-floating mb-3">
-                                                                                    <textarea class="form-control" placeholder="코드를 입력해주세요" id="code-input"></textarea>
+                                                                                    <textarea class="form-control" placeholder="코드를 입력해주세요" id="code-input" name="code-input"></textarea>
                                                                                     <label for="code-input">승인 코드</label>
                                                                                 </div>
                                                                                 <input class="btn btn-primary" type="submit" name="btn-ok" id="btn-ok" value="확인">
