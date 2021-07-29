@@ -51,7 +51,7 @@ $count = 0;
 
 foreach ($sushi as $grade) {
 
-    if ($grade !== 0) $count++;
+    if ($grade != 0) $count++;
     $simple_avg += $grade;
 }
 
@@ -101,13 +101,13 @@ foreach ($univ_list as $univ) {
             break;
     }
 
-    $this_time_result = array($univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
+    $this_time_result = array($univ['code'], $univ['name'], $univ['low'], $univ['high'], $univ['avg'], $this_time_myavg, $gap);
     array_push($sushi_result_list, $this_time_result);
 }
 
 foreach ((array) $sushi_result_list as $key => $value) {
 
-    $sort[$key] = $value[5];
+    $sort[$key] = $value[6];
 }
 
 array_multisort($sort, SORT_ASC, $sushi_result_list);
@@ -115,12 +115,12 @@ array_multisort($sort, SORT_ASC, $sushi_result_list);
 $sushi_final_result = array();
 
 foreach ($sushi_result_list as $data) {
-    if ($data[4] < $data[2]) $posi = 0;
-    elseif ($data[5] > 0) $posi = 1;
-    elseif ($data[4] > $data[1]) $posi = 3;
+    if ($data[5] < $data[3]) $posi = 0;
+    elseif ($data[6] > 0) $posi = 1;
+    elseif ($data[5] > $data[2]) $posi = 3;
     else $posi = 2;
 
-    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+    $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[0]);
     array_push($sushi_final_result, $arr_to_push);
 }
 
@@ -141,18 +141,28 @@ if ($year != -1) {
         }
 
         $gap = $percentile - $univ['percentile'];
-        $this_time_result = array($univ['name'], $univ['percentile'], $percentile, $gap);
+        $this_time_result = array($univ['code'], $univ['name'], $univ['percentile'], $percentile, $gap);
         array_push($jungshi_result_list, $this_time_result);
     }
 
     foreach ((array) $jungshi_result_list as $key => $value) {
 
-        $sort[$key] = $value[3];
+        $sort[$key] = $value[4];
     }
 
     array_multisort($sort, SORT_ASC, $jungshi_result_list);
 
     $jungshi_final_result = array();
+
+    foreach ($jungshi_result_list as $data) {
+        if ($data[4] > 2.0) $posi = 0;
+        elseif ($data[4] > 0) $posi = 1;
+        elseif ($data[4] > -1.0) $posi = 2;
+        else $posi = 3;
+
+        $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[4], $data[0]);
+        array_push($jungshi_final_result, $arr_to_push);
+    }
 } else {
 
     $percentile = -1;
