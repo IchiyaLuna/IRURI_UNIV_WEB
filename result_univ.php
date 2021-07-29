@@ -174,7 +174,7 @@
                                                             if ($iscorrect === true) {
                                                                 echo "맞다";
                                                             } else {
-                                                                echo "틀리다";
+                                                                echo "<script>alert(\"코드가 일치하지 않습니다.\");</script>";
                                                             }
                                                         }
 
