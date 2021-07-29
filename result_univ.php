@@ -119,10 +119,10 @@
                                                                         <div class="modal-body">
                                                                             <form method="POST">
                                                                                 <div class="form-floating mb-3">
-                                                                                    <input type="number" class="form-control" id="Input<?php echo $modal_count; ?>">
-                                                                                    <label for="Input<?php echo $modal_count; ?>">코드를 입력해주세요</label>
+                                                                                    <textarea class="form-control" placeholder="코드를 입력해주세요" id="code-input"></textarea>
+                                                                                    <label for="code-input">승인 코드</label>
                                                                                 </div>
-                                                                                <input class="btn btn-primary" type="submit" name="Btn<?php echo $modal_count; ?>" id="Btn<?php echo $modal_count; ?>" value="확인">
+                                                                                <input class="btn btn-primary" type="submit" name="btn-ok" id="btn-ok" value="확인">
                                                                             </form>
 
                                                                         </div>
@@ -138,8 +138,12 @@
 
                                                         function testcode($code)
                                                         {
+                                                            echo "hahatest" . $code;
                                                         }
 
+                                                        if (array_key_exists('btn-ok', $_POST)) {
+                                                            testcode($_POST['code-input']);
+                                                        }
                                                         ?>
                                                     </tbody>
                                                 </table>
