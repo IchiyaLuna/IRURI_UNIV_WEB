@@ -138,7 +138,44 @@
 
                                                         function testcode($code)
                                                         {
-                                                            echo "hahatest" . $code;
+                                                            $hostname = "localhost";
+                                                            $user = "iruri";
+                                                            $password = "test123";
+                                                            $dbname = "sushi_db";
+
+                                                            $database = mysqli_connect($hostname, $user, $password, $dbname);
+
+                                                            if (!$database) {
+                                                                die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
+                                                            }
+
+                                                            $sql = "SELECT * FROM codes";
+
+                                                            $fetch_all = mysqli_query($database, $sql);
+
+                                                            $code_list = array();
+
+                                                            while ($row = mysqli_fetch_array($fetch_all)) {
+
+                                                                array_push($code_list, $row);
+                                                            }
+
+                                                            mysqli_close($database);
+
+                                                            $iscorrect = false;
+
+                                                            foreach ($code_list as $codedata) {
+                                                                if ($codedata === $code) {
+                                                                    $iscorrect = true;
+                                                                    break;
+                                                                }
+                                                            }
+
+                                                            if ($iscorrect === true) {
+                                                                echo "맞다";
+                                                            } else {
+                                                                echo "틀리다";
+                                                            }
                                                         }
 
                                                         if (array_key_exists('btn-ok', $_POST)) {
