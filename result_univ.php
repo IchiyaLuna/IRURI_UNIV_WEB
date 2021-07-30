@@ -108,21 +108,21 @@
                                                             echo "<td>" . $result[5] . "</td>";
                                                         ?>
                                                             <td>
-                                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $modal_count; ?>">
+                                                                <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $modal_count; ?>">
                                                                     상세
                                                                 </button>
                                                             </td>
-
-                                                            <td>
+                                                            <?php
+                                                            echo "</tr>";
+                                                            ?>
+                                                            <tr>
                                                                 <div class="collapse" id="collapse<?php echo $modal_count; ?>">
                                                                     <div class="card card-body">
                                                                         test
                                                                     </div>
                                                                 </div>
-                                                            </td>
-                                                            <?php
-                                                            echo "</tr>";
-                                                            ?>
+                                                            </tr>
+
                                                         <?php
                                                             $modal_count++;
                                                         }
