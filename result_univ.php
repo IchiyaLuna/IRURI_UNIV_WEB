@@ -112,15 +112,17 @@
                                                                     상세
                                                                 </button>
                                                             </td>
-
-                                                            <div class="collapse" id="collapse<?php echo $modal_count; ?>">
-                                                                <div class="card card-body">
-                                                                    test
-                                                                </div>
-                                                            </div>
                                                             <?php
                                                             echo "</tr>";
                                                             ?>
+                                                            <tr>
+                                                                <div class="collapse" id="collapse<?php echo $modal_count; ?>">
+                                                                    <div class="card card-body">
+                                                                        test
+                                                                    </div>
+                                                                </div>
+                                                            </tr>
+
                                                         <?php
                                                             $modal_count++;
                                                         }
