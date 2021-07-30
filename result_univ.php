@@ -108,19 +108,19 @@
                                                             echo "<td>" . $result[5] . "</td>";
                                                         ?>
                                                             <td>
-                                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#modal<?php echo $modal_count; ?>">
+                                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $modal_count; ?>">
                                                                     상세
                                                                 </button>
                                                             </td>
-                                                            <?php
-                                                            echo "</tr>";
-                                                            ?>
-                                                            <div class="collapse" id="modal<?php echo $modal_count; ?>">
+
+                                                            <div class="collapse" id="collapse<?php echo $modal_count; ?>">
                                                                 <div class="card card-body">
                                                                     test
                                                                 </div>
                                                             </div>
-
+                                                            <?php
+                                                            echo "</tr>";
+                                                            ?>
                                                         <?php
                                                             $modal_count++;
                                                         }
@@ -172,10 +172,6 @@
                                                             testcode($_POST['code-input']);
                                                         }
                                                         ?>
-
-                                                        <script type="text/javascript">
-
-                                                        </script>
                                                     </tbody>
                                                 </table>
                                             </div>
