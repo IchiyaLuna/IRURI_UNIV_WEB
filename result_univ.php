@@ -106,32 +106,21 @@
                                                             }
                                                             echo "<td>" . $result[1] . "</td>";
                                                             echo "<td>" . $result[5] . "</td>";
-                                                            echo "<td>" . "<button type='button' class='btn btn-secondary btn-sm' data-bs-toggle='modal' data-bs-target='#modal" . $modal_count . "'>" . "상세" . "</button>" . "</td>";
-                                                            echo "</tr>";
                                                         ?>
-                                                            <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title" id="Label<?php echo $modal_count; ?>">상세보기</h5>
-                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <form method="POST">
-                                                                                <div class="form-floating mb-3">
-                                                                                    <textarea class="form-control" placeholder="코드를 입력해주세요" id="code-input" name="code-input"></textarea>
-                                                                                    <label for="code-input">승인 코드</label>
-                                                                                </div>
-                                                                                <input class="btn btn-primary" type="submit" name="btn-ok" id="btn-ok" value="확인">
-                                                                            </form>
-
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                                                                        </div>
-                                                                    </div>
+                                                            <td>
+                                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#modal<?php echo $modal_count; ?>">
+                                                                    상세
+                                                                </button>
+                                                            </td>
+                                                            <?php
+                                                            echo "</tr>";
+                                                            ?>
+                                                            <div class="collapse" id="modal<?php echo $modal_count; ?>">
+                                                                <div class="card card-body">
+                                                                    test
                                                                 </div>
                                                             </div>
+
                                                         <?php
                                                             $modal_count++;
                                                         }
@@ -183,6 +172,10 @@
                                                             testcode($_POST['code-input']);
                                                         }
                                                         ?>
+
+                                                        <script type="text/javascript">
+
+                                                        </script>
                                                     </tbody>
                                                 </table>
                                             </div>
