@@ -114,16 +114,6 @@
                                                             <?php
                                                             echo "</tr>";
                                                             ?>
-
-                                                        <?php
-                                                            $modal_count++;
-                                                        }
-
-                                                        $modal_count = 0;
-
-                                                        foreach ($sushi_final_result as $dummy) {
-
-                                                        ?>
                                                             <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
