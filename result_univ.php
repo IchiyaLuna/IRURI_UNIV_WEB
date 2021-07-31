@@ -61,7 +61,6 @@
                                             if ($percentile === -1) {
                                                 echo "미응시";
                                             } else {
-
                                                 echo round($percentile, 2) . "%";
                                             }
                                             ?>
@@ -109,7 +108,7 @@
                                                         ?>
                                                             <td>
                                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
-                                                                    Launch static backdrop modal
+                                                                    상세
                                                                 </button>
                                                             </td>
                                                             <?php
@@ -331,58 +330,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                         <?php
                                                             $modal_count++;
-                                                        }
-                                                        ?>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <div class="table-resposive">
-                                                <table class="table mb-0 table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">합격예측</th>
-                                                            <th scope="col">대학</th>
-                                                            <th scope="col">등급 간 차이</th>
-                                                            <th scope="col">합격 평균 등급</th>
-                                                            <th scope="col">내 환산 등급</th>
-                                                            <th scope="col">상세 정보</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <?php
-                                                        foreach ($sushi_final_result as $result) {
-
-                                                            switch ($result[0]) {
-                                                                case 0:
-                                                                    echo "<tr class='table-primary'>";
-                                                                    echo "<td>" . "안정" . "</td>";
-                                                                    break;
-                                                                case 1:
-                                                                    echo "<tr class='table-success'>";
-                                                                    echo "<td>" . "가능" . "</td>";
-                                                                    break;
-                                                                case 2:
-                                                                    echo "<tr class='table-warning'>";
-                                                                    echo "<td>" . "불안" . "</td>";
-                                                                    break;
-                                                                case 3:
-                                                                    echo "<tr class='table-danger'>";
-                                                                    echo "<td>" . "위험" . "</td>";
-                                                                    break;
-                                                            }
-                                                            echo "<td>" . $result[1] . "</td>";
-                                                            echo "<td>" . $result[6] . "</td>";
-                                                            echo "<td>" . $result[4] . "</td>";
-                                                            echo "<td>" . $result[5] . "</td>";
-                                                            echo "<td>" . "상세" . "</td>";
-                                                            echo "</tr>";
                                                         }
                                                         ?>
                                                     </tbody>
