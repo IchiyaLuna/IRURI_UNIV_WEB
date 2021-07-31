@@ -51,7 +51,7 @@ $count = 0;
 
 foreach ($sushi as $grade) {
 
-    if ($grade != 0) $count++;
+    if ($grade !=  0) $count++;
     $simple_avg += $grade;
 }
 
