@@ -84,7 +84,7 @@
                                                         $modal_count = 0;
 
                                                         foreach ($sushi_final_result as $result) {
-
+                                                            echo $modal_count;
                                                             switch ($result[0]) {
                                                                 case 0:
                                                                     echo "<tr class='table-primary'>";
