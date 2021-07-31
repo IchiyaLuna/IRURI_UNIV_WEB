@@ -319,6 +319,7 @@
                                                                                                         ?>
                                                                                                     </tbody>
                                                                                                 </table>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>
