@@ -42,7 +42,8 @@
 
                     <div class="card card-body">
                         <div class="result-table table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered caption-top">
+                                <caption>모바일 환경에서는 좌우로 스와이프하여 내용을 확인해주세요</caption>
                                 <thead>
                                     <tr>
                                         <th scope="col">성별</th>
@@ -71,7 +72,7 @@
                                             <div>
                                                 <h5>수시 예측</h5>
                                                 <table class="table mb-0 table-hover caption-top">
-                                                    <caption>모바일 환경에서는 좌우로 스와이프하여 내용을 확인해주세요</caption>
+                                                    <caption>환산 등급은 과목 반영비율을 제외한 학년별 반영 비율만 고려하였기에 참고용으로만 사용해 주시기 바랍니다.</caption>
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">합격예측</th>
