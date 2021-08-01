@@ -71,12 +71,12 @@
                                             <div>
                                                 <h5>수시 예측</h5>
                                                 <table class="table mb-0 table-hover caption-top">
-                                                    <caption></caption>
+                                                    <caption>모바일 환경에서는 좌우로 스와이프하여 내용을 확인해주세요</caption>
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">합격예측</th>
                                                             <th scope="col">대학</th>
-                                                            <th scope="col">환산 등급</th>
+                                                            <th scope="col">내 환산 등급</th>
                                                             <th scope="col">상세 정보</th>
                                                         </tr>
                                                     </thead>
