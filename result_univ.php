@@ -68,9 +68,10 @@
                                     </tr>
                                     <tr>
                                         <td colspan="4">
-                                            <div class="table-resposive">
+                                            <div>
                                                 <h5>수시 예측</h5>
-                                                <table class="table mb-0 table-hover">
+                                                <table class="table mb-0 table-hover caption-top">
+                                                    <caption></caption>
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">합격예측</th>
@@ -84,7 +85,7 @@
                                                         $modal_count = 0;
 
                                                         foreach ($sushi_final_result as $result) {
-                                                            echo $modal_count;
+
                                                             switch ($result[0]) {
                                                                 case 0:
                                                                     echo "<tr class='table-primary'>";
