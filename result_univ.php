@@ -76,7 +76,7 @@
                                                         <tr>
                                                             <th scope="col">합격예측</th>
                                                             <th scope="col">대학</th>
-                                                            <th scope="col">내 환산 등급</th>
+                                                            <th scope="col">환산 등급</th>
                                                             <th scope="col">상세 정보</th>
                                                         </tr>
                                                     </thead>
@@ -108,7 +108,7 @@
                                                             echo "<td>" . $result[5] . "</td>";
                                                         ?>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
+                                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
                                                                     상세
                                                                 </button>
                                                             </td>
