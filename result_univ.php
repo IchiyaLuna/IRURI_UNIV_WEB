@@ -186,7 +186,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="table-responsive">
+                            <div class="result-table table-responsive">
                                 <table class="table table-hover caption-top">
                                     <caption>모바일 환경에서는 좌우로 스와이프하여 내용을 확인해주세요</caption>
                                     <thead>
