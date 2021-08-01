@@ -111,231 +111,238 @@
                                                                     상세
                                                                 </button>
                                                             </td>
-                                                            <?php
-                                                            echo "</tr>";
-                                                            ?>
-                                                            <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title" id="label<?php echo $modal_count; ?>">상세 정보</h5>
-                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <table class="table table-hover">
-                                                                                <thead>
-                                                                                    <tr>
-                                                                                        <th scope="col">학교</th>
-                                                                                        <th scope="col">합격자 평균</th>
-                                                                                        <th scope="col">내 환산 등급</th>
-                                                                                        <th scope="col">등급 간 차이</th>
-                                                                                        <th scope="col">합격예측</th>
-                                                                                    </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td><?php echo $result[1]; ?></td>
-                                                                                        <td><?php echo $result[4]; ?></td>
-                                                                                        <td><?php echo $result[5]; ?></td>
-                                                                                        <td><?php echo $result[6]; ?></td>
-                                                                                        <?php
-                                                                                        switch ($result[0]) {
-                                                                                            case 0:
-                                                                                                echo "<td>" . "안정" . "</td>";
-                                                                                                break;
-                                                                                            case 1:
-                                                                                                echo "<td>" . "가능" . "</td>";
-                                                                                                break;
-                                                                                            case 2:
-                                                                                                echo "<td>" . "불안" . "</td>";
-                                                                                                break;
-                                                                                            case 3:
-                                                                                                echo "<td>" . "위험" . "</td>";
-                                                                                                break;
-                                                                                        }
-                                                                                        ?>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td colspan="5">
-                                                                                            <div class="table-resposive">
-                                                                                                <h5>추천 학과</h5>
-                                                                                                <?php
-                                                                                                $hostname = "localhost";
-                                                                                                $user = "iruri";
-                                                                                                $password = "test123";
-                                                                                                $dbname = "sushi_db";
-
-                                                                                                $database = mysqli_connect(
-                                                                                                    $hostname,
-                                                                                                    $user,
-                                                                                                    $password,
-                                                                                                    $dbname
-                                                                                                );
-
-                                                                                                if (!$database) {
-                                                                                                    die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
-                                                                                                }
-
-                                                                                                $sql = "SELECT * FROM sushi_2022_dept WHERE code = '{$result[7]}' AND type = '{$type}'";
-
-                                                                                                $fetch_all = mysqli_query($database, $sql);
-
-                                                                                                $dept_list = array();
-
-                                                                                                while ($row = mysqli_fetch_array($fetch_all)) {
-
-                                                                                                    array_push($dept_list, $row);
-                                                                                                }
-
-                                                                                                mysqli_close($database);
-
-                                                                                                $dept_result_list = array();
-
-                                                                                                foreach ($dept_list as $dept) {
-                                                                                                    $gap = 0;
-
-                                                                                                    switch ($dept['method']) {
-                                                                                                        case 0:
-                                                                                                            $gap = round($dept['avg'] - $white, 3);
-                                                                                                            $this_time_myavg = round($white, 3);
-                                                                                                            break;
-                                                                                                        case 1:
-                                                                                                            $gap = round($dept['avg'] - $yellow, 3);
-                                                                                                            $this_time_myavg = round($yellow, 3);
-                                                                                                            break;
-                                                                                                        case 2:
-                                                                                                            $gap = round($dept['avg'] - $blue, 3);
-                                                                                                            $this_time_myavg = round($blue, 3);
-                                                                                                            break;
-                                                                                                        case 3:
-                                                                                                            $gap = round($dept['avg'] - $purple, 3);
-                                                                                                            $this_time_myavg = round($purple, 3);
-                                                                                                            break;
-                                                                                                        default:
-                                                                                                            $gap = -1;
-                                                                                                            $this_time_myavg = -1;
-                                                                                                            break;
-                                                                                                    }
-
-                                                                                                    $this_time_result = array($dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
-                                                                                                    array_push($dept_result_list, $this_time_result);
-                                                                                                }
-
-                                                                                                foreach ((array) $dept_result_list as $key => $value) {
-
-                                                                                                    $sort[$key] = $value[6];
-                                                                                                }
-
-                                                                                                array_multisort($sort, SORT_ASC, $dept_result_list);
-
-                                                                                                $dept_final_result = array();
-
-                                                                                                foreach ($dept_result_list as $data) {
-                                                                                                    if ($data[5] < $data[3]) $posi = 0;
-                                                                                                    elseif ($data[6] > 0) $posi = 1;
-                                                                                                    elseif ($data[5] > $data[2]) $posi = 3;
-                                                                                                    else $posi = 2;
-
-                                                                                                    $arr_to_push = array($posi, $data[0], $data[1], $data[4], $data[5], $data[6]);
-                                                                                                    array_push($dept_final_result, $arr_to_push);
-                                                                                                }
-
-                                                                                                $index = 0;
-                                                                                                $dept_count = sizeof($dept_final_result);
-                                                                                                $final_result = array();
-
-                                                                                                if ($dept_count >= 10) {
-
-                                                                                                    foreach ($dept_final_result as $dept) {
-
-                                                                                                        if ($dept[5] < 0.0) {
-                                                                                                            if ($index == $dept_count - 7) break;
-                                                                                                            $index++;
-                                                                                                            continue;
-                                                                                                        } elseif ($dept[5] >= 0.0) break;
-                                                                                                    }
-
-                                                                                                    if ($index < 3) {
-                                                                                                        for ($i = 0; $i < 10; $i++) {
-
-                                                                                                            $arr_to_push = $dept_final_result[$i];
-                                                                                                            array_push($final_result, $arr_to_push);
-                                                                                                        }
-                                                                                                    } else {
-                                                                                                        for ($i = $index - 3; $i < $index + 7; $i++) {
-                                                                                                            $arr_to_push = $dept_final_result[$i];
-                                                                                                            array_push($final_result, $arr_to_push);
-                                                                                                        }
-                                                                                                    }
-                                                                                                } else {
-
-                                                                                                    foreach ($dept_final_result as $dept) {
-                                                                                                        $arr_to_push = $dept;
-                                                                                                        array_push($final_result, $arr_to_push);
-                                                                                                    }
-                                                                                                }
-                                                                                                ?>
-                                                                                                <table class="table mb-0 table-hover">
-                                                                                                    <thead>
-                                                                                                        <tr>
-                                                                                                            <th scope="col">합격예측</th>
-                                                                                                            <th scope="col">전형</th>
-                                                                                                            <th scope="col">모집단위</th>
-                                                                                                            <th scope="col">합격자 평균</th>
-                                                                                                            <th scope="col">내 환산 등급</th>
-                                                                                                            <th scope="col">등급 간 차이</th>
-                                                                                                        </tr>
-                                                                                                    </thead>
-                                                                                                    <tbody>
-                                                                                                        <?php
-                                                                                                        foreach ($final_result as $dept) {
-                                                                                                            switch ($dept[0]) {
-                                                                                                                case 0:
-                                                                                                                    echo "<tr class='table-primary'>";
-                                                                                                                    echo "<td>" . "안정" . "</td>";
-                                                                                                                    break;
-                                                                                                                case 1:
-                                                                                                                    echo "<tr class='table-success'>";
-                                                                                                                    echo "<td>" . "가능" . "</td>";
-                                                                                                                    break;
-                                                                                                                case 2:
-                                                                                                                    echo "<tr class='table-warning'>";
-                                                                                                                    echo "<td>" . "불안" . "</td>";
-                                                                                                                    break;
-                                                                                                                case 3:
-                                                                                                                    echo "<tr class='table-danger'>";
-                                                                                                                    echo "<td>" . "위험" . "</td>";
-                                                                                                                    break;
-                                                                                                            }
-
-                                                                                                            echo "<td>" . $dept[1] . "</td>";
-                                                                                                            echo "<td>" . $dept[2] . "</td>";
-                                                                                                            echo "<td>" . $dept[3] . "</td>";
-                                                                                                            echo "<td>" . $dept[4] . "</td>";
-                                                                                                            echo "<td>" . $dept[5] . "</td>";
-                                                                                                            echo "</tr>";
-                                                                                                        }
-                                                                                                        ?>
-                                                                                                    </tbody>
-                                                                                                </table>
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         <?php
+                                                            echo "</tr>";
                                                             $modal_count++;
                                                         }
                                                         ?>
                                                     </tbody>
                                                 </table>
+                                                <?php
+                                                $modal_count = 0;
+
+                                                foreach ($sushi_final_result as $result) {
+                                                ?>
+                                                    <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="label<?php echo $modal_count; ?>">상세 정보</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th scope="col">학교</th>
+                                                                                <th scope="col">합격자 평균</th>
+                                                                                <th scope="col">내 환산 등급</th>
+                                                                                <th scope="col">등급 간 차이</th>
+                                                                                <th scope="col">합격예측</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td><?php echo $result[1]; ?></td>
+                                                                                <td><?php echo $result[4]; ?></td>
+                                                                                <td><?php echo $result[5]; ?></td>
+                                                                                <td><?php echo $result[6]; ?></td>
+                                                                                <?php
+                                                                                switch ($result[0]) {
+                                                                                    case 0:
+                                                                                        echo "<td>" . "안정" . "</td>";
+                                                                                        break;
+                                                                                    case 1:
+                                                                                        echo "<td>" . "가능" . "</td>";
+                                                                                        break;
+                                                                                    case 2:
+                                                                                        echo "<td>" . "불안" . "</td>";
+                                                                                        break;
+                                                                                    case 3:
+                                                                                        echo "<td>" . "위험" . "</td>";
+                                                                                        break;
+                                                                                }
+                                                                                ?>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="5">
+                                                                                    <div class="table-resposive">
+                                                                                        <h5>추천 학과</h5>
+                                                                                        <?php
+                                                                                        $hostname = "localhost";
+                                                                                        $user = "iruri";
+                                                                                        $password = "test123";
+                                                                                        $dbname = "sushi_db";
+
+                                                                                        $database = mysqli_connect(
+                                                                                            $hostname,
+                                                                                            $user,
+                                                                                            $password,
+                                                                                            $dbname
+                                                                                        );
+
+                                                                                        if (!$database) {
+                                                                                            die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
+                                                                                        }
+
+                                                                                        $sql = "SELECT * FROM sushi_2022_dept WHERE code = '{$result[7]}' AND type = '{$type}'";
+
+                                                                                        $fetch_all = mysqli_query($database, $sql);
+
+                                                                                        $dept_list = array();
+
+                                                                                        while ($row = mysqli_fetch_array($fetch_all)) {
+
+                                                                                            array_push($dept_list, $row);
+                                                                                        }
+
+                                                                                        mysqli_close($database);
+
+                                                                                        $dept_result_list = array();
+
+                                                                                        foreach ($dept_list as $dept) {
+                                                                                            $gap = 0;
+
+                                                                                            switch ($dept['method']) {
+                                                                                                case 0:
+                                                                                                    $gap = round($dept['avg'] - $white, 3);
+                                                                                                    $this_time_myavg = round($white, 3);
+                                                                                                    break;
+                                                                                                case 1:
+                                                                                                    $gap = round($dept['avg'] - $yellow, 3);
+                                                                                                    $this_time_myavg = round($yellow, 3);
+                                                                                                    break;
+                                                                                                case 2:
+                                                                                                    $gap = round($dept['avg'] - $blue, 3);
+                                                                                                    $this_time_myavg = round($blue, 3);
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $gap = round($dept['avg'] - $purple, 3);
+                                                                                                    $this_time_myavg = round($purple, 3);
+                                                                                                    break;
+                                                                                                default:
+                                                                                                    $gap = -1;
+                                                                                                    $this_time_myavg = -1;
+                                                                                                    break;
+                                                                                            }
+
+                                                                                            $this_time_result = array($dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
+                                                                                            array_push($dept_result_list, $this_time_result);
+                                                                                        }
+
+                                                                                        foreach ((array) $dept_result_list as $key => $value) {
+
+                                                                                            $sort[$key] = $value[6];
+                                                                                        }
+
+                                                                                        array_multisort($sort, SORT_ASC, $dept_result_list);
+
+                                                                                        $dept_final_result = array();
+
+                                                                                        foreach ($dept_result_list as $data) {
+                                                                                            if ($data[5] < $data[3]) $posi = 0;
+                                                                                            elseif ($data[6] > 0) $posi = 1;
+                                                                                            elseif ($data[5] > $data[2]) $posi = 3;
+                                                                                            else $posi = 2;
+
+                                                                                            $arr_to_push = array($posi, $data[0], $data[1], $data[4], $data[5], $data[6]);
+                                                                                            array_push($dept_final_result, $arr_to_push);
+                                                                                        }
+
+                                                                                        $index = 0;
+                                                                                        $dept_count = sizeof($dept_final_result);
+                                                                                        $final_result = array();
+
+                                                                                        if ($dept_count >= 10) {
+
+                                                                                            foreach ($dept_final_result as $dept) {
+
+                                                                                                if ($dept[5] < 0.0) {
+                                                                                                    if ($index == $dept_count - 7) break;
+                                                                                                    $index++;
+                                                                                                    continue;
+                                                                                                } elseif ($dept[5] >= 0.0) break;
+                                                                                            }
+
+                                                                                            if ($index < 3) {
+                                                                                                for ($i = 0; $i < 10; $i++) {
+
+                                                                                                    $arr_to_push = $dept_final_result[$i];
+                                                                                                    array_push($final_result, $arr_to_push);
+                                                                                                }
+                                                                                            } else {
+                                                                                                for ($i = $index - 3; $i < $index + 7; $i++) {
+                                                                                                    $arr_to_push = $dept_final_result[$i];
+                                                                                                    array_push($final_result, $arr_to_push);
+                                                                                                }
+                                                                                            }
+                                                                                        } else {
+
+                                                                                            foreach ($dept_final_result as $dept) {
+                                                                                                $arr_to_push = $dept;
+                                                                                                array_push($final_result, $arr_to_push);
+                                                                                            }
+                                                                                        }
+                                                                                        ?>
+                                                                                        <table class="table mb-0 table-hover">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th scope="col">합격예측</th>
+                                                                                                    <th scope="col">전형</th>
+                                                                                                    <th scope="col">모집단위</th>
+                                                                                                    <th scope="col">합격자 평균</th>
+                                                                                                    <th scope="col">내 환산 등급</th>
+                                                                                                    <th scope="col">등급 간 차이</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <?php
+                                                                                                foreach ($final_result as $dept) {
+                                                                                                    switch ($dept[0]) {
+                                                                                                        case 0:
+                                                                                                            echo "<tr class='table-primary'>";
+                                                                                                            echo "<td>" . "안정" . "</td>";
+                                                                                                            break;
+                                                                                                        case 1:
+                                                                                                            echo "<tr class='table-success'>";
+                                                                                                            echo "<td>" . "가능" . "</td>";
+                                                                                                            break;
+                                                                                                        case 2:
+                                                                                                            echo "<tr class='table-warning'>";
+                                                                                                            echo "<td>" . "불안" . "</td>";
+                                                                                                            break;
+                                                                                                        case 3:
+                                                                                                            echo "<tr class='table-danger'>";
+                                                                                                            echo "<td>" . "위험" . "</td>";
+                                                                                                            break;
+                                                                                                    }
+
+                                                                                                    echo "<td>" . $dept[1] . "</td>";
+                                                                                                    echo "<td>" . $dept[2] . "</td>";
+                                                                                                    echo "<td>" . $dept[3] . "</td>";
+                                                                                                    echo "<td>" . $dept[4] . "</td>";
+                                                                                                    echo "<td>" . $dept[5] . "</td>";
+                                                                                                    echo "</tr>";
+                                                                                                }
+                                                                                                ?>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <?php
+                                                    $modal_count++;
+                                                }
+                                                ?>
                                             </div>
                                         </td>
                                     </tr>
