@@ -230,8 +230,10 @@
                                                                                             array_push($dept_result_list, $this_time_result);
                                                                                         }
 
+                                                                                        $sort = array();
+
                                                                                         foreach ((array) $dept_result_list as $key => $value) {
-                                                                                            $sort = array();
+
                                                                                             $sort[$key] = $value[6];
                                                                                         }
 
