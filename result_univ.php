@@ -124,7 +124,7 @@
                                                 foreach ($sushi_final_result as $result) {
                                                 ?>
                                                     <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-                                                        <div class="modal-dialog">
+                                                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title" id="label<?php echo $modal_count; ?>">상세 정보</h5>
@@ -231,7 +231,7 @@
                                                                                         }
 
                                                                                         foreach ((array) $dept_result_list as $key => $value) {
-
+                                                                                            $sort = array();
                                                                                             $sort[$key] = $value[6];
                                                                                         }
 
