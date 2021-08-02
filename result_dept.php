@@ -165,8 +165,6 @@
                                                             </thead>
                                                             <tbody>
                                                                 <?php
-                                                                $modal_count = 0;
-
                                                                 foreach ($jungshi_final_result as $result) {
 
                                                                     switch ($result[0]) {
@@ -188,8 +186,10 @@
                                                                             break;
                                                                     }
                                                                     echo "<td>" . $result[1] . "</td>";
-                                                                    echo "<td>" . round($result[2], 2) . "%" . "</td>";
-                                                                    echo "<td>" . round($result[3], 2) . "%" . "</td>";
+                                                                    echo "<td>" . $result[2] . "</td>";
+                                                                    echo "<td>" . $result[3] . "</td>";
+                                                                    echo "<td>" . round($result[4], 2) . "%" . "</td>";
+                                                                    echo "<td>" . round($result[5], 2) . "%" . "</td>";
                                                                     echo "</tr>";
                                                                     $modal_count++;
                                                                 }

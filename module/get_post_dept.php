@@ -164,6 +164,8 @@ if ($year != -1) {
 
     array_multisort($sort, SORT_ASC, $jungshi_result_list);
 
+    $jungshi_final_result = array();
+
     foreach ($jungshi_result_list as $data) {
         if ($data[5] > 2.0) $posi = 0;
         elseif ($data[5] > 0) $posi = 1;
