@@ -132,7 +132,7 @@
                         최소 하나 이상의 내신 등급을 입력해 주세요. (성적이 아직 없거나 생략하고 싶은 경우 0을 입력합니다.)
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal()">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@
                         응시한 과목은 점수를 입력해 주세요.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                         과목 원점수가 올바르지 않습니다 (0 ~ 100의 정수만 입력)
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                         등급은 1~9등급 사이의 실수만 입력해 주세요
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
                         원하는 학과를 하나 선택해 주세요
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>

@@ -181,7 +181,7 @@
                         입력 칸은 비워둘 수 없습니다.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                         석차, 동석차, 이수자, 단위수는 0보다 커야 합니다.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -215,7 +215,7 @@
                         석차는 학생 수보다 클 수 없습니다.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
