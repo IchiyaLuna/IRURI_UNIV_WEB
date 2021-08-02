@@ -256,13 +256,12 @@
 
                                 <option class="ca" value="95">자동차</option>
 
-                                <option class="ar" value="27">건축·건설</option>
-                                <option class="ar" value="27">공간정보</option>
-                                <option class="ar" value="27">교통</option>
-                                <option class="ar" value="27">도시계획</option>
-                                <option class="ar" value="27">목재</option>
-                                <option class="ar" value="27">삼림·토목</option>
-
+                                <option class="ar" value="15">건축·건설</option>
+                                <option class="ar" value="25">공간정보</option>
+                                <option class="ar" value="31">교통</option>
+                                <option class="ar" value="51">도시계획</option>
+                                <option class="ar" value="61">목재</option>
+                                <option class="ar" value="85">삼림·토목</option>
 
                                 <option class="hi" value="18">고고학</option>
                                 <option class="hi" value="33">역사</option>
@@ -288,8 +287,6 @@
                                 <option class="ec" value="73">축산·동물</option>
                                 <option class="ec" value="88">해양</option>
                                 <option class="ec" value="103">원예·조경</option>
-
-                                <option class="ga" value="27">원예</option>
 
                                 <option class="fu" value="105">융합</option>
 
