@@ -73,7 +73,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">성적 입력 기록:</h6>
-                            <a class="collapse-item" href="buttons.html">입력 기록</a>
+                            <a class="collapse-item" href="logs.php">입력 기록</a>
                             <a class="collapse-item" href="cards.html">통계</a>
                         </div>
                     </div>
@@ -303,9 +303,6 @@
         <script src="./assets/vendor/chart.js/Chart.min.js"></script>
 
         <!-- Page level custom scripts -->
-        <script src="./assets/js/demo/chart-area-demo.js"></script>
-        <script src="./assets/js/demo/chart-pie-demo.js"></script>
-
         <?php
 
         $hostname = "localhost";
