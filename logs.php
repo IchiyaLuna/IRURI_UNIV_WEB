@@ -294,99 +294,87 @@
                                 <div class="tab-content" id="logtabcontent">
                                     <div class="tab-pane fade show active" id="univ" role="tabpanel">
                                         <div class="table-responsive">
-                                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table class="table table-bordered dataTable" id="ulogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-                                                            <thead>
-                                                                <tr role="row">
-                                                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">내신 평균</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">예상 백분위</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <?php
-                                                                foreach ($uloglist as $log) {
-                                                                ?>
-                                                                    <tr>
-                                                                        <td><?php echo $log['time']; ?></td>
-                                                                        <td><?php echo $log['location']; ?></td>
-                                                                        <td><?php echo $log['gender']; ?></td>
-                                                                        <td><?php echo $log['type']; ?></td>
-                                                                        <td><?php echo $log['avg']; ?></td>
-                                                                        <td><?php
-                                                                            if ($log['percentile'] == -1) {
-                                                                                echo "미응시";
-                                                                            } else {
-                                                                                echo $log['percentile'] . "%";
-                                                                            } ?></td>
-                                                                    </tr>
-                                                                <?php
-                                                                }
-                                                                ?>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <table class="table table-bordered dataTable" id="ulogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">내신 평균</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">예상 백분위</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    foreach ($uloglist as $log) {
+                                                    ?>
+                                                        <tr>
+                                                            <td><?php echo $log['time']; ?></td>
+                                                            <td><?php echo $log['location']; ?></td>
+                                                            <td><?php echo $log['gender']; ?></td>
+                                                            <td><?php echo $log['type']; ?></td>
+                                                            <td><?php echo $log['avg']; ?></td>
+                                                            <td><?php
+                                                                if ($log['percentile'] == -1) {
+                                                                    echo "미응시";
+                                                                } else {
+                                                                    echo $log['percentile'] . "%";
+                                                                } ?></td>
+                                                        </tr>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="dept" role="tabpanel">
                                         <div class="table-responsive">
-                                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table class="table table-bordered dataTable" id="dlogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-                                                            <thead>
-                                                                <tr role="row">
-                                                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">희망 학과</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">내신 평균</th>
-                                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">예상 백분위</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                                            <table class="table table-bordered dataTable" id="dlogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">희망 학과</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">내신 평균</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">예상 백분위</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    foreach ($dloglist as $log) {
+                                                    ?>
+                                                        <tr>
+                                                            <td><?php echo $log['time']; ?></td>
+                                                            <td><?php echo $log['location']; ?></td>
+                                                            <td><?php echo $log['gender']; ?></td>
+                                                            <td><?php echo $log['type']; ?></td>
+                                                            <td>
                                                                 <?php
-                                                                foreach ($dloglist as $log) {
+                                                                switch ($log['dcode']) {
+                                                                }
+                                                                echo "테스트";
                                                                 ?>
-                                                                    <tr>
-                                                                        <td><?php echo $log['time']; ?></td>
-                                                                        <td><?php echo $log['location']; ?></td>
-                                                                        <td><?php echo $log['gender']; ?></td>
-                                                                        <td><?php echo $log['type']; ?></td>
-                                                                        <td>
-                                                                            <?php
-                                                                            switch ($log['dcode']) {
-                                                                            }
-                                                                            echo "테스트";
-                                                                            ?>
-                                                                        </td>
-                                                                        <td><?php echo $log['avg']; ?></td>
-                                                                        <td>
-                                                                            <?php
-                                                                            if ($log['percentile'] == -1) {
-                                                                                echo "미응시";
-                                                                            } else {
-                                                                                echo $log['percentile'] . "%";
-                                                                            }
-                                                                            ?>
-                                                                        </td>
-                                                                    </tr>
+                                                            </td>
+                                                            <td><?php echo $log['avg']; ?></td>
+                                                            <td>
                                                                 <?php
+                                                                if ($log['percentile'] == -1) {
+                                                                    echo "미응시";
+                                                                } else {
+                                                                    echo $log['percentile'] . "%";
                                                                 }
                                                                 ?>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                            </td>
+                                                        </tr>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
