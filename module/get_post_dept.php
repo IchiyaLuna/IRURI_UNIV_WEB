@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $deptwant = $_POST["deptsel"];
 
     $first = $_POST["dept-first"];
-    $second = $_POST["dept-first"];
-    $third = $_POST["dept-first"];
+    $second = $_POST["dept-second"];
+    $third = $_POST["dept-third"];
 
     $sushi = array($first, $second, $third);
 
@@ -87,15 +87,15 @@ foreach ($dept_list as $dept) {
             break;
         case 1:
             $gap = round($dept['avg'] - $yellow, 3);
-            $this_time_myavg = round($gray, 3);
+            $this_time_myavg = round($yellow, 3);
             break;
         case 2:
             $gap = round($dept['avg'] - $blue, 3);
-            $this_time_myavg = round($yellow, 3);
+            $this_time_myavg = round($blue, 3);
             break;
         case 3:
             $gap = round($dept['avg'] - $purple, 3);
-            $this_time_myavg = round($light_yellow, 3);
+            $this_time_myavg = round($purple, 3);
             break;
         default:
             $gap = -1;
