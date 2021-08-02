@@ -142,8 +142,8 @@
                                                             <tr>
                                                                 <th scope="col">합격예측</th>
                                                                 <th scope="col">대학</th>
+                                                                <th scope="col">합격자 평균</th>
                                                                 <th scope="col">내 예상 백분위</th>
-                                                                <th scope="col">상세 정보</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
