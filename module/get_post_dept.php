@@ -14,6 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sushi = array($first, $second, $third);
 
+    $year = $_POST["dept-yearsel"];
+    $month = $_POST["dept-monthsel"];
+
     $korean_type = $_POST["dept-korean-type"];
     $math_type = $_POST["dept-math-type"];
     $english_type = $_POST["dept-english-type"];
@@ -50,13 +53,13 @@ $count = 0;
 
 foreach ($sushi as $grade) {
 
-    if ($grade !== 0) $count++;
+    if ($grade != 0) $count++;
     $simple_avg += $grade;
 }
 
 $simple_avg /= $count;
 
-require "./module/predict.php";
+require "./module/avg_functions.php";
 
 $white = white($sushi);
 $yellow = yellow($sushi);
@@ -65,7 +68,7 @@ $purple = purple($sushi);
 
 require "./module/dept_load.php";
 
-$result_list = array();
+$sushi_result_list = array();
 
 foreach ($dept_list as $dept) {
 
@@ -100,24 +103,34 @@ foreach ($dept_list as $dept) {
     }
 
     $this_time_result = array($dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
-    array_push($result_list, $this_time_result);
+    array_push($sushi_result_list, $this_time_result);
 }
 
-foreach ((array) $result_list as $key => $value) {
+foreach ((array) $sushi_result_list as $key => $value) {
 
     $sort[$key] = $value[7];
 }
 
-array_multisort($sort, SORT_ASC, $result_list);
+array_multisort($sort, SORT_ASC, $sushi_result_list);
 
-$final_result = array();
+$sushi_final_result = array();
 
-foreach ($result_list as $data) {
+foreach ($sushi_result_list as $data) {
     if ($data[6] < $data[4]) $posi = 0;
     elseif ($data[7] > 0) $posi = 1;
     elseif ($data[6] > $data[3]) $posi = 3;
     else $posi = 2;
 
-    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[6]);
-    array_push($final_result, $arr_to_push);
+    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[5], $data[6]);
+    array_push($sushi_final_result, $arr_to_push);
+}
+
+if ($year != -1) {
+    require "./module/jungshi_load.php";
+    require "./module/jungshi_functions.php";
+
+    $jungshi_result_list = array();
+} else {
+
+    $percentile = -1;
 }
