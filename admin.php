@@ -377,6 +377,20 @@
                 $logs[4]++;
             }
         }
+
+        foreach ($dloglist as $log) {
+            if ($log['time'] == $four) {
+                $logs[0]++;
+            } else if ($log['time'] == $third) {
+                $logs[1]++;
+            } else if ($log['time'] == $second) {
+                $logs[2]++;
+            } else if ($log['time'] == $first) {
+                $logs[3]++;
+            } else if ($log['time'] == $today) {
+                $logs[4]++;
+            }
+        }
         ?>
 
         <script type="text/javascript">
