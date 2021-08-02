@@ -154,6 +154,8 @@ if ($year != -1) {
         array_push($jungshi_result_list, $this_time_result);
     }
 
+    $sort = array();
+
     foreach ((array) $jungshi_result_list as $key => $value) {
 
         $sort[$key] = $value[4];
@@ -172,6 +174,15 @@ if ($year != -1) {
         $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[4], $data[0]);
         array_push($jungshi_final_result, $arr_to_push);
     }
+
+    $sort = array();
+
+    foreach ((array) $jungshi_final_result as $key => $value) {
+
+        $sort[$key] = $value[0] - 0.1 * $value[4];
+    }
+
+    array_multisort($sort, SORT_DESC, $jungshi_final_result);
 } else {
 
     $percentile = -1;

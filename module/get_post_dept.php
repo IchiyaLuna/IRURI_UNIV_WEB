@@ -139,6 +139,49 @@ if ($year != -1) {
     require "./module/jungshi_functions.php";
 
     $jungshi_result_list = array();
+
+    foreach ($dept_list as $dept) {
+
+        $gap = 0;
+
+        if ($gender == "남") {
+            if (strpos($dept['name'], "여대") !== false) {
+                continue;
+            }
+        }
+
+        $gap = $percentile - $dept['jungshi'];
+        $this_time_result = array($univ['name'], $dept['ca'], $dept['dept'], $univ['jungshi'], $percentile, $gap);
+        array_push($jungshi_result_list, $this_time_result);
+    }
+
+    $sort = array();
+
+    foreach ((array) $jungshi_result_list as $key => $value) {
+
+        $sort[$key] = $value[5];
+    }
+
+    array_multisort($sort, SORT_ASC, $jungshi_result_list);
+
+    foreach ($jungshi_result_list as $data) {
+        if ($data[5] > 2.0) $posi = 0;
+        elseif ($data[5] > 0) $posi = 1;
+        elseif ($data[5] > -1.0) $posi = 2;
+        else $posi = 3;
+
+        $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3], $data[4]);
+        array_push($jungshi_final_result, $arr_to_push);
+    }
+
+    $sort = array();
+
+    foreach ((array) $jungshi_final_result as $key => $value) {
+
+        $sort[$key] = $value[0] - 0.1 * $value[5];
+    }
+
+    array_multisort($sort, SORT_DESC, $jungshi_final_result);
 } else {
 
     $percentile = -1;
