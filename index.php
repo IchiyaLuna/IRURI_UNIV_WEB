@@ -180,7 +180,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        등급은 1~9등급 사이의 실수만 입력해주세요
+                        등급은 1~9등급 사이의 실수만 입력해 주세요
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
@@ -197,7 +197,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        등급은 1~9등급 사이의 실수만 입력해주세요
+                        원하는 학과를 하나 선택해 주세요
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
