@@ -15,7 +15,7 @@ function test_calc_input() {
     const sameranks = document.getElementsByName("samerank[]");
     const studentss = document.getElementsByName("students[]");
     const times = document.getElementsByName("time[]");
-
+    var calcresult = document.getElementById('subject-form');
     for (var key in names) {
 
         if (names[key].value === "") {
