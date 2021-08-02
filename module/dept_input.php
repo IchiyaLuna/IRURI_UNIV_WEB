@@ -333,7 +333,7 @@
                                 <div class="col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="year-label">응시 년도</span>
-                                        <select class="form-select" id="year" name="dept-yearsel">
+                                        <select class="form-select" id="dept-year" name="dept-yearsel">
                                             <option value="-1" selected>응시하지 않음</option>
                                             <option value="21">21년</option>
                                         </select>
@@ -343,7 +343,7 @@
                                 <div class="col-xl-6">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text" id="month-label">응시 월</span>
-                                        <select class="form-select" id="month" name="dept-monthsel">
+                                        <select class="form-select" id="dept-month" name="dept-monthsel">
                                             <option value="-1" selected>응시하지 않음</option>
 
                                             <option class="21" value="03">3월 학력평가</option>
