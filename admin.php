@@ -512,7 +512,7 @@
                 data: {
                     labels: ["학교 검색", "학과 검색"],
                     datasets: [{
-                        data: [<?php echo $ucount; ?>, <?php echo $ucount; ?>],
+                        data: [<?php echo $ucount; ?>, <?php echo $dcount; ?>],
                         backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
                         hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
                         hoverBorderColor: "rgba(234, 236, 244, 1)",
