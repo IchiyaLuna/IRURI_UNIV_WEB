@@ -188,3 +188,5 @@ if ($year != -1) {
 
     $percentile = -1;
 }
+
+require "./module/dept_log.php";

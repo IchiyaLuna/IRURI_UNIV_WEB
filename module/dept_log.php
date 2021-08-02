@@ -13,7 +13,7 @@ if (!$database) {
 
 $date = date("Y-m-d", time());
 
-$sql = "INSERT INTO dlogs VALUES('{$date}', '{$location}', '{$gender}', '{$type}', '{$deptwant}', '{$simple_avg}')";
+$sql = "INSERT INTO dlogs VALUES('{$date}', '{$location}', '{$gender}', '{$type}', '{$deptwant}', '{$simple_avg}', '{$percentile}')";
 
 mysqli_query($database, $sql);
 
