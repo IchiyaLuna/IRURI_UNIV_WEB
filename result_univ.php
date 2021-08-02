@@ -172,7 +172,7 @@
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
                                                                 echo "<td>" . $result[2] . "%" . "</td>";
-                                                                echo "<td>" . $result[3] . "%" . "</td>";
+                                                                echo "<td>" . round($result[3], 2) . "%" . "</td>";
                                                                 echo "</tr>";
                                                                 $modal_count++;
                                                             }
