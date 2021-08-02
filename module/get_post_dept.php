@@ -102,13 +102,13 @@ foreach ($dept_list as $dept) {
             break;
     }
 
-    $this_time_result = array($dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap);
+    $this_time_result = array($dept['code'], $dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap, $dept['tag']);
     array_push($sushi_result_list, $this_time_result);
 }
 
 foreach ((array) $sushi_result_list as $key => $value) {
 
-    $sort[$key] = $value[7];
+    $sort[$key] = $value[8];
 }
 
 array_multisort($sort, SORT_ASC, $sushi_result_list);
@@ -116,12 +116,12 @@ array_multisort($sort, SORT_ASC, $sushi_result_list);
 $sushi_final_result = array();
 
 foreach ($sushi_result_list as $data) {
-    if ($data[6] < $data[4]) $posi = 0;
-    elseif ($data[7] > 0) $posi = 1;
-    elseif ($data[6] > $data[3]) $posi = 3;
+    if ($data[7] < $data[5]) $posi = 0;
+    elseif ($data[8] > 0) $posi = 1;
+    elseif ($data[7] > $data[4]) $posi = 3;
     else $posi = 2;
 
-    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[5], $data[6], $data[7]);
+    $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9]);
     array_push($sushi_final_result, $arr_to_push);
 }
 

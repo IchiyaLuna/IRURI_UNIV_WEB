@@ -110,24 +110,28 @@
                                                             $modal_count = 0;
 
                                                             foreach ($sushi_final_result as $result) {
-
-                                                                switch ($result[0]) {
-                                                                    case 0:
-                                                                        echo "<tr class='table-primary'>";
-                                                                        echo "<td>" . "안정" . "</td>";
-                                                                        break;
-                                                                    case 1:
-                                                                        echo "<tr class='table-success'>";
-                                                                        echo "<td>" . "가능" . "</td>";
-                                                                        break;
-                                                                    case 2:
-                                                                        echo "<tr class='table-warning'>";
-                                                                        echo "<td>" . "불안" . "</td>";
-                                                                        break;
-                                                                    case 3:
-                                                                        echo "<tr class='table-danger'>";
-                                                                        echo "<td>" . "위험" . "</td>";
-                                                                        break;
+                                                                if ($result['possible'] == 1) {
+                                                                    switch ($result[0]) {
+                                                                        case 0:
+                                                                            echo "<tr class='table-primary'>";
+                                                                            echo "<td>" . "안정" . "</td>";
+                                                                            break;
+                                                                        case 1:
+                                                                            echo "<tr class='table-success'>";
+                                                                            echo "<td>" . "가능" . "</td>";
+                                                                            break;
+                                                                        case 2:
+                                                                            echo "<tr class='table-warning'>";
+                                                                            echo "<td>" . "불안" . "</td>";
+                                                                            break;
+                                                                        case 3:
+                                                                            echo "<tr class='table-danger'>";
+                                                                            echo "<td>" . "위험" . "</td>";
+                                                                            break;
+                                                                    }
+                                                                } else {
+                                                                    echo "<tr class='table-danger'>";
+                                                                    echo "<td>" . "최저기준미달" . "</td>";
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
                                                                 echo "<td>" . $result[2] . "</td>";
