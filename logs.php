@@ -300,7 +300,7 @@
                                                         <table class="table table-bordered dataTable" id="ulogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                                             <thead>
                                                                 <tr role="row">
-                                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
+                                                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
@@ -343,7 +343,7 @@
                                                         <table class="table table-bordered dataTable" id="dlogtable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                                             <thead>
                                                                 <tr role="row">
-                                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
+                                                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">지역</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">성별</th>
                                                                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">계열</th>
