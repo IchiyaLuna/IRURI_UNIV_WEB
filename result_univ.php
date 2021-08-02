@@ -392,14 +392,7 @@
                                                         array_push($dept_final_result, $arr_to_push);
                                                     }
 
-                                                    $sort = array();
 
-                                                    foreach ((array) $dept_final_result as $key => $value) {
-
-                                                        $sort[$key] = $value[0] - 0.1 * $value[5];
-                                                    }
-
-                                                    array_multisort($sort, SORT_DESC, $dept_final_result);
 
                                                     $index = 0;
                                                     $dept_count = sizeof($dept_final_result);
