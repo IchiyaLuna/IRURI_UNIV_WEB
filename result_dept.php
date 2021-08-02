@@ -130,7 +130,7 @@
                                                                             break;
                                                                     }
                                                                 } else {
-                                                                    echo "<tr class='table-danger'>";
+                                                                    echo "<tr class='table-secondary'>";
                                                                     echo "<td>" . "최저기준미달" . "</td>";
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
