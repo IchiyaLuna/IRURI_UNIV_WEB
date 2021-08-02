@@ -354,9 +354,9 @@
             var hchart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["4일전", "3일전", "2일전", "1일전", String(month) + "-" + String(date)],
+                    labels: ["4일전", "3일전", "2일전", "1일전", String(month) + "월 " + String(date) + "일"],
                     datasets: [{
-                        label: "예측 기록",
+                        label: "기록 수",
                         lineTension: 0.3,
                         backgroundColor: "rgba(78, 115, 223, 0.05)",
                         borderColor: "rgba(78, 115, 223, 1)",
