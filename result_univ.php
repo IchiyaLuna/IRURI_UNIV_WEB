@@ -171,14 +171,8 @@
                                                                         break;
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
-                                                                echo "<td>" . $result[3] . "</td>";
-                                                            ?>
-                                                                <td>
-                                                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
-                                                                        상세
-                                                                    </button>
-                                                                </td>
-                                                            <?php
+                                                                echo "<td>" . $result[2] . "%" . "</td>";
+                                                                echo "<td>" . $result[3] . "%" . "</td>";
                                                                 echo "</tr>";
                                                                 $modal_count++;
                                                             }
