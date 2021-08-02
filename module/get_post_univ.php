@@ -179,7 +179,7 @@ if ($year != -1) {
 
     foreach ((array) $jungshi_final_result as $key => $value) {
 
-        $sort[$key] = $value[0] - 0.1 * $value[4];
+        $sort[$key] = $value[0] - 0.1 * $value[3];
     }
 
     array_multisort($sort, SORT_DESC, $jungshi_final_result);
