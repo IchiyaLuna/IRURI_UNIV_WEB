@@ -86,8 +86,10 @@ function test_univ_input() {
     }
 
     if (parseFloat(first) < 1 || parseFloat(first) > 9 || parseFloat(second) < 1 || parseFloat(second) > 9 || parseFloat(third) < 1 || parseFloat(third) > 9) {
-        sushierror_modal.show();
-        return false;
+        if (parseFloat(first) != 0 || parseFloat(second) != 0 || parseFloat(third) != 0) {
+            sushierror_modal.show();
+            return false;
+        }
     }
 
     var year = document.getElementById("year");
