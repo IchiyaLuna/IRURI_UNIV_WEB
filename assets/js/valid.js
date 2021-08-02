@@ -85,7 +85,7 @@ function test_univ_input() {
         return false;
     }
 
-    if (parseInt(first) < 1 || parseInt(first) > 9 || parseInt(second) < 1 || parseInt(second) > 9 || parseInt(third) < 1 || parseInt(third) > 9) {
+    if (parseFloat(first) < 1 || parseFloat(first) > 9 || parseFloat(second) < 1 || parseFloat(second) > 9 || parseFloat(third) < 1 || parseFloat(third) > 9) {
         sushierror_modal.show();
         return false;
     }
