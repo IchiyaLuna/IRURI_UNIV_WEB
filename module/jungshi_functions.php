@@ -717,7 +717,6 @@ function snu()
         //코드2번
 
         for ($index = 0; $index < $count; $index++) {
-            echo $sushi_final_result[$index]['tag'];
             if ($sushi_final_result[$index]['tag'] == 2) {
                 $sushi_final_result[$index]['possible'] = 0;
             }
