@@ -38,7 +38,10 @@
 
                     <h1>대학 합격 예측기</h1>
 
-                    <p class="lead">학생의 기본 정보와 내신 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시 전형 추천 대학을 보여드립니다.</p>
+                    <p class="lead">
+                        학생의 기본 정보와 내신, 수능(모의고사) 성적을 입력하시면 학원의 자체 데이터를 기반으로 수시, 정시 전형 추천 대학 혹은 학과를 보여드립니다.<br>
+                        (구형 웹 브라우저인 인터넷 익스플로러에서는 작동이 불가능하니 크롬, 엣지, 웨일 등의 최신 브라우저를 이용해주세요.)
+                    </p>
 
                     <div class="card card-body">
                         <div class="result-table table-responsive">
@@ -123,15 +126,9 @@
                                             </div>
                                         </td>
                                     </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <?php if ($percentile != -1) {
-                        ?>
-                            <div class="result-table table-responsive">
-                                <table class="table table-bordered caption-top">
-
-                                    <tbody>
+                                    <?php
+                                    if ($percentile != -1) {
+                                    ?>
                                         <tr>
                                             <td colspan="4">
                                                 <div>
@@ -182,12 +179,15 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        <?php
-                        }
-                        ?>
+                                    <?php
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
                     </div>
                 </div>
                 <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
