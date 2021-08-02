@@ -171,6 +171,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="alert-modal modal fade" id="no-dept" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="zero-input-label">오류</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        과목 원점수가 올바르지 않습니다 (0 ~ 100의 정수만 입력)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="close_modal();">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
