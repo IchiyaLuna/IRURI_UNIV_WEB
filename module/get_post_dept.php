@@ -166,6 +166,7 @@ if ($year != -1) {
             //코드2번
             echo "출력 리스트에서 서울대 자연 제거" . "<br>";
             foreach ($sushi_final_result as $dept) {
+                echo $dept['tag'];
                 if ($dept['tag'] == 2) {
                     $dept['possible'] = 0;
                 }
