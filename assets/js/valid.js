@@ -85,7 +85,7 @@ function test_univ_input() {
     }
 
     if (parseInt(first) < 0 || parseInt(second) < 0 || parseInt(third) < 0) {
-        zeroinput_modal.show();
+        biginput_modal.show();
         return false;
     }
 
