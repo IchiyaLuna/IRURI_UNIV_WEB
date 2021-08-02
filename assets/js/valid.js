@@ -356,6 +356,12 @@ function test_dept_input() {
 }
 
 function close_modal() {
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+    var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
+    var nodept_modal = new bootstrap.Modal(document.getElementById('no-dept'));
+
     noinput_modal.hide();
     zeroinput_modal.hide();
     biginput_modal.hide();
