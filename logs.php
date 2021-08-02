@@ -282,7 +282,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">전체 내역</h6>
                             </div>
                             <div class="card-body">
-                                <ul class="nav nav-tabs" id="logtab" role="tablist">
+                                <ul class="nav nav-tabs nav-fill" id="logtab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="univ-tab" data-bs-toggle="tab" data-bs-target="#univ" type="button" role="tab">학교 입력 기록</button>
                                     </li>
