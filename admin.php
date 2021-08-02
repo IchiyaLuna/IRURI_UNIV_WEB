@@ -43,7 +43,7 @@
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <div class="sidebar-brand-text mx-3">IRURI Admin <sup>+</sup></div>
+                    <div class="sidebar-brand-text mx-3">IRURI Admin</div>
                 </a>
 
                 <!-- Divider -->
