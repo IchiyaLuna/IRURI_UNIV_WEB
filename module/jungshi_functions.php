@@ -715,7 +715,7 @@ function snu()
     if ($math_type == "ps") {
 
         //코드2번
-        echo "출력 리스트에서 서울대 자연 제거" . "<br>";
+
         for ($index = 0; $index < $count; $index++) {
             echo $sushi_final_result[$index]['tag'];
             if ($sushi_final_result[$index]['tag'] == 2) {
@@ -725,7 +725,6 @@ function snu()
     } else if ($selectA == "social" || $selectB == "social") {
 
         //코드2번
-        echo "출력 리스트에서 서울대 자연 제거" . "<br>";
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 2) {
                 $sushi_final_result[$index]['possible'] = 0;
@@ -734,7 +733,6 @@ function snu()
     } else if ($crazy_1 === false && $crazy_2 === false) {
 
         //코드2번
-        echo "출력 리스트에서 서울대 자연 제거" . "<br>";
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 2) {
                 $sushi_final_result[$index]['possible'] = 0;
@@ -745,7 +743,6 @@ function snu()
     if ($foreign_type == "na") {
 
         //코드1번
-        echo "출력 리스트에서 서울대 인문 제거" . "<br>";
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 1) {
                 $sushi_final_result[$index]['possible'] = 0;
@@ -769,7 +766,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
     $j = min($rank1 + $rank2, $rank2 + $rank4);
 
     if ($rank3 > 3) {
-        echo "출력 리스트에서 연세대 제거" . "<br>";
         //코드3,4,5번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 3 || $sushi_final_result[$index]['tag'] == 4 || $sushi_final_result[$index]['tag'] == 5) {
@@ -780,7 +776,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 4) {
-        echo "출력 리스트에서 연세대 인문 제거" . "<br>";
         //코드3번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 3) {
@@ -790,7 +785,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 연세대 자연 제거" . "<br>";
         //코드4,5번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 4 || $sushi_final_result[$index]['tag'] == 5) {
@@ -798,7 +792,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 연세대 자연 제거" . "<br>";
         //코드4,5번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 4 || $sushi_final_result[$index]['tag'] == 5) {
@@ -806,7 +799,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($j > 5) {
-        echo "출력 리스트에서 연세대 자연 제거" . "<br>";
         //코드4,5번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 4 || $sushi_final_result[$index]['tag'] == 5) {
@@ -814,7 +806,6 @@ function yu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($i != 2) {
-        echo "출력 리스트에서 연세대 의예 제거" . "<br>";
         //코드5번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 5) {
@@ -839,7 +830,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
     $j = $rank1 + $rank2 + $rank3 + $rank4;
 
     if ($i > 5) {
-        echo "출력 리스트에서 고려대 인문(학교추천) 제거" . "<br>";
         //코드6번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 6) {
@@ -848,7 +838,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($j > 7) {
-        echo "출력 리스트에서 고려대 인문(학업우수) 제거" . "<br>";
         //코드7번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 7) {
@@ -857,7 +846,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($math_type == "ps") {
-        echo "출력 리스트에서 고려대 자연 제거" . "<br>";
         //코드8,9,10,11,12번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 8 || $sushi_final_result[$index]['tag'] == 9 || $sushi_final_result[$index]['tag'] == 10 || $sushi_final_result[$index]['tag'] == 11 || $sushi_final_result[$index]['tag'] == 12) {
@@ -865,7 +853,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 고려대 자연 제거" . "<br>";
         //코드8,9,10,11,12번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 8 || $sushi_final_result[$index]['tag'] == 9 || $sushi_final_result[$index]['tag'] == 10 || $sushi_final_result[$index]['tag'] == 11 || $sushi_final_result[$index]['tag'] == 12) {
@@ -874,7 +861,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 6) {
-            echo "출력 리스트에서 고려대 자연(학교추천) 제거" . "<br>";
             //코드9번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 9) {
@@ -883,7 +869,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 8) {
-            echo "출력 리스트에서 고려대 자연(학업우수)  제거" . "<br>";
             //코드10,11,12번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 10 || $sushi_final_result[$index]['tag'] == 11 || $sushi_final_result[$index]['tag'] == 12) {
@@ -891,7 +876,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
                 }
             }
         } else if ($j > 7) {
-            echo "출력 리스트에서 고려대 반도체  제거" . "<br>";
             //코드11,12번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 11 || $sushi_final_result[$index]['tag'] == 12) {
@@ -899,7 +883,6 @@ function ku($rank1, $rank2, $rank3, $rank4)
                 }
             }
         } else if ($j > 5) {
-            echo "출력 리스트에서 고려대 의예  제거" . "<br>";
             //코드12번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 12) {
@@ -923,7 +906,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2, $rank3 + $rank1, $rank1 + $rank4, $rank3 + $rank2, $rank4 + $rank2, $rank3 + $rank4);
 
     if ($i > 5) {
-        echo "출력 리스트에서 경희대 인문 제거" . "<br>";
         //코드13,14번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 13 || $sushi_final_result[$index]['tag'] == 14) {
@@ -931,7 +913,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($i > 4) {
-        echo "출력 리스트에서 경희대 인문(한의예) 제거" . "<br>";
         //코드14번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 14) {
@@ -941,7 +922,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 경희대 자연 제거" . "<br>";
         //코드15,16번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 15 || $sushi_final_result[$index]['tag'] == 16) {
@@ -949,7 +929,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 경희대 자연 제거" . "<br>";
         //코드15,16번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 15 || $sushi_final_result[$index]['tag'] == 16) {
@@ -958,7 +937,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 5) {
-            echo "출력 리스트에서 경희대 자연 제거" . "<br>";
             //코드15,16번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 15 || $sushi_final_result[$index]['tag'] == 16) {
@@ -966,7 +944,6 @@ function khu($rank1, $rank2, $rank3, $rank4)
                 }
             }
         } else if ($i > 4) {
-            echo "출력 리스트에서 경희대 의예  제거" . "<br>";
             //코드16번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 16) {
@@ -991,7 +968,6 @@ function uos($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2 + $rank3, $rank1 + $rank2 + $rank4, $rank3 + $rank2 + $rank4, $rank1 + $rank3 + $rank4);
 
     if ($i > 7) {
-        echo "출력 리스트에서 시립대 인문 제거" . "<br>";
         //코드17번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 17) {
@@ -1001,7 +977,6 @@ function uos($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 시립대 자연 제거" . "<br>";
         //코드18번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 18) {
@@ -1009,7 +984,6 @@ function uos($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 시립대 자연 제거" . "<br>";
         //코드18번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 18) {
@@ -1017,7 +991,6 @@ function uos($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($i > 7) {
-        echo "출력 리스트에서 시립대 자연 제거" . "<br>";
         //코드18번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 18) {
@@ -1041,7 +1014,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2 + $rank3, $rank1 + $rank2 + $rank4, $rank3 + $rank2 + $rank4, $rank1 + $rank3 + $rank4);
 
     if ($i > 8) {
-        echo "출력 리스트에서 홍익대 인문(교과) 제거" . "<br>";
         //코드19번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 19) {
@@ -1050,7 +1022,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($i > 7) {
-        echo "출력 리스트에서 홍익대 인문(학종) 제거" . "<br>";
         //코드17번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 17) {
@@ -1060,7 +1031,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 홍익대 자연 제거" . "<br>";
         //코드20,21번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 20 || $sushi_final_result[$index]['tag'] == 21) {
@@ -1068,7 +1038,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 홍익대 자연 제거" . "<br>";
         //코드20,21번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 20 || $sushi_final_result[$index]['tag'] == 21) {
@@ -1077,7 +1046,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 8) {
-            echo "출력 리스트에서 홍익대 자연(학종) 제거" . "<br>";
             //코드20번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 20) {
@@ -1086,7 +1054,6 @@ function hiu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 9) {
-            echo "출력 리스트에서 홍익대 자연(교과) 제거" . "<br>";
             //코드21번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 21) {
@@ -1107,7 +1074,6 @@ function ehwa($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2 + $rank3, $rank1 + $rank2 + $rank4, $rank3 + $rank2 + $rank4, $rank1 + $rank3 + $rank4);
 
     if ($i > 6) {
-        echo "출력 리스트에서 이화여대 인문 제거" . "<br>";
         //코드22번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 22) {
@@ -1132,7 +1098,6 @@ function sju($rank1, $rank2, $rank3, $rank4)
     $j = $rank1 + $rank2 + $rank3;
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 세종대 자연 제거" . "<br>";
         //코드23,24번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 23 || $sushi_final_result[$index]['tag'] == 24) {
@@ -1140,7 +1105,6 @@ function sju($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 세종대 자연 제거" . "<br>";
         //코드23,24번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 23 || $sushi_final_result[$index]['tag'] == 24) {
@@ -1149,7 +1113,6 @@ function sju($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 6) {
-            echo "출력 리스트에서 세종대 자연 제거" . "<br>";
             //코드23번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 23) {
@@ -1158,7 +1121,6 @@ function sju($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 9) {
-            echo "출력 리스트에서 세종대 자연(시스템) 제거" . "<br>";
             //코드24번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 24) {
@@ -1180,7 +1142,6 @@ function swu($rank1, $rank2, $rank3, $rank4)
     $j = min($rank3 + $rank1, $rank3 + $rank2, $rank3 + $rank4);
 
     if ($i > 7 && $j > 5) {
-        echo "출력 리스트에서 서울여대 제거" . "<br>";
         //코드25번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 25) {
@@ -1200,7 +1161,6 @@ function smu($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2, $rank3 + $rank1, $rank2 + $rank4, $rank3 + $rank2, $rank4 + $rank1, $rank3 + $rank4);
 
     if ($i > 7) {
-        echo "출력 리스트에서 상명대 제거" . "<br>";
         //코드26번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 26) {
@@ -1225,7 +1185,6 @@ function cuk($rank1, $rank2, $rank3, $rank4)
     $j = min($rank1 + $rank2 + $rank3, $rank1 + $rank2 + $rank4, $rank3 + $rank2 + $rank4, $rank1 + $rank3 + $rank4);
 
     if ($i > 6) {
-        echo "출력 리스트에서 가톨릭대 인문 제거" . "<br>";
         //코드27번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 27) {
@@ -1235,7 +1194,6 @@ function cuk($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 가톨릭대 자연 제거" . "<br>";
         //코드28,29번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 28 || $sushi_final_result[$index]['tag'] == 29) {
@@ -1243,7 +1201,6 @@ function cuk($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 가톨릭대 자연 제거" . "<br>";
         //코드28,29번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 28 || $sushi_final_result[$index]['tag'] == 29) {
@@ -1252,7 +1209,6 @@ function cuk($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 7) {
-            echo "출력 리스트에서 가톨릭대 자연 제거" . "<br>";
             //코드28번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 28) {
@@ -1261,7 +1217,6 @@ function cuk($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 4) {
-            echo "출력 리스트에서 가톨릭대 의예 제거" . "<br>";
             //코드29번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 29) {
@@ -1286,7 +1241,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
     $i = min($rank1 + $rank2 + $rank3, $rank1 + $rank2 + $rank4, $rank3 + $rank2 + $rank4, $rank1 + $rank3 + $rank4);
 
     if ($i > 11) {
-        echo "출력 리스트에서 강원대 인문 제거" . "<br>";
         //코드31번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 31) {
@@ -1296,7 +1250,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 10) {
-        echo "출력 리스트에서 강원대 인문 제거" . "<br>";
         //코드30번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 30) {
@@ -1306,7 +1259,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 9) {
-        echo "출력 리스트에서 강원대 자연(간호) 제거" . "<br>";
         //코드34번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 34) {
@@ -1316,7 +1268,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 12) {
-        echo "출력 리스트에서 강원대 자연 제거" . "<br>";
         //코드32번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 32) {
@@ -1326,7 +1277,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 강원대 의예 제거" . "<br>";
         //코드33번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 33) {
@@ -1334,7 +1284,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 강원대 의예 제거" . "<br>";
         //코드33번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 33) {
@@ -1342,7 +1291,6 @@ function knu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($i > 5) {
-        echo "출력 리스트에서 강원대 의예 제거" . "<br>";
         //코드33번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 33) {
@@ -1363,7 +1311,6 @@ function kynu($rank1, $rank2, $rank3, $rank4)
     $j = min($rank1 + $rank2, $rank3 + $rank1, $rank2 + $rank4, $rank3 + $rank2, $rank4 + $rank1, $rank3 + $rank4);
 
     if ($j > 8) {
-        echo "출력 리스트에서 경북대 인문 제거" . "<br>";
         //코드35번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 35) {
@@ -1373,7 +1320,6 @@ function kynu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($j > 9) {
-        echo "출력 리스트에서 경북대 자연 제거" . "<br>";
         //코드36번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 36) {
@@ -1383,7 +1329,6 @@ function kynu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 3) {
-        echo "출력 리스트에서 경북대 의예 제거" . "<br>";
         //코드37번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 37) {
@@ -1393,7 +1338,6 @@ function kynu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($i > 4) {
-        echo "출력 리스트에서 경북대 치의예 제거" . "<br>";
         //코드38번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 38) {
@@ -1419,7 +1363,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
 
 
     if ($i > 13) {
-        echo "출력 리스트에서 경상대 인문 제거" . "<br>";
         //코드39번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 39) {
@@ -1429,7 +1372,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($selectA == "사회탐구" || $selectB == "사회탐구") {
-        echo "출력 리스트에서 경상대 자연 제거" . "<br>";
         //코드40,41,42,43,44,45번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 40 || $sushi_final_result[$index]['tag'] == 41 || $sushi_final_result[$index]['tag'] == 42 || $sushi_final_result[$index]['tag'] == 43 || $sushi_final_result[$index]['tag'] == 44 || $sushi_final_result[$index]['tag'] == 45) {
@@ -1438,7 +1380,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 13) {
-            echo "출력 리스트에서 경상대 자연 제거" . "<br>";
             //코드40번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 40) {
@@ -1447,7 +1388,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 14) {
-            echo "출력 리스트에서 경상대 자연 제거" . "<br>";
             //코드43번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 43) {
@@ -1456,7 +1396,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 10) {
-            echo "출력 리스트에서 경상대 자연 제거" . "<br>";
             //코드41번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 41) {
@@ -1467,7 +1406,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 경상대 의예 제거" . "<br>";
         //코드42,44,45번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 42 || $sushi_final_result[$index]['tag'] == 44 || $sushi_final_result[$index]['tag'] == 45) {
@@ -1476,7 +1414,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($j > 6) {
-            echo "출력 리스트에서 경상대 의예 제거" . "<br>";
             //코드42번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 42) {
@@ -1485,7 +1422,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 5) {
-            echo "출력 리스트에서 경상대 의예 제거" . "<br>";
             //코드44번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 44) {
@@ -1494,7 +1430,6 @@ function gnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 4) {
-            echo "출력 리스트에서 경상대 의예 제거" . "<br>";
             //코드45번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 45) {
@@ -1520,7 +1455,6 @@ function pnu($rank1, $rank2, $rank3, $rank4)
     $j = min($rank1 + $rank2, $rank2 + $rank4, $rank3 + $rank2);
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 부산대 자연 제거" . "<br>";
         //코드46,47,48번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 46 || $sushi_final_result[$index]['tag'] == 47 || $sushi_final_result[$index]['tag'] == 48) {
@@ -1528,7 +1462,6 @@ function pnu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 부산대 자연 제거" . "<br>";
         //코드46,47,48번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 46 || $sushi_final_result[$index]['tag'] == 47 || $sushi_final_result[$index]['tag'] == 48) {
@@ -1537,7 +1470,6 @@ function pnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($j > 5) {
-            echo "출력 리스트에서 부산대 자연 제거" . "<br>";
             //코드46번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 46) {
@@ -1546,7 +1478,6 @@ function pnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 6) {
-            echo "출력 리스트에서 부산대 자연 제거" . "<br>";
             //코드47번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 47) {
@@ -1555,7 +1486,6 @@ function pnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 4) {
-            echo "출력 리스트에서 부산대 의예 제거" . "<br>";
             //코드48번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 48) {
@@ -1581,7 +1511,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
     $j = $rank4 + $rank2 + $rank3;
 
     if ($i > 11) {
-        echo "출력 리스트에서 충남대 인문 제거" . "<br>";
         //코드49번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 49) {
@@ -1590,7 +1519,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($i > 9) {
-        echo "출력 리스트에서 충남대 인문 제거" . "<br>";
         //코드50번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 50) {
@@ -1599,7 +1527,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($i > 8) {
-        echo "출력 리스트에서 충남대 인문 제거" . "<br>";
         //코드51번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 51) {
@@ -1609,7 +1536,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 충남대 자연 제거" . "<br>";
         //코드52,53,54,55,56,57번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 52 || $sushi_final_result[$index]['tag'] == 53 || $sushi_final_result[$index]['tag'] == 54 || $sushi_final_result[$index]['tag'] == 55 || $sushi_final_result[$index]['tag'] == 56 || $sushi_final_result[$index]['tag'] == 57) {
@@ -1617,7 +1543,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($j > 12) {
-        echo "출력 리스트에서 충남대 자연 제거" . "<br>";
         //코드52번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 52) {
@@ -1627,7 +1552,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 충남대 자연 제거" . "<br>";
         //코드53,54,55,56,57번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 53 || $sushi_final_result[$index]['tag'] == 54 || $sushi_final_result[$index]['tag'] == 55 || $sushi_final_result[$index]['tag'] == 56 || $sushi_final_result[$index]['tag'] == 57) {
@@ -1636,7 +1560,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($j > 7) {
-            echo "출력 리스트에서 충남대 수의예 제거" . "<br>";
             //코드53번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 53) {
@@ -1645,7 +1568,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 6) {
-            echo "출력 리스트에서 충남대 수의예 제거" . "<br>";
             //코드54번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 54) {
@@ -1654,7 +1576,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 12) {
-            echo "출력 리스트에서 충남대 자연 제거" . "<br>";
             //코드55번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 55) {
@@ -1663,7 +1584,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 10) {
-            echo "출력 리스트에서 충남대 자연 제거" . "<br>";
             //코드56번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 56) {
@@ -1672,7 +1592,6 @@ function cnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 9) {
-            echo "출력 리스트에서 충남대 자연 제거" . "<br>";
             //코드57번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 57) {
@@ -1695,7 +1614,6 @@ function jnu($rank1, $rank2, $rank3, $rank4)
     $k = min($rank2 + $rank3 + $rank4, $rank2 + $rank1 + $rank4, $rank2 + $rank3 + $rank1);
 
     if ($i > 10) {
-        echo "출력 리스트에서 제주대 자연 제거" . "<br>";
         //코드58번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 58) {
@@ -1705,7 +1623,6 @@ function jnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($j > 10) {
-        echo "출력 리스트에서 제주대 자연 제거" . "<br>";
         //코드59번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 59) {
@@ -1715,7 +1632,6 @@ function jnu($rank1, $rank2, $rank3, $rank4)
     }
 
     if ($k > 7) {
-        echo "출력 리스트에서 제주대 자연 제거" . "<br>";
         //코드60번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 60) {
@@ -1744,7 +1660,6 @@ function chnu($rank1, $rank2, $rank3, $rank4)
     //echo $j."<br>";
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 전남대 자연 제거" . "<br>";
         //코드61,62,63번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 61 || $sushi_final_result[$index]['tag'] == 62 || $sushi_final_result[$index]['tag'] == 63) {
@@ -1752,7 +1667,6 @@ function chnu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 전남대 자연 제거" . "<br>";
         //코드61,62,63번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 61 || $sushi_final_result[$index]['tag'] == 62 || $sushi_final_result[$index]['tag'] == 63) {
@@ -1761,7 +1675,6 @@ function chnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($i > 11) {
-            echo "출력 리스트에서 전남대 자연 제거" . "<br>";
             //코드61번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 61) {
@@ -1770,7 +1683,6 @@ function chnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($k > 12) {
-            echo "출력 리스트에서 전남대 자연 제거" . "<br>";
             //코드62번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 62) {
@@ -1779,7 +1691,6 @@ function chnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 6) {
-            echo "출력 리스트에서 전남대 치의예 제거" . "<br>";
             //코드63번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 63) {
@@ -1805,7 +1716,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
     $j = $rank1 + $rank2 + $rank3 + $rank4;
 
     if ($math_type == "ps") {
-        echo "출력 리스트에서 전북대 자연 제거" . "<br>";
         //코드64,65,66,67,68,69,70,71,72,73번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 64 || $sushi_final_result[$index]['tag'] == 65 || $sushi_final_result[$index]['tag'] == 66 || $sushi_final_result[$index]['tag'] == 67 || $sushi_final_result[$index]['tag'] == 68 || $sushi_final_result[$index]['tag'] == 69 || $sushi_final_result[$index]['tag'] == 70 || $sushi_final_result[$index]['tag'] == 71 || $sushi_final_result[$index]['tag'] == 72 || $sushi_final_result[$index]['tag'] == 73) {
@@ -1813,7 +1723,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
     } else if ($selectA == "social" || $selectB == "social") {
-        echo "출력 리스트에서 전북대 자연 제거" . "<br>";
         //코드64,65,66,67,68,69,70,71,72,73번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 64 || $sushi_final_result[$index]['tag'] == 65 || $sushi_final_result[$index]['tag'] == 66 || $sushi_final_result[$index]['tag'] == 67 || $sushi_final_result[$index]['tag'] == 68 || $sushi_final_result[$index]['tag'] == 69 || $sushi_final_result[$index]['tag'] == 70 || $sushi_final_result[$index]['tag'] == 71 || $sushi_final_result[$index]['tag'] == 72 || $sushi_final_result[$index]['tag'] == 73) {
@@ -1822,7 +1731,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
         }
     } else {
         if ($j > 7) {
-            echo "출력 리스트에서 전북대 의예 제거" . "<br>";
             //코드64번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 64) {
@@ -1831,7 +1739,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($j > 5) {
-            echo "출력 리스트에서 전북대 의예 제거" . "<br>";
             //코드65번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 65) {
@@ -1840,7 +1747,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 7) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드66번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 66) {
@@ -1849,7 +1755,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 8) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드67번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 67) {
@@ -1858,7 +1763,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 9) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드68번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 68) {
@@ -1867,7 +1771,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 10) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드69번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 69) {
@@ -1876,7 +1779,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 11) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드70번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 70) {
@@ -1885,7 +1787,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 12) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드71번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 71) {
@@ -1894,7 +1795,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 14) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드72번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 72) {
@@ -1903,7 +1803,6 @@ function jbnu($rank1, $rank2, $rank3, $rank4)
             }
         }
         if ($i > 15) {
-            echo "출력 리스트에서 전북대 자연 제거" . "<br>";
             //코드73번
             for ($index = 0; $index < $count; $index++) {
                 if ($sushi_final_result[$index]['tag'] == 73) {
@@ -1927,7 +1826,6 @@ function namuzi($rank1, $rank2, $rank3, $rank4)
     $l = min($rank1, $rank2, $rank3, $rank4);
 
     if ($i > 9) {
-        echo "출력 리스트에서 서울교대 제거" . "<br>";
         //코드74번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 74) {
@@ -1936,7 +1834,6 @@ function namuzi($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($j > 3) {
-        echo "출력 리스트에서 가천대 의예 제거" . "<br>";
         //코드75번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 75) {
@@ -1945,7 +1842,6 @@ function namuzi($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($k > 2) {
-        echo "출력 리스트에서 가천대 수의예 제거" . "<br>";
         //코드76번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 76) {
@@ -1954,7 +1850,6 @@ function namuzi($rank1, $rank2, $rank3, $rank4)
         }
     }
     if ($l > 5) {
-        echo "출력 리스트에서 조선대 제거" . "<br>";
         //코드77번
         for ($index = 0; $index < $count; $index++) {
             if ($sushi_final_result[$index]['tag'] == 77) {

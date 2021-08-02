@@ -114,24 +114,24 @@
                                                                     switch ($result[0]) {
                                                                         case 0:
                                                                             echo "<tr class='table-primary'>";
-                                                                            echo "<td>" . $result['possible'] . $result['tag'] . "안정" . "</td>";
+                                                                            echo "<td>" . "안정" . "</td>";
                                                                             break;
                                                                         case 1:
                                                                             echo "<tr class='table-success'>";
-                                                                            echo "<td>" . $result['possible'] . $result['tag'] . "가능" . "</td>";
+                                                                            echo "<td>" . "가능" . "</td>";
                                                                             break;
                                                                         case 2:
                                                                             echo "<tr class='table-warning'>";
-                                                                            echo "<td>" . $result['possible'] . $result['tag'] . "불안" . "</td>";
+                                                                            echo "<td>" . "불안" . "</td>";
                                                                             break;
                                                                         case 3:
                                                                             echo "<tr class='table-danger'>";
-                                                                            echo "<td>" . $result['possible'] . $result['tag'] . "위험" . "</td>";
+                                                                            echo "<td>" . "위험" . "</td>";
                                                                             break;
                                                                     }
                                                                 } else {
                                                                     echo "<tr class='table-danger'>";
-                                                                    echo "<td>" . $result['possible'] . $result['tag'] . "최저기준미달" . "</td>";
+                                                                    echo "<td>" . "최저기준미달" . "</td>";
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
                                                                 echo "<td>" . $result[2] . "</td>";
