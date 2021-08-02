@@ -187,3 +187,5 @@ if ($year != -1) {
 
     $percentile = -1;
 }
+
+require "./module/univ_log.php";
