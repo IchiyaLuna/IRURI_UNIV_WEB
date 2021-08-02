@@ -1,6 +1,7 @@
 var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
 var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
 var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
 
 var calcresult = document.getElementById('subject-form');
 var univresultpage = document.getElementById('univ-input-form');
@@ -85,7 +86,7 @@ function test_univ_input() {
     }
 
     if (parseInt(first) < 0 || parseInt(second) < 0 || parseInt(third) < 0) {
-        biginput_modal.show();
+        sushierror_modal.show();
         return false;
     }
 
