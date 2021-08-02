@@ -39,7 +39,7 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./admin.php">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -74,12 +74,11 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">성적 입력 기록:</h6>
                             <a class="collapse-item" href="logs.php">입력 기록</a>
-                            <a class="collapse-item" href="cards.html">통계</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Nav Item - Utilities Collapse Menu 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
@@ -93,16 +92,16 @@
                         </div>
                     </div>
                 </li>
-
+-->
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 
-                <!-- Heading -->
+                <!-- Heading 
                 <div class="sidebar-heading">
                     자료 관리
                 </div>
-
-                <!-- Nav Item - Pages Collapse Menu -->
+-->
+                <!-- Nav Item - Pages Collapse Menu
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                         <i class="fas fa-fw fa-folder"></i>
@@ -115,7 +114,7 @@
                         </div>
                     </div>
                 </li>
-
+ -->
                 <!-- Nav Item
                 <li class="nav-item">
                     <a class="nav-link" href="charts.html">
