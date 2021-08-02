@@ -128,44 +128,21 @@
                         </div>
                         <?php if ($percentile != -1) {
                         ?>
-
                             <div class="result-table table-responsive">
                                 <table class="table table-bordered caption-top">
-                                    <caption>모바일 환경에서는 좌우로 스와이프하여 내용을 확인해주세요</caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">성별</th>
-                                            <th scope="col">계열</th>
-                                            <th scope="col">단순 평균</th>
-                                            <th scope="col">예상 정시 백분위</th>
-                                        </tr>
-                                    </thead>
+
                                     <tbody>
-                                        <tr>
-                                            <td><?php echo $gender; ?></td>
-                                            <td><?php echo $type; ?></td>
-                                            <td><?php echo round($simple_avg, 2); ?></td>
-                                            <td>
-                                                <?php
-                                                if ($percentile === -1) {
-                                                    echo "미응시";
-                                                } else {
-                                                    echo round($percentile, 2) . "%";
-                                                }
-                                                ?>
-                                            </td>
-                                        </tr>
                                         <tr>
                                             <td colspan="4">
                                                 <div>
-                                                    <h5>수시 예측</h5>
+                                                    <h5>정시 예측</h5>
                                                     <table class="table mb-0 table-hover caption-top">
                                                         <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col">합격예측</th>
                                                                 <th scope="col">대학</th>
-                                                                <th scope="col">내 환산 등급</th>
+                                                                <th scope="col">내 예상 백분위</th>
                                                                 <th scope="col">상세 정보</th>
                                                             </tr>
                                                         </thead>
@@ -173,7 +150,7 @@
                                                             <?php
                                                             $modal_count = 0;
 
-                                                            foreach ($sushi_final_result as $result) {
+                                                            foreach ($jungshi_final_result as $result) {
 
                                                                 switch ($result[0]) {
                                                                     case 0:
@@ -194,7 +171,7 @@
                                                                         break;
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
-                                                                echo "<td>" . $result[5] . "</td>";
+                                                                echo "<td>" . $result[3] . "</td>";
                                                             ?>
                                                                 <td>
                                                                     <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
@@ -214,7 +191,6 @@
                                     </tbody>
                                 </table>
                             </div>
-
                         <?php
                         }
                         ?>
