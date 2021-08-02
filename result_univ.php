@@ -77,7 +77,17 @@
                                                     <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시 예측 보기</button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
+                                                    <?php
+                                                    if ($percentile != -1) {
+                                                    ?>
+                                                        <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <button class="nav-link disabled" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 응시하지 않음</button>
+                                                    <?php
+                                                    }
+                                                    ?>
                                                 </li>
                                             </ul>
                                             <div class="tab-content" id="myTabContent">
