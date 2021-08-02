@@ -151,7 +151,7 @@ if ($year != -1) {
         }
 
         $gap = $percentile - $dept['jungshi'];
-        $this_time_result = array($univ['name'], $dept['ca'], $dept['dept'], $univ['jungshi'], $percentile, $gap);
+        $this_time_result = array($dept['name'], $dept['ca'], $dept['dept'], $dept['jungshi'], $percentile, $gap);
         array_push($jungshi_result_list, $this_time_result);
     }
 
