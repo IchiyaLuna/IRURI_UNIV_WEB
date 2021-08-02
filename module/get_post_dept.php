@@ -129,7 +129,7 @@ $sort = array();
 
 foreach ((array) $sushi_final_result as $key => $value) {
 
-    $sort[$key] = $value[0] + 0.1 * $value[6];
+    $sort[$key] = $value[0] - 0.1 * $value[6];
 }
 
 array_multisort($sort, SORT_DESC, $sushi_final_result);
