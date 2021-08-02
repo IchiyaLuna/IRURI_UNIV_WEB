@@ -332,9 +332,35 @@
                 <div class="jungshi py-3">
                     <div class="row">
                         <div class="col-xl-6">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="year-label">응시 년도</span>
+                                        <select class="form-select" id="year" name="dept-yearsel">
+                                            <option value="-1" selected>응시하지 않음</option>
+                                            <option value="21">21년</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="month-label">응시 월</span>
+                                        <select class="form-select" id="month" name="dept-monthsel">
+                                            <option value="-1" selected>응시하지 않음</option>
+
+                                            <option class="21" value="03">3월 학력평가</option>
+                                            <option class="21" value="04">4월 학력평가</option>
+                                            <option class="21" value="07">7월 학력평가</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-korean-label">국어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-korean-type">
+                                <span class="input-group-text" id="dept-korean-label">국어</span>
+                                <select class="form-select" id="dept-korean-type" name="dept-korean-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="tw">화법과작문</option>
                                     <option value="lm">언어와매체</option>
@@ -342,11 +368,14 @@
                                 <input type="number" class="form-control form-control-sm text-center" name="dept-korean-score" id="dept-korean-score" placeholder="원점수">
                             </div>
                         </div>
+                    </div>
 
+
+                    <div class="row">
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-math-label">수학&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-math-type">
+                                <span class="input-group-text" id="dept-math-label">수학</span>
+                                <select class="form-select" id="dept-math-type" name="dept-math-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="ps">확률과통계</option>
                                     <option value="cl">미적분</option>
@@ -358,8 +387,8 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-english-label">영어&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-english-type">
+                                <span class="input-group-text" id="dept-english-label">영어</span>
+                                <select class="form-select" id="dept-english-type" name="dept-english-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="at">응시</option>
                                 </select>
@@ -369,8 +398,8 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-history-label">한국사&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-history-type" disabled>
+                                <span class="input-group-text" id="dept-history-label">한국사</span>
+                                <select class="form-select" id="dept-history-type" name="dept-history-type" disabled>
                                     <option value="at" selected>필수</option>
                                 </select>
                                 <input type="number" class="form-control form-control-sm text-center" name="dept-history-score" id="dept-history-score" placeholder="원점수">
@@ -379,8 +408,8 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-selectA-label">탐구 1&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-selectA-type">
+                                <span class="input-group-text" id="dept-selectA-label">탐구 1</span>
+                                <select class="form-select" id="dept-selectA-type" name="dept-selectA-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -406,8 +435,8 @@
 
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="dept-selectB-label">탐구 2&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                <select class="form-select" id="dept-selectB-type">
+                                <span class="input-group-text" id="dept-selectB-label">탐구 2</span>
+                                <select class="form-select" id="dept-selectB-type" name="dept-selectB-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="p1">물리학 I</option>
                                     <option value="c1">화학 I</option>
@@ -434,7 +463,7 @@
                         <div class="col-xl-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="dept-foreignlang-label">제2외국어</span>
-                                <select class="form-select" id="dept-foreignlang-type">
+                                <select class="form-select" id="dept-foreignlang-type" name="dept-foreignlang-type">
                                     <option value="na" selected>미응시</option>
                                     <option value="du">독일어 I</option>
                                     <option value="fr">프랑스어 I</option>

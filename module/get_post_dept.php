@@ -121,7 +121,7 @@ foreach ($sushi_result_list as $data) {
     elseif ($data[6] > $data[3]) $posi = 3;
     else $posi = 2;
 
-    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[5], $data[6]);
+    $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[5], $data[6], $data[7]);
     array_push($sushi_final_result, $arr_to_push);
 }
 
