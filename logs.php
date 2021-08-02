@@ -939,10 +939,28 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#ulogtable').DataTable({
-                    "order": [0, 'desc']
+                    "order": [0, 'desc'],
+                    "language": {
+                        "lengthMenu": "최대 _MENU_ 기록 표시",
+                        "search": "검색 : ",
+                        "info": "총 _TOTAL_ 페이지 중 _PAGE_ 에서 _PAGES_ 페이지",
+                        "paginate": {
+                            "previous": "이전",
+                            "next": "다음"
+                        }
+                    }
                 });
                 $('#dlogtable').DataTable({
-                    "order": [0, 'desc']
+                    "order": [0, 'desc'],
+                    "language": {
+                        "lengthMenu": "최대 _MENU_ 기록 표시",
+                        "search": "검색 : ",
+                        "info": "총 _TOTAL_ 페이지 중 _PAGE_ 에서 _PAGES_ 페이지",
+                        "paginate": {
+                            "previous": "이전",
+                            "next": "다음"
+                        }
+                    }
                 });
 
             });
