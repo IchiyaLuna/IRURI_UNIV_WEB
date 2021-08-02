@@ -1,13 +1,3 @@
-var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
-var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
-var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
-var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
-var nodept_modal = new bootstrap.Modal(document.getElementById('no-dept'));
-
-var calcresult = document.getElementById('subject-form');
-var univresultpage = document.getElementById('univ-input-form');
-var deptresultpage = document.getElementById('dept-input-form');
-
 function test_calc_input() {
 
     const names = document.getElementsByName("subject[]");
@@ -15,7 +5,13 @@ function test_calc_input() {
     const sameranks = document.getElementsByName("samerank[]");
     const studentss = document.getElementsByName("students[]");
     const times = document.getElementsByName("time[]");
+
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+
     var calcresult = document.getElementById('subject-form');
+
     for (var key in names) {
 
         if (names[key].value === "") {
@@ -69,6 +65,13 @@ function test_univ_input() {
     const first = document.getElementById("univ-first").value;
     const second = document.getElementById("univ-second").value;
     const third = document.getElementById("univ-third").value;
+
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+    var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
+
+    var univresultpage = document.getElementById('univ-input-form');
 
     if (first === "" || second === "" || third === "") {
         noinput_modal.show();
@@ -202,6 +205,14 @@ function test_dept_input() {
     const first = document.getElementById("dept-first").value;
     const second = document.getElementById("dept-second").value;
     const third = document.getElementById("dept-third").value;
+
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+    var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
+    var nodept_modal = new bootstrap.Modal(document.getElementById('no-dept'));
+
+    var deptresultpage = document.getElementById('dept-input-form');
 
     if (first === "" || second === "" || third === "") {
         noinput_modal.show();
