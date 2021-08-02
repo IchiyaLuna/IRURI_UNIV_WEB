@@ -85,8 +85,22 @@ function test_univ_input() {
         return false;
     }
 
-    if (parseFloat(first) < 1 || parseFloat(first) > 9 || parseFloat(second) < 1 || parseFloat(second) > 9 || parseFloat(third) < 1 || parseFloat(third) > 9) {
-        if (parseFloat(first) != 0 && parseFloat(second) != 0 && parseFloat(third) != 0) {
+    if (parseFloat(first) != 0) {
+        if (parseFloat(first) < 1 || parseFloat(first) > 9) {
+            sushierror_modal.show();
+            return false;
+        }
+    }
+
+    if (parseFloat(second) != 0) {
+        if (parseFloat(second) < 1 || parseFloat(second) > 9) {
+            sushierror_modal.show();
+            return false;
+        }
+    }
+
+    if (parseFloat(third) != 0) {
+        if (parseFloat(third) < 1 || parseFloat(third) > 9) {
             sushierror_modal.show();
             return false;
         }
