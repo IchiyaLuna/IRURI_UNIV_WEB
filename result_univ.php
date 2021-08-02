@@ -72,17 +72,16 @@
                                     </tr>
                                     <tr>
                                         <td colspan="4">
-                                            <ul class="nav nav-tabs" id="univ-result-tab" role="tablist">
+                                            <ul class="nav nav-tabs nav-fill" id="univ-result-tab" role="tablist">
                                                 <li class="nav-item" role="presentation">
-                                                    <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시</button>
+                                                    <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시 예측 보기</button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시</button>
+                                                    <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
                                                 </li>
                                             </ul>
                                             <div class="tab-content" id="myTabContent">
                                                 <div class="tab-pane fade show active" id="sushi" role="tabpanel">
-                                                    <h5>수시 예측</h5>
                                                     <table class="table mb-0 table-hover caption-top">
                                                         <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
                                                         <thead>
@@ -138,7 +137,6 @@
                                                     <?php
                                                     if ($percentile != -1) {
                                                     ?>
-                                                        <h5>정시 예측</h5>
                                                         <table class="table mb-0 table-hover caption-top">
                                                             <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
                                                             <thead>
@@ -185,7 +183,6 @@
                                                     <?php
                                                     } else {
                                                     ?>
-                                                        <h5>정시 예측</h5>
                                                         <p>응시하지 않아 결과를 표시하지 않습니다.</p>
                                                     <?php
                                                     }
