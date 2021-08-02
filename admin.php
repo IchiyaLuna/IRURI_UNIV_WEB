@@ -171,11 +171,13 @@
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <!--
                                     <a class="dropdown-item" href="#">
                                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                         설정
                                     </a>
                                     <div class="dropdown-divider"></div>
+                                    -->
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         로그아웃
@@ -319,6 +321,64 @@
         <script src="./assets/js/demo/chart-area-demo.js"></script>
         <script src="./assets/js/demo/chart-pie-demo.js"></script>
 
+        <?php
+
+        $hostname = "localhost";
+        $user = "iruri";
+        $password = "test123";
+        $dbname = "sushi_db";
+
+        $database = mysqli_connect($hostname, $user, $password, $dbname);
+
+        if (!$database) {
+            die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
+        }
+
+        $sql = "SELECT * FROM ulogs";
+
+        $fetch_all = mysqli_query($database, $sql);
+
+        $uloglist = array();
+
+        while ($row = mysqli_fetch_array($fetch_all)) {
+
+            array_push($uloglist, $row);
+        }
+
+        $sql = "SELECT * FROM dlogs";
+
+        $fetch_all = mysqli_query($database, $sql);
+
+        $dloglist = array();
+
+        while ($row = mysqli_fetch_array($fetch_all)) {
+
+            array_push($dloglist, $row);
+        }
+
+        $four = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 4);
+        $third = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 3);
+        $second = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 2);
+        $first = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400);
+        $today = date('Y-m-d', $_SERVER['REQUEST_TIME']);
+
+        $logs = array(0, 0, 0, 0, 0);
+
+        foreach ($uloglist as $log) {
+            if ($log['time'] == $four) {
+                $logs[0]++;
+            } else if ($log['time'] == $third) {
+                $logs[1]++;
+            } else if ($log['time'] == $second) {
+                $logs[2]++;
+            } else if ($log['time'] == $first) {
+                $logs[3]++;
+            } else if ($log['time'] == $today) {
+                $logs[4]++;
+            }
+        }
+        ?>
+
         <script type="text/javascript">
             var now = new Date();
             var month = (now.getMonth() + 1);
@@ -368,7 +428,7 @@
                         pointHoverBorderColor: "rgba(78, 115, 223, 1)",
                         pointHitRadius: 10,
                         pointBorderWidth: 2,
-                        data: [0, 0, 3, 5, 6],
+                        data: [<?php echo $logs[0] ?>, <?php echo $logs[1] ?>, <?php echo $logs[2] ?>, <?php echo $logs[3] ?>, <?php echo $logs[4] ?>],
                     }],
                 },
                 options: {
