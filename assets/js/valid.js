@@ -106,9 +106,9 @@ function test_univ_input() {
         }
     }
 
-    var year = document.getElementById("year");
+    var year = document.getElementById("univ-year");
     year = year.options[year.selectedIndex].value;
-    var month = document.getElementById("month");
+    var month = document.getElementById("univ-month");
     month = month.options[month.selectedIndex].value;
 
     var korean_type = document.getElementById("univ-korean-type");
@@ -260,9 +260,9 @@ function test_dept_input() {
         return false;
     }
 
-    var year = document.getElementById("year");
+    var year = document.getElementById("dept-year");
     year = year.options[year.selectedIndex].value;
-    var month = document.getElementById("month");
+    var month = document.getElementById("dept-month");
     month = month.options[month.selectedIndex].value;
 
     var korean_type = document.getElementById("dept-korean-type");
