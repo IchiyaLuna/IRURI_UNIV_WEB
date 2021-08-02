@@ -56,10 +56,6 @@ function test_calc_input() {
         }
 
         if (parseInt(ranks[key].value) > parseInt(studentss[key].value)) {
-            alert(ranks[key].value);
-            alert(typeof ranks[key].value);
-            alert(studentss[key].value);
-            alert(typeof studentss[key].value);
             biginput_modal.show();
             return false;
         }
