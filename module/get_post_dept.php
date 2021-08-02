@@ -125,6 +125,15 @@ foreach ($sushi_result_list as $data) {
     array_push($sushi_final_result, $arr_to_push);
 }
 
+$sort = array();
+
+foreach ((array) $sushi_final_result as $key => $value) {
+
+    $sort[$key] = $value[0] + 0.1 * $value[6];
+}
+
+array_multisort($sort, SORT_ASC, $sushi_final_result);
+
 if ($year != -1) {
     require "./module/jungshi_load.php";
     require "./module/jungshi_functions.php";
