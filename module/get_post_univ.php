@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sushi = array($first, $second, $third);
 
-    $year = $_POST["univ-yearsel"];
-    $month = $_POST["univ-monthsel"];
+    $year = $_POST["univ-year"];
+    $month = $_POST["univ-month"];
 
     $korean_type = $_POST["univ-korean-type"];
     $math_type = $_POST["univ-math-type"];

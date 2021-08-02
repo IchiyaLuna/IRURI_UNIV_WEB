@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sushi = array($first, $second, $third);
 
-    $year = $_POST["dept-yearsel"];
-    $month = $_POST["dept-monthsel"];
+    $year = $_POST["dept-year"];
+    $month = $_POST["dept-month"];
 
     $korean_type = $_POST["dept-korean-type"];
     $math_type = $_POST["dept-math-type"];
