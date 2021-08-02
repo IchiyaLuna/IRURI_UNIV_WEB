@@ -461,8 +461,13 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#ulogtable').DataTable();
-                $('#dlogtable').DataTable();
+                $('#ulogtable').DataTable({
+                    "order": [0, 'desc']
+                });
+                $('#dlogtable').DataTable({
+                    "order": [0, 'desc']
+                });
+
             });
         </script>
     </body>
