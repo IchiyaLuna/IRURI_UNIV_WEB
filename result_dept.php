@@ -52,7 +52,6 @@
                                         <th scope="col">성별</th>
                                         <th scope="col">계열</th>
                                         <th scope="col">단순 평균</th>
-                                        <th scope="col">예상 정시 백분위</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,15 +59,6 @@
                                         <td><?php echo $gender; ?></td>
                                         <td><?php echo $type; ?></td>
                                         <td><?php echo round($simple_avg, 2); ?></td>
-                                        <td>
-                                            <?php
-                                            if ($percentile === -1) {
-                                                echo "미응시";
-                                            } else {
-                                                echo round($percentile, 2) . "%";
-                                            }
-                                            ?>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="4">
@@ -101,7 +91,6 @@
                                                                 <th scope="col">전형</th>
                                                                 <th scope="col">모집단위</th>
                                                                 <th scope="col">합격자 평균</th>
-                                                                <th scope="col">내 환산 등급</th>
                                                                 <th scope="col">등급 간 차이</th>
                                                             </tr>
                                                         </thead>
@@ -137,7 +126,6 @@
                                                                 echo "<td>" . $result[2] . "</td>";
                                                                 echo "<td>" . $result[3] . "</td>";
                                                                 echo "<td>" . $result[4] . "</td>";
-                                                                echo "<td>" . $result[5] . "</td>";
                                                                 echo "<td>" . $result[6] . "</td>";
                                                                 echo "</tr>";
                                                                 $modal_count++;
@@ -160,7 +148,6 @@
                                                                     <th scope="col">전형</th>
                                                                     <th scope="col">모집단위</th>
                                                                     <th scope="col">합격자 평균</th>
-                                                                    <th scope="col">내 예상 백분위</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -189,7 +176,6 @@
                                                                     echo "<td>" . $result[2] . "</td>";
                                                                     echo "<td>" . $result[3] . "</td>";
                                                                     echo "<td>" . round($result[4], 2) . "%" . "</td>";
-                                                                    echo "<td>" . round($result[5], 2) . "%" . "</td>";
                                                                     echo "</tr>";
                                                                     $modal_count++;
                                                                 }
