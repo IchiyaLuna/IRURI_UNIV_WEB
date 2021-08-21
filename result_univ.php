@@ -281,7 +281,7 @@ if (isset($_COOKIE['authid'])) {
         </div>
 
         <div class="modal fade" id="authmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="labelauth">휴대폰 인증</h5>
@@ -307,7 +307,6 @@ if (isset($_COOKIE['authid'])) {
                                 </div>
                                 <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
                             </form>
-
                             <button type="button" class="btn btn-secondary" id="checkbtn" onclick="codeauth()" disabled>인증 완료</button>
                         </div>
                     </div>
@@ -577,7 +576,7 @@ if (isset($_COOKIE['authid'])) {
             var contentmodal = new bootstrap.Modal(document.getElementById("modal" + String(modalcode)));
 
             if (cookie != null) {
-                authmodal.toggle();
+                authmodal.hide();
                 //contentmodal.show();
                 return false;
             } else {
