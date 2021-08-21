@@ -297,7 +297,7 @@ if (isset($_COOKIE['authid'])) {
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="codelabel">인증번호</span>
-                                    <input type="text" class="form-control" id="authcode" name="authcode" maxlength="5" placeholder="숫자만 입력해주세요" disabled>
+                                    <input type="text" class="form-control" id="authcode" name="authcode" maxlength="6" placeholder="숫자만 입력해주세요" disabled>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="agreecbox">
