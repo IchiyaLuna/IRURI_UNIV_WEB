@@ -280,7 +280,7 @@ if (isset($_COOKIE['authid'])) {
             </div>
         </div>
 
-        <div class="modal fade" id="authmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="alert-modal modal fade" id="authmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
