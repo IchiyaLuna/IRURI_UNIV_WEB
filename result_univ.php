@@ -648,7 +648,7 @@ if (isset($_COOKIE['authid'])) {
 
             $.ajax({
                 url: "./module/auth.php",
-                type: "GET",
+                type: "POST",
                 dataType: "json",
                 data: {
                     pnum: $("#pnumber").val()
