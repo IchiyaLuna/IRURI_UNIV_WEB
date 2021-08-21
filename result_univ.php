@@ -578,7 +578,7 @@ if (isset($_COOKIE['authid'])) {
 
             alert(cookie);
 
-            if (cookie != "") {
+            if (cookie != null) {
                 authmodal.hide();
                 contentmodal.show();
                 return false;
