@@ -565,10 +565,10 @@ if (isset($_COOKIE['authid'])) {
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
     <script>
-        var getCookie = function(name) {
+        function getCookie(name) {
             var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
             return value ? value[2] : null;
-        };
+        }
 
         function openmodal(modalcode) {
             var cookie = getCookie("authid");
