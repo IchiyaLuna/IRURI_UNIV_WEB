@@ -58,6 +58,6 @@ $ret = curl_exec($oCurl);
 curl_close($oCurl);
 
 echo $ret;
-$retArr = json_decode($ret); // 결과배열
+$retArr = json_decode($ret, TRUE); // 결과배열
 echo $retArr['result_code'];
 echo $randcode;
