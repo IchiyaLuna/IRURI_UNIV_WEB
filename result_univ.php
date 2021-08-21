@@ -297,7 +297,7 @@ if (isset($_COOKIE['authid'])) {
                                 </div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="codelabel">인증번호</span>
-                                    <input type="text" class="form-control" id="authcode" name="authcode" placeholder="숫자만 입력해주세요" disabled>
+                                    <input type="text" class="form-control" id="authcode" name="authcode" maxlength="5" placeholder="숫자만 입력해주세요" disabled>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="agreecbox">
@@ -644,6 +644,8 @@ if (isset($_COOKIE['authid'])) {
         });
 
         function smssend() {
+            pnumber = $("#pnumber").val();
+
             $.ajax({
                 url: "./module/auth.php",
                 type: "GET",
@@ -652,6 +654,7 @@ if (isset($_COOKIE['authid'])) {
                 }
             }).done(function(data) {
                 authcode = data;
+                $("#pnumber").attr("disabled", true);
                 alert("문자를 확인해라");
                 $("#authcode").removeAttr('disabled');
                 $("#checkbtn").removeAttr('disabled');
@@ -663,12 +666,14 @@ if (isset($_COOKIE['authid'])) {
 
             if (code == authcode) {
                 alert("ok");
+
             } else {
                 alert("no");
             }
         }
 
         var authcode;
+        var pnumber;
     </script>
 </body>
 
