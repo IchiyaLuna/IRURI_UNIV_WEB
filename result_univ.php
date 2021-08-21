@@ -57,38 +57,6 @@ if (isset($_COOKIE['authid'])) {
 
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/result.css" rel="stylesheet">
-
-    <script>
-        function getCookie(name) {
-            var cookieArr = document.cookie.split(";");
-
-            for (var i in cookieArr) {
-                if (cookieArr[i].split("=")[0].trim() == "username")
-                    if (cookieArr[i][cookieArr[i].length - 1] != "=")
-                        return cookieArr[i].split("=")[1];
-            }
-            return "";
-        }
-
-        function openmodal(modalcode) {
-            var cookie = getCookie("authid");
-
-            var authmodal = document.getElementById("authmodal");
-            var contentmodal = document.getElementById("modal" + modalcode);
-
-            if (cookie != "") {
-                authmodal.hide();
-                contentmodal.show();
-                return false;
-            } else {
-                thistimemodal = modalcode;
-                authmodal.show();
-                return false;
-            }
-        }
-
-        var thistimemodal;
-    </script>
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -265,9 +233,6 @@ if (isset($_COOKIE['authid'])) {
                                 </tbody>
                             </table>
                         </div>
-
-
-
                     </div>
                 </div>
                 <div class="content-sidebar col-md-4 d-none d-md-block sticky-md-top">
@@ -340,61 +305,6 @@ if (isset($_COOKIE['authid'])) {
                             </form>
                             <button type="button" class="btn btn-secondary" onclick="openmodal(thistimemodal)" disabled>인증 완료</button>
                         </div>
-                        <script>
-                            var autoHypenPhone = function(str) {
-                                str = str.replace(/[^0-9]/g, '');
-                                var tmp = '';
-                                if (str.length < 4) {
-                                    return str;
-                                } else if (str.length < 7) {
-                                    tmp += str.substr(0, 3);
-                                    tmp += '-';
-                                    tmp += str.substr(3);
-                                    return tmp;
-                                } else if (str.length < 11) {
-                                    tmp += str.substr(0, 3);
-                                    tmp += '-';
-                                    tmp += str.substr(3, 3);
-                                    tmp += '-';
-                                    tmp += str.substr(6);
-                                    return tmp;
-                                } else {
-                                    tmp += str.substr(0, 3);
-                                    tmp += '-';
-                                    tmp += str.substr(3, 4);
-                                    tmp += '-';
-                                    tmp += str.substr(7);
-                                    return tmp;
-                                }
-
-                                return str;
-                            }
-
-                            var phoneNum = document.getElementById('pnumber');
-
-                            phoneNum.onkeyup = function() {
-                                console.log(this.value);
-                                this.value = autoHypenPhone(this.value);
-                            }
-
-                            $("#sendbtn").attr("disabled", true);
-                            $("#agreecbox").on('click', function() {
-                                var chk = $('input:checkbox[id="agreecbox"]').is(":checked");
-                                if (chk == true) {
-                                    $("#sendbtn").removeAttr('disabled');
-                                } else {
-                                    $("#sendbtn").attr("disabled", true);
-                                }
-                            });
-
-                            function smssend() {
-                                $.ajax({
-                                    url: "./module/auth.php",
-                                    type: "GET",
-                                    data: $("#pnumber").val()
-                                })
-                            }
-                        </script>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
@@ -647,6 +557,96 @@ if (isset($_COOKIE['authid'])) {
     <?php require "./module/footer.php" ?>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            for (var i in cookieArr) {
+                if (cookieArr[i].split("=")[0].trim() == "username")
+                    if (cookieArr[i][cookieArr[i].length - 1] != "=")
+                        return cookieArr[i].split("=")[1];
+            }
+            return "";
+        }
+
+        function openmodal(modalcode) {
+            var cookie = getCookie("authid");
+
+            var authmodal = document.getElementById("authmodal");
+            var contentmodal = document.getElementById("modal" + modalcode);
+
+            if (cookie != "") {
+                authmodal.hide();
+                contentmodal.show();
+                return false;
+            } else {
+                thistimemodal = modalcode;
+                authmodal.show();
+                return false;
+            }
+        }
+
+        var thistimemodal;
+    </script>
+
+    <script>
+        var autoHypenPhone = function(str) {
+            str = str.replace(/[^0-9]/g, '');
+            var tmp = '';
+            if (str.length < 4) {
+                return str;
+            } else if (str.length < 7) {
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3);
+                return tmp;
+            } else if (str.length < 11) {
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3, 3);
+                tmp += '-';
+                tmp += str.substr(6);
+                return tmp;
+            } else {
+                tmp += str.substr(0, 3);
+                tmp += '-';
+                tmp += str.substr(3, 4);
+                tmp += '-';
+                tmp += str.substr(7);
+                return tmp;
+            }
+
+            return str;
+        }
+
+        var phoneNum = document.getElementById('pnumber');
+
+        phoneNum.onkeyup = function() {
+            console.log(this.value);
+            this.value = autoHypenPhone(this.value);
+        }
+
+        $("#sendbtn").attr("disabled", true);
+        $("#agreecbox").on('click', function() {
+            var chk = $('input:checkbox[id="agreecbox"]').is(":checked");
+            if (chk == true) {
+                $("#sendbtn").removeAttr('disabled');
+            } else {
+                $("#sendbtn").attr("disabled", true);
+            }
+        });
+
+        function smssend() {
+            $.ajax({
+                url: "./module/auth.php",
+                type: "GET",
+                data: $("#pnumber").val()
+            })
+        }
+    </script>
 </body>
 
 </html>
