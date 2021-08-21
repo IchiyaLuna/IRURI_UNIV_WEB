@@ -295,6 +295,10 @@ if (isset($_COOKIE['authid'])) {
                                     <span class="input-group-text" id="pnumlabel">핸드폰 번호</span>
                                     <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="숫자만 입력해주세요">
                                 </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="codelabel">인증번호</span>
+                                    <input type="text" class="form-control" id="authcode" name="authcode" placeholder="숫자만 입력해주세요" disabled>
+                                </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="agreecbox">
                                     <label class="form-check-label" for="agreecbox">
@@ -303,7 +307,8 @@ if (isset($_COOKIE['authid'])) {
                                 </div>
                                 <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
                             </form>
-                            <button type="button" class="btn btn-secondary" onclick="openmodal(thistimemodal)" disabled>인증 완료</button>
+
+                            <button type="button" class="btn btn-secondary" onclick="codeauth()" disabled>인증 완료</button>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -645,8 +650,24 @@ if (isset($_COOKIE['authid'])) {
                 data: {
                     pnum: $("#pnumber").val()
                 }
-            })
+            }).done(function(data) {
+                authcode = data;
+                alert("문자를 확인해라");
+                $("#authcode").removeAttr('disabled');
+            });
         }
+
+        function codeauth() {
+            var code = $("#authcode").val();
+
+            if (code == authcode) {
+                alert("ok");
+            } else {
+                alert("no");
+            }
+        }
+
+        var authcode;
     </script>
 </body>
 
