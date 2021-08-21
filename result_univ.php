@@ -642,12 +642,7 @@ if (isset($_COOKIE['authid'])) {
             $.ajax({
                 url: "./module/auth.php",
                 type: "GET",
-                data: {
-                    pnum: $("#pnumber").val()
-                },
-                error: function(request, status, error) {
-                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-                }
+                data: $("#pnumber").val()
             })
         }
     </script>
