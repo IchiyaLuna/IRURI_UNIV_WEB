@@ -58,6 +58,10 @@ $ret = curl_exec($oCurl);
 curl_close($oCurl);
 
 //echo $ret;
-//$retArr = json_decode($ret); // 결과배열
+$retArr = json_decode($ret); // 결과배열
+
+if ($retArr['result_code'] != 1) {
+    echo "<script>alert(\"문제가 생겼다 이놈아\");</script>";
+}
 
 echo $randcode;
