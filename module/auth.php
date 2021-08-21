@@ -1,4 +1,6 @@
 <?php
+header("Content-Type: application/json");
+
 function genRandStr($length = 5)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -60,6 +62,9 @@ curl_close($oCurl);
 echo $ret;
 $retArr = json_decode($ret, TRUE); // 결과배열
 
-$list = array("authcode" => $randcode, "authresult" => $retArr['result_code']);
+$list = array(
+    "authcode" => $randcode,
+    "authresult" => $retArr['result_code']
+);
 
 echo json_encode($list);
