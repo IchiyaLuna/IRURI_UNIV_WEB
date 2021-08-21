@@ -1,3 +1,43 @@
+<?php
+$isregistered = FALSE;
+
+if (isset($_COOKIE['authid'])) {
+
+    $uid = $_COOKIE['authid'];
+
+    $hostname = "localhost";
+    $user = "iruri";
+    $password = "test123";
+    $dbname = "sushi_db";
+
+    $database = mysqli_connect($hostname, $user, $password, $dbname);
+
+    if (!$database) {
+        die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
+    }
+
+    $sql = "SELECT * FROM codes WHERE UID = '{$uid}'";
+
+    $fetch_all = mysqli_query($database, $sql);
+
+    $userlist = array();
+
+    while ($row = mysqli_fetch_array($fetch_all)) {
+
+        array_push($userlist, $row);
+    }
+
+    mysqli_close($database);
+
+    if (empty($userlist)) {
+        setcookie("authid", "", 0, "/");
+    } else {
+        $isregistered = TRUE;
+    }
+}
+?>
+
+
 <!doctype html>
 <html lang="ko" class="h-100">
 
@@ -17,6 +57,38 @@
 
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/result.css" rel="stylesheet">
+
+    <script>
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            for (var i in cookieArr) {
+                if (cookieArr[i].split("=")[0].trim() == "username")
+                    if (cookieArr[i][cookieArr[i].length - 1] != "=")
+                        return cookieArr[i].split("=")[1];
+            }
+            return "";
+        }
+
+        function openmodal(modalcode) {
+            var cookie = getCookie("authid");
+
+            var authmodal = document.getElementById("authmodal");
+            var contentmodal = document.getElementById("modal" + modalcode);
+
+            if (cookie != "") {
+                authmodal.hide();
+                contentmodal.show();
+                return false;
+            } else {
+                thistimemodal = modalcode;
+                authmodal.show();
+                return false;
+            }
+        }
+
+        var thistimemodal;
+    </script>
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -118,7 +190,7 @@
                                                                 echo "<td>" . $result[1] . "</td>";
                                                             ?>
                                                                 <td>
-                                                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modal<?php echo $modal_count; ?>">
+                                                                    <button type="button" class="btn btn-secondary btn-sm" onclick="openmodal(<?php echo $modal_count; ?>)">
                                                                         상세
                                                                     </button>
                                                                 </td>
@@ -243,11 +315,100 @@
             </div>
         </div>
 
+        <div class="modal fade" id="authmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelauth">휴대폰 인증</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h5>상세 정보를 확인하려면 인증이 필요합니다.</h5>
+                            <form name="phonenumber" id="phonenumber">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="pnumlabel">핸드폰 번호</span>
+                                    <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="숫자만 입력해주세요">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="agreecbox">
+                                    <label class="form-check-label" for="agreecbox">
+                                        휴대폰 인증에 동의합니다.
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
+                            </form>
+                            <button type="button" class="btn btn-secondary" onclick="openmodal(thistimemodal)" disabled>인증 완료</button>
+                        </div>
+                        <script>
+                            var autoHypenPhone = function(str) {
+                                str = str.replace(/[^0-9]/g, '');
+                                var tmp = '';
+                                if (str.length < 4) {
+                                    return str;
+                                } else if (str.length < 7) {
+                                    tmp += str.substr(0, 3);
+                                    tmp += '-';
+                                    tmp += str.substr(3);
+                                    return tmp;
+                                } else if (str.length < 11) {
+                                    tmp += str.substr(0, 3);
+                                    tmp += '-';
+                                    tmp += str.substr(3, 3);
+                                    tmp += '-';
+                                    tmp += str.substr(6);
+                                    return tmp;
+                                } else {
+                                    tmp += str.substr(0, 3);
+                                    tmp += '-';
+                                    tmp += str.substr(3, 4);
+                                    tmp += '-';
+                                    tmp += str.substr(7);
+                                    return tmp;
+                                }
+
+                                return str;
+                            }
+
+                            var phoneNum = document.getElementById('pnumber');
+
+                            phoneNum.onkeyup = function() {
+                                console.log(this.value);
+                                this.value = autoHypenPhone(this.value);
+                            }
+
+                            $("#sendbtn").attr("disabled", true);
+                            $("#agreecbox").on('click', function() {
+                                var chk = $('input:checkbox[id="agreecbox"]').is(":checked");
+                                if (chk == true) {
+                                    $("#sendbtn").removeAttr('disabled');
+                                } else {
+                                    $("#sendbtn").attr("disabled", true);
+                                }
+                            });
+
+                            function smssend() {
+                                $.ajax({
+                                    url: "./module/auth.php",
+                                    type: "GET",
+                                    data: $("#pnumber").val()
+                                })
+                            }
+                        </script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php
         $modal_count = 0;
 
         foreach ($sushi_final_result as $result) {
         ?>
+
             <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
