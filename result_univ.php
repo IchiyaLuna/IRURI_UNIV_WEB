@@ -565,21 +565,9 @@ if (isset($_COOKIE['authid'])) {
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
     <script>
-        function getCookie(key) {
-            var result = null;
-            var cookie = document.cookie.split(';');
-            cookie.some(function(item) {
-                // 공백을 제거
-                item = item.replace(' ', '');
-
-                var dic = item.split('=');
-
-                if (key === dic[0]) {
-                    result = dic[1];
-                    return true; // break;
-                }
-            });
-            return result;
+        function getCookie(name) {
+            var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return value ? value[2] : null;
         }
 
         function openmodal(modalcode) {
@@ -587,6 +575,8 @@ if (isset($_COOKIE['authid'])) {
 
             var authmodal = new bootstrap.Modal(document.getElementById("authmodal"));
             var contentmodal = new bootstrap.Modal(document.getElementById("modal" + String(modalcode)));
+
+            alert(cookie);
 
             if (cookie != "") {
                 authmodal.hide();
