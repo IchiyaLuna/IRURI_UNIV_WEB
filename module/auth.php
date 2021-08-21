@@ -57,7 +57,7 @@ curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, FALSE);
 $ret = curl_exec($oCurl);
 curl_close($oCurl);
 
-//echo $ret;
+echo $ret;
 $retArr = json_decode($ret); // 결과배열
-echo $retArr;
+//echo $retArr;
 echo $randcode;
