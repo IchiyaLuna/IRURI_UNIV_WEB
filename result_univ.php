@@ -572,12 +572,12 @@ if (isset($_COOKIE['authid'])) {
         function openmodal(modalcode) {
             var cookie = getCookie("authid");
 
-            var authmodal = new bootstrap.Modal(document.getElementById("authmodal"));
+            const authmodal = new bootstrap.Modal(document.getElementById("authmodal"));
             var contentmodal = new bootstrap.Modal(document.getElementById("modal" + String(modalcode)));
 
             if (cookie != null) {
                 authmodal.hide();
-                //contentmodal.show();
+                contentmodal.show();
                 return false;
             } else {
                 thistimemodal = modalcode;
