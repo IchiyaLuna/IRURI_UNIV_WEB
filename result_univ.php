@@ -625,7 +625,6 @@ if (isset($_COOKIE['authid'])) {
         var phoneNum = document.getElementById('pnumber');
 
         phoneNum.onkeyup = function() {
-            console.log(this.value);
             this.value = autoHypenPhone(this.value);
         }
 
@@ -643,7 +642,9 @@ if (isset($_COOKIE['authid'])) {
             $.ajax({
                 url: "./module/auth.php",
                 type: "GET",
-                data: $("#pnumber").val()
+                data: {
+                    pnum: $("#pnumber").val()
+                }
             })
         }
     </script>
