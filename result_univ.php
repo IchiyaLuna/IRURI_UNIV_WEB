@@ -308,7 +308,7 @@ if (isset($_COOKIE['authid'])) {
                                 <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
                             </form>
 
-                            <button type="button" class="btn btn-secondary" onclick="codeauth()" disabled>인증 완료</button>
+                            <button type="button" class="btn btn-secondary" id="checkbtn" onclick="codeauth()" disabled>인증 완료</button>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -654,6 +654,7 @@ if (isset($_COOKIE['authid'])) {
                 authcode = data;
                 alert("문자를 확인해라");
                 $("#authcode").removeAttr('disabled');
+                $("#checkbtn").removeAttr('disabled');
             });
         }
 
