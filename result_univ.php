@@ -653,11 +653,17 @@ if (isset($_COOKIE['authid'])) {
                     pnum: $("#pnumber").val()
                 }
             }).done(function(data) {
-                authcode = data;
-                $("#pnumber").attr("disabled", true);
-                alert("문자를 확인해라");
-                $("#authcode").removeAttr('disabled');
-                $("#checkbtn").removeAttr('disabled');
+                authcode = data.authcode;
+                if (data.authresult != 1) {
+                    alert("인증을 진행할 수 없습니다. 입력하신 번호를 다시 확인해주세요.");
+                } else {
+                    $("#pnumber").attr("disabled", true);
+                    $("#agreecbox").attr("disabled", true);
+                    $("#sendbtn").attr("disabled", true);
+                    alert("인증 문자 전송이 완료되었습니다. 인증 번호를 입력해주세요.");
+                    $("#authcode").removeAttr('disabled');
+                    $("#checkbtn").removeAttr('disabled');
+                }
             });
         }
 
@@ -668,7 +674,7 @@ if (isset($_COOKIE['authid'])) {
                 alert("ok");
 
             } else {
-                alert("no");
+                alert("인증 번호가 올바르지 않습니다.");
             }
         }
 

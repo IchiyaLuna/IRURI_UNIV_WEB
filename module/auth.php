@@ -59,5 +59,7 @@ curl_close($oCurl);
 
 echo $ret;
 $retArr = json_decode($ret, TRUE); // 결과배열
-echo $retArr['result_code'];
-echo $randcode;
+
+$list = array("authcode" => $randcode, "authresult" => $retArr['result_code']);
+
+echo json_encode($list);
