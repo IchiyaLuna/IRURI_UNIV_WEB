@@ -323,7 +323,6 @@ if (isset($_COOKIE['authid'])) {
 
         foreach ($sushi_final_result as $result) {
         ?>
-
             <div class="modal fade" id="modal<?php echo $modal_count; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
@@ -566,22 +565,16 @@ if (isset($_COOKIE['authid'])) {
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
     <script>
-        function getCookie(name) {
-            var cookieArr = document.cookie.split(";");
-
-            for (var i in cookieArr) {
-                if (cookieArr[i].split("=")[0].trim() == "username")
-                    if (cookieArr[i][cookieArr[i].length - 1] != "=")
-                        return cookieArr[i].split("=")[1];
-            }
-            return "";
-        }
+        var getCookie = function(name) {
+            var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return value ? value[2] : null;
+        };
 
         function openmodal(modalcode) {
             var cookie = getCookie("authid");
 
-            var authmodal = new bootstrap.Modal(document.getElementById('authmodal'));
-            var contentmodal = new bootstrap.Modal(document.getElementById("modal" + modalcode));
+            var authmodal = new bootstrap.Modal(document.getElementById("authmodal"));
+            var contentmodal = new bootstrap.Modal(document.getElementById("modal" + str(modalcode)));
 
             if (cookie != "") {
                 authmodal.hide();
