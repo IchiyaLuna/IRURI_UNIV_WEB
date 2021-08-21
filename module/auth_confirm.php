@@ -25,7 +25,7 @@ if (!$database) {
     die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO codes VALUES('{$date}', '{$uid}', '{$phone}', 0)";
+$sql = "INSERT INTO codes VALUES('{$date}', '{$uid}', '{$phone}', 1)";
 
 mysqli_query($database, $sql);
 
