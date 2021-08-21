@@ -654,7 +654,6 @@ if (isset($_COOKIE['authid'])) {
                 }
             }).done(function(data) {
                 authcode = data;
-                alert(authcode);
                 $("#pnumber").attr("disabled", true);
                 alert("문자를 확인해라");
                 $("#authcode").removeAttr('disabled');
