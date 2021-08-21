@@ -23,7 +23,7 @@ function GenRandNum($length = 6)
     return $randomString;
 }
 
-$phone = $_GET['pnum'];
+$phone = $_POST['pnum'];
 
 $sms_url = "https://apis.aligo.in/send/"; // 전송요청 URL
 $sms['user_id'] = "akkyu0724"; // SMS 아이디
