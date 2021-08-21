@@ -647,7 +647,7 @@ if (isset($_COOKIE['authid'])) {
             pnumber = $("#pnumber").val();
 
             $.ajax({
-                url: "./module/auth.php",
+                url: "./module/auth_send.php",
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -672,8 +672,20 @@ if (isset($_COOKIE['authid'])) {
             var code = $("#authcode").val();
 
             if (code == authcode) {
-                alert("ok");
-
+                alert("인증이 완료되었습니다.");
+                $.ajax({
+                    url: "./module/auth_confirm.php",
+                    type: "POST",
+                    data: {
+                        pnum: pnumber
+                    }
+                }).done(function(data) {
+                    if (data != 1) {
+                        alert("권한 발급에 문제가 발생했습니다. 다시 시도해주세요.");
+                    } else {
+                        openmodal(thistimemodal);
+                    }
+                });
             } else {
                 alert("인증 번호가 올바르지 않습니다.");
             }
