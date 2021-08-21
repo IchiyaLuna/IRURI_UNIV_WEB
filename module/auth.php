@@ -56,10 +56,10 @@ curl_setopt($oCurl, CURLOPT_POST, 1);
 curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($oCurl, CURLOPT_POSTFIELDS, $sms);
 curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, FALSE);
+
 $ret = curl_exec($oCurl);
 curl_close($oCurl);
 
-echo $ret;
 $retArr = json_decode($ret, TRUE); // 결과배열
 
 $list = array(
