@@ -1,6 +1,4 @@
 <?php
-$isregistered = FALSE;
-
 if (isset($_COOKIE['authid'])) {
 
     $uid = $_COOKIE['authid'];
@@ -27,13 +25,16 @@ if (isset($_COOKIE['authid'])) {
         array_push($userlist, $row);
     }
 
-    mysqli_close($database);
+
 
     if (empty($userlist)) {
         setcookie("authid", "", 0, "/");
     } else {
-        $isregistered = TRUE;
+        $newaccess = $userlist[0]['access'] + 1;
+        $sql = "UPDATE codes SET access = '{$newaccess}' WHERE UID = '{$uid}'";
     }
+
+    mysqli_close($database);
 }
 ?>
 
