@@ -74,7 +74,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">성적 입력 기록:</h6>
-                            <a class="collapse-item" href="buttons.html">입력 기록</a>
+                            <a class="collapse-item" href="logs.php">입력 기록</a>
                         </div>
                     </div>
                 </li>
