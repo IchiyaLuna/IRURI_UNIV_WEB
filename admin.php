@@ -66,36 +66,32 @@
 
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#logcollapse" aria-expanded="true" aria-controls="logcollapse">
                         <i class="fas fa-fw fa-clipboard-list"></i>
                         <span>성적 기록</span>
                     </a>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="logcollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">성적 입력 기록:</h6>
                             <a class="collapse-item" href="logs.php">입력 기록</a>
                         </div>
                     </div>
                 </li>
-
-                <!-- Nav Item - Utilities Collapse Menu 
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+                <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#detailcollapse" aria-expanded="true" aria-controls="detailcollapse">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>인증 코드</span>
+                        <span>상세 보기 기록</span>
                     </a>
-                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div id="detailcollapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">인증 코드 메뉴:</h6>
-                            <a class="collapse-item" href="utilities-color.html">코드 생성</a>
-                            <a class="collapse-item" href="utilities-border.html">코드 목록</a>
+                            <h6 class="collapse-header">상세 보기:</h6>
+                            <a class="collapse-item" href="authlog.php">인증 내역</a>
                         </div>
                     </div>
                 </li>
--->
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
                 <!-- Heading 
                 <div class="sidebar-heading">
                     자료 관리

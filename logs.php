@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         <meta name="author" content="Ichiya Luna">
-        <title>UNDER DEV - Admin Page</title>
+        <title>UNDER DEV - Logs</title>
 
         <!-- Custom fonts for this template-->
         <link href="./assets/fa-assets/css/all.min.css" rel="stylesheet" type="text/css">
@@ -199,6 +199,7 @@
                         </div>
 
                         <!-- Content Row -->
+
                         <?php
 
                         $hostname = "localhost";
@@ -232,48 +233,6 @@
                         while ($row = mysqli_fetch_array($fetch_all)) {
 
                             array_push($dloglist, $row);
-                        }
-
-                        $four = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 4);
-                        $third = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 3);
-                        $second = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400 * 2);
-                        $first = date('Y-m-d', $_SERVER['REQUEST_TIME'] - 86400);
-                        $today = date('Y-m-d', $_SERVER['REQUEST_TIME']);
-
-                        $logs = array(0, 0, 0, 0, 0);
-                        $ucount = 0;
-                        $dcount = 0;
-
-                        foreach ($uloglist as $log) {
-                            if ($log['time'] == $four) {
-                                $logs[0]++;
-                            } else if ($log['time'] == $third) {
-                                $logs[1]++;
-                            } else if ($log['time'] == $second) {
-                                $logs[2]++;
-                            } else if ($log['time'] == $first) {
-                                $logs[3]++;
-                            } else if ($log['time'] == $today) {
-                                $logs[4]++;
-                            }
-
-                            $ucount++;
-                        }
-
-                        foreach ($dloglist as $log) {
-                            if ($log['time'] == $four) {
-                                $logs[0]++;
-                            } else if ($log['time'] == $third) {
-                                $logs[1]++;
-                            } else if ($log['time'] == $second) {
-                                $logs[2]++;
-                            } else if ($log['time'] == $first) {
-                                $logs[3]++;
-                            } else if ($log['time'] == $today) {
-                                $logs[4]++;
-                            }
-
-                            $dcount++;
                         }
                         ?>
 
