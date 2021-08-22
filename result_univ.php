@@ -32,6 +32,7 @@ if (isset($_COOKIE['authid'])) {
     } else {
         $newaccess = $userlist[0]['access'] + 1;
         $sql = "UPDATE codes SET access = '{$newaccess}' WHERE UID = '{$uid}'";
+        mysqli_query($database, $sql);
     }
 
     mysqli_close($database);
