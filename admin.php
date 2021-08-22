@@ -66,11 +66,11 @@
 
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#logcollapse" aria-expanded="true" aria-controls="logcollapse">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-clipboard-list"></i>
                         <span>성적 기록</span>
                     </a>
-                    <div id="logcollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">성적 입력 기록:</h6>
                             <a class="collapse-item" href="logs.php">입력 기록</a>
@@ -82,12 +82,12 @@
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#detailcollapse" aria-expanded="true" aria-controls="detailcollapse">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>상세 보기 기록</span>
+                        <i class="fas fa-sms"></i>
+                        <span>핸드폰 인증 기록</span>
                     </a>
                     <div id="detailcollapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">상세 보기:</h6>
+                            <h6 class="collapse-header">핸드폰 인증 기록:</h6>
                             <a class="collapse-item" href="authlog.php">인증 내역</a>
                         </div>
                     </div>

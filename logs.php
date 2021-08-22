@@ -78,22 +78,21 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- Nav Item - Utilities Collapse Menu 
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+                <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>인증 코드</span>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#detailcollapse" aria-expanded="true" aria-controls="detailcollapse">
+                        <i class="fas fa-sms"></i>
+                        <span>핸드폰 인증 기록</span>
                     </a>
-                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div id="detailcollapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">인증 코드 메뉴:</h6>
-                            <a class="collapse-item" href="utilities-color.html">코드 생성</a>
-                            <a class="collapse-item" href="utilities-border.html">코드 목록</a>
+                            <h6 class="collapse-header">핸드폰 인증 기록:</h6>
+                            <a class="collapse-item" href="authlog.php">인증 내역</a>
                         </div>
                     </div>
                 </li>
--->
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 

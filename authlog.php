@@ -83,7 +83,7 @@
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#detailcollapse" aria-expanded="true" aria-controls="detailcollapse">
-                        <i class="fas fa-fw fa-wrench"></i>
+                        <i class="fas fa-sms"></i>
                         <span>핸드폰 인증 기록</span>
                     </a>
                     <div id="detailcollapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
