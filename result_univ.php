@@ -289,29 +289,27 @@ if (isset($_COOKIE['authid'])) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="text-center">
-                            <h5>상세 정보를 확인하려면 인증이 필요합니다.</h5>
-                            <form name="phonenumber" id="phonenumber">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="pnumlabel">핸드폰 번호</span>
-                                    <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="숫자만 입력해주세요">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="codelabel">인증번호</span>
-                                    <input type="text" class="form-control" id="authcode" name="authcode" maxlength="6" placeholder="숫자만 입력해주세요" disabled>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="agreecbox">
-                                    <label class="form-check-label" for="agreecbox">
-                                        휴대폰 인증에 동의합니다.
-                                    </label>
-                                </div>
-
-                            </form>
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
-                                <button type="button" class="btn btn-success" id="checkbtn" onclick="codeauth()" disabled>인증 완료</button>
+                        <h5>상세 정보를 확인하려면 인증이 필요합니다.</h5>
+                        <form name="phonenumber" id="phonenumber">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="pnumlabel">핸드폰 번호</span>
+                                <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="숫자만 입력해주세요">
                             </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="codelabel">인증번호</span>
+                                <input type="text" class="form-control" id="authcode" name="authcode" maxlength="6" placeholder="숫자만 입력해주세요" disabled>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="agreecbox">
+                                <label class="form-check-label" for="agreecbox">
+                                    휴대폰 인증에 동의합니다.
+                                </label>
+                            </div>
+
+                        </form>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-secondary" id="sendbtn" onclick="smssend()">인증번호 요청</button>
+                            <button type="button" class="btn btn-success" id="checkbtn" onclick="codeauth()" disabled>인증 완료</button>
                         </div>
                     </div>
                     <div class="modal-footer">
