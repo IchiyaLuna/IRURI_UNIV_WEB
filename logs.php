@@ -93,9 +93,6 @@
                         </div>
                     </div>
                 </li>
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
                 <!-- Heading 
                 <div class="sidebar-heading">
                     자료 관리
