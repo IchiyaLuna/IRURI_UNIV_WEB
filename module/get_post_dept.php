@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $korean_type = $_POST["dept-korean-type"];
     $math_type = $_POST["dept-math-type"];
     $english_type = $_POST["dept-english-type"];
-    $history_type = $_POST["dept-history-type"];
     $selectA_type = $_POST["dept-selectA-type"];
     $selectB_type = $_POST["dept-selectB-type"];
     $foreign_type = $_POST["dept-foreignlang-type"];

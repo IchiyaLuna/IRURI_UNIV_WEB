@@ -117,8 +117,6 @@ function test_univ_input() {
     math_type = math_type.options[math_type.selectedIndex].value;
     var english_type = document.getElementById("univ-english-type");
     english_type = english_type.options[english_type.selectedIndex].value;
-    var history_type = document.getElementById("univ-history-type");
-    history_type = history_type.options[history_type.selectedIndex].value;
     var selectA_type = document.getElementById("univ-selectA-type");
     selectA_type = selectA_type.options[selectA_type.selectedIndex].value;
     var selectB_type = document.getElementById("univ-selectB-type");
@@ -162,10 +160,6 @@ function test_univ_input() {
             return false;
         }
 
-        if (history_type != "na" && history_score === "") {
-            zeroinput_modal.show();
-            return false;
-        }
         if (parseInt(history_score) < 0 || parseInt(history_score) > 50) {
             biginput_modal.show();
             return false;
@@ -271,8 +265,6 @@ function test_dept_input() {
     math_type = math_type.options[math_type.selectedIndex].value;
     var english_type = document.getElementById("dept-english-type");
     english_type = english_type.options[english_type.selectedIndex].value;
-    var history_type = document.getElementById("dept-history-type");
-    history_type = history_type.options[history_type.selectedIndex].value;
     var selectA_type = document.getElementById("dept-selectA-type");
     selectA_type = selectA_type.options[selectA_type.selectedIndex].value;
     var selectB_type = document.getElementById("dept-selectB-type");
@@ -316,7 +308,7 @@ function test_dept_input() {
             return false;
         }
 
-        if (history_type != "na" && history_score === "") {
+        if (history_score === "") {
             zeroinput_modal.show();
             return false;
         }
