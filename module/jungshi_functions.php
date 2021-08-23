@@ -622,11 +622,16 @@ function standard_score_T_2($score)
 function english_rank($score)
 {
     global $english_rank;
-    for ($i = 0; $i < 8; $i++) {
-        if ($score - (90 - 10 * $i) >= 0) {
-            break;
-        } else {
-            $english_rank = $english_rank + 1;
+    if ($score == 0) {
+        $english_rank = 9;
+    } else {
+        for ($i = 0; $i < 8; $i++) {
+            echo $score;
+            if ($score - (90 - 10 * $i) >= 0) {
+                break;
+            } else {
+                $english_rank = $english_rank + 1;
+            }
         }
     }
     return 0;
