@@ -48,7 +48,9 @@ if (isset($_COOKIE['authid'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="Ichiya Luna">
-    <title>UNDER DEV - Result Page</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>이루리학원 - 대학 합격 예측기</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">

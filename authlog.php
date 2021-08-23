@@ -20,7 +20,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         <meta name="author" content="Ichiya Luna">
-        <title>UNDER DEV - Auth Logs</title>
+        <link rel="shortcut icon" href="./assets/img/favicon.ico">
+        <link rel="icon" href="./assets/img/favicon.ico">
+        <title>IRURI ADMIN PAGE - 핸드폰 인증 기록</title>
 
         <!-- Custom fonts for this template-->
         <link href="./assets/fa-assets/css/all.min.css" rel="stylesheet" type="text/css">

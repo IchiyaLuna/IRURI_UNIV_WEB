@@ -302,21 +302,21 @@
                         <div class="col-xl-3 first-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-first-label">1학년 평균</span>
-                                <input type="number" class="form-control form-control-sm text-center" name="dept-first" id="dept-first" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="dept-first" id="dept-first" placeholder="1.0" min="1" max="9">
                             </div>
                         </div>
 
                         <div class="col-xl-3 second-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-second-label">2학년 평균</span>
-                                <input type="number" class="form-control form-control-sm text-center" name="dept-second" id="dept-second" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="dept-second" id="dept-second" placeholder="1.0" min="1" max="9">
                             </div>
                         </div>
 
                         <div class="col-xl-3 third-group">
                             <div class="input-group">
                                 <span class="input-group-text" id="ig-third-label">3학년 평균</span>
-                                <input type="number" class="form-control form-control-sm text-center" name="dept-third" id="dept-third" placeholder="1.0">
+                                <input type="number" class="form-control form-control-sm text-center" name="dept-third" id="dept-third" placeholder="1.0" min="1" max="9">
                             </div>
                         </div>
 

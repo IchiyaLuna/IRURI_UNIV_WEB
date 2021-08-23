@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="Ichiya Luna">
-    <title>UNDER DEV - Calc Page</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>이루리학원 - 내신 등급 계산기</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +17,7 @@
 
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/fa-assets/css/all.css" rel="stylesheet">
+
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">

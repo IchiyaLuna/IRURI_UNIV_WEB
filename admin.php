@@ -20,7 +20,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="">
         <meta name="author" content="Ichiya Luna">
-        <title>UNDER DEV - Admin Page</title>
+        <link rel="shortcut icon" href="./assets/img/favicon.ico">
+        <link rel="icon" href="./assets/img/favicon.ico">
+        <title>IRURI ADMIN PAGE - DASHBOARD</title>
 
         <!-- Custom fonts for this template-->
         <link href="./assets/fa-assets/css/all.min.css" rel="stylesheet" type="text/css">
