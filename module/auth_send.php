@@ -16,14 +16,14 @@ $phone = $_POST['pnum'];
 
 $sms_url = "https://apis.aligo.in/send/"; // 전송요청 URL
 $sms['user_id'] = "iruriedu"; // SMS 아이디
-$sms['key'] = "6fc99e7ezqd9l6bikwhzyqq7btv87iho"; //인증키
+$sms['key'] = "t6i41u1vw1pq4utey61k5tssljtj437w"; //인증키
 
 $randcode = GenRandNum(6);
 
 $_POST['msg'] = '안녕하세요. 이루리 학원입니다. 인증 번호는 [' . $randcode . '] 입니다.';
 $_POST['receiver'] = $phone;
 
-$_POST['sender'] = "02";
+$_POST['sender'] = "025588520";
 $_POST['testmode_yn'] = 'Y';
 $_POST['msg_type'] = 'SMS';
 
