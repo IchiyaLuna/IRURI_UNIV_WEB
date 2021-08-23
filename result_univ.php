@@ -3,10 +3,10 @@ if (isset($_COOKIE['authid'])) {
 
     $uid = $_COOKIE['authid'];
 
-    $hostname = "localhost";
+    $hostname = "db.iruri.gabia.io";
     $user = "iruri";
-    $password = "test123";
-    $dbname = "sushi_db";
+    $password = "iruridb3307";
+    $dbname = "dbiruri";
 
     $database = mysqli_connect($hostname, $user, $password, $dbname);
 
@@ -24,8 +24,6 @@ if (isset($_COOKIE['authid'])) {
 
         array_push($userlist, $row);
     }
-
-
 
     if (empty($userlist)) {
         setcookie("authid", "", 0, "/");
@@ -373,10 +371,10 @@ if (isset($_COOKIE['authid'])) {
                                                 <div class="table-resposive">
                                                     <h5>추천 학과</h5>
                                                     <?php
-                                                    $hostname = "localhost";
+                                                    $hostname = "db.iruri.gabia.io";
                                                     $user = "iruri";
-                                                    $password = "test123";
-                                                    $dbname = "sushi_db";
+                                                    $password = "iruridb3307";
+                                                    $dbname = "dbiruri";
 
                                                     $database = mysqli_connect(
                                                         $hostname,

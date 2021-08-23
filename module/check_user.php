@@ -9,7 +9,7 @@ if (!isset($_POST['user-id']) || !isset($_POST['user-pw'])) {
 $user_id = $_POST['user-id'];
 $user_pw = $_POST['user-pw'];
 
-$hostname = "localhost";
+$hostname = "db.iruri.gabia.io";
 $user = "iruri";
 $password = "iruridb3307";
 $dbname = "dbiruri";

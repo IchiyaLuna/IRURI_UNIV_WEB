@@ -14,10 +14,10 @@ $date = date("Y-m-d", time());
 $uid = genRandStr();
 $phone = $_POST['pnum'];
 
-$hostname = "localhost";
+$hostname = "db.iruri.gabia.io";
 $user = "iruri";
 $password = "iruridb3307";
-$dbname = "sushi_db";
+$dbname = "dbiruri";
 
 $database = mysqli_connect($hostname, $user, $password, $dbname);
 

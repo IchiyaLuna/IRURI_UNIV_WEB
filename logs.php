@@ -198,10 +198,10 @@
 
                         <?php
 
-                        $hostname = "localhost";
+                        $hostname = "db.iruri.gabia.io";
                         $user = "iruri";
-                        $password = "test123";
-                        $dbname = "sushi_db";
+                        $password = "iruridb3307";
+                        $dbname = "dbiruri";
 
                         $database = mysqli_connect($hostname, $user, $password, $dbname);
 

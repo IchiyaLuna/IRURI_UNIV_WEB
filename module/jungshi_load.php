@@ -1,6 +1,6 @@
 <?php
 
-$hostname = "localhost";
+$hostname = "db.iruri.gabia.io";
 $user = "iruri";
 $password = "iruridb3307";
 $dbname = "dbiruri";
