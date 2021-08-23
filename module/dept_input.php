@@ -321,7 +321,7 @@
                         </div>
 
                         <div class="col-xl-3 calc-btn d-grid gap-2">
-                            <a class="btn btn-primary justify-content-md-end" href="./calc" target="_blank" role="button">등급 계산기 바로가기</a>
+                            <a class="btn btn-primary justify-content-md-end" href="./calc.php" target="_blank" role="button">등급 계산기 바로가기</a>
                         </div>
                     </div>
                 </div>

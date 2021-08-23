@@ -18,9 +18,9 @@
                 <li class="nav-item">
                     <?php
                     if ($cur_page == "index") {
-                        echo "<a class='nav-link active' href='./index'>";
+                        echo "<a class='nav-link active' href='./index.php'>";
                     } else {
-                        echo "<a class='nav-link' href='./index'>";
+                        echo "<a class='nav-link' href='./index.php'>";
                     }
                     ?>
                     합격 예측기</a>
@@ -29,9 +29,9 @@
                 <li class="nav-item">
                     <?php
                     if ($cur_page == "calc") {
-                        echo "<a class='nav-link active' href='./calc'>";
+                        echo "<a class='nav-link active' href='./calc.php'>";
                     } else {
-                        echo "<a class='nav-link' href='./calc'>";
+                        echo "<a class='nav-link' href='./calc.php'>";
                     }
                     ?>
                     성적 계산기</a>
@@ -42,7 +42,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">기타</a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbar-dropdown">
-                        <li><a class="dropdown-item" href="./login">관리자</a></li>
+                        <li><a class="dropdown-item" href="./login.php">관리자</a></li>
                     </ul>
 
                 </li>
