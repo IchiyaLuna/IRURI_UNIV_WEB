@@ -24,6 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $selectB_type = $_POST["dept-selectB-type"];
     $foreign_type = $_POST["dept-foreignlang-type"];
 
+    $korean_score = 0;
+    $math_score = 0;
+    $english_score = 0;
+    $history_score = 0;
+    $selectA_score = 0;
+    $selectB_score = 0;
+    $foreign_score = 0;
+
     $korean_score = $_POST["dept-korean-score"];
     $math_score = $_POST["dept-math-score"];
     $english_score = $_POST["dept-english-score"];
