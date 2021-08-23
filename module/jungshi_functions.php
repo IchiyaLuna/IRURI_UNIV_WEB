@@ -1860,23 +1860,25 @@ function namuzi($rank1, $rank2, $rank3, $rank4)
     return 0;
 }
 
-snu();
-yu($korean_rank, $math_rank, $english_rank, $select_rank);
-ku($korean_rank, $math_rank, $english_rank, $select_rank);
-khu($korean_rank, $math_rank, $english_rank, $select_rank);
-uos($korean_rank, $math_rank, $english_rank, $select_rank);
-hiu($korean_rank, $math_rank, $english_rank, $select_rank);
-ehwa($korean_rank, $math_rank, $english_rank, $select_rank);
-sju($korean_rank, $math_rank, $english_rank, $select_rank);
-swu($korean_rank, $math_rank, $english_rank, $select_rank);
-smu($korean_rank, $math_rank, $english_rank, $select_rank);
-cuk($korean_rank, $math_rank, $english_rank, $select_rank);
-knu($korean_rank, $math_rank, $english_rank, $select_rank);
-kynu($korean_rank, $math_rank, $english_rank, $select_rank);
-gnu($korean_rank, $math_rank, $english_rank, $select_rank);
-pnu($korean_rank, $math_rank, $english_rank, $select_rank);
-cnu($korean_rank, $math_rank, $english_rank, $select_rank);
-jnu($korean_rank, $math_rank, $english_rank, $select_rank);
-chnu($korean_rank, $math_rank, $english_rank, $select_rank);
-jbnu($korean_rank, $math_rank, $english_rank, $select_rank);
-namuzi($korean_rank, $math_rank, $english_rank, $select_rank);
+if (isset($sushi_final_result[0]['tag'])) {
+    snu();
+    yu($korean_rank, $math_rank, $english_rank, $select_rank);
+    ku($korean_rank, $math_rank, $english_rank, $select_rank);
+    khu($korean_rank, $math_rank, $english_rank, $select_rank);
+    uos($korean_rank, $math_rank, $english_rank, $select_rank);
+    hiu($korean_rank, $math_rank, $english_rank, $select_rank);
+    ehwa($korean_rank, $math_rank, $english_rank, $select_rank);
+    sju($korean_rank, $math_rank, $english_rank, $select_rank);
+    swu($korean_rank, $math_rank, $english_rank, $select_rank);
+    smu($korean_rank, $math_rank, $english_rank, $select_rank);
+    cuk($korean_rank, $math_rank, $english_rank, $select_rank);
+    knu($korean_rank, $math_rank, $english_rank, $select_rank);
+    kynu($korean_rank, $math_rank, $english_rank, $select_rank);
+    gnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    pnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    cnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    jnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    chnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    jbnu($korean_rank, $math_rank, $english_rank, $select_rank);
+    namuzi($korean_rank, $math_rank, $english_rank, $select_rank);
+}
