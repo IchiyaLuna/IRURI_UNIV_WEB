@@ -16,7 +16,7 @@ $phone = $_POST['pnum'];
 
 $hostname = "localhost";
 $user = "iruri";
-$password = "test123";
+$password = "iruridb3307";
 $dbname = "sushi_db";
 
 $database = mysqli_connect($hostname, $user, $password, $dbname);

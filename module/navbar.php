@@ -3,9 +3,9 @@
 
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="https://workruri.akkyu.net/">
+        <a class="navbar-brand" href="https://iruriconsulting.com/">
             <img src="./assets/webp/logo_green.webp" width="30" height="30" class="d-inline-block align-top" alt="">
-            &nbsp;이루리 테스트
+            &nbsp;이루리학원
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
