@@ -650,7 +650,8 @@ if (isset($_COOKIE['authid'])) {
             }).done(function(data) {
                 authcode = data.authcode;
                 if (data.authresult != 1) {
-                    alert("인증을 진행할 수 없습니다. 입력하신 번호를 다시 확인해주세요.");
+                    if (data.authresult == 999)
+                        alert("인증을 진행할 수 없습니다. 입력하신 번호를 다시 확인해주세요.");
                 } else {
                     $("#pnumber").attr("disabled", true);
                     $("#agreecbox").attr("disabled", true);
