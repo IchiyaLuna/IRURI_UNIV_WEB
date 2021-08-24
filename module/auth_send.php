@@ -44,7 +44,7 @@ if ($oktogo) {
     $_POST['receiver'] = $phone;
 
     $_POST['sender'] = "025588520";
-    $_POST['testmode_yn'] = 'Y';
+    //$_POST['testmode_yn'] = 'Y';
     $_POST['msg_type'] = 'SMS';
 
     $sms['msg'] = stripslashes($_POST['msg']);

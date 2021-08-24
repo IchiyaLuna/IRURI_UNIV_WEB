@@ -130,6 +130,7 @@ if (isset($_COOKIE['authid'])) {
                                                             <tr>
                                                                 <th scope="col">합격예측</th>
                                                                 <th scope="col">대학</th>
+                                                                <th scope="col">합격자 평균<i class="fas fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요."></i></th>
                                                                 <th scope="col">상세 정보</th>
                                                             </tr>
                                                         </thead>
@@ -184,6 +185,7 @@ if (isset($_COOKIE['authid'])) {
                                                                     <th scope="col">합격예측</th>
                                                                     <th scope="col">대학</th>
                                                                     <th scope="col">합격자 평균</th>
+                                                                    <th scope="col">상세 정보</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -651,7 +653,7 @@ if (isset($_COOKIE['authid'])) {
                 authcode = data.authcode;
                 if (data.authresult != 1) {
                     if (data.authresult == 999)
-                        alert("인증을 진행할 수 없습니다. 입력하신 번호를 다시 확인해주세요.");
+                        alert("악용 방지를 위해 오늘은 더이상 인증 문자를 요청하실 수 없습니다.");
                 } else {
                     $("#pnumber").attr("disabled", true);
                     $("#agreecbox").attr("disabled", true);
