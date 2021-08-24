@@ -130,7 +130,11 @@ if (isset($_COOKIE['authid'])) {
                                                             <tr>
                                                                 <th scope="col">합격예측</th>
                                                                 <th scope="col">대학</th>
-                                                                <th scope="col">합격자 평균<i class="fas fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요."></i></th>
+                                                                <th scope="col">합격자 평균
+                                                                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
+                                                                        <i class="fas fa-question-circle"></i>
+                                                                    </a>
+                                                                </th>
                                                                 <th scope="col">상세 정보</th>
                                                             </tr>
                                                         </thead>
