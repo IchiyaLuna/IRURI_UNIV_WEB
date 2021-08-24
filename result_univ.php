@@ -53,12 +53,12 @@ if (isset($_COOKIE['authid'])) {
     <title>이루리학원 - 대학 합격 예측기</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-
-    <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/result.css" rel="stylesheet">
+    <link href="./assets/fa-assets/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/result.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column h-100" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
