@@ -640,11 +640,15 @@ function english_rank($score)
 function history_rank($score)
 {
     global $history_rank;
-    for ($i = 0; $i < 8; $i++) {
-        if ($score - (40 - 5 * $i) >= 0) {
-            break;
-        } else {
-            $history_rank = $history_rank + 1;
+    if ($score == 0) {
+        $history_rank = 9;
+    } else {
+        for ($i = 0; $i < 8; $i++) {
+            if ($score - (40 - 5 * $i) >= 0) {
+                break;
+            } else {
+                $history_rank = $history_rank + 1;
+            }
         }
     }
     return 0;
@@ -691,7 +695,9 @@ if ($selectB_type == "p1" || $selectB_type == "c1" || $selectB_type == "b1" || $
     $selectB = "social";
 }
 
-$count = count($sushi_final_result);
+if ($simple_avg != 0) {
+    $count = count($sushi_final_result);
+}
 
 function snu()
 {

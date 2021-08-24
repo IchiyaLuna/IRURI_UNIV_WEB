@@ -109,8 +109,8 @@ function test_univ_input() {
     if (sushi_sum == 0) {
         if (year == "-1" && month == "-1") {
             noinput_modal.show();
+            return false;
         }
-        return false;
     }
 
     if (parseFloat(first) != 0) {
