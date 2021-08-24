@@ -131,7 +131,7 @@ if (isset($_COOKIE['authid'])) {
                                                                 <th scope="col">합격예측</th>
                                                                 <th scope="col">대학</th>
                                                                 <th scope="col">합격자 평균
-                                                                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
+                                                                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
                                                                         <i class="fas fa-question-circle"></i>
                                                                     </a>
                                                                 </th>
@@ -163,6 +163,7 @@ if (isset($_COOKIE['authid'])) {
                                                                         break;
                                                                 }
                                                                 echo "<td>" . $result[1] . "</td>";
+                                                                echo "<td>" . round($result[4], 2) . "</td>";
                                                             ?>
                                                                 <td>
                                                                     <button type="button" class="btn btn-secondary btn-sm" onclick="openmodal(<?php echo $modal_count; ?>)">
@@ -218,6 +219,13 @@ if (isset($_COOKIE['authid'])) {
                                                                     }
                                                                     echo "<td>" . $result[1] . "</td>";
                                                                     echo "<td>" . round($result[2], 2) . "%" . "</td>";
+                                                                ?>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-secondary btn-sm" onclick="openmodal(<?php echo ($modal_count + 1) * 100; ?>)">
+                                                                            상세
+                                                                        </button>
+                                                                    </td>
+                                                                <?php
                                                                     echo "</tr>";
                                                                     $modal_count++;
                                                                 }
@@ -340,7 +348,7 @@ if (isset($_COOKIE['authid'])) {
                         </div>
                         <div class="modal-body">
                             <div class="result-table table-responsive">
-                                <table class="table table-hover caption-top">
+                                <table class="table caption-top">
                                     <caption>모바일 환경에서는 상하좌우로 스와이프하여 내용을 확인해주세요</caption>
                                     <thead>
                                         <tr>
@@ -505,7 +513,8 @@ if (isset($_COOKIE['authid'])) {
                                                         }
                                                     }
                                                     ?>
-                                                    <table class="table mb-0 table-hover">
+                                                    <table class="table mb-0 table-hover caption-top">
+                                                        <caption>현제 학생의 성적을 고려하여 가작 적합한 학과를 최대 10개 보여드립니다.</caption>
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col">합격예측</th>
@@ -563,14 +572,232 @@ if (isset($_COOKIE['authid'])) {
             $modal_count++;
         }
         ?>
+
+
+        <?php
+        $modal_count = 0;
+        if ($percentile != -1) {
+            foreach ($jungshi_final_result as $result) {
+        ?>
+                <div class="modal fade" id="modal<?php echo ($modal_count + 1) * 100; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="label<?php echo ($modal_count + 1) * 100; ?>">상세 정보</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="result-table table-responsive">
+                                    <table class="table caption-top">
+                                        <caption>모바일 환경에서는 상하좌우로 스와이프하여 내용을 확인해주세요</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">학교</th>
+                                                <th scope="col">합격자 평균</th>
+                                                <th scope="col">합격예측</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><?php echo $result[1]; ?></td>
+                                                <td><?php echo round($result[2], 2) . "%"; ?></td>
+                                                <?php
+                                                switch ($result[0]) {
+                                                    case 0:
+                                                        echo "<td>" . "안정" . "</td>";
+                                                        break;
+                                                    case 1:
+                                                        echo "<td>" . "가능" . "</td>";
+                                                        break;
+                                                    case 2:
+                                                        echo "<td>" . "불안" . "</td>";
+                                                        break;
+                                                    case 3:
+                                                        echo "<td>" . "위험" . "</td>";
+                                                        break;
+                                                }
+                                                ?>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <div class="table-resposive">
+                                                        <h5>추천 학과</h5>
+                                                        <?php
+                                                        $hostname = "db.iruri.gabia.io";
+                                                        $user = "iruri";
+                                                        $password = "iruridb3307";
+                                                        $dbname = "dbiruri";
+
+                                                        $database = mysqli_connect(
+                                                            $hostname,
+                                                            $user,
+                                                            $password,
+                                                            $dbname
+                                                        );
+
+                                                        if (!$database) {
+                                                            die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
+                                                        }
+
+                                                        $sql = "SELECT * FROM sushi_2022_dept WHERE code = '{$result[5]}' AND type = '{$type}'";
+
+                                                        $fetch_all = mysqli_query($database, $sql);
+
+                                                        $dept_list = array();
+
+                                                        while ($row = mysqli_fetch_array($fetch_all)) {
+
+                                                            array_push($dept_list, $row);
+                                                        }
+
+                                                        mysqli_close($database);
+
+                                                        $dept_result_list = array();
+
+                                                        foreach ($dept_list as $dept) {
+
+                                                            $gap = $percentile - $dept['jungshi'];
+                                                            $this_time_result = array($dept['ca'], $dept['dept'], $dept['jungshi'], $gap);
+                                                            array_push($dept_result_list, $this_time_result);
+                                                        }
+
+                                                        $sort = array();
+
+                                                        foreach ((array) $dept_result_list as $key => $value) {
+
+                                                            $sort[$key] = $value[3];
+                                                        }
+
+                                                        array_multisort($sort, SORT_ASC, $dept_result_list);
+
+                                                        $dept_final_result = array();
+
+                                                        foreach ($dept_result_list as $data) {
+                                                            if ($data[3] > 2.0) $posi = 0;
+                                                            elseif ($data[3] > 0) $posi = 1;
+                                                            elseif ($data[3] > -1.0) $posi = 2;
+                                                            else $posi = 3;
+
+                                                            $arr_to_push = array($posi, $data[0], $data[1], $data[2], $data[3]);
+                                                            array_push($dept_final_result, $arr_to_push);
+                                                        }
+
+                                                        $sort = array();
+
+                                                        foreach ((array) $dept_final_result as $key => $value) {
+
+                                                            $sort[$key] = $value[0] + 0.1 * $value[3];
+                                                        }
+
+                                                        array_multisort($sort, SORT_DESC, $dept_final_result);
+
+                                                        $index = 0;
+                                                        $dept_count = sizeof($dept_final_result);
+                                                        $final_result = array();
+
+                                                        if ($dept_count >= 10) {
+
+                                                            foreach ($dept_final_result as $dept) {
+
+                                                                if ($dept[4] < 0.0) {
+                                                                    if ($index == $dept_count - 7) break;
+                                                                    $index++;
+                                                                    continue;
+                                                                } elseif ($dept[4] >= 0.0) break;
+                                                            }
+
+                                                            if ($index < 3) {
+                                                                for ($i = 0; $i < 10; $i++) {
+
+                                                                    $arr_to_push = $dept_final_result[$i];
+                                                                    array_push($final_result, $arr_to_push);
+                                                                }
+                                                            } else {
+                                                                for ($i = $index - 3; $i < $index + 7; $i++) {
+                                                                    $arr_to_push = $dept_final_result[$i];
+                                                                    array_push($final_result, $arr_to_push);
+                                                                }
+                                                            }
+                                                        } else {
+
+                                                            foreach ($dept_final_result as $dept) {
+                                                                $arr_to_push = $dept;
+                                                                array_push($final_result, $arr_to_push);
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <table class="table mb-0 table-hover caption-top">
+                                                            <caption>현제 학생의 성적을 고려하여 가작 적합한 학과를 최대 10개 보여드립니다.</caption>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">합격예측</th>
+                                                                    <th scope="col">전형</th>
+                                                                    <th scope="col">모집단위</th>
+                                                                    <th scope="col">합격자 평균</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php
+                                                                foreach ($final_result as $dept) {
+                                                                    switch ($dept[0]) {
+                                                                        case 0:
+                                                                            echo "<tr class='table-primary'>";
+                                                                            echo "<td>" . "안정" . "</td>";
+                                                                            break;
+                                                                        case 1:
+                                                                            echo "<tr class='table-success'>";
+                                                                            echo "<td>" . "가능" . "</td>";
+                                                                            break;
+                                                                        case 2:
+                                                                            echo "<tr class='table-warning'>";
+                                                                            echo "<td>" . "불안" . "</td>";
+                                                                            break;
+                                                                        case 3:
+                                                                            echo "<tr class='table-danger'>";
+                                                                            echo "<td>" . "위험" . "</td>";
+                                                                            break;
+                                                                    }
+
+                                                                    echo "<td>" . $dept[1] . "</td>";
+                                                                    echo "<td>" . $dept[2] . "</td>";
+                                                                    echo "<td>" . $dept[3] . "%" . "</td>";
+                                                                    echo "</tr>";
+                                                                }
+                                                                ?>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <?php
+                $modal_count++;
+            }
+        }
+        ?>
     </main>
 
 
     <?php require "./module/footer.php" ?>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 
     <script>
         function getCookie(name) {

@@ -131,7 +131,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        최소 하나 이상의 내신 등급을 입력해 주세요. (성적이 아직 없거나 생략하고 싶은 경우 0을 입력합니다.)
+                        최소 하나 이상의 내신 등급을 입력해 주세요. 성적이 아직 없거나 생략하고 싶은 경우 0을 입력하세요.<br>
+                        내신 등급에 모두 0을 입력하면 정시 성적만 입력하여 조회 가능합니다.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
