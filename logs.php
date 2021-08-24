@@ -271,9 +271,17 @@
                                                             <td><?php echo $log['location']; ?></td>
                                                             <td><?php echo $log['gender']; ?></td>
                                                             <td><?php echo $log['type']; ?></td>
-                                                            <td><?php echo $log['avg']; ?></td>
+                                                            <td>
+                                                                <?php
+                                                                if ($log['avg'] != 0) {
+                                                                    echo $log['avg'];
+                                                                } else {
+                                                                    echo "입력하지 않음";
+                                                                }
+                                                                ?>
+                                                            </td>
                                                             <td><?php
-                                                                if ($log['percentile'] == -1) {
+                                                                if ($log['percentile'] == -1 || $log['percentile'] == 0) {
                                                                     echo "미응시";
                                                                 } else {
                                                                     echo $log['percentile'] . "%";
@@ -805,10 +813,18 @@
                                                                 }
                                                                 ?>
                                                             </td>
-                                                            <td><?php echo $log['avg']; ?></td>
                                                             <td>
                                                                 <?php
-                                                                if ($log['percentile'] == -1) {
+                                                                if ($log['avg'] != 0) {
+                                                                    echo $log['avg'];
+                                                                } else {
+                                                                    echo "입력하지 않음";
+                                                                }
+                                                                ?>
+                                                            </td>
+                                                            <td>
+                                                                <?php
+                                                                if ($log['percentile'] == -1 || $log['percentile'] == 0) {
                                                                     echo "미응시";
                                                                 } else {
                                                                     echo $log['percentile'] . "%";
