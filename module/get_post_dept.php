@@ -55,6 +55,8 @@ if ($type == 1) {
     $type = "자연";
 }
 
+require "./module/dept_load.php";
+
 $simple_avg = 0;
 $count = 0;
 
@@ -64,82 +66,84 @@ foreach ($sushi as $grade) {
     $simple_avg += $grade;
 }
 
-$simple_avg /= $count;
+if ($simple_avg != 0) {
+    $simple_avg /= $count;
 
-require "./module/avg_functions.php";
+    require "./module/avg_functions.php";
 
-$white = white($sushi);
-$yellow = yellow($sushi);
-$blue = blue($sushi);
-$purple = purple($sushi);
+    $white = white($sushi);
+    $yellow = yellow($sushi);
+    $blue = blue($sushi);
+    $purple = purple($sushi);
 
-require "./module/dept_load.php";
 
-$sushi_result_list = array();
 
-foreach ($dept_list as $dept) {
+    $sushi_result_list = array();
 
-    $gap = 0;
+    foreach ($dept_list as $dept) {
 
-    if ($gender == "남") {
-        if (strpos($dept['name'], "여대") !== false) {
-            continue;
+        $gap = 0;
+
+        if ($gender == "남") {
+            if (strpos($dept['name'], "여대") !== false) {
+                continue;
+            }
         }
+
+        switch ($dept['method']) {
+            case 0:
+                $gap = round($dept['avg'] - $white, 3);
+                $this_time_myavg = round($white, 3);
+                break;
+            case 1:
+                $gap = round($dept['avg'] - $yellow, 3);
+                $this_time_myavg = round($yellow, 3);
+                break;
+            case 2:
+                $gap = round($dept['avg'] - $blue, 3);
+                $this_time_myavg = round($blue, 3);
+                break;
+            case 3:
+                $gap = round($dept['avg'] - $purple, 3);
+                $this_time_myavg = round($purple, 3);
+                break;
+            default:
+                $gap = -1;
+                break;
+        }
+
+        $this_time_result = array($dept['code'], $dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap, $dept['tag']);
+        array_push($sushi_result_list, $this_time_result);
     }
 
-    switch ($dept['method']) {
-        case 0:
-            $gap = round($dept['avg'] - $white, 3);
-            $this_time_myavg = round($white, 3);
-            break;
-        case 1:
-            $gap = round($dept['avg'] - $yellow, 3);
-            $this_time_myavg = round($yellow, 3);
-            break;
-        case 2:
-            $gap = round($dept['avg'] - $blue, 3);
-            $this_time_myavg = round($blue, 3);
-            break;
-        case 3:
-            $gap = round($dept['avg'] - $purple, 3);
-            $this_time_myavg = round($purple, 3);
-            break;
-        default:
-            $gap = -1;
-            break;
+    foreach ((array) $sushi_result_list as $key => $value) {
+
+        $sort[$key] = $value[8];
     }
 
-    $this_time_result = array($dept['code'], $dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap, $dept['tag']);
-    array_push($sushi_result_list, $this_time_result);
+    array_multisort($sort, SORT_ASC, $sushi_result_list);
+
+    $sushi_final_result = array();
+
+    foreach ($sushi_result_list as $data) {
+        if ($data[7] < $data[5]) $posi = 0;
+        elseif ($data[8] > 0) $posi = 1;
+        elseif ($data[7] > $data[4]) $posi = 3;
+        else $posi = 2;
+
+        $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9]);
+        array_push($sushi_final_result, $arr_to_push);
+    }
+
+    $sort = array();
+
+    foreach ((array) $sushi_final_result as $key => $value) {
+
+        $sort[$key] = $value[0] - 0.1 * $value[6];
+    }
+
+    array_multisort($sort, SORT_DESC, $sushi_final_result);
 }
-
-foreach ((array) $sushi_result_list as $key => $value) {
-
-    $sort[$key] = $value[8];
-}
-
-array_multisort($sort, SORT_ASC, $sushi_result_list);
-
-$sushi_final_result = array();
-
-foreach ($sushi_result_list as $data) {
-    if ($data[7] < $data[5]) $posi = 0;
-    elseif ($data[8] > 0) $posi = 1;
-    elseif ($data[7] > $data[4]) $posi = 3;
-    else $posi = 2;
-
-    $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9]);
-    array_push($sushi_final_result, $arr_to_push);
-}
-
-$sort = array();
-
-foreach ((array) $sushi_final_result as $key => $value) {
-
-    $sort[$key] = $value[0] - 0.1 * $value[6];
-}
-
-array_multisort($sort, SORT_DESC, $sushi_final_result);
 
 if ($year != -1) {
     require "./module/jungshi_load.php";

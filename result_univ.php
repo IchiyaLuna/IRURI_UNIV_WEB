@@ -149,7 +149,6 @@ if (isset($_COOKIE['authid'])) {
                                                 </li>
                                             </ul>
                                             <div class="tab-content" id="myTabContent">
-
                                                 <?php
                                                 if ($simple_avg != 0) {
                                                 ?>
@@ -217,7 +216,7 @@ if (isset($_COOKIE['authid'])) {
                                                 <?php
                                                 }
                                                 ?>
-                                                <div class="tab-pane fade <?php if ($simple_avg == 0) echo " show active"; ?> id=" jungshi" role="tabpanel">
+                                                <div class="tab-pane fade <?php if ($simple_avg == 0) echo 'show active'; ?>" id="jungshi" role="tabpanel">
                                                     <?php
                                                     if ($percentile != -1) {
                                                     ?>
