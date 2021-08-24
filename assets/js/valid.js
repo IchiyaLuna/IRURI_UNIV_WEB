@@ -66,46 +66,6 @@ function test_univ_input() {
     const second = document.getElementById("univ-second").value;
     const third = document.getElementById("univ-third").value;
 
-    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
-    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
-    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
-    var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
-
-    var univresultpage = document.getElementById('univ-input-form');
-
-    if (first === "" || second === "" || third === "") {
-        noinput_modal.show();
-        return false;
-    }
-
-    const sushi_sum = first + second + third;
-
-    if (sushi_sum == 0) {
-        noinput_modal.show();
-        return false;
-    }
-
-    if (parseFloat(first) != 0) {
-        if (parseFloat(first) < 1 || parseFloat(first) > 9) {
-            sushierror_modal.show();
-            return false;
-        }
-    }
-
-    if (parseFloat(second) != 0) {
-        if (parseFloat(second) < 1 || parseFloat(second) > 9) {
-            sushierror_modal.show();
-            return false;
-        }
-    }
-
-    if (parseFloat(third) != 0) {
-        if (parseFloat(third) < 1 || parseFloat(third) > 9) {
-            sushierror_modal.show();
-            return false;
-        }
-    }
-
     var year = document.getElementById("univ-year");
     year = year.options[year.selectedIndex].value;
     var month = document.getElementById("univ-month");
@@ -131,6 +91,48 @@ function test_univ_input() {
     const selectA_score = document.getElementById("univ-selectA-score").value;
     const selectB_score = document.getElementById("univ-selectB-score").value;
     const foreign_score = document.getElementById("univ-foreignlang-score").value;
+
+    var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
+    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
+    var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
+    var sushierror_modal = new bootstrap.Modal(document.getElementById('sushi-error'));
+
+    var univresultpage = document.getElementById('univ-input-form');
+
+    if (first === "" || second === "" || third === "") {
+        noinput_modal.show();
+        return false;
+    }
+
+    const sushi_sum = first + second + third;
+
+    if (sushi_sum == 0) {
+        if (year == "-1" && month == "-1") {
+            noinput_modal.show();
+        }
+        return false;
+    }
+
+    if (parseFloat(first) != 0) {
+        if (parseFloat(first) < 1 || parseFloat(first) > 9) {
+            sushierror_modal.show();
+            return false;
+        }
+    }
+
+    if (parseFloat(second) != 0) {
+        if (parseFloat(second) < 1 || parseFloat(second) > 9) {
+            sushierror_modal.show();
+            return false;
+        }
+    }
+
+    if (parseFloat(third) != 0) {
+        if (parseFloat(third) < 1 || parseFloat(third) > 9) {
+            sushierror_modal.show();
+            return false;
+        }
+    }
 
     if (year != "-1" && month != "-1") {
         if (korean_type != "na" && korean_score === "") {

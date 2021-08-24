@@ -100,19 +100,45 @@ if (isset($_COOKIE['authid'])) {
                                     <tr>
                                         <td><?php echo $gender; ?></td>
                                         <td><?php echo $type; ?></td>
-                                        <td><?php echo round($simple_avg, 2); ?></td>
+                                        <td>
+                                            <?php
+                                            if ($simple_avg != 0) {
+                                                echo round($simple_avg, 2);
+                                            } else {
+                                                echo "입력하지 않음";
+                                            }
+                                            ?>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="4">
                                             <ul class="nav nav-tabs nav-fill" id="univ-result-tab" role="tablist">
                                                 <li class="nav-item" role="presentation">
-                                                    <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시 예측 보기</button>
+                                                    <?php
+                                                    if ($simple_avg != 0) {
+                                                    ?>
+                                                        <button class="nav-link active" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시 예측 보기</button>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <button class="nav-link disabled" id="sushi-tab" data-bs-toggle="tab" data-bs-target="#sushi" type="button" role="tab">수시 입력하지 않음</button>
+                                                    <?php
+                                                    }
+                                                    ?>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
                                                     <?php
                                                     if ($percentile != -1) {
+                                                        if ($simple_avg != 0) {
                                                     ?>
-                                                        <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
+                                                            <button class="nav-link" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <button class="nav-link active" id="jungshi-tab" data-bs-toggle="tab" data-bs-target="#jungshi" type="button" role="tab">정시 예측 보기</button>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                     <?php
                                                     } else {
                                                     ?>
@@ -124,60 +150,69 @@ if (isset($_COOKIE['authid'])) {
                                             </ul>
                                             <div class="tab-content" id="myTabContent">
                                                 <div class="tab-pane fade show active" id="sushi" role="tabpanel">
-                                                    <table class="table mb-0 table-hover caption-top">
-                                                        <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">합격예측</th>
-                                                                <th scope="col">대학</th>
-                                                                <th scope="col">합격자 평균
-                                                                    <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
-                                                                        <i class="fas fa-question-circle"></i>
-                                                                    </a>
-                                                                </th>
-                                                                <th scope="col">상세 정보</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php
-                                                            $modal_count = 0;
+                                                    <?php
+                                                    if ($simple_avg != 0) {
+                                                    ?>
+                                                        <table class="table mb-0 table-hover caption-top">
+                                                            <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">합격예측</th>
+                                                                    <th scope="col">대학</th>
+                                                                    <th scope="col">합격자 평균
+                                                                        <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
+                                                                            <i class="fas fa-question-circle"></i>
+                                                                        </a>
+                                                                    </th>
+                                                                    <th scope="col">상세 정보</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php
+                                                                $modal_count = 0;
 
-                                                            foreach ($sushi_final_result as $result) {
+                                                                foreach ($sushi_final_result as $result) {
 
-                                                                switch ($result[0]) {
-                                                                    case 0:
-                                                                        echo "<tr class='table-primary'>";
-                                                                        echo "<td>" . "안정" . "</td>";
-                                                                        break;
-                                                                    case 1:
-                                                                        echo "<tr class='table-success'>";
-                                                                        echo "<td>" . "가능" . "</td>";
-                                                                        break;
-                                                                    case 2:
-                                                                        echo "<tr class='table-warning'>";
-                                                                        echo "<td>" . "불안" . "</td>";
-                                                                        break;
-                                                                    case 3:
-                                                                        echo "<tr class='table-danger'>";
-                                                                        echo "<td>" . "위험" . "</td>";
-                                                                        break;
+                                                                    switch ($result[0]) {
+                                                                        case 0:
+                                                                            echo "<tr class='table-primary'>";
+                                                                            echo "<td>" . "안정" . "</td>";
+                                                                            break;
+                                                                        case 1:
+                                                                            echo "<tr class='table-success'>";
+                                                                            echo "<td>" . "가능" . "</td>";
+                                                                            break;
+                                                                        case 2:
+                                                                            echo "<tr class='table-warning'>";
+                                                                            echo "<td>" . "불안" . "</td>";
+                                                                            break;
+                                                                        case 3:
+                                                                            echo "<tr class='table-danger'>";
+                                                                            echo "<td>" . "위험" . "</td>";
+                                                                            break;
+                                                                    }
+                                                                    echo "<td>" . $result[1] . "</td>";
+                                                                    echo "<td>" . round($result[4], 2) . "</td>";
+                                                                ?>
+                                                                    <td>
+                                                                        <button type="button" class="btn btn-secondary btn-sm" onclick="openmodal(<?php echo $modal_count; ?>)">
+                                                                            상세
+                                                                        </button>
+                                                                    </td>
+                                                                <?php
+                                                                    echo "</tr>";
+                                                                    $modal_count++;
                                                                 }
-                                                                echo "<td>" . $result[1] . "</td>";
-                                                                echo "<td>" . round($result[4], 2) . "</td>";
-                                                            ?>
-                                                                <td>
-                                                                    <button type="button" class="btn btn-secondary btn-sm" onclick="openmodal(<?php echo $modal_count; ?>)">
-                                                                        상세
-                                                                    </button>
-                                                                </td>
-                                                            <?php
-                                                                echo "</tr>";
-                                                                $modal_count++;
-                                                            }
-                                                            ?>
-                                                        </tbody>
-                                                    </table>
-
+                                                                ?>
+                                                            </tbody>
+                                                        </table>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <p>입력하지 않아 결과를 표시하지 않습니다.</p>
+                                                    <?php
+                                                    }
+                                                    ?>
                                                 </div>
                                                 <div class="tab-pane fade" id="jungshi" role="tabpanel">
                                                     <?php
