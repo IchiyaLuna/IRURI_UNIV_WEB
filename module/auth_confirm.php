@@ -12,6 +12,7 @@ function genRandStr($length = 5)
 
 $date = date("Y-m-d", time());
 $uid = genRandStr();
+$grade = $_POST['grade'];
 $phone = $_POST['pnum'];
 
 $hostname = "db.iruri.gabia.io";
@@ -25,7 +26,7 @@ if (!$database) {
     die("데이터베이스 연결 실패 [ERROR] : " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO codes VALUES('{$date}', '{$uid}', '{$phone}', 1)";
+$sql = "INSERT INTO codes VALUES('{$date}', '{$uid}', '{$grade}', '{$phone}', 1)";
 
 mysqli_query($database, $sql);
 

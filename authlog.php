@@ -234,6 +234,7 @@
                                             <tr role="row">
                                                 <th class="sorting sorting_desc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">날짜</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">고유 아이디</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">학년</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">인증 전화번호</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1">접근 횟수</th>
                                             </tr>
@@ -245,6 +246,7 @@
                                                 <tr>
                                                     <td><?php echo $authlog['time']; ?></td>
                                                     <td><?php echo $authlog['UID']; ?></td>
+                                                    <td><?php echo $authlog['grade'] . "학년"; ?></td>
                                                     <td><?php echo $authlog['phone']; ?></td>
                                                     <td><?php echo $authlog['access']; ?></td>
                                                 </tr>

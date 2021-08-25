@@ -344,6 +344,14 @@ if (isset($_COOKIE['authid'])) {
                         <h5>상세 정보를 확인하려면 인증이 필요합니다.</h5>
                         <form name="phonenumber" id="phonenumber">
                             <div class="input-group mb-3">
+                                <label class="input-group-text" for="gradesel">학년</label>
+                                <select class="form-select" id="gradesel" name="gradesel">
+                                    <option value="1" selected>1학년</option>
+                                    <option value="2">2학년</option>
+                                    <option value="3">3학년</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
                                 <span class="input-group-text" id="pnumlabel">핸드폰 번호</span>
                                 <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="숫자만 입력해주세요">
                             </div>
@@ -935,6 +943,7 @@ if (isset($_COOKIE['authid'])) {
 
         function codeauth() {
             var code = $("#authcode").val();
+            var gradesel = $("#gradesel option:selected").val();
 
             if (code == authcode) {
                 alert("인증이 완료되었습니다.");
@@ -942,7 +951,8 @@ if (isset($_COOKIE['authid'])) {
                     url: "./module/auth_confirm.php",
                     type: "POST",
                     data: {
-                        pnum: pnumber
+                        pnum: pnumber,
+                        grade: gradesel
                     }
                 }).done(function(data) {
                     if (data != 1) {
