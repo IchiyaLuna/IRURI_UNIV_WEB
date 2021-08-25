@@ -346,7 +346,8 @@ if (isset($_COOKIE['authid'])) {
                             <div class="input-group mb-3">
                                 <label class="input-group-text" for="gradesel">학년</label>
                                 <select class="form-select" id="gradesel" name="gradesel">
-                                    <option value="1" selected>1학년</option>
+                                    <option value="-1" selected>학년을 선택해주세요</option>
+                                    <option value="1">1학년</option>
                                     <option value="2">2학년</option>
                                     <option value="3">3학년</option>
                                 </select>
@@ -916,6 +917,13 @@ if (isset($_COOKIE['authid'])) {
         });
 
         function smssend() {
+            var gradesel = $("#gradesel option:selected").val();
+
+            if (gradesel == -1) {
+                alert("학생의 학년을 반드시 선택해 주세요.");
+                return false;
+            }
+
             pnumber = $("#pnumber").val();
 
             $.ajax({
@@ -939,6 +947,8 @@ if (isset($_COOKIE['authid'])) {
                     $("#checkbtn").removeAttr('disabled');
                 }
             });
+
+            return false;
         }
 
         function codeauth() {
@@ -966,6 +976,8 @@ if (isset($_COOKIE['authid'])) {
                 $("#pnumber").removeAttr('disabled');
                 $("#sendbtn").removeAttr('disabled');
             }
+
+            return false;
         }
 
         var authcode;

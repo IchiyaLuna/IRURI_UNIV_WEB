@@ -319,10 +319,11 @@
                                 <input type="number" class="form-control form-control-sm text-center" name="dept-third" id="dept-third" placeholder="1.0" min="1" max="9">
                             </div>
                         </div>
-
+                        <!-- DEL WANTED
                         <div class="col-xl-3 calc-btn d-grid gap-2">
                             <a class="btn btn-primary justify-content-md-end" href="./calc.php" target="_blank" role="button">등급 계산기 바로가기</a>
                         </div>
+                        -->
                     </div>
                 </div>
                 <h3 class="pb-3 border-bottom">수능(모의고사)</h3>
