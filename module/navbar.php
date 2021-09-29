@@ -25,18 +25,16 @@
                     ?>
                     합격 예측기</a>
                 </li>
-                <!-- DEL WANTED 
                 <li class="nav-item">
                     <?php
-                    //if ($cur_page == "calc") {
-                    //    echo "<a class='nav-link active' href='./calc.php'>";
-                    //} else {
-                    //    echo "<a class='nav-link' href='./calc.php'>";
-                    //}
+                    if ($cur_page == "calc") {
+                        echo "<a class='nav-link active' href='./calc.php'>";
+                    } else {
+                        echo "<a class='nav-link' href='./calc.php'>";
+                    }
                     ?>
                     성적 계산기</a>
                 </li>
-                -->
                 <li class="nav-item dropdown">
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">기타</a>
