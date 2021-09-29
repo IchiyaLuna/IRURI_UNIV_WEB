@@ -164,7 +164,11 @@ if (isset($_COOKIE['authid'])) {
                                                                             <i class="fas fa-question-circle"></i>
                                                                         </a>
                                                                     </th>
-                                                                    <th scope="col">상세 정보</th>
+                                                                    <th scope="col">상세 정보
+                                                                        <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="상세 정보를 확인하시면 입력한 성적을 바탕으로 해당 학교에서 학생에게 적합한 학과를 최대 10가지 보여드립니다.">
+                                                                            <i class="fas fa-question-circle"></i>
+                                                                        </a>
+                                                                    </th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -226,8 +230,16 @@ if (isset($_COOKIE['authid'])) {
                                                                 <tr>
                                                                     <th scope="col">합격예측</th>
                                                                     <th scope="col">대학</th>
-                                                                    <th scope="col">합격자 평균</th>
-                                                                    <th scope="col">상세 정보</th>
+                                                                    <th scope="col">합격자 평균
+                                                                        <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="모든 학과를 고려한 평균으로, 특정 학과에 의해 크게 달라질 수 있으니 상세 정보를 같이 참고해주세요.">
+                                                                            <i class="fas fa-question-circle"></i>
+                                                                        </a>
+                                                                    </th>
+                                                                    <th scope="col">상세 정보
+                                                                        <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="" data-bs-original-title="상세 정보를 확인하시면 입력한 성적을 바탕으로 해당 학교에서 학생에게 적합한 학과를 최대 10가지 보여드립니다.">
+                                                                            <i class="fas fa-question-circle"></i>
+                                                                        </a>
+                                                                    </th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -594,8 +606,8 @@ if (isset($_COOKIE['authid'])) {
 
                                                                     echo "<td>" . $dept[1] . "</td>";
                                                                     echo "<td>" . $dept[2] . "</td>";
-                                                                    echo "<td>" . $dept[3] . "</td>";
-                                                                    echo "<td>" . $dept[5] . "</td>";
+                                                                    echo "<td>" . round($dept[3], 2) . "</td>";
+                                                                    echo "<td>" . round($dept[5], 2) . "</td>";
                                                                     echo "</tr>";
                                                                 }
                                                                 ?>
