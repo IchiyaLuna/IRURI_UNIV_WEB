@@ -48,7 +48,7 @@
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
-                                        과목명
+                                        과목 분류
                                     </div>
                                     <div class="col text-center">
                                         석차
@@ -69,7 +69,14 @@
 
                                 <div class="subject-input row g-1 py-1 align-items-center">
                                     <div class="col-3">
-                                        <input type="text" class="form-control form-control-sm text-center" name="subject[]" placeholder="과목명" required>
+                                        <select class="form-select" id="subject-select" name="subject-select">
+                                            <option value="na" selected>미선택</option>
+                                            <option value="ko">국어</option>
+                                            <option value="ma">수학</option>
+                                            <option value="en">영어</option>
+                                            <option value="so">사회</option>
+                                            <option value="sc">과학</option>
+                                        </select>
                                     </div>
                                     <div class="col">
                                         <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
