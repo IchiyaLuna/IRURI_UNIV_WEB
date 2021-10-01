@@ -48,6 +48,9 @@
                             <div class="container-floating">
                                 <div class="row gx-1">
                                     <div class="col-3 text-center">
+                                        학년
+                                    </div>
+                                    <div class="col-3 text-center">
                                         과목 분류
                                     </div>
                                     <div class="col text-center">
@@ -68,7 +71,14 @@
                                 </div>
 
                                 <div class="subject-input row g-1 py-1 align-items-center">
-                                    <div class="col-3">
+                                    <div class="col">
+                                        <select class="form-select" id="grade-select" name="grade-select">
+                                            <option value="1" selected>1학년</option>
+                                            <option value="2">2학년</option>
+                                            <option value="3">3학년</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
                                         <select class="form-select" id="subject-select" name="subject-select">
                                             <option value="na" selected>미선택</option>
                                             <option value="ko">국어</option>
