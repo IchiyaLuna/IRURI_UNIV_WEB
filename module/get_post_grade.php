@@ -1,14 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $subject = $_POST['subject'];
+    $subject = $_POST['grade-select'];
+    $subject = $_POST['subject-select'];
     $rank = $_POST['rank'];
     $samerank = $_POST['samerank'];
     $students = $_POST['students'];
     $time = $_POST['time'];
 }
 
-$subjects = array();
+$f_grade = array();
+$isFGE = false;
+$f_tTime = 0;
+
+$s_grade = array();
+$isSGE = false;
+$s_tTime = 0;
+
+$t_grade = array();
+$isTGE = false;
+$t_tTime = 0;
+
 $modified_grade = 0;
 $total_time = 0;
 
