@@ -47,10 +47,10 @@
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
                             <div class="container-floating">
                                 <div class="row gx-1">
-                                    <div class="col-3 text-center">
+                                    <div class="col text-center">
                                         학년
                                     </div>
-                                    <div class="col-3 text-center">
+                                    <div class="col text-center">
                                         과목 분류
                                     </div>
                                     <div class="col text-center">
