@@ -48,13 +48,27 @@
 
                             <table class="table">
                                 <thead>
-                                    <th scope="col text-center">학년</th>
-                                    <th scope="col text-center">과목 분류</th>
-                                    <th scope="col text-center">석차</th>
-                                    <th scope="col text-center">동석차</th>
-                                    <th scope="col text-center">이수자</th>
-                                    <th scope="col text-center">이수단위</th>
-                                    <th scope="col text-center">추가·삭제</th>
+                                    <th scope="col">
+                                        <p class="text-center">학년</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">과목 분류</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">석차</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">동석차</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">이수자</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">이수단위</p>
+                                    </th>
+                                    <th scope="col">
+                                        <p class="text-center">추가·삭제</p>
+                                    </th>
                                 </thead>
                                 <tbody>
                                     <tr>
