@@ -111,9 +111,11 @@
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-success btn-sm btn-add">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
