@@ -74,7 +74,7 @@
                                     <tr>
                                         <td class="align-middle" rowspan="5">1학년</td>
                                         <td>
-                                            <p class="text-center">국어</p>
+                                            <div class="text-center">국어</div>
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
@@ -98,7 +98,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="text-center">수학</p>
+                                            <div class="text-center">수학</div>
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
@@ -122,7 +122,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="text-center">영어</p>
+                                            <div class="text-center">영어</div>
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
@@ -146,7 +146,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="text-center">사회</p>
+                                            <div class="text-center">사회</div>
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
@@ -170,7 +170,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="text-center">과학</p>
+                                            <div class="text-center">과학</div>
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
