@@ -72,7 +72,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td rowspan="5">1학년</td>
+                                        <td class="align-middle" rowspan="5">1학년</td>
                                         <td>
                                             <p class="text-center">국어</p>
                                         </td>
