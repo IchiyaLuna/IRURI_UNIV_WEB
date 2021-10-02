@@ -48,13 +48,13 @@
 
                             <table class="table">
                                 <thead>
-                                    <th scope="col">학년</th>
-                                    <th scope="col">과목 분류</th>
-                                    <th scope="col">석차</th>
-                                    <th scope="col">동석차</th>
-                                    <th scope="col">이수자</th>
-                                    <th scope="col">이수단위</th>
-                                    <th scope="col">추가·삭제</th>
+                                    <th scope="col text-center">학년</th>
+                                    <th scope="col text-center">과목 분류</th>
+                                    <th scope="col text-center">석차</th>
+                                    <th scope="col text-center">동석차</th>
+                                    <th scope="col text-center">이수자</th>
+                                    <th scope="col text-center">이수단위</th>
+                                    <th scope="col text-center">추가·삭제</th>
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -170,70 +170,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="container-floating">
-                                <div class="row gx-1">
-                                    <div class="col text-center">
-                                        학년
-                                    </div>
-                                    <div class="col text-center">
-                                        과목 분류
-                                    </div>
-                                    <div class="col text-center">
-                                        석차
-                                    </div>
-                                    <div class="col text-center">
-                                        동석차
-                                    </div>
-                                    <div class="col text-center">
-                                        이수자
-                                    </div>
-                                    <div class="col text-center">
-                                        단위
-                                    </div>
-                                    <div class="col-1 text-center">
-
-                                    </div>
-                                </div>
-
-                                <div class="subject-input row g-1 py-1 align-items-center">
-                                    <div class="col">
-                                        <select class="form-select" id="grade-select" name="grade-select">
-                                            <option value="1" selected>1학년</option>
-                                            <option value="2">2학년</option>
-                                            <option value="3">3학년</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <select class="form-select" id="subject-select" name="subject-select">
-                                            <option value="na" selected>미선택</option>
-                                            <option value="ko">국어</option>
-                                            <option value="ma">수학</option>
-                                            <option value="en">영어</option>
-                                            <option value="so">사회</option>
-                                            <option value="sc">과학</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col-1 text-center">
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-success btn-sm btn-add">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </form>
                     </div>
 
