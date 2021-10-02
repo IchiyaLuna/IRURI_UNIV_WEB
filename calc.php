@@ -77,16 +77,16 @@
                                             <div class="text-center">국어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -101,16 +101,16 @@
                                             <div class="text-center">수학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -125,16 +125,16 @@
                                             <div class="text-center">영어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -149,16 +149,16 @@
                                             <div class="text-center">사회</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -173,16 +173,16 @@
                                             <div class="text-center">과학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -199,16 +199,16 @@
                                             <div class="text-center">국어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -223,16 +223,16 @@
                                             <div class="text-center">수학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -247,16 +247,16 @@
                                             <div class="text-center">영어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -271,16 +271,16 @@
                                             <div class="text-center">사회</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -295,16 +295,16 @@
                                             <div class="text-center">과학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -321,16 +321,16 @@
                                             <div class="text-center">국어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -345,16 +345,16 @@
                                             <div class="text-center">수학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -369,16 +369,16 @@
                                             <div class="text-center">영어</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -393,16 +393,16 @@
                                             <div class="text-center">사회</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -417,16 +417,16 @@
                                             <div class="text-center">과학</div>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
                                         </td>
                                         <td>
                                             <div class="d-grid">
