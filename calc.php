@@ -47,7 +47,7 @@
                     <div class="dynamic-input table-responsive mb-3">
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
                             <table class="table table-light calc-table">
-                                <thead>
+                                <thead class="thead-wb">
                                     <th scope="col">
                                         <div class="text-center">학년</div>
                                     </th>

@@ -1,3 +1,7 @@
 .calc-table {
     word-break: keep-all;
 }
+
+.thead-wb {
+    word-break: break-all;
+}
