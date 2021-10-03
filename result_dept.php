@@ -64,492 +64,116 @@
                                         <td>
                                             <?php
                                             switch ($deptwant) {
-                                                case 0:
-                                                    echo "AI";
-                                                    break;
-
                                                 case 1:
-                                                    echo "영어번역";
-                                                    break;
-
-                                                case 2:
-                                                    echo "영어";
-                                                    break;
-
-                                                case 3:
-                                                    echo "E-비즈니스";
-                                                    break;
-
-                                                case 4:
-                                                    echo "글로벌 비즈니스";
-                                                    break;
-
-                                                case 5:
-                                                    echo "경영";
-                                                    break;
-
-                                                case 6:
-                                                    echo "IT";
-                                                    break;
-
-                                                case 7:
-                                                    echo "문화";
-                                                    break;
-
-                                                case 8:
-                                                    echo "언어";
-                                                    break;
-
-                                                case 9:
-                                                    echo "시스템";
-                                                    break;
-
-                                                case 10:
-                                                    echo "소프트웨어";
-                                                    break;
-
-                                                case 11:
-                                                    echo "가족·아동";
-                                                    break;
-
-                                                case 12:
-                                                    echo "복지";
-                                                    break;
-
-                                                case 13:
-                                                    echo "아랍어";
-                                                    break;
-
-                                                case 16:
-                                                    echo "금융 경제";
-                                                    break;
-
-                                                case 17:
-                                                    echo "경찰행정";
-                                                    break;
-
-                                                case 22:
-                                                    echo "행정";
-                                                    break;
-
-                                                case 23:
-                                                    echo "법";
-                                                    break;
-
-                                                case 28:
-                                                    echo "관광";
-                                                    break;
-
-                                                case 29:
-                                                    echo "미디어";
-                                                    break;
-
-                                                case 31:
-                                                    echo "교통";
-                                                    break;
-
-                                                case 34:
-                                                    echo "국문";
-                                                    break;
-
-                                                case 36:
-                                                    echo "그리스·불가리아";
-                                                    break;
-
-                                                case 37:
-                                                    echo "스포츠 산업";
-                                                    break;
-
-                                                case 39:
-                                                    echo "글로벌리더";
-                                                    break;
-
-                                                case 45:
-                                                    echo "네덜란드";
-                                                    break;
-
-                                                case 46:
-                                                    echo "러시아";
-                                                    break;
-
-                                                case 52:
-                                                    echo "독일어";
-                                                    break;
-
-                                                case 54:
-                                                    echo "소방행정";
-                                                    break;
-
-                                                case 55:
-                                                    echo "동양어";
-                                                    break;
-
-                                                case 57:
-                                                    echo "외식경영";
-                                                    break;
-
-                                                case 58:
-                                                    echo "루마니아";
-                                                    break;
-
-                                                case 63:
-                                                    echo "무역";
-                                                    break;
-
-                                                case 64:
-                                                    echo "문예창작";
-                                                    break;
-
-                                                case 65:
-                                                    echo "문헌정보";
-                                                    break;
-
-                                                case 79:
-                                                    echo "북한";
-                                                    break;
-
-                                                case 80:
-                                                    echo "프랑스";
-                                                    break;
-
-                                                case 81:
-                                                    echo "브라질";
-                                                    break;
-
-                                                case 92:
-                                                    echo "소비자";
-                                                    break;
-
-                                                case 98:
-                                                    echo "언론 신문";
-                                                    break;
-
-                                                case 104:
-                                                    echo "유럽";
-                                                    break;
-
-                                                case 107:
-                                                    echo "이탈리아";
-                                                    break;
-
-                                                case 108:
-                                                    echo "인도";
-                                                    break;
-
-                                                case 113:
-                                                    echo "정치외교정책";
-                                                    break;
-
-                                                case 114:
-                                                    echo "중국";
-                                                    break;
-
-                                                case 115:
-                                                    echo "중동";
-                                                    break;
-
-                                                case 116:
-                                                    echo "아시아";
-                                                    break;
-
-                                                case 123:
-                                                    echo "태국";
-                                                    break;
-
-                                                case 124:
-                                                    echo "터키·아제르바이잔";
-                                                    break;
-
-                                                case 125:
-                                                    echo "페르시아·이란";
-                                                    break;
-
-                                                case 126:
-                                                    echo "포르투갈·폴란드";
-                                                    break;
-
-                                                case 127:
-                                                    echo "한문";
-                                                    break;
-
-                                                case 60:
-                                                    echo "말레이·인도네시아";
-                                                    break;
-
-                                                case 62:
-                                                    echo "몽골";
-                                                    break;
-
-                                                case 75:
-                                                    echo "베트남";
-                                                    break;
-
-                                                case 87:
-                                                    echo "스페인";
-                                                    break;
-
-                                                case 90:
-                                                    echo "세르비아·크로아티아";
-                                                    break;
-
-                                                case 97:
-                                                    echo "스칸다나비아";
-                                                    break;
-
-                                                case 100:
-                                                    echo "아프리카";
-                                                    break;
-
-                                                case 102:
-                                                    echo "우크라이나";
-                                                    break;
-
-                                                case 111:
-                                                    echo "일본";
-                                                    break;
-
-                                                case 120:
-                                                    echo "체코·슬로바키아";
-                                                    break;
-
-                                                case 129:
-                                                    echo "헝가리";
-                                                    break;
-
-                                                case 84:
-                                                    echo "상담·심리";
-                                                    break;
-
-                                                case 14:
                                                     echo "간호";
                                                     break;
-
-                                                case 38:
-                                                    echo "의예";
+                                                case 2:
+                                                    echo "건축";
                                                     break;
-
-                                                case 67:
-                                                    echo "물리치료·재활";
+                                                case 3:
+                                                    echo "경영";
                                                     break;
-
-                                                case 74:
-                                                    echo "방사선";
+                                                case 4:
+                                                    echo "경제";
                                                     break;
-
-                                                case 89:
-                                                    echo "응급구조";
-                                                    break;
-
-                                                case 121:
-                                                    echo "수의예·치의예·한의예";
-                                                    break;
-
-                                                case 122:
-                                                    echo "치위생";
-                                                    break;
-
-                                                case 128:
-                                                    echo "약";
-                                                    break;
-
-                                                case 27:
+                                                case 5:
                                                     echo "교육";
                                                     break;
-
-                                                case 82:
-                                                    echo "통계";
+                                                case 6:
+                                                    echo "교통/운송";
                                                     break;
-
-                                                case 93:
-                                                    echo "수학";
-                                                    break;
-
-                                                case 24:
-                                                    echo "화학";
-                                                    break;
-
-                                                case 26:
-                                                    echo "과학";
-                                                    break;
-
-                                                case 30:
-                                                    echo "광기술";
-                                                    break;
-
-                                                case 48:
-                                                    echo "뇌과학";
-                                                    break;
-
-                                                case 49:
-                                                    echo "대기과학";
-                                                    break;
-
-                                                case 53:
-                                                    echo "생명과학";
-                                                    break;
-
-                                                case 66:
-                                                    echo "물리학";
-                                                    break;
-
-                                                case 68:
-                                                    echo "미생물";
-                                                    break;
-
-                                                case 70:
-                                                    echo "바이오";
-                                                    break;
-
-                                                case 118:
-                                                    echo "지질학";
-                                                    break;
-
-                                                case 50:
-                                                    echo "데이터·빅데이터";
-                                                    break;
-
-                                                case 94:
-                                                    echo "보안";
-                                                    break;
-
-                                                case 41:
-                                                    echo "금속·접합";
-                                                    break;
-
-                                                case 42:
-                                                    echo "기계공";
-                                                    break;
-
-                                                case 44:
-                                                    echo "에너지";
-                                                    break;
-
-                                                case 58:
-                                                    echo "로봇";
-                                                    break;
-
-                                                case 71:
-                                                    echo "반도체";
-                                                    break;
-
-                                                case 106:
-                                                    echo "전기·전자";
-                                                    break;
-
-                                                case 112:
-                                                    echo "정보통신";
-                                                    break;
-
-                                                case 96:
-                                                    echo "항공우주";
-                                                    break;
-
-                                                case 19:
-                                                    echo "나노·소재";
-                                                    break;
-
-                                                case 95:
-                                                    echo "자동차";
-                                                    break;
-
-                                                case 15:
-                                                    echo "건축·건설";
-                                                    break;
-
-                                                case 25:
-                                                    echo "공간정보";
-                                                    break;
-
-                                                case 31:
-                                                    echo "교통";
-                                                    break;
-
-                                                case 51:
-                                                    echo "도시계획";
-                                                    break;
-
-                                                case 61:
-                                                    echo "목재";
-                                                    break;
-
-                                                case 85:
-                                                    echo "삼림·토목";
-                                                    break;
-
-                                                case 18:
-                                                    echo "고고학";
-                                                    break;
-
-                                                case 33:
-                                                    echo "역사";
-                                                    break;
-
-                                                case 110:
-                                                    echo "인류학";
-                                                    break;
-
-                                                case 119:
-                                                    echo "철학";
-                                                    break;
-
-                                                case 43:
-                                                    echo "종교";
-                                                    break;
-
-                                                case 20:
-                                                    echo "디자인";
-                                                    break;
-
-                                                case 40:
-                                                    echo "패션의류";
-                                                    break;
-
-                                                case 59:
-                                                    echo "애니메이션";
-                                                    break;
-
-                                                case 69:
-                                                    echo "미술";
-                                                    break;
-
-                                                case 101:
-                                                    echo "영화예술";
-                                                    break;
-
-                                                case 32:
+                                                case 7:
                                                     echo "국방";
                                                     break;
-
-                                                case 35:
-                                                    echo "국제";
+                                                case 8:
+                                                    echo "기계/금속";
                                                     break;
-
-                                                case 83:
-                                                    echo "사회";
+                                                case 9:
+                                                    echo "농림/수산";
                                                     break;
-
+                                                case 10:
+                                                    echo "디자인";
+                                                    break;
+                                                case 11:
+                                                    echo "로봇/항공/자동차";
+                                                    break;
+                                                case 12:
+                                                    echo "물리";
+                                                    break;
+                                                case 13:
+                                                    echo "미디어";
+                                                    break;
+                                                case 14:
+                                                    echo "법";
+                                                    break;
+                                                case 15:
+                                                    echo "보건/치료";
+                                                    break;
+                                                case 16:
+                                                    echo "사회학";
+                                                    break;
+                                                case 17:
+                                                    echo "산업";
+                                                    break;
+                                                case 18:
+                                                    echo "생물";
+                                                    break;
+                                                case 19:
+                                                    echo "생활과학";
+                                                    break;
+                                                case 20:
+                                                    echo "수의예/치의예/한의예";
+                                                    break;
                                                 case 21:
+                                                    echo "수학";
+                                                    break;
+                                                case 22:
+                                                    echo "신소재/재료";
+                                                    break;
+                                                case 23:
+                                                    echo "언어/문학";
+                                                    break;
+                                                case 24:
+                                                    echo "에너지/정밀";
+                                                    break;
+                                                case 25:
+                                                    echo "영어";
+                                                    break;
+                                                case 26:
+                                                    echo "영화/애니메이션";
+                                                    break;
+                                                case 27:
+                                                    echo "예술";
+                                                    break;
+                                                case 28:
+                                                    echo "융합/자율전공";
+                                                    break;
+                                                case 29:
+                                                    echo "의예";
+                                                    break;
+                                                case 30:
+                                                    echo "인문학";
+                                                    break;
+                                                case 31:
+                                                    echo "전기/전자";
+                                                    break;
+                                                case 32:
+                                                    echo "지구과학";
+                                                    break;
+                                                case 33:
+                                                    echo "컴퓨터/통신";
+                                                    break;
+                                                case 34:
+                                                    echo "토목/도시";
+                                                    break;
+                                                case 35:
+                                                    echo "행정";
+                                                    break;
+                                                case 36:
+                                                    echo "화학";
+                                                    break;
+                                                case 37:
                                                     echo "환경";
-                                                    break;
-
-                                                case 73:
-                                                    echo "축산·동물";
-                                                    break;
-
-                                                case 88:
-                                                    echo "해양";
-                                                    break;
-
-                                                case 103:
-                                                    echo "원예·조경";
-                                                    break;
-
-                                                case 105:
-                                                    echo "융합";
-                                                    break;
-
-                                                case 109:
-                                                    echo "자율";
                                                     break;
                                                 default:
                                                     echo "오류";
