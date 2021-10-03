@@ -11,8 +11,7 @@ $(function () {
         NewEntry.find('.btn-remove').html('<i class="fas fa-minus"></i>');
         $(this).closest('tr').after(NewEntry);
 
-        CurrentEntry.find('input').val('4')
-        NewEntry.find('input').val('3');
+        NewEntry.find('input').val('');
 
         if ($(this).closest('tr').is('.first')) {
             var initspan = $(this).closest('tr').find('td[rowspan]').attr('rowspan')
