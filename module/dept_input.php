@@ -97,9 +97,43 @@
                         <div class="col-md-12 mb-3">
                             <select class="form-select" id="category" size="5">
                                 <option selected>학과 분야를 선택해주세요</option>
-                                <option value="be">경영 경제</option>
-                                <option value="ad">행정</option>
-                                <option value="pr">언론</option>
+                                <option value="1">간호</option>
+                                <option value="2">건축</option>
+                                <option value="3">경영</option>
+                                <option value="4">경제</option>
+                                <option value="5">교육</option>
+                                <option value="6">교통/운송</option>
+                                <option value="7">국방</option>
+                                <option value="8">기계/금속</option>
+                                <option value="9">농림/수산</option>
+                                <option value="10">디자인</option>
+                                <option value="11">로봇/항공/자동차</option>
+                                <option value="12">물리</option>
+                                <option value="13">미디어</option>
+                                <option value="14">법</option>
+                                <option value="15">보건/치료</option>
+                                <option value="16">사회학</option>
+                                <option value="17">산업</option>
+                                <option value="18">생물</option>
+                                <option value="19">생활과학</option>
+                                <option value="20">수의예/치의예/한의예</option>
+                                <option value="21">수학</option>
+                                <option value="22">신소재/재료</option>
+                                <option value="23">언어/문학</option>
+                                <option value="24">에너지/정밀</option>
+                                <option value="25">영어</option>
+                                <option value="26">영화/애니메이션</option>
+                                <option value="27">예술</option>
+                                <option value="28">융합/자율전공</option>
+                                <option value="29">의예</option>
+                                <option value="30">인문학</option>
+                                <option value="31">전기/전자</option>
+                                <option value="32">지구과학</option>
+                                <option value="33">컴퓨터/통신</option>
+                                <option value="34">토목/도시</option>
+                                <option value="35">행정</option>
+                                <option value="36">화학</option>
+                                <option value="37">환경</option>
                             </select>
                         </div>
                     </div>
