@@ -112,7 +112,7 @@ if ($simple_avg != 0) {
                 break;
         }
 
-        $this_time_result = array($dept['code'], $dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap, $dept['tag']);
+        $this_time_result = array($dept['code'], $dept['name'], $dept['ca'], $dept['dept'], $dept['low'], $dept['high'], $dept['avg'], $this_time_myavg, $gap, $dept['tag'], $dept['cacode']);
         array_push($sushi_result_list, $this_time_result);
     }
 
@@ -131,7 +131,7 @@ if ($simple_avg != 0) {
         elseif ($data[7] > $data[4]) $posi = 3;
         else $posi = 2;
 
-        $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9]);
+        $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9], 'cacode' => $data[10]);
         array_push($sushi_final_result, $arr_to_push);
     }
 
