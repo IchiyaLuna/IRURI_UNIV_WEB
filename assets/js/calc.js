@@ -5,7 +5,7 @@ $(function () {
         var CurrentEntry = $(this).closest('tr');
         var NewEntry = CurrentEntry.clone();
         NewEntry.find('.align-middle').remove();
-        NewEntry.find('.first').removeClass('first');
+        NewEntry.removeClass('first');
         NewEntry.find('.btn-add').removeClass('btn-add').addClass('btn-remove');
         NewEntry.find('.btn-remove').removeClass('btn-success').addClass('btn-danger');
         NewEntry.find('.btn-remove').html('<i class="fas fa-minus"></i>');
