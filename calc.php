@@ -71,7 +71,7 @@
                                     </th>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr class="first input-tr">
                                         <td class="align-middle" rowspan="5">1학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
@@ -193,7 +193,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
+                                    <tr class="first">
                                         <td class="align-middle" rowspan="5">2학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
@@ -315,7 +315,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
+                                    <tr class="first">
                                         <td class="align-middle" rowspan="5">3학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
