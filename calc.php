@@ -52,7 +52,7 @@
                                         <div class="text-center">학년</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="text-center">과목 분류</div>
+                                        <div class="text-center">과목분류</div>
                                     </th>
                                     <th scope="col">
                                         <div class="text-center">석차</div>
@@ -64,10 +64,10 @@
                                         <div class="text-center">이수자</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="text-center">이수 단위</div>
+                                        <div class="text-center">이수단위</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="text-center">추가 · 삭제</div>
+                                        <div class="text-center">추가·삭제</div>
                                     </th>
                                 </thead>
                                 <tbody>
