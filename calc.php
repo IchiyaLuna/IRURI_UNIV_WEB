@@ -45,70 +45,399 @@
 
                     <div class="dynamic-input mb-3">
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
-                            <div class="container-floating">
-                                <div class="row gx-1">
-                                    <div class="col text-center">
-                                        학년
-                                    </div>
-                                    <div class="col text-center">
-                                        과목 분류
-                                    </div>
-                                    <div class="col text-center">
-                                        석차
-                                    </div>
-                                    <div class="col text-center">
-                                        동석차
-                                    </div>
-                                    <div class="col text-center">
-                                        이수자
-                                    </div>
-                                    <div class="col text-center">
-                                        단위
-                                    </div>
-                                    <div class="col-1 text-center">
 
-                                    </div>
-                                </div>
+                            <table class="table table-light">
+                                <thead>
+                                    <th scope="col">
+                                        <div class="text-center">학년</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">과목 분류</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">석차</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">동석차</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">이수자</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">이수단위</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">추가·삭제</div>
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle" rowspan="5">1학년</td>
+                                        <td>
+                                            <div class="text-center">국어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">수학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">영어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">사회</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">과학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                <div class="subject-input row g-1 py-1 align-items-center">
-                                    <div class="col">
-                                        <select class="form-select" id="grade-select" name="grade-select">
-                                            <option value="1" selected>1학년</option>
-                                            <option value="2">2학년</option>
-                                            <option value="3">3학년</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <select class="form-select" id="subject-select" name="subject-select">
-                                            <option value="na" selected>미선택</option>
-                                            <option value="ko">국어</option>
-                                            <option value="ma">수학</option>
-                                            <option value="en">영어</option>
-                                            <option value="so">사회</option>
-                                            <option value="sc">과학</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" placeholder="1" required>
-                                    </div>
-                                    <div class="col-1 text-center">
-                                        <div class="d-grid">
-                                            <button type="button" class="btn btn-success btn-sm btn-add">
-                                                <i class="fas fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    <tr>
+                                        <td class="align-middle" rowspan="5">2학년</td>
+                                        <td>
+                                            <div class="text-center">국어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">수학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">영어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">사회</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">과학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="align-middle" rowspan="5">3학년</td>
+                                        <td>
+                                            <div class="text-center">국어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">수학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">영어</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">사회</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">과학</div>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="rank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="samerank[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="students[]" required>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="time[]" required>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid">
+                                                <button type="button" class="btn btn-success btn-sm btn-add">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </form>
                     </div>
 
