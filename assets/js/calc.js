@@ -2,28 +2,40 @@ $(function () {
     $(document).on('click', '.btn-add', function (e) {
         e.preventDefault();
 
-        var DynamicForm = $('.dynamic-input form:first');
-        var CurrentEntry = $(this).parents('.input-tr:first');
-        var NewEntry = $(this).parents('.input-tr:last').after(CurrentEntry.clone());
+        var CurrentEntry = $(this).closest('tr');
+        var NewEntry = CurrentEntry.clone();
+        NewEntry.find('.align-middle').remove();
+        NewEntry.find('.btn-add').removeClass('btn-add').addClass('btn-remove');
+        NewEntry.find('.btn-remove').removeClass('btn-success').addClass('btn-danger');
+        NewEntry.find('.btn-remove').html('<i class="fas fa-minus"></i>');
+        $(this).closest('tr').after(NewEntry);
 
-        NewEntry.find('input').val('');
+        CurrentEntry.find('input').val('4')
+        NewEntry.find('input').val('3');
 
-        if ($(this).is('.first')) {
-            var initspan = $(this).find('td[rowspan]').attr('rowspan')
-            $(this).find('td[rowspan]').attr('rowspan', (initspan + 1))
-        } else if ($(this).prev().is('.first')) {
-            var initspan = $(this).prev().find('td[rowspan]').attr('rowspan')
-            $(this).prev().find('td[rowspan]').attr('rowspan', (initspan + 1))
+        if ($(this).closest('tr').is('.first')) {
+            var initspan = $(this).closest('tr').find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').find('td[rowspan]').attr('rowspan', (parseInt(initspan) + 1))
+        } else if ($(this).closest('tr').prev().is('.first')) {
+            var initspan = $(this).closest('tr').prev().find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').prev().find('td[rowspan]').attr('rowspan', (parseInt(initspan) + 1))
         } else {
-            var initspan = $(this).prevUntil('.first').prev().find('td[rowspan]').attr('rowspan')
-            $(this).prevUntil('.first').prev().find('td[rowspan]').attr('rowspan', (initspan + 1))
+            var initspan = $(this).closest('tr').prevUntil('.first').prev().find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').prevUntil('.first').prev().find('td[rowspan]').attr('rowspan', (parseInt(initspan) + 1))
+        }
+    }).on('click', '.btn-remove', function (e) {
+        if ($(this).closest('tr').is('.first')) {
+            var initspan = $(this).closest('tr').find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').find('td[rowspan]').attr('rowspan', (parseInt(initspan) - 1))
+        } else if ($(this).closest('tr').prev().is('.first')) {
+            var initspan = $(this).closest('tr').prev().find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').prev().find('td[rowspan]').attr('rowspan', (parseInt(initspan) - 1))
+        } else {
+            var initspan = $(this).closest('tr').prevUntil('.first').prev().find('td[rowspan]').attr('rowspan')
+            $(this).closest('tr').prevUntil('.first').prev().find('td[rowspan]').attr('rowspan', (parseInt(initspan) - 1))
         }
 
-        DynamicForm.find('.input-tr:not(:last) .btn-add').removeClass('btn-add').addClass('btn-remove');
-        DynamicForm.find('.input-tr:not(:last) .btn-remove').removeClass('btn-success').addClass('btn-danger');
-        DynamicForm.find('.input-tr:not(:last) .btn-remove').html('<i class="fas fa-minus"></i>');
-    }).on('click', '.btn-remove', function (e) {
-        $(this).parents('.input-tr:first').remove();
+        $(this).closest('tr').remove();
 
         e.preventDefault();
         return false;
