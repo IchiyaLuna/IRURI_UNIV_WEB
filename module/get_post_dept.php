@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["dept-gender-radio"];
     $type = $_POST["dept-type-radio"];
 
-    $deptwant = $_POST["deptsel"];
+    $deptwant = $_POST["category"];
 
     $first = $_POST["dept-first"];
     $second = $_POST["dept-second"];
