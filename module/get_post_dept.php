@@ -125,11 +125,26 @@ if ($simple_avg != 0) {
 
     $sushi_final_result = array();
 
+    $isHakjong = false;
+    $isGyogwa = false;
+
     foreach ($sushi_result_list as $data) {
         if ($data[7] < $data[5]) $posi = 0;
         elseif ($data[8] > 0) $posi = 1;
         elseif ($data[7] > $data[4]) $posi = 3;
         else $posi = 2;
+
+        if ($isHakjong == false) {
+            if ($data[10] == 1) {
+                $isHakjong = true;
+            }
+        }
+
+        if ($isGyogwa == false) {
+            if ($data[10] == 2) {
+                $isGyogwa = true;
+            }
+        }
 
         $arr_to_push = array($posi, $data[1], $data[2], $data[3], $data[6], $data[7], $data[8], 'possible' => 1, 'tag' => $data[9], 'cacode' => $data[10]);
         array_push($sushi_final_result, $arr_to_push);

@@ -300,107 +300,130 @@
                                                             </div>
 
                                                             <div class="tab-pane fade" id="hakjong" role="tabpanel">
-                                                                <table class="table mb-0 table-hover caption-top">
-                                                                    <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col">합격예측</th>
-                                                                            <th scope="col">대학</th>
-                                                                            <th scope="col">전형</th>
-                                                                            <th scope="col">모집단위</th>
-                                                                            <th scope="col">합격자 평균</th>
-                                                                            <th scope="col">등급 간 차이</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <?php
-                                                                        foreach ($sushi_final_result as $result) {
+                                                                <?php
+                                                                if ($isHakjong) {
+                                                                ?>
+                                                                    <table class="table mb-0 table-hover caption-top">
+                                                                        <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th scope="col">합격예측</th>
+                                                                                <th scope="col">대학</th>
+                                                                                <th scope="col">전형</th>
+                                                                                <th scope="col">모집단위</th>
+                                                                                <th scope="col">합격자 평균</th>
+                                                                                <th scope="col">등급 간 차이</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php
+                                                                            foreach ($sushi_final_result as $result) {
 
-                                                                            if ($result['cacode'] != 1) {
-                                                                                continue;
+                                                                                if ($result['cacode'] != 1) {
+                                                                                    continue;
+                                                                                }
+
+                                                                                switch ($result[0]) {
+                                                                                    case 0:
+                                                                                        echo "<tr class='table-primary'>";
+                                                                                        echo "<td>" . "안정" . "</td>";
+                                                                                        break;
+                                                                                    case 1:
+                                                                                        echo "<tr class='table-success'>";
+                                                                                        echo "<td>" . "가능" . "</td>";
+                                                                                        break;
+                                                                                    case 2:
+                                                                                        echo "<tr class='table-warning'>";
+                                                                                        echo "<td>" . "불안" . "</td>";
+                                                                                        break;
+                                                                                    case 3:
+                                                                                        echo "<tr class='table-danger'>";
+                                                                                        echo "<td>" . "위험" . "</td>";
+                                                                                        break;
+                                                                                }
+
+                                                                                echo "<td>" . $result[1] . "</td>";
+                                                                                echo "<td>" . $result[2] . "</td>";
+                                                                                echo "<td>" . $result[3] . "</td>";
+                                                                                echo "<td>" . $result[4] . "</td>";
+                                                                                echo "<td>" . $result[6] . "</td>";
+                                                                                echo "</tr>";
                                                                             }
-
-                                                                            switch ($result[0]) {
-                                                                                case 0:
-                                                                                    echo "<tr class='table-primary'>";
-                                                                                    echo "<td>" . "안정" . "</td>";
-                                                                                    break;
-                                                                                case 1:
-                                                                                    echo "<tr class='table-success'>";
-                                                                                    echo "<td>" . "가능" . "</td>";
-                                                                                    break;
-                                                                                case 2:
-                                                                                    echo "<tr class='table-warning'>";
-                                                                                    echo "<td>" . "불안" . "</td>";
-                                                                                    break;
-                                                                                case 3:
-                                                                                    echo "<tr class='table-danger'>";
-                                                                                    echo "<td>" . "위험" . "</td>";
-                                                                                    break;
-                                                                            }
-
-                                                                            echo "<td>" . $result[1] . "</td>";
-                                                                            echo "<td>" . $result[2] . "</td>";
-                                                                            echo "<td>" . $result[3] . "</td>";
-                                                                            echo "<td>" . $result[4] . "</td>";
-                                                                            echo "<td>" . $result[6] . "</td>";
-                                                                            echo "</tr>";
-                                                                        }
-                                                                        ?>
-                                                                    </tbody>
-                                                                </table>
+                                                                            ?>
+                                                                        </tbody>
+                                                                    </table>
+                                                                <?php
+                                                                } else {
+                                                                ?>
+                                                                    <p>선택하신 학과는 학종 모집단위가 없습니다.</p>
+                                                                <?php
+                                                                }
+                                                                ?>
                                                             </div>
 
                                                             <div class="tab-pane fade" id="gyogwa" role="tabpanel">
-                                                                <table class="table mb-0 table-hover caption-top">
-                                                                    <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col">합격예측</th>
-                                                                            <th scope="col">대학</th>
-                                                                            <th scope="col">전형</th>
-                                                                            <th scope="col">모집단위</th>
-                                                                            <th scope="col">합격자 평균</th>
-                                                                            <th scope="col">등급 간 차이</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <?php
-                                                                        foreach ($sushi_final_result as $result) {
+                                                                <?php
+                                                                if ($isGyogwa) {
+                                                                ?>
+                                                                    <table class="table mb-0 table-hover caption-top">
+                                                                        <caption>예측 결과는 참고용으로만 사용해 주시기 바랍니다.</caption>
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th scope="col">합격예측</th>
+                                                                                <th scope="col">대학</th>
+                                                                                <th scope="col">전형</th>
+                                                                                <th scope="col">모집단위</th>
+                                                                                <th scope="col">합격자 평균</th>
+                                                                                <th scope="col">등급 간 차이</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <?php
 
-                                                                            if ($result['cacode'] != 2) {
-                                                                                continue;
+
+                                                                            foreach ($sushi_final_result as $result) {
+
+                                                                                if ($result['cacode'] != 2) {
+                                                                                    continue;
+                                                                                }
+
+                                                                                $isGyogwa = true;
+                                                                                switch ($result[0]) {
+                                                                                    case 0:
+                                                                                        echo "<tr class='table-primary'>";
+                                                                                        echo "<td>" . "안정" . "</td>";
+                                                                                        break;
+                                                                                    case 1:
+                                                                                        echo "<tr class='table-success'>";
+                                                                                        echo "<td>" . "가능" . "</td>";
+                                                                                        break;
+                                                                                    case 2:
+                                                                                        echo "<tr class='table-warning'>";
+                                                                                        echo "<td>" . "불안" . "</td>";
+                                                                                        break;
+                                                                                    case 3:
+                                                                                        echo "<tr class='table-danger'>";
+                                                                                        echo "<td>" . "위험" . "</td>";
+                                                                                        break;
+                                                                                }
+
+                                                                                echo "<td>" . $result[1] . "</td>";
+                                                                                echo "<td>" . $result[2] . "</td>";
+                                                                                echo "<td>" . $result[3] . "</td>";
+                                                                                echo "<td>" . $result[4] . "</td>";
+                                                                                echo "<td>" . $result[6] . "</td>";
+                                                                                echo "</tr>";
                                                                             }
-
-                                                                            switch ($result[0]) {
-                                                                                case 0:
-                                                                                    echo "<tr class='table-primary'>";
-                                                                                    echo "<td>" . "안정" . "</td>";
-                                                                                    break;
-                                                                                case 1:
-                                                                                    echo "<tr class='table-success'>";
-                                                                                    echo "<td>" . "가능" . "</td>";
-                                                                                    break;
-                                                                                case 2:
-                                                                                    echo "<tr class='table-warning'>";
-                                                                                    echo "<td>" . "불안" . "</td>";
-                                                                                    break;
-                                                                                case 3:
-                                                                                    echo "<tr class='table-danger'>";
-                                                                                    echo "<td>" . "위험" . "</td>";
-                                                                                    break;
-                                                                            }
-
-                                                                            echo "<td>" . $result[1] . "</td>";
-                                                                            echo "<td>" . $result[2] . "</td>";
-                                                                            echo "<td>" . $result[3] . "</td>";
-                                                                            echo "<td>" . $result[4] . "</td>";
-                                                                            echo "<td>" . $result[6] . "</td>";
-                                                                            echo "</tr>";
-                                                                        }
-                                                                        ?>
-                                                                    </tbody>
-                                                                </table>
+                                                                            ?>
+                                                                        </tbody>
+                                                                    </table>
+                                                                <?php
+                                                                } else {
+                                                                ?>
+                                                                    <p>선택하신 학과는 교과 모집단위가 없습니다.</p>
+                                                                <?php
+                                                                }
+                                                                ?>
                                                             </div>
                                                         </div>
                                                     </div>
