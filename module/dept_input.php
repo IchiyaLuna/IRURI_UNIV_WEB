@@ -95,7 +95,7 @@
                 <div class="categorysel py-3">
                     <div class="row gy-3">
                         <div class="col-md-12 mb-3">
-                            <select class="form-select" id="category" size="5">
+                            <select class="form-select" name="category" id="category" size="5">
                                 <option value="-1" selected>학과 분야를 선택해주세요</option>
                                 <option value="1">간호</option>
                                 <option value="2">건축</option>
