@@ -16,6 +16,7 @@
     <!-- Custom styles for this template -->
 
     <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/calc.css" rel="stylesheet">
     <link href="../assets/fa-assets/css/all.css" rel="stylesheet">
 
 </head>
