@@ -275,7 +275,7 @@ function test_dept_input() {
         }
     }
 
-    var dept = document.getElementById("detail");
+    var dept = document.getElementById("category");
     dept = dept.options[dept.selectedIndex].value;
 
     if (dept == -1) {
