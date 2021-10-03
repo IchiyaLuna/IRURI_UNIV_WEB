@@ -4,7 +4,7 @@ $(function () {
 
         var DynamicForm = $('.dynamic-input form:first');
         var CurrentEntry = $(this).parents('.input-tr:first');
-        var NewEntry = $(this).after(CurrentEntry.clone());
+        var NewEntry = $(this).parents('.input-tr:last').after(CurrentEntry.clone());
 
         NewEntry.find('input').val('');
 
