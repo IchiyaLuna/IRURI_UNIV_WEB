@@ -64,10 +64,10 @@
                                         <div class="text-center">이수자</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="text-center">이수단위</div>
+                                        <div class="text-center">이수 단위</div>
                                     </th>
                                     <th scope="col">
-                                        <div class="text-center">추가·삭제</div>
+                                        <div class="text-center">추가 · 삭제</div>
                                     </th>
                                 </thead>
                                 <tbody>
