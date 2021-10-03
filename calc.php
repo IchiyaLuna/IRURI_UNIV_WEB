@@ -44,7 +44,7 @@
 
                     <h5 class="pb-3 mb-3 border-bottom">계산 방법 혹은 조건에 따라 다를 수 있으나 표준적인 방법을 활용하여 학년 평균 등급을 계산합니다.</h5>
 
-                    <div class="dynamic-input table-responsive mb-3">
+                    <div class="dynamic-input mb-3">
                         <form id="subject-form" class="needs-validation" method="POST" action="./result_calc.php" autocomplete="off" novalidate>
                             <table class="table table-light calc-table">
                                 <thead class="thead-wb">
