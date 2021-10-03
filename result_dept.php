@@ -239,11 +239,33 @@
                                                             <li class="nav-item" role="presentation">
                                                                 <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">전체 보기</button>
                                                             </li>
+
                                                             <li class="nav-item" role="presentation">
-                                                                <button class="nav-link" id="hakjong-tab" data-bs-toggle="tab" data-bs-target="#hakjong" type="button" role="tab">학종 보기</button>
+                                                                <?php
+                                                                if ($isHakjong) {
+                                                                ?>
+                                                                    <button class="nav-link" id="hakjong-tab" data-bs-toggle="tab" data-bs-target="#hakjong" type="button" role="tab">학종 보기</button>
+                                                                <?php
+                                                                } else {
+                                                                ?>
+                                                                    <button class="nav-link disabled" id="hakjong-tab" data-bs-toggle="tab" data-bs-target="#hakjong" type="button" role="tab">학종 모집 없음</button>
+                                                                <?php
+                                                                }
+                                                                ?>
                                                             </li>
+
                                                             <li class="nav-item" role="presentation">
-                                                                <button class="nav-link" id="gyogwa-tab" data-bs-toggle="tab" data-bs-target="#gyogwa" type="button" role="tab">교과 보기</button>
+                                                                <?php
+                                                                if ($isGyogwa) {
+                                                                ?>
+                                                                    <button class="nav-link" id="gyogwa-tab" data-bs-toggle="tab" data-bs-target="#gyogwa" type="button" role="tab">교과 보기</button>
+                                                                <?php
+                                                                } else {
+                                                                ?>
+                                                                    <button class="nav-link disabled" id="hakjong-tab" data-bs-toggle="tab" data-bs-target="#gyogwa" type="button" role="tab">교과 모집 없음</button>
+                                                                <?php
+                                                                }
+                                                                ?>
                                                             </li>
                                                         </ul>
 
