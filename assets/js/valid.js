@@ -10,18 +10,29 @@ function count_arr(arr) {
     return count;
 }
 
+function isEmpty(value) {
+    if (value === "") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function test_calc_input() {
 
+    //const fsubjects = document.getElementsByName("fsubject[]");
     const franks = document.getElementsByName("frank[]");
     const fsameranks = document.getElementsByName("fsamerank[]");
     const fstudentss = document.getElementsByName("fstudents[]");
     const ftimes = document.getElementsByName("ftime[]");
 
+    //const ssubjects = document.getElementsByName("ssubject[]");
     const sranks = document.getElementsByName("srank[]");
     const ssameranks = document.getElementsByName("ssamerank[]");
     const sstudentss = document.getElementsByName("sstudents[]");
     const stimes = document.getElementsByName("stime[]");
 
+    //const tsubjects = document.getElementsByName("tsubject[]");
     const tranks = document.getElementsByName("trank[]");
     const tsameranks = document.getElementsByName("tsamerank[]");
     const tstudentss = document.getElementsByName("tstudents[]");
@@ -59,6 +70,32 @@ function test_calc_input() {
         return false;
     }
 
+    for (let i = 0; i < fcount; i++) {
+        if (isEmpty(franks[i]) == isEmpty(fsameranks[i]) && isEmpty(fsameranks[i]) == isEmpty(fstudentss[i]) && isEmpty(fstudentss[i]) == isEmpty(ftimes[i])) {
+            continue;
+        }
+
+        noinput_modal.show();
+        return false;
+    }
+
+    for (let i = 0; i < scount; i++) {
+        if (isEmpty(sranks[i]) == isEmpty(ssameranks[i]) && isEmpty(ssameranks[i]) == isEmpty(sstudentss[i]) && isEmpty(sstudentss[i]) == isEmpty(stimes[i])) {
+            continue;
+        }
+
+        noinput_modal.show();
+        return false;
+    }
+
+    for (let i = 0; i < tcount; i++) {
+        if (isEmpty(tranks[i]) == isEmpty(tsameranks[i]) && isEmpty(tsameranks[i]) == isEmpty(tstudentss[i]) && isEmpty(tstudentss[i]) == isEmpty(ttimes[i])) {
+            continue;
+        }
+
+        noinput_modal.show();
+        return false;
+    }
     //calcresult.submit();
     return false;
 }

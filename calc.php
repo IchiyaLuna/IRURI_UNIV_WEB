@@ -75,6 +75,7 @@
                                         <td class="align-middle" rowspan="5">1학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
+                                            <input type="hidden" name="fsubject[]" value="ko">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
@@ -99,6 +100,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">수학</div>
+                                            <input type="hidden" name="fsubject[]" value="ma">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
@@ -123,6 +125,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">영어</div>
+                                            <input type="hidden" name="fsubject[]" value="en">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
@@ -147,6 +150,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">사회</div>
+                                            <input type="hidden" name="fsubject[]" value="so">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
@@ -171,6 +175,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">과학</div>
+                                            <input type="hidden" name="fsubject[]" value="sc">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
@@ -197,6 +202,7 @@
                                         <td class="align-middle" rowspan="5">2학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
+                                            <input type="hidden" name="ssubject[]" value="ko">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
@@ -221,6 +227,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">수학</div>
+                                            <input type="hidden" name="ssubject[]" value="ma">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
@@ -245,6 +252,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">영어</div>
+                                            <input type="hidden" name="ssubject[]" value="en">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
@@ -269,6 +277,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">사회</div>
+                                            <input type="hidden" name="ssubject[]" value="so">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
@@ -293,6 +302,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">과학</div>
+                                            <input type="hidden" name="ssubject[]" value="sc">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
@@ -319,6 +329,7 @@
                                         <td class="align-middle" rowspan="5">3학년</td>
                                         <td>
                                             <div class="text-center">국어</div>
+                                            <input type="hidden" name="tsubject[]" value="ko">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
@@ -343,6 +354,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">수학</div>
+                                            <input type="hidden" name="tsubject[]" value="ma">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
@@ -367,6 +379,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">영어</div>
+                                            <input type="hidden" name="tsubject[]" value="en">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
@@ -391,6 +404,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">사회</div>
+                                            <input type="hidden" name="tsubject[]" value="so">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
@@ -415,6 +429,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center">과학</div>
+                                            <input type="hidden" name="tsubject[]" value="sc">
                                         </td>
                                         <td>
                                             <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
