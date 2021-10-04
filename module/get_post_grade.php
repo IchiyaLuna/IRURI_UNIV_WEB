@@ -27,23 +27,60 @@ $flen = 0;
 $slen = 0;
 $tlen = 0;
 
-foreach ($frank as $data) {
-    if ($data != "") {
+for ($i = 0; $i < count($frank); $i++) {
+    if ($frank[$i] == "") {
+        unset($fsubject[$i]);
+        unset($frank[$i]);
+        unset($fsamerank[$i]);
+        unset($fstudents[$i]);
+        unset($ftime[$i]);
+    } else {
         $flen++;
     }
 }
 
-foreach ($srank as $data) {
-    if ($data != "") {
+$fsubject = array_values($fsubject);
+$frank = array_values($frank);
+$fsamerank = array_values($fsamerank);
+$fstudents = array_values($fstudents);
+$ftime = array_values($ftime);
+
+for ($i = 0; $i < count($srank); $i++) {
+    if ($srank[$i] == "") {
+        unset($ssubject[$i]);
+        unset($srank[$i]);
+        unset($ssamerank[$i]);
+        unset($sstudents[$i]);
+        unset($stime[$i]);
+    } else {
         $slen++;
     }
 }
 
-foreach ($trank as $data) {
-    if ($data != "") {
+$ssubject = array_values($ssubject);
+$srank = array_values($srank);
+$ssamerank = array_values($ssamerank);
+$sstudents = array_values($sstudents);
+$stime = array_values($stime);
+
+for ($i = 0; $i < count($trank); $i++) {
+    if ($trank[$i] == "") {
+        unset($tsubject[$i]);
+        unset($trank[$i]);
+        unset($tsamerank[$i]);
+        unset($tstudents[$i]);
+        unset($ttime[$i]);
+    } else {
         $tlen++;
     }
 }
+
+$tsubject = array_values($tsubject);
+$trank = array_values($trank);
+$tsamerank = array_values($tsamerank);
+$tstudents = array_values($tstudents);
+$ttime = array_values($ttime);
+
 
 $mod_grade_arr = array(0, 0, 0);
 $time_arr = array(0, 0, 0);
@@ -198,22 +235,41 @@ $sci_time_sum = $sci_time[0] + $sci_time[1] + $sci_time[2];
 $simple_avg = ($mod_grade_arr[0] + $mod_grade_arr[1] + $mod_grade_arr[2]) / ($time_arr[0] + $time_arr[1] + $time_arr[2]);
 
 if ($flen != 0) {
-    $favg = $mod_grade_arr[0] / $time_arr[0];
+    $favg = round($mod_grade_arr[0] / $time_arr[0], 1);
 } else {
     $favg = 0;
 }
 if ($slen != 0) {
-    $savg = $mod_grade_arr[1] / $time_arr[1];
+    $savg = round($mod_grade_arr[1] / $time_arr[1], 1);
 } else {
     $savg = 0;
 }
 if ($tlen != 0) {
-    $tavg = $mod_grade_arr[2] / $time_arr[2];
+    $tavg = round($mod_grade_arr[2] / $time_arr[2], 1);
 } else {
     $tavg = 0;
 }
 
-$KMESO = ($kor_mod_sum + $mat_mod_sum + $eng_mod_sum + $soc_mod_sum) / ($kor_time_sum + $mat_time_sum + $eng_time_sum + $soc_time_sum);
-$KMESC = ($kor_mod_sum + $mat_mod_sum + $eng_mod_sum + $sci_mod_sum) / ($kor_time_sum + $mat_time_sum + $eng_time_sum + $sci_time_sum);
-$KESO = ($kor_mod_sum + $eng_mod_sum + $soc_mod_sum) / ($kor_time_sum + $eng_time_sum + $soc_time_sum);
-$KMSC = ($kor_mod_sum + $mat_mod_sum + $sci_mod_sum) / ($kor_time_sum + $mat_time_sum + $sci_time_sum);
+if ($kor_time_sum + $mat_time_sum + $eng_time_sum + $soc_time_sum != 0) {
+    $KMESO = ($kor_mod_sum + $mat_mod_sum + $eng_mod_sum + $soc_mod_sum) / ($kor_time_sum + $mat_time_sum + $eng_time_sum + $soc_time_sum);
+} else {
+    $KMESO = 0;
+}
+
+if ($kor_time_sum + $mat_time_sum + $eng_time_sum + $sci_time_sum != 0) {
+    $KMESC = ($kor_mod_sum + $mat_mod_sum + $eng_mod_sum + $sci_mod_sum) / ($kor_time_sum + $mat_time_sum + $eng_time_sum + $sci_time_sum);
+} else {
+    $KMESC = 0;
+}
+
+if ($kor_time_sum + $eng_time_sum + $soc_time_sum != 0) {
+    $KESO = ($kor_mod_sum + $eng_mod_sum + $soc_mod_sum) / ($kor_time_sum + $eng_time_sum + $soc_time_sum);
+} else {
+    $KESO = 0;
+}
+
+if ($kor_time_sum + $mat_time_sum + $sci_time_sum != 0) {
+    $KMSC = ($kor_mod_sum + $mat_mod_sum + $sci_mod_sum) / ($kor_time_sum + $mat_time_sum + $sci_time_sum);
+} else {
+    $KMSC = 0;
+}

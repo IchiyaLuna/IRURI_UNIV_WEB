@@ -323,6 +323,157 @@
                                 </tr>
                             </tbody>
                         </table>
+
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text-center">반영 과목</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">등급</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="text-center">전과목</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            echo round($simple_avg, 1);
+                                            ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-center">국영수사</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($KMESO != 0) {
+                                                echo round($KMESO, 1);
+                                            } else {
+                                                echo "해당 없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-center">국영수과</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($KMESC != 0) {
+                                                echo round($KMESC, 1);
+                                            } else {
+                                                echo "해당 없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-center">국영사</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($KESO != 0) {
+                                                echo round($KESO, 1);
+                                            } else {
+                                                echo "해당 없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-center">국수과</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($KMSC != 0) {
+                                                echo round($KMSC, 1);
+                                            } else {
+                                                echo "해당 없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <?php
+                        if ($favg != 0 && $savg != 0 && $tavg != 0) {
+                        ?>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="text-center">학년별 반영 비율</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="text-center">등급</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">1:1:1</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <?php
+                                                echo round(($favg + $savg + $tavg) / 3, 1);
+                                                ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">2:3:5</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <?php
+                                                echo round(($favg * 2 + $savg * 3 + $tavg * 5) / 10, 1);
+                                                ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center">3:3:4</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <?php
+                                                echo round(($favg * 3 + $savg * 3 + $tavg * 4) / 10, 1);
+                                                ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        <?php
+                        } else {
+                            echo "1, 2, 3학년을 모두 입력해야 학년별 반영 비율을 고려한 평균 등급을 알 수 있습니다.";
+                        }
+                        ?>
                     </div>
 
                     <button type="button" class="btn btn-warning float-end" onclick="location.href='./calc.php';"><i class="fas fa-redo-alt"></i>&nbsp;다시 계산하기</button>
