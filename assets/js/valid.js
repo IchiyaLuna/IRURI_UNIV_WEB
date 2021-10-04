@@ -1,10 +1,22 @@
 function test_calc_input() {
 
-    const names = document.getElementsByName("subject[]");
-    const ranks = document.getElementsByName("rank[]");
-    const sameranks = document.getElementsByName("samerank[]");
-    const studentss = document.getElementsByName("students[]");
-    const times = document.getElementsByName("time[]");
+    const fnames = document.getElementsByName("fsubject[]");
+    const franks = document.getElementsByName("frank[]");
+    const fsameranks = document.getElementsByName("fsamerank[]");
+    const fstudentss = document.getElementsByName("fstudents[]");
+    const ftimes = document.getElementsByName("ftime[]");
+
+    const snames = document.getElementsByName("ssubject[]");
+    const sranks = document.getElementsByName("srank[]");
+    const ssameranks = document.getElementsByName("ssamerank[]");
+    const sstudentss = document.getElementsByName("sstudents[]");
+    const stimes = document.getElementsByName("stime[]");
+
+    const tnames = document.getElementsByName("tsubject[]");
+    const tranks = document.getElementsByName("trank[]");
+    const tsameranks = document.getElementsByName("tsamerank[]");
+    const tstudentss = document.getElementsByName("tstudents[]");
+    const ttimes = document.getElementsByName("ttime[]");
 
     var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
     var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
