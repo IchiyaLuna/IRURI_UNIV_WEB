@@ -71,7 +71,13 @@ function test_calc_input() {
     }
 
     for (let i = 0; i < fcount; i++) {
-        if (isEmpty(franks[i]) == isEmpty(fsameranks[i]) && isEmpty(fsameranks[i]) == isEmpty(fstudentss[i]) && isEmpty(fstudentss[i]) == isEmpty(ftimes[i])) {
+        if (isEmpty(franks[i].value) == isEmpty(fsameranks[i].value) && isEmpty(fsameranks[i].value) == isEmpty(fstudentss[i].value) && isEmpty(fstudentss[i].value) == isEmpty(ftimes[i].value)) {
+            if (!isEmpty(franks[i].value)) {
+                if (franks[i].value <= 0 || fsameranks[i].value <= 0 || fstudentss[i].value <= 0 || ftimes[i].value <= 0) {
+                    zeroinput_modal.show();
+                    return false;
+                }
+            }
             continue;
         }
 
@@ -80,7 +86,13 @@ function test_calc_input() {
     }
 
     for (let i = 0; i < scount; i++) {
-        if (isEmpty(sranks[i]) == isEmpty(ssameranks[i]) && isEmpty(ssameranks[i]) == isEmpty(sstudentss[i]) && isEmpty(sstudentss[i]) == isEmpty(stimes[i])) {
+        if (isEmpty(sranks[i].value) == isEmpty(ssameranks[i].value) && isEmpty(ssameranks[i].value) == isEmpty(sstudentss[i].value) && isEmpty(sstudentss[i].value) == isEmpty(stimes[i].value)) {
+            if (!isEmpty(sranks[i].value)) {
+                if (sranks[i].value <= 0 || ssameranks[i].value <= 0 || sstudentss[i].value <= 0 || stimes[i].value <= 0) {
+                    zeroinput_modal.show();
+                    return false;
+                }
+            }
             continue;
         }
 
@@ -89,13 +101,21 @@ function test_calc_input() {
     }
 
     for (let i = 0; i < tcount; i++) {
-        if (isEmpty(tranks[i]) == isEmpty(tsameranks[i]) && isEmpty(tsameranks[i]) == isEmpty(tstudentss[i]) && isEmpty(tstudentss[i]) == isEmpty(ttimes[i])) {
+        if (isEmpty(tranks[i].value) == isEmpty(tsameranks[i].value) && isEmpty(tsameranks[i].value) == isEmpty(tstudentss[i].value) && isEmpty(tstudentss[i].value) == isEmpty(ttimes[i].value)) {
+            if (!isEmpty(tranks[i].value)) {
+                if (tranks[i].value <= 0 || tsameranks[i].value <= 0 || tstudentss[i].value <= 0 || ttimes[i].value <= 0) {
+                    zeroinput_modal.show();
+                    return false;
+                }
+            }
             continue;
         }
 
         noinput_modal.show();
         return false;
     }
+
+
     //calcresult.submit();
     return false;
 }
