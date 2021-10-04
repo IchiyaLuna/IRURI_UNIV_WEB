@@ -1,18 +1,27 @@
+function count_arr(arr) {
+    var count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != "") {
+            count++;
+        }
+    }
+
+    return count;
+}
+
 function test_calc_input() {
 
-    const fnames = document.getElementsByName("fsubject[]");
     const franks = document.getElementsByName("frank[]");
     const fsameranks = document.getElementsByName("fsamerank[]");
     const fstudentss = document.getElementsByName("fstudents[]");
     const ftimes = document.getElementsByName("ftime[]");
 
-    const snames = document.getElementsByName("ssubject[]");
     const sranks = document.getElementsByName("srank[]");
     const ssameranks = document.getElementsByName("ssamerank[]");
     const sstudentss = document.getElementsByName("sstudents[]");
     const stimes = document.getElementsByName("stime[]");
 
-    const tnames = document.getElementsByName("tsubject[]");
     const tranks = document.getElementsByName("trank[]");
     const tsameranks = document.getElementsByName("tsamerank[]");
     const tstudentss = document.getElementsByName("tstudents[]");
@@ -24,23 +33,23 @@ function test_calc_input() {
 
     var calcresult = document.getElementById('subject-form');
 
-    var fcount = fnames.length;
+    const fcount = count_arr(franks);
 
-    if (fcount != franks.length || fcount < fsameranks.length || fcount < fstudentss.length || fcount < ftimes.length) {
+    if (fcount != count_arr(fsameranks) || fcount != count_arr(fstudentss) || fcount != count_arr(ftimes)) {
         noinput_modal.show();
         return false;
     }
 
-    var scount = snames.length;
+    const scount = count_arr(sranks);
 
-    if (scount != sranks.length || scount < ssameranks.length || scount < sstudentss.length || scount < stimes.length) {
+    if (scount != count_arr(ssameranks) || scount != count_arr(sstudentss) || scount != count_arr(stimes)) {
         noinput_modal.show();
         return false;
     }
 
-    var tcount = tnames.length;
+    const tcount = count_arr(tranks);
 
-    if (tcount != tranks.length || tcount < tsameranks.length || tcount < tstudentss.length || tcount < ttimes.length) {
+    if (tcount != count_arr(tsameranks) || tcount != count_arr(tstudentss) || tcount != count_arr(ttimes)) {
         noinput_modal.show();
         return false;
     }
@@ -50,7 +59,7 @@ function test_calc_input() {
         return false;
     }
 
-    calcresult.submit();
+    //calcresult.submit();
     return false;
 }
 
