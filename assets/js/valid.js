@@ -28,68 +28,26 @@ function test_calc_input() {
 
     if (fcount != franks.length || fcount < fsameranks.length || fcount < fstudentss.length || fcount < ftimes.length) {
         noinput_modal.show();
+        return false;
     }
 
     var scount = snames.length;
 
     if (scount != sranks.length || scount < ssameranks.length || scount < sstudentss.length || scount < stimes.length) {
         noinput_modal.show();
+        return false;
     }
 
     var tcount = tnames.length;
 
     if (tcount != tranks.length || tcount < tsameranks.length || tcount < tstudentss.length || tcount < ttimes.length) {
         noinput_modal.show();
+        return false;
     }
 
     if (fcount === 0 && scount === 0 && tcount === 0) {
         noinput_modal.show();
-    }
-
-
-    for (var key in names) {
-
-        if (names[key].value === "") {
-            noinput_modal.show();
-            return false;
-        }
-        if (ranks[key].value === "") {
-            noinput_modal.show();
-            return false;
-        }
-        if (parseInt(ranks[key].value) <= 0) {
-            zeroinput_modal.show();
-            return false;
-        }
-        if (sameranks[key].value === "") {
-            noinput_modal.show();
-            return false;
-        }
-        if (parseInt(sameranks[key].value) <= 0) {
-            zeroinput_modal.show();
-            return false;
-        }
-        if (studentss[key].value === "") {
-            noinput_modal.show();
-            return false;
-        }
-        if (parseInt(studentss[key].value) <= 0) {
-            zeroinput_modal.show();
-            return false;
-        }
-        if (times[key].value === "") {
-            noinput_modal.show();
-            return false;
-        }
-        if (parseInt(times[key].value) <= 0) {
-            zeroinput_modal.show();
-            return false;
-        }
-
-        if (parseInt(ranks[key].value) > parseInt(studentss[key].value)) {
-            biginput_modal.show();
-            return false;
-        }
+        return false;
     }
 
     calcresult.submit();
