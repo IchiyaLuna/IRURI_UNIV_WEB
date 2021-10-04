@@ -78,16 +78,16 @@
                                             <input type="hidden" name="fsubject[]" value="ko">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -103,16 +103,16 @@
                                             <input type="hidden" name="fsubject[]" value="ma">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -128,16 +128,16 @@
                                             <input type="hidden" name="fsubject[]" value="en">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -153,16 +153,16 @@
                                             <input type="hidden" name="fsubject[]" value="so">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -178,16 +178,16 @@
                                             <input type="hidden" name="fsubject[]" value="sc">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="frank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="fstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ftime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -205,16 +205,16 @@
                                             <input type="hidden" name="ssubject[]" value="ko">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -230,16 +230,16 @@
                                             <input type="hidden" name="ssubject[]" value="ma">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -255,16 +255,16 @@
                                             <input type="hidden" name="ssubject[]" value="en">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -280,16 +280,16 @@
                                             <input type="hidden" name="ssubject[]" value="so">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -305,16 +305,16 @@
                                             <input type="hidden" name="ssubject[]" value="sc">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="srank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ssamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="sstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="stime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -332,16 +332,16 @@
                                             <input type="hidden" name="tsubject[]" value="ko">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -357,16 +357,16 @@
                                             <input type="hidden" name="tsubject[]" value="ma">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -382,16 +382,16 @@
                                             <input type="hidden" name="tsubject[]" value="en">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -407,16 +407,16 @@
                                             <input type="hidden" name="tsubject[]" value="so">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">
@@ -432,16 +432,16 @@
                                             <input type="hidden" name="tsubject[]" value="sc">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="trank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tsamerank[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="tstudents[]" required numberOnly>
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required>
+                                            <input type="number" class="form-control form-control-sm text-center" min="1" pattern="\d*" name="ttime[]" required numberOnly>
                                         </td>
                                         <td>
                                             <div class="d-grid">

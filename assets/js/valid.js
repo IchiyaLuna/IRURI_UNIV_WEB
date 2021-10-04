@@ -18,6 +18,10 @@ function isEmpty(value) {
     }
 }
 
+$("input:text[numberOnly]").on("keyup", function () {
+    $(this).val($(this).val().replace(/[^0-9]/g, ""));
+});
+
 function test_calc_input() {
 
     //const fsubjects = document.getElementsByName("fsubject[]");
