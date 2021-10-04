@@ -6,7 +6,7 @@ $(function () {
         var NewEntry = CurrentEntry.clone();
         NewEntry.find('.align-middle').remove();
         NewEntry.removeClass('first');
-        NewEntry.removeClass('origin');
+        NewEntry.addClass('new-input');
         NewEntry.find('.btn-add').removeClass('btn-add').addClass('btn-remove');
         NewEntry.find('.btn-remove').removeClass('btn-success').addClass('btn-danger');
         NewEntry.find('.btn-remove').html('<i class="fas fa-minus"></i>');
@@ -45,7 +45,7 @@ $(function () {
 
 function CalcRefresh() {
     $('input').val('');
-    $('tr').not('tr.origin').remove();
+    $('tr.new-input').remove();
     $('.align-middle').attr('rowspan', 5);
 
     return false;
