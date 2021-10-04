@@ -46,7 +46,7 @@ $(function () {
 function CalcRefresh() {
     $('input').val('');
     $('tr').not('tr.origin').remove();
-    $('align-middle').attr('rowspan', 5);
+    $('.align-middle').attr('rowspan', 5);
 
     return false;
 }
