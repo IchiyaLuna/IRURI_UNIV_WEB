@@ -46,40 +46,72 @@
                     <?php require "./module/get_post_grade.php" ?>
 
                     <div class="result-table table-resposive mb-3">
-                        <table class="table mb-0 table-hover">
+                        <table class="table mb-0">
                             <thead>
                                 <tr>
-                                    <th scope="col">과목명</th>
-                                    <th scope="col">석차</th>
-                                    <th scope="col">동석차</th>
-                                    <th scope="col">이수자</th>
-                                    <th scope="col">단위</th>
-                                    <th scope="col">등급</th>
+                                    <th scope="col">
+                                        <div class="text-center">학년</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">과목</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">과목 등급</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text-center">학년 등급</div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                foreach ($subjects as $data) {
-
-                                    echo "<tr>";
-
-                                    echo "<td>" . $data[0] . "</td>";
-                                    echo "<td>" . $data[1] . "등" . "</td>";
-                                    echo "<td>" . $data[2] . "명" . "</td>";
-                                    echo "<td>" . $data[3] . "명" . "</td>";
-                                    echo "<td>" . $data[4] . "단위" . "</td>";
-                                    echo "<td>" . "<div class='text-danger'>" . $data[5] . "등급" . "</div>" . "</td>";
-
-                                    echo "</tr>";
-                                }
-                                ?>
-                            </tbody>
-                            <tfoot>
                                 <tr>
-                                    <td colspan="6" class="text-center fw-bold text-danger">
-                                        <?php echo "평균 등급 : " . $final_grade; ?>
+                                    <td class="align-middle text-center" rowspan="5">1학년</td>
+                                    <td>
+                                        <div class="text-center">국어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center"><?php echo $kor_mod[0] / $kor_time[0]; ?></div>
+                                    </td>
+                                    <td class="align-middle text-center" rowspan="5"><?php echo $favg; ?></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">수학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center"><?php echo $mat_mod[0] / $mat_time[0]; ?></div>
                                     </td>
                                 </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">영어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center"><?php echo $eng_mod[0] / $eng_time[0]; ?></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">사회</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center"><?php echo $soc_mod[0] / $soc_time[0]; ?></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">과학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center"><?php echo $sci_mod[0] / $sci_time[0]; ?></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
                             </tfoot>
                         </table>
                     </div>

@@ -61,8 +61,8 @@ for ($i = 0; $i < sizeof($subject_1); $i++) {
     $arrtopush_1 = array($subject_1[$i], $rank_1[$i], $samerank_1[$i], $students_1[$i], $time_1[$i], $thistimerank_1);
     array_push($subjects_1, $arrtopush_1);
 
-    if($subject_1[$i]=="과학"){
-        $time_1[$i]=0;
+    if ($subject_1[$i] == "과학") {
+        $time_1[$i] = 0;
     }
 
     $modified_grade_1_b += $thistimerank_1 * $time_1[$i];
@@ -87,8 +87,8 @@ for ($i = 0; $i < sizeof($subject_1); $i++) {
     $arrtopush_1 = array($subject_1[$i], $rank_1[$i], $samerank_1[$i], $students_1[$i], $time_1[$i], $thistimerank_1);
     array_push($subjects_1, $arrtopush_1);
 
-    if($subject_1[$i]=="사회"){
-        $time_1[$i]=0;
+    if ($subject_1[$i] == "사회") {
+        $time_1[$i] = 0;
     }
 
     $modified_grade_1_c += $thistimerank_1 * $time_1[$i];
@@ -113,8 +113,8 @@ for ($i = 0; $i < sizeof($subject_1); $i++) {
     $arrtopush_1 = array($subject_1[$i], $rank_1[$i], $samerank_1[$i], $students_1[$i], $time_1[$i], $thistimerank_1);
     array_push($subjects_1, $arrtopush_1);
 
-    if($subject_1[$i]=="과학" || $subject_1[$i]=="수학"){
-        $time_1[$i]=0;
+    if ($subject_1[$i] == "과학" || $subject_1[$i] == "수학") {
+        $time_1[$i] = 0;
     }
 
     $modified_grade_1_d += $thistimerank_1 * $time_1[$i];
@@ -139,8 +139,8 @@ for ($i = 0; $i < sizeof($subject_1); $i++) {
     $arrtopush_1 = array($subject_1[$i], $rank_1[$i], $samerank_1[$i], $students_1[$i], $time_1[$i], $thistimerank_1);
     array_push($subjects_1, $arrtopush_1);
 
-    if($subject_1[$i]=="사회" || $subject_1[$i]=="영어"){
-        $time_1[$i]=0;
+    if ($subject_1[$i] == "사회" || $subject_1[$i] == "영어") {
+        $time_1[$i] = 0;
     }
 
     $modified_grade_1_e += $thistimerank_1 * $time_1[$i];
@@ -215,8 +215,8 @@ for ($i = 0; $i < sizeof($subject_2); $i++) {
     $arrtopush_2 = array($subject_2[$i], $rank_2[$i], $samerank_2[$i], $students_2[$i], $time_2[$i], $thistimerank_2);
     array_push($subjects_2, $arrtopush_2);
 
-    if($subject_2[$i]=="과학"){
-        $time_2[$i]=0;
+    if ($subject_2[$i] == "과학") {
+        $time_2[$i] = 0;
     }
 
     $modified_grade_2_a += $thistimerank_2 * $time_2[$i];
@@ -241,8 +241,8 @@ for ($i = 0; $i < sizeof($subject_2); $i++) {
     $arrtopush_2 = array($subject_2[$i], $rank_2[$i], $samerank_2[$i], $students_2[$i], $time_2[$i], $thistimerank_2);
     array_push($subjects_2, $arrtopush_2);
 
-    if($subject_2[$i]=="사회"){
-        $time_2[$i]=0;
+    if ($subject_2[$i] == "사회") {
+        $time_2[$i] = 0;
     }
 
     $modified_grade_2_a += $thistimerank_2 * $time_2[$i];
@@ -267,8 +267,8 @@ for ($i = 0; $i < sizeof($subject_2); $i++) {
     $arrtopush_2 = array($subject_2[$i], $rank_2[$i], $samerank_2[$i], $students_2[$i], $time_2[$i], $thistimerank_2);
     array_push($subjects_2, $arrtopush_2);
 
-    if($subject_2[$i]=="과학" || $subject_2[$i]=="수학"){
-        $time_2[$i]=0;
+    if ($subject_2[$i] == "과학" || $subject_2[$i] == "수학") {
+        $time_2[$i] = 0;
     }
 
     $modified_grade_2_a += $thistimerank_2 * $time_2[$i];
@@ -293,8 +293,8 @@ for ($i = 0; $i < sizeof($subject_2); $i++) {
     $arrtopush_2 = array($subject_2[$i], $rank_2[$i], $samerank_2[$i], $students_2[$i], $time_2[$i], $thistimerank_2);
     array_push($subjects_2, $arrtopush_2);
 
-    if($subject_2[$i]=="사회" || $subject_2[$i]=="영어"){
-        $time_2[$i]=0;
+    if ($subject_2[$i] == "사회" || $subject_2[$i] == "영어") {
+        $time_2[$i] = 0;
     }
 
     $modified_grade_2_a += $thistimerank_2 * $time_2[$i];
@@ -369,8 +369,8 @@ for ($i = 0; $i < sizeof($subject_3); $i++) {
     $arrtopush_3 = array($subject_3[$i], $rank_3[$i], $samerank_3[$i], $students_3[$i], $time_3[$i], $thistimerank_3);
     array_push($subjects_3, $arrtopush_3);
 
-    if($subject_3[$i]=="과학"){
-        $time_3[$i]=0;
+    if ($subject_3[$i] == "과학") {
+        $time_3[$i] = 0;
     }
 
     $modified_grade_3_a += $thistimerank_3 * $time_3[$i];
@@ -395,8 +395,8 @@ for ($i = 0; $i < sizeof($subject_3); $i++) {
     $arrtopush_3 = array($subject_3[$i], $rank_3[$i], $samerank_3[$i], $students_3[$i], $time_3[$i], $thistimerank_3);
     array_push($subjects_3, $arrtopush_3);
 
-    if($subject_3[$i]=="사회"){
-        $time_3[$i]=0;
+    if ($subject_3[$i] == "사회") {
+        $time_3[$i] = 0;
     }
 
     $modified_grade_3_a += $thistimerank_3 * $time_3[$i];
@@ -421,8 +421,8 @@ for ($i = 0; $i < sizeof($subject_3); $i++) {
     $arrtopush_3 = array($subject_3[$i], $rank_3[$i], $samerank_3[$i], $students_3[$i], $time_3[$i], $thistimerank_3);
     array_push($subjects_3, $arrtopush_3);
 
-    if($subject_3[$i]=="과학" || $subject_3[$i]=="수학"){
-        $time_3[$i]=0;
+    if ($subject_3[$i] == "과학" || $subject_3[$i] == "수학") {
+        $time_3[$i] = 0;
     }
 
     $modified_grade_3_a += $thistimerank_3 * $time_3[$i];
@@ -447,8 +447,8 @@ for ($i = 0; $i < sizeof($subject_3); $i++) {
     $arrtopush_3 = array($subject_3[$i], $rank_3[$i], $samerank_3[$i], $students_3[$i], $time_3[$i], $thistimerank_3);
     array_push($subjects_3, $arrtopush_3);
 
-    if($subject_3[$i]=="사회" || $subject_3[$i]=="영어"){
-        $time_3[$i]=0;
+    if ($subject_3[$i] == "사회" || $subject_3[$i] == "영어") {
+        $time_3[$i] = 0;
     }
 
     $modified_grade_3_a += $thistimerank_3 * $time_3[$i];
@@ -461,7 +461,7 @@ $final_grade_3_c = round($modified_grade_3_c / $total_time_3_c, 1); //3학년 �
 $final_grade_3_d = round($modified_grade_3_d / $total_time_3_d, 1); //3학년 국영사
 $final_grade_3_e = round($modified_grade_3_e / $total_time_3_e, 1); //3학년 국수과
 
-if($final_grade_1_a != 0 && $final_grade_2_a != 0 && $final_grade_3_a != 0){
+if ($final_grade_1_a != 0 && $final_grade_2_a != 0 && $final_grade_3_a != 0) {
     $overall_grade_a = round($modified_grade_1_a + $modified_grade_2_a + $modified_grade_3_a / 3, 1);                 //100%
     $overall_grade_b = round($modified_grade_1_a * 3 + $modified_grade_2_a * 3 + $modified_grade_3_a * 4 / 10, 1);    //3:3:4
     $overall_grade_c = round($modified_grade_1_a * 2 + $modified_grade_2_a * 3 + $modified_grade_3_a * 5 / 10, 1);    //2:3:5
