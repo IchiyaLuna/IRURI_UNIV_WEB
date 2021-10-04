@@ -199,12 +199,18 @@ $simple_avg = ($mod_grade_arr[0] + $mod_grade_arr[1] + $mod_grade_arr[2]) / ($ti
 
 if ($flen != 0) {
     $favg = $mod_grade_arr[0] / $time_arr[0];
+} else {
+    $favg = 0;
 }
 if ($slen != 0) {
     $savg = $mod_grade_arr[1] / $time_arr[1];
+} else {
+    $savg = 0;
 }
 if ($tlen != 0) {
     $tavg = $mod_grade_arr[2] / $time_arr[2];
+} else {
+    $tavg = 0;
 }
 
 $KMESO = ($kor_mod_sum + $mat_mod_sum + $eng_mod_sum + $soc_mod_sum) / ($kor_time_sum + $mat_time_sum + $eng_time_sum + $soc_time_sum);

@@ -70,7 +70,15 @@
                                         <div class="text-center">국어</div>
                                     </td>
                                     <td>
-                                        <div class="text-center"><?php echo $kor_mod[0] / $kor_time[0]; ?></div>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($kor_mod[0] != 0) {
+                                                echo $kor_mod[0] / $kor_time[0];
+                                            } else {
+                                                echo "없음";
+                                            }
+                                            ?>
+                                        </div>
                                     </td>
                                     <td class="align-middle text-center" rowspan="5"><?php echo $favg; ?></td>
                                 </tr>
@@ -80,7 +88,13 @@
                                         <div class="text-center">수학</div>
                                     </td>
                                     <td>
-                                        <div class="text-center"><?php echo $mat_mod[0] / $mat_time[0]; ?></div>
+                                        <div class="text-center">
+                                            <?php if ($mat_mod[0] != 0) {
+                                                echo $mat_mod[0] / $mat_time[0];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
                                     </td>
                                 </tr>
 
@@ -89,7 +103,13 @@
                                         <div class="text-center">영어</div>
                                     </td>
                                     <td>
-                                        <div class="text-center"><?php echo $eng_mod[0] / $eng_time[0]; ?></div>
+                                        <div class="text-center">
+                                            <?php if ($eng_mod[0] != 0) {
+                                                echo $eng_mod[0] / $eng_time[0];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
                                     </td>
                                 </tr>
 
@@ -98,7 +118,13 @@
                                         <div class="text-center">사회</div>
                                     </td>
                                     <td>
-                                        <div class="text-center"><?php echo $soc_mod[0] / $soc_time[0]; ?></div>
+                                        <div class="text-center">
+                                            <?php if ($soc_mod[0] != 0) {
+                                                echo $soc_mod[0] / $soc_time[0];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
                                     </td>
                                 </tr>
 
@@ -107,11 +133,190 @@
                                         <div class="text-center">과학</div>
                                     </td>
                                     <td>
-                                        <div class="text-center"><?php echo $sci_mod[0] / $sci_time[0]; ?></div>
+                                        <div class="text-center">
+                                            <?php if ($sci_mod[0] != 0) {
+                                                echo $sci_mod[0] / $sci_time[0];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="align-middle text-center" rowspan="5">2학년</td>
+                                    <td>
+                                        <div class="text-center">국어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($kor_mod[1] != 0) {
+                                                echo $kor_mod[1] / $kor_time[1];
+                                            } else {
+                                                echo "없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center" rowspan="5">
+                                        <?php
+                                        if ($savg != 0) {
+                                            echo $savg;
+                                        } else {
+                                            echo "없음";
+                                        } ?>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">수학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($mat_mod[1] != 0) {
+                                                echo $mat_mod[1] / $mat_time[1];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">영어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($eng_mod[1] != 0) {
+                                                echo $eng_mod[1] / $eng_time[1];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">사회</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($soc_mod[1] != 0) {
+                                                echo $soc_mod[1] / $soc_time[1];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">과학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($sci_mod[1] != 0) {
+                                                echo $sci_mod[1] / $sci_time[1];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="align-middle text-center" rowspan="5">3학년</td>
+                                    <td>
+                                        <div class="text-center">국어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php
+                                            if ($kor_mod[2] != 0) {
+                                                echo $kor_mod[2] / $kor_time[2];
+                                            } else {
+                                                echo "없음";
+                                            }
+                                            ?>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center" rowspan="5">
+                                        <?php
+                                        if ($tavg != 0) {
+                                            echo $tavg;
+                                        } else {
+                                            echo "없음";
+                                        } ?>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">수학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($mat_mod[2] != 0) {
+                                                echo $mat_mod[2] / $mat_time[2];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">영어</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($eng_mod[2] != 0) {
+                                                echo $eng_mod[2] / $eng_time[2];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">사회</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($soc_mod[2] != 0) {
+                                                echo $soc_mod[2] / $soc_time[2];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="text-center">과학</div>
+                                    </td>
+                                    <td>
+                                        <div class="text-center">
+                                            <?php if ($sci_mod[2] != 0) {
+                                                echo $sci_mod[2] / $sci_time[2];
+                                            } else {
+                                                echo "없음";
+                                            } ?>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
+                                테스트
                             </tfoot>
                         </table>
                     </div>

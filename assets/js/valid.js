@@ -83,7 +83,7 @@ function test_calc_input() {
     for (let i = 0; i < fcount; i++) {
         if (isEmpty(franks[i].value) == isEmpty(fsameranks[i].value) && isEmpty(fsameranks[i].value) == isEmpty(fstudentss[i].value) && isEmpty(fstudentss[i].value) == isEmpty(ftimes[i].value)) {
             if (!isEmpty(franks[i].value)) {
-                if (franks[i].value > fstudentss[i].value) {
+                if (parseInt(franks[i].value) > parseInt(fstudentss[i].value)) {
                     biginput_modal.show();
                     return false;
                 }
@@ -98,7 +98,7 @@ function test_calc_input() {
     for (let i = 0; i < scount; i++) {
         if (isEmpty(sranks[i].value) == isEmpty(ssameranks[i].value) && isEmpty(ssameranks[i].value) == isEmpty(sstudentss[i].value) && isEmpty(sstudentss[i].value) == isEmpty(stimes[i].value)) {
             if (!isEmpty(sranks[i].value)) {
-                if (sranks[i].value > sstudentss[i].value) {
+                if (parseInt(sranks[i].value) > parseInt(sstudentss[i].value)) {
                     biginput_modal.show();
                     return false;
                 }
@@ -113,7 +113,7 @@ function test_calc_input() {
     for (let i = 0; i < tcount; i++) {
         if (isEmpty(tranks[i].value) == isEmpty(tsameranks[i].value) && isEmpty(tsameranks[i].value) == isEmpty(tstudentss[i].value) && isEmpty(tstudentss[i].value) == isEmpty(ttimes[i].value)) {
             if (!isEmpty(tranks[i].value)) {
-                if (tranks[i].value > tstudentss[i].value) {
+                if (parseInt(tranks[i].value) > parseInt(tstudentss[i].value)) {
                     biginput_modal.show();
                     return false;
                 }
@@ -126,7 +126,7 @@ function test_calc_input() {
     }
 
 
-    //calcresult.submit();
+    calcresult.submit();
     return false;
 }
 
