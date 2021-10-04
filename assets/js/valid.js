@@ -24,6 +24,29 @@ function test_calc_input() {
 
     var calcresult = document.getElementById('subject-form');
 
+    var fcount = fnames.length;
+
+    if (fcount != franks.length || fcount < fsameranks.length || fcount < fstudentss.length || fcount < ftimes.length) {
+        noinput_modal.show();
+    }
+
+    var scount = snames.length;
+
+    if (scount != sranks.length || scount < ssameranks.length || scount < sstudentss.length || scount < stimes.length) {
+        noinput_modal.show();
+    }
+
+    var tcount = tnames.length;
+
+    if (tcount != tranks.length || tcount < tsameranks.length || tcount < tstudentss.length || tcount < ttimes.length) {
+        noinput_modal.show();
+    }
+
+    if (fcount === 0 && scount === 0 && tcount === 0) {
+        noinput_modal.show();
+    }
+
+
     for (var key in names) {
 
         if (names[key].value === "") {
