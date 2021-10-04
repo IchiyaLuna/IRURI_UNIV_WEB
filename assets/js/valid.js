@@ -50,7 +50,6 @@ function test_calc_input() {
     const ttimes = document.getElementsByName("ttime[]");
 
     var noinput_modal = new bootstrap.Modal(document.getElementById('no-input'));
-    var zeroinput_modal = new bootstrap.Modal(document.getElementById('zero-input'));
     var biginput_modal = new bootstrap.Modal(document.getElementById('big-input'));
 
     var calcresult = document.getElementById('subject-form');
@@ -84,8 +83,8 @@ function test_calc_input() {
     for (let i = 0; i < fcount; i++) {
         if (isEmpty(franks[i].value) == isEmpty(fsameranks[i].value) && isEmpty(fsameranks[i].value) == isEmpty(fstudentss[i].value) && isEmpty(fstudentss[i].value) == isEmpty(ftimes[i].value)) {
             if (!isEmpty(franks[i].value)) {
-                if (franks[i].value <= 0 || fsameranks[i].value <= 0 || fstudentss[i].value <= 0 || ftimes[i].value <= 0) {
-                    zeroinput_modal.show();
+                if (franks[i].value > fstudentss[i].value) {
+                    biginput_modal.show();
                     return false;
                 }
             }
@@ -99,8 +98,8 @@ function test_calc_input() {
     for (let i = 0; i < scount; i++) {
         if (isEmpty(sranks[i].value) == isEmpty(ssameranks[i].value) && isEmpty(ssameranks[i].value) == isEmpty(sstudentss[i].value) && isEmpty(sstudentss[i].value) == isEmpty(stimes[i].value)) {
             if (!isEmpty(sranks[i].value)) {
-                if (sranks[i].value <= 0 || ssameranks[i].value <= 0 || sstudentss[i].value <= 0 || stimes[i].value <= 0) {
-                    zeroinput_modal.show();
+                if (sranks[i].value > sstudentss[i].value) {
+                    biginput_modal.show();
                     return false;
                 }
             }
@@ -114,8 +113,8 @@ function test_calc_input() {
     for (let i = 0; i < tcount; i++) {
         if (isEmpty(tranks[i].value) == isEmpty(tsameranks[i].value) && isEmpty(tsameranks[i].value) == isEmpty(tstudentss[i].value) && isEmpty(tstudentss[i].value) == isEmpty(ttimes[i].value)) {
             if (!isEmpty(tranks[i].value)) {
-                if (tranks[i].value <= 0 || tsameranks[i].value <= 0 || tstudentss[i].value <= 0 || ttimes[i].value <= 0) {
-                    zeroinput_modal.show();
+                if (tranks[i].value > tstudentss[i].value) {
+                    biginput_modal.show();
                     return false;
                 }
             }
