@@ -41,11 +41,12 @@ $(function () {
         e.preventDefault();
         return false;
     });
-
-    $(document).on('click', '.refresh-calc', function (e) {
-
-        $('input').val('');
-        $('tr').not('tr.origin').remove();
-        $('align-middle').attr('rowspan', 5);
-    });
 });
+
+function CalcRefresh() {
+    $('input').val('');
+    $('tr').not('tr.origin').remove();
+    $('align-middle').attr('rowspan', 5);
+
+    return false;
+}

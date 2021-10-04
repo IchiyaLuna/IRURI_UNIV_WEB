@@ -443,7 +443,7 @@
 
                     <div class="btn-group float-end" role="group">
                         <button type="button" class="btn btn-warning" onclick="window.location.reload();"><i class="fas fa-redo-alt"></i>&nbsp;(구)초기화</button>
-                        <button type="button" class="btn btn-warning refresh-calc"><i class="fas fa-redo-alt"></i>&nbsp;초기화</button>
+                        <button type="button" class="btn btn-warning" onclick="CalcRefresh();"><i class="fas fa-redo-alt"></i>&nbsp;초기화</button>
                         <button type="button" class="btn btn-primary" onclick="test_calc_input();"><i class="fas fa-calculator"></i>&nbsp;등급 계산 하기</button>
                     </div>
                 </div>
