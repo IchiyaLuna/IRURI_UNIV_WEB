@@ -18,9 +18,16 @@ function isEmpty(value) {
     }
 }
 
-$("input:text[numberOnly]").on("keyup", function () {
-    $(this).val($(this).val().replace(/[^0-9]/g, ""));
-});
+function InputLock() {
+    this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+    if (this.value > 999) {
+        this.value = 999;
+    } else if (this.value < 1) {
+        this.value = 1;
+    }
+
+    return false;
+}
 
 function test_calc_input() {
 
